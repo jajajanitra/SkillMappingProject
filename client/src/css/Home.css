@@ -1,0 +1,14 @@
+.normal-btn {
+    background: #FFF296;
+    color: #2D2D2D;
+    border-radius: 20px;
+    border-style: hidden;
+    padding: 10px;
+    margin: 10px;
+    font-size: 14px;
+    box-shadow: 0px;
+}
+
+.normal-btn:hover{
+    box-shadow: 1px 2px #BDE6FF;
+}

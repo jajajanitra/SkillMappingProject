@@ -1,0 +1,65 @@
+.submit-btn{
+    background: #CFFF80;
+    color: #4D4D4D;
+    border-radius: 10px;
+    border-style: hidden;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 10px;
+    font-size: 14px;
+    box-shadow: 0px;
+}
+
+.submit-btn:hover{
+    background: #B9FF45;
+    color: #212529;
+}
+
+.top-header{
+    margin: 10px;
+    color: #B080FF;
+    text-align: center;
+}
+
+.level-textbox{
+    width: 100%;
+    vertical-align: middle;
+}
+
+.level-col{
+    text-align: center;
+    vertical-align: middle;
+}
+
+.skill-input{
+    padding: 10px;
+    margin: 10px;
+}
+
+.skill-table{
+    margin: 20px;
+}
+
+.textbox{
+    width: 100%;
+}
+
+input{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border-color: #a2a2a2;
+}
+
+textarea{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border-color: #a2a2a2;
+}
+
+normal-card{
+    margin: 20px;
+    border-width: 4px;
+}
