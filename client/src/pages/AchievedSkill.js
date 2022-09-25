@@ -34,35 +34,38 @@ function AchievedSkill () {
     return (
         <div>
 
-            <h4 class="top-header">Add achieved skills from course</h4>
-            <div>
-                <label>
-                    Select course:
-                </label>
-                <select value={course} onChange={handleCourseChange}>
-                    {options.map((option) => (
-                        <option value={option.value}>{option.label}</option>
+            <h4 className="top-header">Add achieved skills from course</h4>
+            <div className="container">
+                <div>
+                    <h6>
+                        Select course:
+                    </h6>
+                    <select value={course} onChange={handleCourseChange}>
+                        {options.map((option) => (
+                            <option value={option.value}>{option.label}</option>
+                        ))}
+                    </select> 
+                </div>
+                
+                <div>
+                    <h4>Course : {course}</h4>
+                    <p>Please select all skills that student will achive in this course.</p>
+                    <h6>
+                        Skills
+                    </h6>    
+                    {skills.map((skill, index) => (
+                        <div key={index}>
+                            <input
+                            type="checkbox"
+                            name={skill.name}
+                            checked={skill?.isChecked || false}
+                            onChange={handleSkillsChange}
+                            />
+                            <label>{skill.name}</label>
+                        </div>
                     ))}
-                </select> 
-            </div>
-            
-            <div>
-                <h4>Course : {course}</h4>
-                <p>Please select all skills that student will achive in this course.</p>
-                <label>
-                    Skills
-                </label>    
-                {skills.map((skill, index) => (
-                    <div key={index}>
-                        <input
-                        type="checkbox"
-                        name={skill.name}
-                        checked={skill?.isChecked || false}
-                        onChange={handleSkillsChange}
-                        />
-                        <label>{skill.name}</label>
-                    </div>
-                ))}
+                </div>
+                <button type="submit" className="submit-btn">save</button>  
             </div>
             
         </div>

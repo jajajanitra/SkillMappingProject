@@ -1,23 +1,26 @@
 .submit-btn{
-    background: #CFFF80;
-    color: #4D4D4D;
-    border-radius: 10px;
+    float: right;
+    background: #BDE6FF;
+    color: #212529;
+    border-radius: 20px;
     border-style: hidden;
     padding: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
     margin: 10px;
     font-size: 14px;
     box-shadow: 0px;
+    height: 40px;
 }
 
 .submit-btn:hover{
-    background: #B9FF45;
-    color: #212529;
+    background: #7FCFFF;
+    color: #ffffff;
 }
 
 .top-header{
     margin: 10px;
+    margin-top: 30px;
     color: #B080FF;
     text-align: center;
 }
@@ -48,6 +51,7 @@
 input{
     margin-top: 5px;
     margin-bottom: 5px;
+    border: 1px solid;
     border-radius: 5px;
     border-color: #a2a2a2;
 }
