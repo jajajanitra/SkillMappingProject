@@ -70,6 +70,24 @@ function AchievedSkill () {
         setSkills(tempSkill);
     };
 
+    const handleLevelChange = (event) => {
+        const name = event.target.name;
+        const level = event.target.value;
+        let tempSkill = skills.map((skill) => (
+            skill.name === name ? { ...skill, selected_level: level } : skill)
+        );
+        setSkills(tempSkill);
+    };
+
+    const handleCommentChange = (event) => {
+        const name = event.target.name;
+        const comment = event.target.value;
+        let tempSkill = skills.map((skill) => (
+            skill.name === name ? { ...skill, comment: comment } : skill)
+        );
+        setSkills(tempSkill);
+    };
+
     const handleSubmit = () => {
         var data = skills.filter((skill) => (skill.isChecked));
         console.log(data);
@@ -121,11 +139,11 @@ function AchievedSkill () {
                                     <tr>
                                         <th className="name-col">Name</th>
                                         <th className="des-col">Description </th>
-                                        {skill.levels.map((level) => (
-                                            <th className="level-col">
-                                                level {level.level_id}
-                                            </th>
-                                        ))}
+                                        <th className="level-col">Level 1</th>
+                                        <th className="level-col">Level 2</th>
+                                        <th className="level-col">Level 3</th>
+                                        <th className="level-col">Level 4</th>
+                                        <th className="level-col">Level 5</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -143,7 +161,7 @@ function AchievedSkill () {
                                         <td></td>
                                         {skill.levels.map((level) => (
                                             <td className="level-col">
-                                                <input type="radio" name={index} value={level.level_id}></input>
+                                                <input type="radio" name={skill.name} value={level.level_id} onChange={handleLevelChange}></input>
                                                 <label>{level.level_id}</label>
                                             </td>
                                         ))}
@@ -152,7 +170,7 @@ function AchievedSkill () {
                             </Table>
                             <div className="comment">
                                 <label>comment</label>
-                                <textarea className="comment-box" name={index}></textarea>  
+                                <textarea className="comment-box" name={skill.name} onChange={handleCommentChange}></textarea>  
                             </div>
                             <br/>
                         </div>
