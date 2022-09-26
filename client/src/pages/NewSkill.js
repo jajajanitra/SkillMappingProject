@@ -13,9 +13,9 @@ function NewSkill () {
 
     const handleSubmit = (event) => {
         var data = {
-            skill_name: name,
-            skill_des: description,
-            skill_level: [
+            name: name,
+            des: description,
+            levels: [
                 {
                     level_id: 1,
                     level_des: level1},

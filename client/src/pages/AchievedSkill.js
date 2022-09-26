@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import {Table} from "react-bootstrap";
 import '../css/AchievedSkill.css';
 
 function AchievedSkill () {
@@ -10,8 +11,47 @@ function AchievedSkill () {
         {label: "course2", value: "course2"}
     ];
     const skillData = [
-        {name: "API", des: "API"},
-        {name: "Coding", des: "Coding"}
+        {name: "API",
+            des: "API des",
+            levels: [
+                {
+                    level_id: 1,
+                    level_des: "API 1"},
+                {
+                    level_id: 2,
+                    level_des: "API 2"},
+                {
+                    level_id: 3,
+                    level_des: "API 3"},
+                {
+                    level_id: 4,
+                    level_des: "API 4"},
+                {
+                    level_id: 5,
+                    level_des: "API 5"},
+            ]
+        },
+        {name: "Coding",
+            des: "Coding des",
+            levels: [
+                {
+                    level_id: 1,
+                    level_des: "Coding 1"},
+                {
+                    level_id: 2,
+                    level_des: "Coding 2"},
+                {
+                    level_id: 3,
+                    level_des: "Coding 3"},
+                {
+                    level_id: 4,
+                    level_des: "Coding 4"},
+                {
+                    level_id: 5,
+                    level_des: "Coding 5"},
+            ]
+        }
+
     ];
 
     useEffect(() => {
@@ -49,10 +89,10 @@ function AchievedSkill () {
                 
                 <div>
                     <h4>Course : {course}</h4>
-                    <p>Please select all skills that student will achive in this course.</p>
-                    <h6>
+                    <h5>
                         Skills
-                    </h6>    
+                    </h5>  
+                    <label>Please select all skills that student will achive in this course.</label>  
                     {skills.map((skill, index) => (
                         <div key={index}>
                             <input
@@ -65,6 +105,55 @@ function AchievedSkill () {
                         </div>
                     ))}
                 </div>
+
+                <div>
+                    <br/>
+                    <h5>Skill level</h5>
+                    {skills.map((skill, index) => (
+                        <div>
+                            <Table>
+                                <thead>
+                                    <tr>
+                                        <th className="name-col">Name</th>
+                                        <th className="des-col">Description </th>
+                                        {skill.levels.map((level) => (
+                                            <th className="level-col">
+                                                level {level.level_id}
+                                            </th>
+                                        ))}
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td className="name-col">{skill.name}</td>
+                                        <td className="des-col">{skill.des}</td>
+                                        {skill.levels.map((level) => (
+                                            <td className="level-col">
+                                                {level.level_des}
+                                            </td>
+                                        ))}
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        {skill.levels.map((level) => (
+                                            <td className="level-col">
+                                                <input type="radio" name={index} value={level.level_id}></input>
+                                                <label>{level.level_id}</label>
+                                            </td>
+                                        ))}
+                                    </tr>
+                                </tbody>
+                            </Table>
+                            <div className="comment">
+                                <label>comment</label>
+                                <textarea className="comment-box"></textarea>  
+                            </div>
+                            <br/>
+                        </div>
+                    ))}
+                </div>
+
                 <button type="submit" className="submit-btn">save</button>  
             </div>
             

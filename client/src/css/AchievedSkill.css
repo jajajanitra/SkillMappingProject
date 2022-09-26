@@ -24,3 +24,32 @@
     background: #7FCFFF;
     color: #ffffff;
 }
+
+.name-col{
+    width: 10%;
+}
+
+.des-col{
+    width: 20%;
+}
+
+.level-col{
+    width: 14%;
+}
+
+.comment{
+    margin: 10px;
+}
+
+.comment-box{
+    width: 100%;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+  }
+
