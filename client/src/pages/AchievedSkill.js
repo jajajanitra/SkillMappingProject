@@ -64,12 +64,16 @@ function AchievedSkill () {
 
     const handleSkillsChange = (event) => {
         const { name, checked } = event.target;
-        let tempSkill = skills.map((skill) =>
-            skill.name === name ? { ...skill, isChecked: checked } : skill
+        let tempSkill = skills.map((skill) => (
+            skill.name === name ? { ...skill, isChecked: checked } : skill)
         );
         setSkills(tempSkill);
     };
 
+    const handleSubmit = () => {
+        var data = skills.filter((skill) => (skill.isChecked));
+        console.log(data);
+    };
 
     return (
         <div>
@@ -98,6 +102,7 @@ function AchievedSkill () {
                             <input
                             type="checkbox"
                             name={skill.name}
+                            value={skill.name}
                             checked={skill?.isChecked || false}
                             onChange={handleSkillsChange}
                             />
@@ -109,7 +114,7 @@ function AchievedSkill () {
                 <div>
                     <br/>
                     <h5>Skill level</h5>
-                    {skills.map((skill, index) => (
+                    {skills.filter(skill => skill.isChecked).map((skill, index) => (
                         <div>
                             <Table>
                                 <thead>
@@ -147,14 +152,14 @@ function AchievedSkill () {
                             </Table>
                             <div className="comment">
                                 <label>comment</label>
-                                <textarea className="comment-box"></textarea>  
+                                <textarea className="comment-box" name={index}></textarea>  
                             </div>
                             <br/>
                         </div>
                     ))}
                 </div>
 
-                <button type="submit" className="submit-btn">save</button>  
+                <button type="submit" className="submit-btn" onClick={handleSubmit}>save</button>  
             </div>
             
         </div>
