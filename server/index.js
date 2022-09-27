@@ -13,7 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 app.use('/courses' ,coursesRouters);
-app.use('/skill',skillRouters );
+app.use('/skills',skillRouters );
 
 
 //const CONNECTION_URL = 'mongodb+srv://project:491@skillmapping.s8p064c.mongodb.net/?retryWrites=true&w=majority'

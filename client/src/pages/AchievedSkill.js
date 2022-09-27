@@ -1,67 +1,40 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 import {Table,Form} from "react-bootstrap";
 import '../css/AchievedSkill.css';
 
 function AchievedSkill () {
     const [course, setCourse] = useState("");
+    const [options, setOptions] = useState([]);
     const [skills, setSkills] = useState([]);
     const [topic, setTopic] = useState("");
     const [isSelTopic, setIsSelTopic] = useState(false);
 
-    const options = [
-        {label: "course1", value: "course1"},
-        {label: "course2", value: "course2"}
-    ];
-    const skillData = [
-        {name: "API",
-            des: "API des",
-            levels: [
-                {
-                    level_id: 1,
-                    level_des: "API 1"},
-                {
-                    level_id: 2,
-                    level_des: "API 2"},
-                {
-                    level_id: 3,
-                    level_des: "API 3"},
-                {
-                    level_id: 4,
-                    level_des: "API 4"},
-                {
-                    level_id: 5,
-                    level_des: "API 5"},
-            ]
-        },
-        {name: "Coding",
-            des: "Coding des",
-            levels: [
-                {
-                    level_id: 1,
-                    level_des: "Coding 1"},
-                {
-                    level_id: 2,
-                    level_des: "Coding 2"},
-                {
-                    level_id: 3,
-                    level_des: "Coding 3"},
-                {
-                    level_id: 4,
-                    level_des: "Coding 4"},
-                {
-                    level_id: 5,
-                    level_des: "Coding 5"},
-            ]
-        }
-
-    ];
+    const URL = "http://localhost:5001";
+    const requestCourses = axios.get(URL + "/courses");
+    const requestSkills = axios.get(URL + "/skills");
 
     useEffect(() => {
-        setSkills(skillData);
+        getData();
     }, []);
-    
+
+    const getData = async () => {
+        await axios.all([requestCourses, requestSkills])
+        .then(
+            axios.spread((...responses) => {
+                const responseCourses = responses[0];
+                const responseSkills = responses[1];
+                setOptions(responseCourses.data);
+                setSkills(responseSkills.data);
+              }
+        ))
+    };
+
     const handleCourseChange = (event) => {
         setCourse(event.target.value);
+        if (event.target.id === 261494 || event.target.id === 261497 || event.target.id === 261498 || event.target.id === 261499){
+            setIsSelTopic(true);
+        }
     };
 
     const handleSkillsChange = (event) => {
@@ -89,21 +62,21 @@ function AchievedSkill () {
     };
 
     const handleSubmit = () => {
-        var cleaned_skill = skills.slice(0);
-        // cleaned_skill.filter(skill => skill.isChecked).forEach((skill) => {
-        //     delete skill.des;
-        //     delete skill.isChecked;
-        //     delete skill.levels;
-        // })
-        console.log(cleaned_skill);
-        console.log(skills);
+        var cleaned_skill = skills.filter(skill => skill.isChecked).slice(0);
+
+        cleaned_skill.forEach((skill) => {
+            delete skill.des;
+            delete skill.isChecked;
+            delete skill.levels;
+        })
+
         var data = {
-            //course_id: id,
-            course_name: course,
+            course_id: course,
             topic: topic,
             skills: cleaned_skill
             }
-        // console.log(data);
+        console.log(data);
+        // window.location.reload();
     };
 
     return (
@@ -116,8 +89,9 @@ function AchievedSkill () {
                         Course:
                     </h6>
                     <Form.Select className="courses-dropdown" value={course} onChange={handleCourseChange}>
+                        <option value={0} >Please select course</option>
                         {options.map((option) => (
-                            <option value={option.value}>{option.label}</option>
+                            <option value={option._id} id={option.id} >{option.id} {option.name}</option>
                         ))}
                     </Form.Select> 
                     <h6>
@@ -155,11 +129,11 @@ function AchievedSkill () {
                                     <tr>
                                         <th className="name-col">Name</th>
                                         <th className="des-col">Description </th>
-                                        <th className="level-col">Level 1</th>
-                                        <th className="level-col">Level 2</th>
-                                        <th className="level-col">Level 3</th>
-                                        <th className="level-col">Level 4</th>
-                                        <th className="level-col">Level 5</th>
+                                        {skill.levels.map((level) => (
+                                            <th className="level-col">
+                                                Level {level.level_id}
+                                            </th>
+                                        ))}
                                     </tr>
                                 </thead>
                                 <tbody>

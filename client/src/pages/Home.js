@@ -1,4 +1,3 @@
-import {Button, Card} from 'react-bootstrap';
 import '../css/Home.css';
 
 function Home () {
