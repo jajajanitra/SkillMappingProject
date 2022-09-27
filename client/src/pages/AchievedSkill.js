@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
-import {Table} from "react-bootstrap";
+import {Table,Form} from "react-bootstrap";
 import '../css/AchievedSkill.css';
 
 function AchievedSkill () {
     const [course, setCourse] = useState("");
     const [skills, setSkills] = useState([]);
+    const [topic, setTopic] = useState("");
+    const [isSelTopic, setIsSelTopic] = useState(false);
 
     const options = [
         {label: "course1", value: "course1"},
@@ -71,26 +73,37 @@ function AchievedSkill () {
     };
 
     const handleLevelChange = (event) => {
-        const name = event.target.name;
+        const index = event.target.id;
         const level = event.target.value;
-        let tempSkill = skills.map((skill) => (
-            skill.name === name ? { ...skill, selected_level: level } : skill)
-        );
+        let tempSkill = skills;
+        tempSkill[index]['selected_level'] = level;
         setSkills(tempSkill);
     };
 
     const handleCommentChange = (event) => {
-        const name = event.target.name;
+        const index = event.target.id;
         const comment = event.target.value;
-        let tempSkill = skills.map((skill) => (
-            skill.name === name ? { ...skill, comment: comment } : skill)
-        );
+        let tempSkill = skills;
+        tempSkill[index]['comment'] = comment;
         setSkills(tempSkill);
     };
 
     const handleSubmit = () => {
-        var data = skills.filter((skill) => (skill.isChecked));
-        console.log(data);
+        var cleaned_skill = skills.slice(0);
+        // cleaned_skill.filter(skill => skill.isChecked).forEach((skill) => {
+        //     delete skill.des;
+        //     delete skill.isChecked;
+        //     delete skill.levels;
+        // })
+        console.log(cleaned_skill);
+        console.log(skills);
+        var data = {
+            //course_id: id,
+            course_name: course,
+            topic: topic,
+            skills: cleaned_skill
+            }
+        // console.log(data);
     };
 
     return (
@@ -100,17 +113,21 @@ function AchievedSkill () {
             <div className="container">
                 <div>
                     <h6>
-                        Select course:
+                        Course:
                     </h6>
-                    <select value={course} onChange={handleCourseChange}>
+                    <Form.Select className="courses-dropdown" value={course} onChange={handleCourseChange}>
                         {options.map((option) => (
                             <option value={option.value}>{option.label}</option>
                         ))}
-                    </select> 
+                    </Form.Select> 
+                    <h6>
+                        Topic:
+                    </h6>
+                    <input type="text" onChange={e => setTopic(e.target.value)}></input>
                 </div>
                 
                 <div>
-                    <h4>Course : {course}</h4>
+                    <br/>
                     <h5>
                         Skills
                     </h5>  
@@ -131,7 +148,6 @@ function AchievedSkill () {
 
                 <div>
                     <br/>
-                    <h5>Skill level</h5>
                     {skills.filter(skill => skill.isChecked).map((skill, index) => (
                         <div>
                             <Table>
@@ -161,7 +177,7 @@ function AchievedSkill () {
                                         <td></td>
                                         {skill.levels.map((level) => (
                                             <td className="level-col">
-                                                <input type="radio" name={skill.name} value={level.level_id} onChange={handleLevelChange}></input>
+                                                <input type="radio" name={skill.name} id={index} value={level.level_id} onChange={handleLevelChange}></input>
                                                 <label>{level.level_id}</label>
                                             </td>
                                         ))}
@@ -170,7 +186,7 @@ function AchievedSkill () {
                             </Table>
                             <div className="comment">
                                 <label>comment</label>
-                                <textarea className="comment-box" name={skill.name} onChange={handleCommentChange}></textarea>  
+                                <textarea className="comment-box" name={skill.name} id={index} onChange={handleCommentChange}></textarea>  
                             </div>
                             <br/>
                         </div>
