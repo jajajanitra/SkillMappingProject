@@ -49,7 +49,7 @@ function AchievedSkill () {
         const index = event.target.id;
         const level = event.target.value;
         let tempSkill = skills;
-        tempSkill[index]['selected_level'] = level;
+        tempSkill[index]['level_id'] = level;
         setSkills(tempSkill);
     };
 
@@ -68,6 +68,10 @@ function AchievedSkill () {
             delete skill.des;
             delete skill.isChecked;
             delete skill.levels;
+            skill['skill_id'] = skill['id'];
+            delete skill['id'];
+            skill['skill_name'] = skill['name'];
+            delete skill['name'];
         })
 
         var data = {
