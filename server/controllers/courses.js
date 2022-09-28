@@ -1,4 +1,5 @@
 import CoursesModel from '../models/coursesmodel.js';
+import mongoose from 'mongoose';
 
 export const getCourses = async (req,res) =>{
     try{
@@ -15,16 +16,16 @@ export const getCourses = async (req,res) =>{
 
 export const updateCoursesSkill = async (req, res)=>{
     
-    const { id,skills } = req.body;
+    const { course_id,skills } = req.body;
 
-    console.log(id);
+    console.log(req.body);
     console.log(skills);
 
-    if (!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send(`No post with id: ${id}`);
+    if (!mongoose.Types.ObjectId.isValid(course_id)) return res.status(404).send(`No post with id: ${course_id}`);
 
     const updatedCoursesSkill = { skills };
 
-    await PostMessage.findByIdAndUpdate(id, updatedCoursesSkill, { new: true });
+    await CoursesModel.findByIdAndUpdate(course_id, updatedCoursesSkill, { new: true });
 
     res.json(updateCoursesSkill);
 

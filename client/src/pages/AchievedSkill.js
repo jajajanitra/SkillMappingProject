@@ -61,7 +61,7 @@ function AchievedSkill () {
         setSkills(tempSkill);
     };
 
-    const handleSubmit = () => {
+    const handleSubmit = async () => {
         var cleaned_skill = skills.filter(skill => skill.isChecked).slice(0);
 
         cleaned_skill.forEach((skill) => {
@@ -76,7 +76,17 @@ function AchievedSkill () {
             skills: cleaned_skill
             }
         console.log(data);
-        // window.location.reload();
+
+        await axios.post(URL + "/courses", data)
+        .then((res) => {
+            console.log(res.status);
+            if (res.status === 200){
+                // window.location.reload();
+            }
+        })
+        .catch((err) => {
+            console.log(err);
+        })
     };
 
     return (
