@@ -5,6 +5,8 @@ import cors from 'cors';
 
 import coursesRouters from './routes/courses.js';
 import skillRouters from './routes/skills.js';
+import updateCoursesSkill from './routes/courses.js';
+
 
 const app = express();
 
@@ -12,8 +14,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
-app.use('/courses' ,coursesRouters);
+app.use('/courses' ,coursesRouters ,updateCoursesSkill);
 app.use('/skills',skillRouters );
+
 
 
 //const CONNECTION_URL = 'mongodb+srv://project:491@skillmapping.s8p064c.mongodb.net/?retryWrites=true&w=majority'
