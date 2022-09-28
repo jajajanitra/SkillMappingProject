@@ -6,6 +6,7 @@ import cors from 'cors';
 import coursesRouters from './routes/courses.js';
 import skillRouters from './routes/skills.js';
 import updateCoursesSkill from './routes/courses.js';
+import newSkill from './routes/skills.js';
 
 
 const app = express();
@@ -15,7 +16,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 app.use('/courses' ,coursesRouters ,updateCoursesSkill);
-app.use('/skills',skillRouters );
+app.use('/skills',skillRouters ,newSkill);
 
 
 
