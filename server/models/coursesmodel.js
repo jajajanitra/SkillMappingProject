@@ -9,7 +9,8 @@ const coursesSchema = mongoose.Schema({
         {
         skill_id : String,
         skill_name : String,
-        level_id : String
+        level_id : String,
+        comment : String
         }
     ]
 });
