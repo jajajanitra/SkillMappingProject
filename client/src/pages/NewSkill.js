@@ -2,8 +2,12 @@ import React, {useState} from "react";
 import {Table, Row, Col} from "react-bootstrap";
 import axios from "axios";
 import '../css/NewSkill.css';
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
 
+import {Skill_URL} from '../constants';
 
+const MySwal = withReactContent(Swal);
 
 function NewSkill () {
     const [name, setName] = useState("");
@@ -14,9 +18,8 @@ function NewSkill () {
     const [level4, setLevel4] = useState("");
     const [level5, setLevel5] = useState("");
 
-    const URL = "http://localhost:5001";
-
     const handleSubmit = async (event) => {
+        event.preventDefault();
         var data = {
             name: name,
             des: description,
@@ -38,21 +41,35 @@ function NewSkill () {
                     level_des: level5},
             ]
         }
-        await axios.post(URL + "/skills", data)
+        await axios.post(Skill_URL, data)
                 .then((res) => {
-                    if (res.status === 200){
-                        console.log(res.status);
-                        event.preventDefault();
+                    if (res.status === 200 || res.status === 201){
+                        MySwal.fire({
+                            title: 'Success!',
+                            text: 'The skill has been added.',
+                            icon: 'success',
+                            confirmButtonColor: '#7FCFFF',
+                            allowOutsideClick: false,
+                            allowEscapeKey: false
+                          }).then((result) => {
+                            if (result.isConfirmed){
+                                window.location.reload();
+                            }
+                          })
                     }else{
-                        console.log(res.status);
-                        event.preventDefault();
+                        MySwal.fire({
+                            title: 'Something went wrong!',
+                            text: `Status ${res.status} (${res.statusText})`,
+                            icon: 'error',
+                            confirmButtonColor: '#7FCFFF',
+                            allowOutsideClick: false,
+                            allowEscapeKey: false
+                          })
                     }
                 })
                 .catch((err) => {
                     console.log(err);
                 })
-
-        console.log(data);
         
     };
 
@@ -61,7 +78,7 @@ function NewSkill () {
             
             <h4 className="top-header">Add new skill</h4>
             <div className="container">
-                <form>
+                <form onSubmit={handleSubmit}>
                     <div className="skill-input">
                         <Row>
                             <Col>
@@ -126,9 +143,9 @@ function NewSkill () {
                                 </tr>
                             </tbody>
                         </Table>    
-                        <button type="submit" className="submit-btn" onClick={handleSubmit}>save new skill</button>  
-                    </div>
-                </form>     
+                        <button type="submit" value="Submit" className="submit-btn" >save new skill</button>  
+                    </div>      
+                </form>
             </div>
 
         </div>
