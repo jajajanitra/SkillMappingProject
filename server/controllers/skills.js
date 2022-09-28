@@ -15,13 +15,14 @@ export const getSkills = async (req,res) =>{
 };
 
 export const newSkill = async (req,res) =>{
-    const { id ,name ,des ,levels : [{level_id, level_des } ]} = req.body;
-    const SkillsModel = new SkillsModel({ id ,name ,des ,levels : [{level_id, level_des } ] })
+    const { id ,name ,des ,levels } = req.body;
+    const SkillModel = new SkillsModel({ id ,name ,des ,levels})
 
+    console.log(req.body);
     try {
-        await SkillsModel.save();
+        await SkillModel.save();
 
-        res.status(201).json(SkillsModel );
+        res.status(201).json(SkillModel );
     } catch (error) {
         res.status(409).json({ message: error.message });
     }

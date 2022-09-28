@@ -10,8 +10,9 @@ const skillsSchema = mongoose.Schema({
         level_des : String
         }
     ]
-});
+},{versionKey: false});
 
 const SkillsModel = mongoose.model('SkillsModel',skillsSchema);
+
 
 export default SkillsModel;

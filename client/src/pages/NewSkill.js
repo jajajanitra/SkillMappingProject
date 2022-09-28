@@ -1,6 +1,9 @@
 import React, {useState} from "react";
 import {Table, Row, Col} from "react-bootstrap";
+import axios from "axios";
 import '../css/NewSkill.css';
+
+
 
 function NewSkill () {
     const [name, setName] = useState("");
@@ -11,7 +14,9 @@ function NewSkill () {
     const [level4, setLevel4] = useState("");
     const [level5, setLevel5] = useState("");
 
-    const handleSubmit = (event) => {
+    const URL = "http://localhost:5001";
+
+    const handleSubmit = async (event) => {
         var data = {
             name: name,
             des: description,
@@ -33,8 +38,22 @@ function NewSkill () {
                     level_des: level5},
             ]
         }
+        await axios.post(URL + "/skills", data)
+                .then((res) => {
+                    if (res.status === 200){
+                        console.log(res.status);
+                        event.preventDefault();
+                    }else{
+                        console.log(res.status);
+                        event.preventDefault();
+                    }
+                })
+                .catch((err) => {
+                    console.log(err);
+                })
+
         console.log(data);
-        event.preventDefault();
+        
     };
 
     return (
@@ -42,7 +61,7 @@ function NewSkill () {
             
             <h4 className="top-header">Add new skill</h4>
             <div className="container">
-                <form onSubmit={handleSubmit}>
+                <form>
                     <div className="skill-input">
                         <Row>
                             <Col>
@@ -107,7 +126,7 @@ function NewSkill () {
                                 </tr>
                             </tbody>
                         </Table>    
-                        <button type="submit" className="submit-btn">save new skill</button>  
+                        <button type="submit" className="submit-btn" onClick={handleSubmit}>save new skill</button>  
                     </div>
                 </form>     
             </div>

@@ -2,6 +2,10 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import {Table,Form} from "react-bootstrap";
 import '../css/AchievedSkill.css';
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+
+const MySwal = withReactContent(Swal)
 
 function AchievedSkill () {
     const [course, setCourse] = useState("");
@@ -85,7 +89,20 @@ function AchievedSkill () {
         .then((res) => {
             console.log(res.status);
             if (res.status === 200){
-                // window.location.reload();
+                MySwal.fire({
+                    title: 'Your achieved skills has been saved',
+                    icon: 'success',
+                    confirmButtonColor: '#7FCFFF'
+                  }).then((result) => {
+                    if (result.isConfirmed){
+                        window.location.reload();
+                    }
+                  })
+            }else{
+                MySwal.fire({
+                    title: 'Something went wrong!',
+                    icon: 'error'
+                  })
             }
         })
         .catch((err) => {
