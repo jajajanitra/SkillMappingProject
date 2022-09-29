@@ -14,35 +14,73 @@ export const getCourses = async (req,res) =>{
 };
 
 
-export const updateCoursesSkill = async (req, res)=>{
+// export const updateCoursesSkill = async (req, res)=>{
     
-    const { course_id,skills } = req.body;
+//     const { course_id,skills } = req.body;
 
-    console.log(req.body);
-    console.log(skills);
+//     console.log(req.body);
+//     console.log(skills);
 
-    if (!mongoose.Types.ObjectId.isValid(course_id)) return res.status(404).send(`No post with id: ${course_id}`);
+//     if (!mongoose.Types.ObjectId.isValid(course_id)) return res.status(404).send(`No post with id: ${course_id}`);
 
-    const updatedCoursesSkill = { skills };
+//     const updatedCoursesSkill = { skills };
 
-    await CoursesModel.findByIdAndUpdate(course_id, updatedCoursesSkill, { new: true });
+//     await CoursesModel.findByIdAndUpdate(course_id, updatedCoursesSkill, { new: true });
 
-    res.json(updateCoursesSkill);
+//     res.json(updateCoursesSkill);
 
-    console.log(res);
+//     console.log(res);
     
-}; 
+// }; 
 
 
-/*export const updatePost = async (req, res) => {
-    const { id } = req.params;
-    const { title, message, creator, selectedFile, tags } = req.body;
+// export const newSelTopic = async (req,res) =>{
+//     const { id,name ,des , sel_topic,levels } = req.body;
+//     const SkillModel = new CoursesModel({ id,name ,des , sel_topic,levels})
+
+//     console.log(req.body);
+//     try {
+//         await CoursesModel.save();
+
+//         res.status(201).json(SkillModel );
+//     } catch (error) {
+//         res.status(409).json({ message: error.message });
+//     }
+// }
+
+
+export const UpdateorNew = async (req,res) =>{
+    const { course_id,id,name ,des , sel_topic,skills,isSelTopic } = req.body;
+
+    if( isSelTopic == true /*เป็นseltopic*/){
+        // const { id,name ,des , sel_topic,levels } = req.body;
+
+        const Courses = new CoursesModel({ id,name ,des , sel_topic,skills})
+        
+        console.log(req.body);            
+        try {
+            await Courses.save();
     
-    if (!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send(`No post with id: ${id}`);
+            res.status(201).json (Courses );
+        } catch (error) {
+            res.status(409).json({ message: error.message });
+        }
+    }
+    else{
+        // const { course_id,skills } = req.body;
 
-    const updatedPost = { creator, title, message, tags, selectedFile, _id: id };
+        console.log(req.body);
+        console.log(skills);
 
-    await PostMessage.findByIdAndUpdate(id, updatedPost, { new: true });
+        if (!mongoose.Types.ObjectId.isValid(course_id)) return res.status(404).send(`No post with id: ${course_id}`);
 
-    res.json(updatedPost);
-}*/
+        const updatedCoursesSkill = { skills };
+
+        await CoursesModel.findByIdAndUpdate(course_id, updatedCoursesSkill, { new: true });
+
+        res.json(updatedCoursesSkill);
+
+        console.log(res);
+    }
+
+}

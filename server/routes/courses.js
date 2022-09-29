@@ -1,11 +1,11 @@
 import express from 'express';
 import { get } from 'mongoose';
 
-import { getCourses , updateCoursesSkill } from '../controllers/courses.js';
+import { getCourses , UpdateorNew  } from '../controllers/courses.js';
 
 const router = express.Router();
 
 router.get( '/' , getCourses );
-router.post( '/' , updateCoursesSkill );
+router.post( '/' , UpdateorNew  );
 
 export default router;

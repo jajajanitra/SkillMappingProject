@@ -15,8 +15,8 @@ export const getSkills = async (req,res) =>{
 };
 
 export const newSkill = async (req,res) =>{
-    const { id ,name ,des ,levels } = req.body;
-    const SkillModel = new SkillsModel({ id ,name ,des ,levels})
+    const { name ,des ,levels } = req.body;
+    const SkillModel = new SkillsModel({ name ,des ,levels})
 
     console.log(req.body);
     try {
