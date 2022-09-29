@@ -116,7 +116,7 @@ function NewSkill () {
                             <thead>
                                 <tr>
                                     <th className="level-col" >Skill level</th>
-                                    <th className="level-col" >Skill description</th>
+                                    <th className="" >Description</th>
                                 </tr>
                             </thead>
 
