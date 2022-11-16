@@ -40,10 +40,15 @@ function AchievedSkill () {
         const index = event.target.selectedIndex;
         const el = event.target.childNodes[index]
         const option =  el.getAttribute('id'); 
+
+        console.log(option,"opt");
         
         if (option === "261494" || option === "261497" || option === "261498" || option === "261499"){
             setIsSelTopic(true);
+        }else{
+            setIsSelTopic(false);
         }
+        console.log(isSelTopic);
         setCourse(event.target.value);
     };
 
@@ -74,34 +79,27 @@ function AchievedSkill () {
     const validateData = () => {
         console.log("course", course);
         if(course !== 0){
-            console.log("0");
+            console.log("1");
             if (isSelTopic && topic === " "){
+                console.log(isSelTopic, topic, "f");
                 setValidated(false); 
+                return false;
             }else{
+                console.log(true);
                 setValidated(true); 
+                return true;
             }
         }else{
-            console.log("1");
+            console.log("0");
             setValidated(false);
+            return false;
         }
     };
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        // validateData();
-        // if (validated){
-                
-        // }else{
-        //     MySwal.fire({
-        //         text: `Please inform required field.`,
-        //         icon: 'warning',
-        //         confirmButtonColor: '#7FCFFF',
-        //         allowOutsideClick: false,
-        //         allowEscapeKey: false
-        //     })
-        // }
-
-        var cleaned_skill = skills.filter(skill => skill.isChecked).slice(0);
+        if (validateData()){
+            var cleaned_skill = skills.filter(skill => skill.isChecked).slice(0);
 
             cleaned_skill.forEach((skill) => {
                 delete skill.des;
@@ -119,7 +117,7 @@ function AchievedSkill () {
                 topic: topic,
                 skills: cleaned_skill
                 }
-            console.log(data);
+            console.log(data);        
 
             await axios.post(Course_URL, data)
             .then((res) => {
@@ -151,6 +149,16 @@ function AchievedSkill () {
             .catch((err) => {
                 console.log(err);
             })
+            
+        }else{
+            MySwal.fire({
+                text: `Please inform required field.`,
+                icon: 'warning',
+                confirmButtonColor: '#7FCFFF',
+                allowOutsideClick: false,
+                allowEscapeKey: false
+            })
+        }
         
     };
 
@@ -165,14 +173,15 @@ function AchievedSkill () {
                             Course:
                         </h6>
                         <Form.Select className="courses-dropdown" value={course} onChange={handleCourseChange} required>
-                            <option value="0" id="0" >Please select course</option>
+                            <option>Please select course</option>
                             {options.map((option) => (
                                 <option value={option._id} id={option.id} >{option.id} {option.name}</option>
                             ))}
                         </Form.Select> 
                         <h6>
-                            Topic:
+                            Topic for Selected Topics Course:
                         </h6>
+                        
                         <input type="text" onChange={e => setTopic(e.target.value)}></input>
                     </div>
                     
