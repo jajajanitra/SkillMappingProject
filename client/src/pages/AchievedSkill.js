@@ -77,20 +77,15 @@ function AchievedSkill () {
     };
 
     const validateData = () => {
-        console.log("course", course);
         if(course !== 0){
-            console.log("1");
             if (isSelTopic && topic === " "){
-                console.log(isSelTopic, topic, "f");
                 setValidated(false); 
                 return false;
             }else{
-                console.log(true);
                 setValidated(true); 
                 return true;
             }
         }else{
-            console.log("0");
             setValidated(false);
             return false;
         }
@@ -117,7 +112,7 @@ function AchievedSkill () {
                 topic: topic,
                 skills: cleaned_skill
                 }
-            console.log(data);        
+            // console.log(data);        
 
             await axios.post(Course_URL, data)
             .then((res) => {
