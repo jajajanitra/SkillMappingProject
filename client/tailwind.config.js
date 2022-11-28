@@ -11,7 +11,7 @@ module.exports = {
         "dark-purple-bg": "#B080FF",
         "dark-purple-hv": "#A772FF",
         "yellow": "#FFF296",
-        "dark-blue-bg": "#6a8aeb"
+        "dark-blue-bg": "#7FCFFF"
       }
     },
   },

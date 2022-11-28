@@ -10,7 +10,7 @@ const SideBar = () => {
     return (
         <div className="flex">
 
-            <div className={`bg-gradient-to-b from-dark-purple-bg to-dark-purple-font h-screen p-3 ${open ? "w-64" : "w-16"}
+            <div className={`bg-gradient-to-b from-dark-purple-bg to-dark-blue-bg h-screen p-3 ${open ? "w-64" : "w-16"}
             duration-300 relative`}>
                 
                 <div className='inline-flex mb-2'>
