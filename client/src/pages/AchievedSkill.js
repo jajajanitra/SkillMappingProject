@@ -106,44 +106,46 @@ function AchievedSkill () {
                 delete skill['name'];
             })
 
+            console.log("skill", cleaned_skill);
+
             var data = {
                 course_id: course,
                 isSelTopic: isSelTopic,
                 topic: topic,
                 skills: cleaned_skill
                 }
-            // console.log(data);        
+            console.log(data);        
 
-            await axios.post(Course_URL, data)
-            .then((res) => {
-                console.log(res.status);
-                if (res.status === 200){
-                    MySwal.fire({
-                        title: 'Sucess!',
-                        text: 'Your achieved skills has been saved',
-                        icon: 'success',
-                        confirmButtonColor: '#7FCFFF',
-                        allowOutsideClick: false,
-                        allowEscapeKey: false
-                    }).then((result) => {
-                        if (result.isConfirmed){
-                            window.location.reload();
-                        }
-                    })
-                }else{
-                    MySwal.fire({
-                        title: 'Something went wrong!',
-                        text: `Status ${res.status} (${res.statusText})`,
-                        icon: 'error',
-                        confirmButtonColor: '#7FCFFF',
-                        allowOutsideClick: false,
-                        allowEscapeKey: false
-                    })
-                }
-            })
-            .catch((err) => {
-                console.log(err);
-            })
+            // await axios.post(Course_URL, data)
+            // .then((res) => {
+            //     console.log(res.status);
+            //     if (res.status === 200){
+            //         MySwal.fire({
+            //             title: 'Sucess!',
+            //             text: 'Your achieved skills has been saved',
+            //             icon: 'success',
+            //             confirmButtonColor: '#7FCFFF',
+            //             allowOutsideClick: false,
+            //             allowEscapeKey: false
+            //         }).then((result) => {
+            //             if (result.isConfirmed){
+            //                 window.location.reload();
+            //             }
+            //         })
+            //     }else{
+            //         MySwal.fire({
+            //             title: 'Something went wrong!',
+            //             text: `Status ${res.status} (${res.statusText})`,
+            //             icon: 'error',
+            //             confirmButtonColor: '#7FCFFF',
+            //             allowOutsideClick: false,
+            //             allowEscapeKey: false
+            //         })
+            //     }
+            // })
+            // .catch((err) => {
+            //     console.log(err);
+            // })
             
         }else{
             MySwal.fire({

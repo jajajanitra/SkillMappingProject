@@ -5,18 +5,22 @@
 }
 
 .Home {
-  background-color: white;
+  background-color: #F5EFFF;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: #B080FF;
+  color: #925FF0;
 }
 
 .App-link {
   color: #61dafb;
+}
+
+body {
+  background-color: #F5EFFF; 
 }
 
 @keyframes App-logo-spin {
