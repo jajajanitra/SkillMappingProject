@@ -9,7 +9,7 @@ import AchievedSkill from './pages/AchievedSkill';
 import NewSkill from './pages/NewSkill';
 
 //students
-import ST_Home from './pages/ST_Home';
+import StuHome from './pages/StuHome';
 
 function App() {
   return (
@@ -19,8 +19,7 @@ function App() {
         <Route path="/achievedSkill" element={<AchievedSkill />} />
         <Route path="/newSkill" element={<NewSkill />} />
 
-        {/* for students */}
-        <Route path="/student_home" element={<ST_Home />} />
+        <Route path="/student_home" element={<StuHome />} />
       </Routes>
     </div>
   );

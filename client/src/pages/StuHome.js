@@ -1,6 +1,6 @@
 import SideBar from "../components/SideBar";
 
-function ST_Home () {
+function StuHome () {
     return (
         <div>
             <SideBar></SideBar>
@@ -8,4 +8,4 @@ function ST_Home () {
     );
 }
 
-export default ST_Home;
+export default StuHome;

@@ -115,30 +115,30 @@ function NewSkill () {
                         <Table striped>
                             <thead>
                                 <tr>
-                                    <th className="level-col" >Skill level</th>
+                                    <th className="levels-col" >Skill level</th>
                                     <th className="" >Description</th>
                                 </tr>
                             </thead>
 
                             <tbody>
                                 <tr>
-                                    <td className="level-col" >1</td>
+                                    <td className="levels-col" >1</td>
                                     <td><textarea className="level-textbox" onChange={e => setLevel1(e.target.value)} required/></td>
                                 </tr>
                                 <tr>
-                                    <td className="level-col" >2</td>
+                                    <td className="levels-col" >2</td>
                                     <td><textarea className="level-textbox" onChange={e => setLevel2(e.target.value)} required/></td>
                                 </tr>
                                 <tr>
-                                    <td className="level-col" >3</td>
+                                    <td className="levels-col" >3</td>
                                     <td><textarea className="level-textbox" onChange={e => setLevel3(e.target.value)} required/></td>
                                 </tr>
                                 <tr>
-                                    <td className="level-col" >4</td>
+                                    <td className="levels-col" >4</td>
                                     <td><textarea className="level-textbox" onChange={e => setLevel4(e.target.value)} required/></td>
                                 </tr>
                                 <tr>
-                                    <td className="level-col" >5</td>
+                                    <td className="levels-col" >5</td>
                                     <td><textarea className="level-textbox" onChange={e => setLevel5(e.target.value)} required/></td>
                                 </tr>
                             </tbody>

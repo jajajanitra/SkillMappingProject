@@ -5,7 +5,7 @@ import {TbClipboardCheck} from 'react-icons/tb';
 
 import { useState } from 'react';
 
-const SideBar = () => {
+function SideBar () {
     const [open, setOpen] = useState(true);
     return (
         <div className="flex">
