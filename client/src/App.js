@@ -10,6 +10,7 @@ import NewSkill from './pages/NewSkill';
 
 //students
 import StuHome from './pages/StuHome';
+import StuAddCourse from './pages/StuAddCourse';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/newSkill" element={<NewSkill />} />
 
         <Route path="/student_home" element={<StuHome />} />
+        <Route path="/student_addCourse" element={<StuAddCourse />} />
       </Routes>
     </div>
   );

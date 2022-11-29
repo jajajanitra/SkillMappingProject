@@ -123,7 +123,7 @@ function AchievedSkill () {
             await axios.post(Course_URL, data)
             .then((res) => {
                 console.log(res.status);
-                if (res.status === 200){
+                if (res.status === 200 || res.status === 201){
                     MySwal.fire({
                         title: 'Sucess!',
                         text: 'Your achieved skills has been saved',
