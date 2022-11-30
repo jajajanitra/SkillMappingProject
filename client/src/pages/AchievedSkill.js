@@ -30,7 +30,9 @@ function AchievedSkill () {
             axios.spread((...responses) => {
                 const resCourses = responses[0];
                 const resSkills = responses[1];
-                setOptions(resCourses.data);
+                setOptions(resCourses.data.sort(
+                    (p1, p2) => (p1.id > p2.id) ? 1 : (p1.id < p2.id) ? -1 : 0));
+                // setOptions(resCourses.data);
                 setSkills(resSkills.data);
               }
         ))
@@ -192,7 +194,7 @@ function AchievedSkill () {
                         <h5>
                             Skills
                         </h5>  
-                        <label>Please select all skills that student will achive in this course.</label>  
+                        <label>Please select all skills that student will acheive in this course.</label>  
                         {skills.map((skill, index) => (
                             <div key={index}>
                                 <input
@@ -234,8 +236,7 @@ function AchievedSkill () {
                                             ))}
                                         </tr>
                                         <tr>
-                                            <td></td>
-                                            <td></td>
+                                            <td colspan="2"><h6>Please select level of acheieved skill</h6></td>
                                             {skill.levels.map((level) => (
                                                 <td className="level-col">
                                                     <input type="radio" name={skill.name} id={index} value={level.level_id} onChange={handleLevelChange}></input>
@@ -245,8 +246,9 @@ function AchievedSkill () {
                                         </tr>
                                     </tbody>
                                 </Table>
+
                                 <div className="comment">
-                                    <label>comment</label>
+                                    <label>You can suggest detail of each level here.</label>
                                     <textarea className="comment-box" name={skill.name} id={index} onChange={handleCommentChange}></textarea>  
                                 </div>
                                 <br/>

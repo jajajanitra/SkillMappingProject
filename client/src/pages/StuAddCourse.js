@@ -26,7 +26,6 @@ function StuAddCourse () {
                 setCourses(resCourses.data);
             }
         ))
-        
     };
 
     const handleSearchChange = (e) => {
@@ -40,7 +39,7 @@ function StuAddCourse () {
     };
 
     const addCourse = () => {
-
+        console.log(courses);
     };
 
     return (
@@ -74,15 +73,17 @@ function StuAddCourse () {
                             </tr>
                         </thead>
 
-                        {filteredCourses.map((course, index) => (
-                            <tr className="border-b hover:bg-gray-50">
-                                <td className="p-3">{course.id}</td>
-                                <td className="p-3">{course.name}</td>
-                                <tdc lassName="p-3">{course.topic}</tdc>
-                                <td className="text-center p-3"><button className="yellow-btn" onClick={addCourse}>+ เพิ่มรายวิชา</button></td>
-                            </tr>
-                            
-                        ))}
+                        <tbody>
+                            {filteredCourses.map((course, index) => (
+                                <tr className="border-b hover:bg-gray-50">
+                                    <td className="p-3">{course.id}</td>
+                                    <td className="p-3">{course.name}</td>
+                                    <td className="p-3">{course.sel_topic}</td>
+                                    <td className="text-center p-3"><button className="yellow-btn" onClick={addCourse}>+ เพิ่มรายวิชา</button></td>
+                                </tr>
+                                
+                            ))}    
+                        </tbody>
 
                     </table>                    
                 </div>
