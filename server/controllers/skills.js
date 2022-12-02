@@ -1,6 +1,6 @@
 import SkillsModel from '../models/skillmodel.js';
 
-
+//show skill
 export const getSkills = async (req,res) =>{
 
     try{
@@ -14,6 +14,7 @@ export const getSkills = async (req,res) =>{
     }
 };
 
+//add skill
 export const newSkill = async (req,res) =>{
     const { name ,des ,levels } = req.body;
     const SkillModel = new SkillsModel({ name ,des ,levels})

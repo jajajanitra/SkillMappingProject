@@ -13,7 +13,7 @@ const coursesSchema = mongoose.Schema({
         comment : String
         }
     ]
-});
+},{versionKey: false});
 
 const CoursesModel = mongoose.model('CoursesModel',coursesSchema);
 
