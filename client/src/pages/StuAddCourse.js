@@ -34,7 +34,7 @@ function StuAddCourse () {
 
     const searchID = () => {
         setFilteredCourses(courses.filter((course) => {
-            return course.id == searchInput
+            return course.id === searchInput
         }))
     };
 
@@ -46,7 +46,7 @@ function StuAddCourse () {
         <div className="flex">
             <SideBar></SideBar>
             <div className="w-full p-2">
-                <h3 className="mt-4 mb-2 text-dark-purple-font text-center">รายวิชาที่เรียน</h3>
+                <h3 className="top-header">รายวิชาที่เรียน</h3>
 
                 <div className="grid grid-flow-row-dense grid-cols-6 gap-4">
                     <input
