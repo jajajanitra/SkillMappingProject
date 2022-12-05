@@ -14,6 +14,7 @@
   .top-header{
     @apply mt-4 mb-2 text-dark-purple-font text-center
   }
+
 }
 
 body {
@@ -31,4 +32,6 @@ code {
     monospace;
 }
 
+.nav-tabs{
 
+}

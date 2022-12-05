@@ -2,10 +2,11 @@ const { purple } = require('color-name')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js}"],
+  content: ["./src/**/*.{html,js}", './node_modules/tw-elements/dist/js/**/*.js'],
   theme: {
     extend: {
       colors: {
+        "black": "#333333",
         "dark-purple-font": "#925FF0",
         "light-purple-bg": "#F5EFFF",
         "dark-purple-bg": "#B080FF",
@@ -17,5 +18,7 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('tw-elements/dist/plugin')
+  ],
 }

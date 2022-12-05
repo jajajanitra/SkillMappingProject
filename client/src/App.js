@@ -1,5 +1,7 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'flowbite';
+import 'tw-elements';
 
 import { Routes, Route } from 'react-router-dom';
 
@@ -14,6 +16,7 @@ import StuAddCourse from './pages/StuAddCourse';
 import StuSkills from './pages/StuSkills';
 import StuCareers from './pages/StuCareers';
 import StuSuggestion from './pages/StuSuggestion';
+import StuFillInformation from './pages/StuFillInformation';
 
 function App() {
   return (
@@ -28,6 +31,7 @@ function App() {
         <Route path="/student_careers" element={<StuCareers />} />
         <Route path="/student_suggestion" element={<StuSuggestion />} />
         <Route path="/student_skills" element={<StuSkills />} />
+        <Route path="/student_fillInformation" element={<StuFillInformation/>} />
       </Routes>
     </div>
   );
