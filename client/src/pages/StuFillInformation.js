@@ -4,6 +4,7 @@ import axios from "axios";
 import { Server_URL, Skill_URL, Course_URL } from "../constants";
 
 import SideBar from "../components/SideBar";
+import { co } from "co";
 
 function StuFillInformation () {
     const [skills, setSkills] = useState([]);
@@ -14,6 +15,7 @@ function StuFillInformation () {
 
     const requestSkills = axios.get(Skill_URL);
     const requestCourses = axios.get(Course_URL);
+    const stuID = '123456789';
 
     useEffect(() => {
         getData();
@@ -56,8 +58,18 @@ function StuFillInformation () {
         }))
     };
 
-    const addCourse = () => {
-        console.log(courses);
+    const addCourse = async (index) => {
+        
+        await axios.post(Server_URL+'career',{
+            student_id: stuID,
+            courses: [
+                {
+                    course_id: courses[index]._id,
+                    couse_name: courses[index].name     
+                }
+            ]
+             
+        })
     };
 
     return (
@@ -145,7 +157,7 @@ function StuFillInformation () {
                                             <td className="p-3">{course.id}</td>
                                             <td className="p-3">{course.name}</td>
                                             <td className="p-3">{course.sel_topic}</td>
-                                            <td className="text-center p-3"><button className="yellow-btn" onClick={addCourse}>+ เพิ่มรายวิชา</button></td>
+                                            <td className="text-center p-3"><button className="yellow-btn" onClick={addCourse(index)}>+ เพิ่มรายวิชา</button></td>
                                         </tr>
                                         
                                     ))}    
