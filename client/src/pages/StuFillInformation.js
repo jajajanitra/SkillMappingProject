@@ -4,7 +4,6 @@ import axios from "axios";
 import { Server_URL, Skill_URL, Course_URL } from "../constants";
 
 import SideBar from "../components/SideBar";
-import { co } from "co";
 
 function StuFillInformation () {
     const [skills, setSkills] = useState([]);

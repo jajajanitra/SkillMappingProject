@@ -54,11 +54,11 @@ function StuCareers () {
                     >ค้นหา</button>
                 </div>
 
-                <div>
+                <div class="grid grid-cols-2 gap-6 p-4">
                     {careers.map((career, index) => (
-                        <div class="flex justify-center my-1">
-                            <div class="block px-6 py-2 rounded-lg shadow-md bg-white w-1/2 min-w-fit border-solid border-b-8 border-light-purple">
-                                <p class="text-gray-700 text-xl leading-tight font-medium my-1" >frontend deverloper</p>
+                        <div class="flex justify-center my-4">
+                            <div class="block px-6 py-2 rounded-lg shadow-md bg-white hover:bg-sky-700 w-full min-w-fit border-solid border-b-8 border-light-purple">
+                                <p class="text-gray-700 text-xl leading-tight font-medium my-1" >{career.name_career}</p>
                             </div>
                         </div>
                     ))}
