@@ -1,20 +1,23 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
 
 import { Server_URL, Skill_URL, Course_URL } from "../constants";
 
 import SideBar from "../components/SideBar";
 
+const MySwal = withReactContent(Swal);
+
 function StuFillInformation () {
     const [skills, setSkills] = useState([]);
-    const [opens, setOpens] = useState([]);
     const [courses, setCourses] = useState([]);
     const [filteredCourses, setFilteredCourses] = useState([]);
     const [searchInput, setSearchInput] = useState("");
 
     const requestSkills = axios.get(Skill_URL);
     const requestCourses = axios.get(Course_URL);
-    const stuID = '123456789';
+    const token = "12345";
 
     useEffect(() => {
         getData();
@@ -29,22 +32,9 @@ function StuFillInformation () {
                 const resCourses = responses[1];
                 setCourses(resCourses.data);
 
-                setOpens(new Array(skills.length).fill(false));   
             }
         ))
-        console.log(skills);
-    };
-
-    const handleOpenChange = (event) => {
-        var index = event.target.value;
-        const toggleOpen = opens.map((o, i) => {
-            if (i === index) {
-                return !o;
-            } else {
-                return o;
-            }
-        });
-        setOpens(toggleOpen);
+        // console.log(skills);
     };
 
     const handleSearchChange = (e) => {
@@ -57,19 +47,49 @@ function StuFillInformation () {
         }))
     };
 
-    const addCourse = async (index) => {
-        
-        await axios.post(Server_URL+'career',{
-            student_id: stuID,
-            courses: [
-                {
-                    course_id: courses[index]._id,
-                    couse_name: courses[index].name     
-                }
-            ]
-             
+    const addCourse = async (event, course) => {
+        // console.log(course);
+        await axios.post(Server_URL+'/student/courses',{
+            token: token,
+            course_id: course.id,
+            course_name: course.name,
+            id: course._id
+            
         })
+        .then(
+            (res) => {
+                console.log(res);
+                if (res.status === 200 || res.status === 201){
+                    MySwal.fire({
+                        title: 'เพิ่มรายวิชาเรียบร้อย!',
+                        text: '',
+                        icon: 'success',
+                        confirmButtonColor: '#7FCFFF',
+                        allowOutsideClick: false,
+                        allowEscapeKey: false
+                    })
+                }else{
+                    MySwal.fire({
+                        title: 'เกิดข้อผิดพลาด!',
+                        text: `Status ${res.status} (${res.statusText})`,
+                        icon: 'error',
+                        confirmButtonColor: '#7FCFFF',
+                        allowOutsideClick: false,
+                        allowEscapeKey: false
+                    })
+                }
+            }
+        )
     };
+
+    const addSelfSkill = async () => {
+
+    };
+
+    const addLike = async () => {
+
+    };
+
 
     return (
         <div className="flex">
@@ -176,7 +196,7 @@ function StuFillInformation () {
                                             <td className="p-3">{course.id}</td>
                                             <td className="p-3">{course.name}</td>
                                             <td className="p-3">{course.sel_topic}</td>
-                                            <td className="text-center p-3"><button className="yellow-btn" onClick={addCourse(index)}>+ เพิ่มรายวิชา</button></td>
+                                            <td className="text-center p-3"><button className="yellow-btn" onClick={event => addCourse(event, course)}>+ เพิ่มรายวิชา</button></td>
                                         </tr>
                                         
                                     ))}    
