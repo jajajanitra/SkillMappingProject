@@ -5,8 +5,11 @@ import SideBar from "../components/SideBar";
 function StuSuggestion () {
 
     return (
-        <div>
+        <div className="flex">
             <SideBar></SideBar>
+            <div className="p-4 w-full">
+                <h4>แนะนำอาชีพ</h4>
+            </div>
         </div>
     )
 }

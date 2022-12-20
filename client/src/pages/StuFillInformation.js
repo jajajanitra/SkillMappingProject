@@ -74,7 +74,8 @@ function StuFillInformation () {
     return (
         <div className="flex">
             <SideBar></SideBar>
-            <div className="w-full p-3">
+            <div className="w-full p-4">
+                <h4>กรอกข้อมูล</h4>
                 <ul class="
                 nav nav-tabs nav-justified
                 flex flex-col

@@ -39,7 +39,8 @@ function StuCareers () {
     return (
         <div className="flex">
             <SideBar></SideBar>
-            <div className="w-full p-3">
+            <div className="w-full p-4">
+                <h4>ข้อมูลอาชีพ</h4>
                 <div className="grid grid-flow-row-dense grid-cols-6 gap-4">
                     <input
                     className="h-10 w-full p-2 ml-3 mr-3 col-span-5"
