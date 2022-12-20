@@ -20,44 +20,57 @@ function SideBar () {
             <ul className={`${!open && "hidden"} ml-0`}>
                 <li className='text-white text-sm flex-items-center gap-x-4 p-2
                     hover:bg-dark-purple-hv rounded-md mt-1'>
-                    <span className={`block float-left text-xl mr-2 `}><AiOutlineHome/></span>
-                    <span className={`text-base font-medium flex-1 `}>หน้าแรก</span>
+                    <a href="/student_home"
+                    className='text-white no-underline'>
+                        <div>
+                        <span className={`block float-left text-xl mr-2 `}><AiOutlineHome/></span>
+                        <span className={`text-base font-medium flex-1 `}>หน้าแรก</span>      
+                        </div>                      
+                    </a>
                 </li>
 
                 <li className='text-white text-sm flex-items-center gap-x-4 p-2
                     hover:bg-dark-purple-hv rounded-md mt-1'>
-                    <span className={`block float-left text-xl mr-2 `}><BiBookAdd /></span>
-                    <span className={`text-base font-medium flex-1 `}>รายวิชาที่เรียน</span>
+                    <a href="/student_fillInformation"
+                    className='text-white no-underline'>
+                        <div>
+                        <span className={`block float-left text-xl mr-2 `}><BiBookAdd /></span>
+                        <span className={`text-base font-medium flex-1 `}>กรอกข้อมูล</span>
+                        </div>
+                    </a>
                 </li>
 
                 <li className='text-white text-sm flex-items-center gap-x-4 p-2
                     hover:bg-dark-purple-hv rounded-md mt-1'>
-                    <span className={`block float-left text-xl mr-2 `}><TbClipboardCheck /></span>
-                    <span className={`text-base font-medium flex-1 `}>ประเมินทักษะ</span>
+                    <a href="/student_careers"
+                    className='text-white no-underline'>
+                        <div>
+                        <span className={`block float-left text-xl mr-2 `}><AiOutlineFileSearch /></span>
+                        <span className={`text-base font-medium flex-1 `}>ข้อมูลอาชีพ</span>   
+                        </div>                         
+                    </a>
                 </li>
 
                 <li className='text-white text-sm flex-items-center gap-x-4 p-2
                     hover:bg-dark-purple-hv rounded-md mt-1'>
-                    <span className={`block float-left text-xl mr-2 `}><AiOutlineLike /></span>
-                    <span className={`text-base font-medium flex-1 `}>ประเมินความชอบ</span>
+                    <a href="/student_suggestion"
+                    className='text-white no-underline'>
+                        <div>
+                        <span className={`block float-left text-xl mr-2 `}><AiOutlineBulb /></span>
+                        <span className={`text-base font-medium flex-1 `}>แนะนำอาชีพ</span>
+                        </div>
+                    </a>
                 </li>
 
                 <li className='text-white text-sm flex-items-center gap-x-4 p-2
                     hover:bg-dark-purple-hv rounded-md mt-1'>
-                    <span className={`block float-left text-xl mr-2 `}><AiOutlineFileSearch /></span>
-                    <span className={`text-base font-medium flex-1 `}>ข้อมูลอาชีพ</span>
-                </li>
-
-                <li className='text-white text-sm flex-items-center gap-x-4 p-2
-                    hover:bg-dark-purple-hv rounded-md mt-1'>
-                    <span className={`block float-left text-xl mr-2 `}><AiOutlineBulb /></span>
-                    <span className={`text-base font-medium flex-1 `}>แนะนำอาชีพ</span>
-                </li>
-
-                <li className='text-white text-sm flex-items-center gap-x-4 p-2
-                    hover:bg-dark-purple-hv rounded-md mt-1'>
-                    <span className={`block float-left text-xl mr-2 `}><AiOutlineUser /></span>
-                    <span className={`text-base font-medium flex-1 `}>ข้อมูลผู้ใช้</span>
+                    <a href="/student_user"
+                    className='text-white no-underline'>
+                        <div>
+                        <span className={`block float-left text-xl mr-2 `}><AiOutlineUser /></span>
+                        <span className={`text-base font-medium flex-1 `}>ข้อมูลผู้ใช้</span>
+                        </div>
+                    </a>
                 </li>
 
             </ul>
