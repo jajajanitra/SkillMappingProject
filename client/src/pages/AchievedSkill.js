@@ -165,100 +165,132 @@ function AchievedSkill () {
         
     };
 
+    const showInstruction = () => {
+        MySwal.fire({
+            title: 'Instruction',
+            html: `<div class="align-left">
+            1. Select course from dropdown manu.<br /> <br />
+            2. Select all skills that the students will achieved from the course. <br /> <br />
+            3. Select the level of skill students will achieved based on the level description or rubric. <br /> <br />
+            4. If you have any suggestion on the level description, please type in the comment box under that skill. <br /> <br />
+            5. If you have suggestion on additional skill provided by the course, please add via the form below save button.<br /> <br />
+            </div>`,
+            confirmButtonColor: '#7FCFFF',
+            allowOutsideClick: false,
+            allowEscapeKey: false
+        })
+    };
+
 
     return (
         <div>
-
-            <h4 className="top-header">Add achieved skills from course</h4>
-            <div className="container">
-                <form onSubmit={handleSubmit}>
-                    <div>
-                        <h6>
-                            Course:
-                        </h6>
-                        <Form.Select className="courses-dropdown" value={course} onChange={handleCourseChange} required>
-                            <option>Please select course</option>
-                            {options.map((option) => (
-                                <option value={option._id} id={option.id} >{option.id} {option.name}</option>
-                            ))}
-                        </Form.Select> 
-                        <h6>
-                            Topic for Selected Topics Course:
-                        </h6>
-                        
-                        <input type="text" onChange={e => setTopic(e.target.value)}></input>
-                    </div>
-                    
-                    <div>
-                        <br/>
-                        <h5>
-                            Skills
-                        </h5>  
-                        <label>Please select all skills that student will acheive in this course.</label>  
-                        {skills.map((skill, index) => (
-                            <div key={index}>
-                                <input
-                                type="checkbox"
-                                name={skill.name}
-                                value={skill.name}
-                                checked={skill?.isChecked || false}
-                                onChange={handleSkillsChange}
-                                />
-                                <label>{skill.name}</label>
-                            </div>
-                        ))}
-                    </div>
-
-                    <div>
-                        <br/>
-                        {skills.filter(skill => skill.isChecked).map((skill, index) => (
+            <div class="grid grid-flow-row auto-rows-max">
+                
+                <div>
+                <h4 className="top-header">Add achieved skills from course</h4>
+                    <div className="container">
+                        <div class="bg-blue-50 rounded-lg py-2 px-6 text-base text-red-500 mb-2 hover:bg-blue-100 cursor-pointer" onClick={showInstruction}>
+                        Click to read the instruction here!
+                        </div>
+                        <form onSubmit={handleSubmit}>
                             <div>
-                                <Table>
-                                    <thead>
-                                        <tr>
-                                            <th className="name-col">Name</th>
-                                            <th className="des-col">Description </th>
-                                            {skill.levels.map((level) => (
-                                                <th className="level-col">
-                                                    Level {level.level_id}
-                                                </th>
-                                            ))}
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td className="name-col">{skill.name}</td>
-                                            <td className="des-col">{skill.des}</td>
-                                            {skill.levels.map((level) => (
-                                                <td className="level-col">
-                                                    {level.level_des}
-                                                </td>
-                                            ))}
-                                        </tr>
-                                        <tr>
-                                            <td colspan="2"><h6>Please select level of acheieved skill</h6></td>
-                                            {skill.levels.map((level) => (
-                                                <td className="level-col">
-                                                    <input type="radio" name={skill.name} id={index} value={level.level_id} onChange={handleLevelChange}></input>
-                                                    <label>{level.level_id}</label>
-                                                </td>
-                                            ))}
-                                        </tr>
-                                    </tbody>
-                                </Table>
-
-                                <div className="comment">
-                                    <label>You can suggest detail of each level here.</label>
-                                    <textarea className="comment-box" name={skill.name} id={index} onChange={handleCommentChange}></textarea>  
-                                </div>
-                                <br/>
+                                <h6>
+                                    Course:
+                                </h6>
+                                <Form.Select className="courses-dropdown" value={course} onChange={handleCourseChange} required>
+                                    <option>Please select course</option>
+                                    {options.map((option) => (
+                                        <option value={option._id} id={option.id} >{option.id} {option.name}</option>
+                                    ))}
+                                </Form.Select> 
+                                <h6>
+                                    Topic for Selected Topics Course:
+                                </h6>
+                                
+                                <input type="text" onChange={e => setTopic(e.target.value)}></input>
                             </div>
-                        ))}
-                    </div>
+                            
+                            <div>
+                                <br/>
+                                <h5>
+                                    Skills
+                                </h5>  
+                                <label>Please select all skills that student will acheive in this course.</label>  
+                                {skills.map((skill, index) => (
+                                    <div key={index}>
+                                        <input
+                                        type="checkbox"
+                                        name={skill.name}
+                                        value={skill.name}
+                                        checked={skill?.isChecked || false}
+                                        onChange={handleSkillsChange}
+                                        />
+                                        <label>{skill.name}</label>
+                                    </div>
+                                ))}
+                            </div>
 
-                    <button type="submit" value="Submit" className="submit-btn">save</button>  
-                </form>
+                            <div>
+                                <br/>
+                                {skills.filter(skill => skill.isChecked).map((skill, index) => (
+                                    <div>
+                                        <Table>
+                                            <thead>
+                                                <tr>
+                                                    <th className="name-col">Name</th>
+                                                    <th className="des-col">Description </th>
+                                                    {skill.levels.map((level) => (
+                                                        <th className="level-col">
+                                                            Level {level.level_id}
+                                                        </th>
+                                                    ))}
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td className="name-col">{skill.name}</td>
+                                                    <td className="des-col">{skill.des}</td>
+                                                    {skill.levels.map((level) => (
+                                                        <td className="level-col">
+                                                            {level.level_des}
+                                                        </td>
+                                                    ))}
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2"><h6>Please select level of acheieved skill</h6></td>
+                                                    {skill.levels.map((level) => (
+                                                        <td className="level-col">
+                                                            <input type="radio" name={skill.name} id={index} value={level.level_id} onChange={handleLevelChange}></input>
+                                                            <label>{level.level_id}</label>
+                                                        </td>
+                                                    ))}
+                                                </tr>
+                                            </tbody>
+                                        </Table>
+
+                                        <div className="comment">
+                                            <label>You can suggest detail of each level here.</label>
+                                            <textarea className="comment-box" name={skill.name} id={index} onChange={handleCommentChange}></textarea>  
+                                        </div>
+                                        <br/>
+                                    </div>
+                                ))}
+                            </div>
+                            <div>
+                                <button type="submit" value="Submit" className="submit-btn">save</button>     
+                            </div>
+                            
+                        </form>
+                        
+                    </div>
+                </div>
+
+                <div className="container">
+                    <p>If you want to suggest more skills please inform this form <a href="https://cmu.to/CPESkillMapping" target="_blank">Add additional achieved skills from course</a></p>
+                </div>
             </div>
+
+            
             
         </div>
     )

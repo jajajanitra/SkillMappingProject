@@ -9,7 +9,7 @@ function StuCareers () {
     const [careers, setCareers] = useState([]);
     const [searchInput, setSearchInput] = useState("");
 
-    const requestCareers = axios.get(Server_URL+"/career");
+    const requestCareers = axios.get(Server_URL+"/career/");
 
     useEffect(() => {
         getData();
