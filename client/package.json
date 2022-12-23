@@ -40,7 +40,6 @@
     "async": "^3.2.4",
     "asynckit": "^0.4.0",
     "at-least-node": "^1.0.0",
-    "autoprefixer": "^10.4.12",
     "axe-core": "^4.4.3",
     "axios": "^0.27.2",
     "axobject-query": "^2.2.0",
@@ -247,7 +246,7 @@
     "find-up": "^5.0.0",
     "flat-cache": "^3.0.4",
     "flatted": "^3.2.7",
-    "flowbite": "^1.5.4",
+    "flowbite": "^1.5.5",
     "follow-redirects": "^1.15.2",
     "fork-ts-checker-webpack-plugin": "^6.5.2",
     "form-data": "^3.0.1",
@@ -497,7 +496,6 @@
     "pirates": "^4.0.5",
     "pkg-dir": "^4.2.0",
     "pkg-up": "^3.1.0",
-    "postcss": "^8.4.16",
     "postcss-attribute-case-insensitive": "^5.0.2",
     "postcss-browser-comments": "^4.0.0",
     "postcss-calc": "^8.2.4",
@@ -797,6 +795,8 @@
     "yocto-queue": "^0.1.0"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.20",
     "tailwindcss": "^3.2.4"
   },
   "engines": {

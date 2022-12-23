@@ -5,7 +5,7 @@ import withReactContent from 'sweetalert2-react-content'
 
 import { Server_URL, Skill_URL, Course_URL } from "../constants";
 
-import SideBar from "../components/SideBar";
+import NavBar from "../components/NavBar";
 
 const MySwal = withReactContent(Swal);
 
@@ -93,8 +93,8 @@ function StuFillInformation () {
 
     return (
         <div className="flex">
-            <SideBar></SideBar>
-            <div className="w-full p-4">
+            <NavBar></NavBar>
+            <div className="w-full p-4 mt-16 mx-4 lg:mt-24 lg:mx-12">
                 <h4>กรอกข้อมูล</h4>
                 <ul class="
                 nav nav-tabs nav-justified
