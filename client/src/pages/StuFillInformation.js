@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
+import {AiOutlineInfoCircle} from 'react-icons/ai';
 
 import { Server_URL, Skill_URL, Course_URL } from "../constants";
 
@@ -217,71 +218,46 @@ function StuFillInformation () {
                                 <div class="overflow-x-auto">
                                 {skills.map((skill, index) => (
                                     <div>
+                                        <div class="min-w-full ">
+                                            <div class="border-double border-l-8 border-pink-600  px-3 py-2 shadow-md">
+                                                <span className="flex flex-wrap">
+                                                    <button class="accordion-button collapsed relative flex items-center w-fit py-2 lg:px-3 text-base text-gray-800 text-left
+                                                    bg-white border-0 rounded-none transition focus:outline-none hover:bg-blue-500" 
+                                                    type="button" data-bs-toggle="collapse" 
+                                                    data-bs-target={"#"+skill.name.replace(/[^A-Z0-9]+/ig, "_")}
+                                                    aria-expanded="false" aria-controls={skill.name.replace(/[^A-Z0-9]+/ig, "_")}>
+                                                        <span className="pr-1 text-blue-500 text-lg"><AiOutlineInfoCircle></AiOutlineInfoCircle></span>
+                                                        ทักษะ: {skill.name}
+                                                    </button>
+                                                </span>
+                                                <div className="flex justify-between">
+                                                    <span className="inline-block align-baseline py-2">ระดับ:</span>
+                                                    <span className="text-sm text-gray-900 font-light p-2 lg:px-6 lg:py-4 whitespace-nowrap">
+                                                        <input type="radio" name={skill.name} id={index} value={0}></input>
+                                                        <label>0</label>
+                                                    </span>
+                                                    {skill.levels.map((level) => (
+                                                        <span className="text-sm text-gray-900 font-light p-2 lg:px-6 lg:py-4 whitespace-nowrap">
+                                                            <input type="radio" name={skill.name} id={skill._id} value={level.level_id}></input>
+                                                            <label>{level.level_id}</label>
+                                                        </span>
+                                                    ))}
+                                                </div>
+                                                
+                                            </div>
+
+                                        </div>
                                         
-                                        <table class="min-w-full ">
-                                        <thead class="border-double border-l-8 border-pink-700 bg-fuchsia-50 ">
-                                            <tr>
-                                            
-                                            <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-                                                ทักษะ
-                                            </th>
-                                            <th scope="col" colspan="6" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-                                                ระดับ
-                                            </th>
-                                            
-                                            </tr>     
-                                        </thead>
-                                        <tbody>
-                                        
-                                            <tr class="border-b">
-                                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                                    {skill.name}
-                                                </td>
-                                                <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap w-24">
-                                                    <input type="radio" name={skill.name} id={index} value={0}></input>
-                                                    <label>0</label>
-                                                </td>
-                                            
-                                                {skill.levels.map((level) => (
-                                                    <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap w-24">
-                                                        <input type="radio" name={skill.name} id={index} value={level.level_id}></input>
-                                                        <label>{level.level_id}</label>
-                                                    </td>
-                                                ))}
-                                            </tr>
-                                            
-                                            
-                                        </tbody>
-                                        </table>
                                     
                                         <div class="accordion accordion-flush" id="accordionFlushExample">
                                             <div class="accordion-item border-t-0 border-l-0 border-r-0 rounded-none bg-white border border-gray-200">
                                                 <h2 class="accordion-header mb-0" id="flush-headingOne">
-                                                <button class="accordion-button
-                                                collapsed
-                                                relative
-                                                flex
-                                                items-center
-                                                w-full
-                                                py-2
-                                                px-3
-                                                text-base text-gray-800 text-left
-                                                bg-white
-                                                border-0
-                                                rounded-none
-                                                transition
-                                                focus:outline-none" 
-                                                type="button" data-bs-toggle="collapse" 
-                                                data-bs-target={"#"+skill.name.replace(/[^A-Z0-9]+/ig, "_")}
-                                                aria-expanded="false" aria-controls={skill.name.replace(/[^A-Z0-9]+/ig, "_")}>
-                                                    รายละเอียดทักษะ {skill.name}
-                                                </button>
                                                 </h2>
                                                 <div id={skill.name.replace(/[^A-Z0-9]+/ig, "_")} class="accordion-collapse border-0 collapse"
                                                 aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                                                     <div class="accordion-body py-4">
                                                         <table class={`min-w-full text-left`}>
-                                                            <thead class="border-b bg-gray-100">
+                                                            <thead class="border-b bg-pink-50">
                                                                 <tr>
                                                                 <th scope="col" class="text-sm font-medium px-6 py-4 w-12">
                                                                     ระดับ

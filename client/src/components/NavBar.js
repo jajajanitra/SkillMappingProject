@@ -1,7 +1,5 @@
 import {AiOutlineHome, AiOutlineLike, AiOutlineBulb, AiOutlineFileSearch, AiOutlineUser} from 'react-icons/ai';
 import {BiBookAdd} from 'react-icons/bi';
-import {GiHamburgerMenu} from 'react-icons/gi';
-import {TbClipboardCheck} from 'react-icons/tb';
 
 
 function NavBar (){
