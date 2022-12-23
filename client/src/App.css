@@ -4,6 +4,8 @@
   }
 }
 
+@import url('https://fonts.googleapis.com/css?family=Kanit');
+
 .Home {
   min-height: 100vh;
   display: flex;
@@ -20,6 +22,10 @@
 
 .App-link {
   color: #61dafb;
+}
+
+body{
+  font-family: 'Kanit', cursive;
 }
 
 @keyframes App-logo-spin {

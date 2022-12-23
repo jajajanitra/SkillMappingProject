@@ -95,7 +95,7 @@ function StuFillInformation () {
         <div className="flex">
             <NavBar></NavBar>
             <div className="content-div">
-                <h4>กรอกข้อมูล</h4>
+                <h4 className="page-header">กรอกข้อมูล</h4>
                 <ul class="
                 nav nav-tabs nav-justified
                 flex flex-col

@@ -3,7 +3,7 @@ import axios from "axios";
 
 import { Server_URL } from "../constants";
 
-import SideBar from "../components/SideBar";
+import NavBar from "../components/NavBar";
 
 function StuUser () {
     const [student, setStudent] = useState({});
@@ -30,10 +30,10 @@ function StuUser () {
     };
 
     return (
-        <div className="flex">
-            <SideBar></SideBar>
-            <div className="p-4 w-full">
-                <h4>ข้อมูลผู้ใช้</h4>
+        <div>
+            <NavBar></NavBar>
+            <div className="content-div">
+                <h4 className="page-header">ข้อมูลผู้ใช้</h4>
                 <div className="py-2">
                     <div>
                         <h6>ชื่อ: {student.student_name}</h6>

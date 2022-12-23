@@ -8,7 +8,7 @@
   }
 
   .yellow-btn{
-    @apply bg-yellow text-gray-700 text-center p-2 pl-4 pr-4 ml-1 mr-1 rounded w-fit
+    @apply bg-light-yellow text-gray-700 text-center p-2 pl-4 pr-4 ml-1 mr-1 rounded w-fit
   }
 
   .top-header{
@@ -16,11 +16,19 @@
   }
 
   .content-div{
-    @apply w-full p-2 mt-20 mx-4 lg:mt-28 lg:mx-12
+    @apply w-full p-2 mt-20 mx-4 lg:mt-28 lg:mx-12 max-w-[95%]
   }
 
   .page-header{
-    @apply underline underline-offset-8 decoration-dark-purple-font decoration-4
+    @apply underline underline-offset-8 decoration-dark-purple-font decoration-4 mb-6
+  }
+
+  .career-card{
+    @apply my-2 md:my-4 block px-6 py-2 
+    rounded-lg shadow-md 
+    w-full min-w-fit 
+    border-solid border-l-8 border-dark-yellow 
+    hover:bg-amber-50
   }
 }
 
