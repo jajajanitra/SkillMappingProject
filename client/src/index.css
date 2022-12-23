@@ -15,6 +15,13 @@
     @apply mt-4 mb-2 text-dark-purple-font text-center
   }
 
+  .content-div{
+    @apply w-full p-2 mt-20 mx-4 lg:mt-28 lg:mx-12
+  }
+
+  .page-header{
+    @apply underline underline-offset-8 decoration-dark-purple-font decoration-4
+  }
 }
 
 body {

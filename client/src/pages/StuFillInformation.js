@@ -94,7 +94,7 @@ function StuFillInformation () {
     return (
         <div className="flex">
             <NavBar></NavBar>
-            <div className="w-full p-4 mt-16 mx-4 lg:mt-24 lg:mx-12">
+            <div className="content-div">
                 <h4>กรอกข้อมูล</h4>
                 <ul class="
                 nav nav-tabs nav-justified
@@ -163,48 +163,52 @@ function StuFillInformation () {
                 </li>
                 </ul>
                 <div class="tab-content" id="tabs-tabContentJustify">
-                <div class="tab-pane fade show active" id="tabs-homeJustify" role="tabpanel"
+                    <div class="tab-pane fade show active" id="tabs-homeJustify" role="tabpanel"
                     aria-labelledby="tabs-home-tabJustify">
-                            <div className="grid grid-flow-row-dense grid-cols-6 gap-4">
+                        <div className="flex flex-wrap lg:grid lg:grid-flow-row-dense lg:grid-cols-6 lg:gap-4">
                             <input
-                            className="h-10 w-full p-2 ml-3 mr-3 col-span-5"
+                            className="h-10 w-full p-2 mx-2 my-2 md:my-1 lg:col-span-5"
                             type="ืีnumber"
                             placeholder="ค้นหาโดยรหัสวิชา"
                             onChange={handleSearchChange}
                             value={searchInput} />
 
                             <button 
-                            className="blue-btn"
+                            className="w-full my-1 mx-2 blue-btn"
                             onClick={searchID}
                             >ค้นหา</button>
-                         </div>
+                        </div>
                         
                         <div className="grid mt-3">
-                            <table className="text-m text-left ml-4 mr-4 mt-3 p-2 ">
-                                <thead className="bg-gray-100 p-2">
-                                    <tr>
-                                        <th className="text-sm font-medium text-gray-900 p-2">รหัสวิชา</th>
-                                        <th className="text-sm font-medium text-gray-900 p-2">ชื่อวิชา</th>
-                                        <th className="text-sm font-medium text-gray-900 p-2">หัวข้อ</th>
-                                        <th className="text-sm font-medium text-gray-900 text-center w-36">เพิ่ม</th>    
-                                    </tr>
-                                </thead>
-
-                                <tbody>
-                                    {filteredCourses.map((course, index) => (
-                                        <tr className="border-b hover:bg-gray-50">
-                                            <td className="p-3">{course.id}</td>
-                                            <td className="p-3">{course.name}</td>
-                                            <td className="p-3">{course.sel_topic}</td>
-                                            <td className="text-center p-3"><button className="yellow-btn" onClick={event => addCourse(event, course)}>+ เพิ่มรายวิชา</button></td>
+                            {filteredCourses.length > 0 ? (
+                                <table className="text-m text-left ml-4 mr-4 mt-3 p-2 ">
+                                    <thead className="bg-gray-100 p-2">
+                                        <tr>
+                                            <th className="text-sm font-medium text-gray-900 p-2">รหัสวิชา</th>
+                                            <th className="text-sm font-medium text-gray-900 p-2">ชื่อวิชา</th>
+                                            <th className="text-sm font-medium text-gray-900 p-2">หัวข้อ</th>
+                                            <th className="text-sm font-medium text-gray-900 text-center w-36">เพิ่ม</th>    
                                         </tr>
-                                        
-                                    ))}    
-                                </tbody>
+                                    </thead>
 
-                            </table>                    
+                                    <tbody>
+                                        {filteredCourses.map((course, index) => (
+                                            <tr className="border-b hover:bg-gray-50">
+                                                <td className="p-3">{course.id}</td>
+                                                <td className="p-3">{course.name}</td>
+                                                <td className="p-3">{course.sel_topic}</td>
+                                                <td className="text-center p-3"><button className="yellow-btn" onClick={event => addCourse(event, course)}>+ เพิ่มรายวิชา</button></td>
+                                            </tr>
+                                            
+                                        ))}    
+                                    </tbody>
+
+                                </table>   
+                            ):(
+                                    <span></span>
+                            )}            
                         </div>
-                </div>
+                    </div>
 
                 <div class="tab-pane fade" id="tabs-profileJustify" role="tabpanel" aria-labelledby="tabs-profile-tabJustify">
                     <div class="flex flex-col">

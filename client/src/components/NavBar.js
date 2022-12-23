@@ -3,6 +3,7 @@ import {BiBookAdd} from 'react-icons/bi';
 import {GiHamburgerMenu} from 'react-icons/gi';
 import {TbClipboardCheck} from 'react-icons/tb';
 
+
 function NavBar (){
     return (
         <div>
@@ -10,15 +11,15 @@ function NavBar (){
                 <div class=" flex flex-wrap items-center justify-between mx-4 lg:mx-16 lg:px-2">
                 <a href="" class="flex items-center no-underline">
                     <img src="../Images/SkillMappingLogo.png" class="h-12 mr-3" alt="SkillMapping Logo" />
-                    <span class="text-lg text-purple-600">Skill Mapping</span>
+                    <span class="text-xl text-purple-600">Skill Mapping</span>
                 </a>
                 <div class="flex items-center lg:order-2">
-                    <button type="button" class="flex mr-3 text-sm bg-gray-800 rounded-full lg:mr-0 focus:ring-4 focus:ring-gray-300 " id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
+                    <button type="button" class="flex mr-3 text-sm rounded-full lg:mr-0 focus:ring-4 focus:ring-gray-300 " id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
                         <span class="sr-only">Open user menu</span>
-                        <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="user photo" />
+                        <img class="w-10 h-10 rounded-full" src="../Images/Panda.jpg" alt="user photo" />
                     </button>
                     {/* for user */}
-                    <div class="z-50 hidden my-3 text-base list-none bg-white divide-y divide-gray-100 rounded shadow" id="user-dropdown">
+                    <div class="z-50 hidden my-3 mr-2 text-base list-none bg-white divide-y divide-gray-100 rounded shadow" id="user-dropdown">
                         <div class="px-4 py-3">
                         <span class="block text-sm text-gray-900 ">Bonnie Green</span>
                         <span class="block text-sm font-medium text-gray-500 truncate ">name@flowbite.com</span>

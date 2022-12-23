@@ -5,14 +5,14 @@ function StuHome () {
     return (
         <div>
             <NavBar></NavBar>
-            {/* <div className="w-full p-4">
-                <h4>หน้าแรก</h4>
+            <div className="content-div">
+                <h4 className="page-header">หน้าแรก</h4>
                 <div>
                     <div>
                         
                     </div>
                 </div>
-            </div> */}
+            </div>
         </div>
     );
 }
