@@ -16,7 +16,7 @@
   }
 
   .content-div{
-    @apply w-full p-2 mt-20 mx-4 lg:mt-28 lg:mx-12 max-w-[95%]
+    @apply w-full p-2 mt-20 mx-3 lg:mt-28 lg:mx-12 max-w-[95%]
   }
 
   .page-header{

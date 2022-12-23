@@ -35,16 +35,16 @@ function StuUser () {
             <div className="content-div">
                 <h4 className="page-header">ข้อมูลผู้ใช้</h4>
                 <div className="py-2">
-                    <div>
-                        <h6>ชื่อ: {student.student_name}</h6>
-                        <h6>รหัสนักศึกษา: {student.student_id}</h6>
+                    <div className="mb-3 px-3 py-2 lg:p-4">
+                        <h6 className="text-lg">ชื่อ: {student.student_name}</h6>
+                        <h6 className="text-lg">รหัสนักศึกษา: {student.student_id}</h6>
                     </div>
 
-                    <div className="grid grid-cols-2 gap-6 p-4" >
-                        <div>
-                            <h6>รายวิชาที่เรียน</h6>
+                    <div className="grid gird-flow-row lg:grid-cols-2 lg:gap-8 p-2 lg:p-4 " >
+                        <div className="mb-2">
+                            <h6 className="text-lg border-solid border-l-4 border-pink-700 pl-2">รายวิชาที่เรียน</h6>
                             <table class="w-full text-left my-3">
-                                <thead class="border-b bg-gray-100">
+                                <thead class="border-b bg-purple-100">
                                     <tr>
                                     <th scope="col" class="text-sm font-medium px-2 py-4 text-center">
                                         รหัสวิชา
@@ -57,7 +57,7 @@ function StuUser () {
                                 </thead>
                                 <tbody>
                                     {student.courses?.map((course, index) => (
-                                        <tr className="bg-white border-b">
+                                        <tr className="bg-white border-b ">
                                             <td className="text-sm text-gray-900 font-light px-2 py-4 text-center w-fit">{course.course_id} </td>
                                             <td className="text-sm text-gray-900 font-light px-2 py-4 ">{course.course_name}</td>
                                         </tr>
@@ -68,15 +68,15 @@ function StuUser () {
 
                         </div>
 
-                        <div>
-                            <h6>ระดับทักษะ</h6>
+                        <div className="mb-2">
+                            <h6 className="text-lg border-solid border-l-4 border-pink-700 pl-2">ระดับทักษะ</h6>
                             <table class="w-full text-left my-3">
-                                <thead class="border-b bg-gray-100">
+                                <thead class="border-b bg-purple-100">
                                     <tr>
-                                    <th scope="col" class="text-sm font-medium px-2 py-4 text-center">
+                                    <th scope="col" class="text-sm font-medium px-2 py-4 text-center w-fit">
                                         ระดับทักษะ
                                     </th>
-                                    <th scope="col" class="text-sm font-medium px-2 py-4 text-center">
+                                    <th scope="col" class="text-sm font-medium px-2 py-4 text-center w-fit">
                                         ระดับความชอบ
                                     </th>
                                     <th scope="col" class="text-sm font-medium px-2 py-4">

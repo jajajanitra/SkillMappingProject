@@ -219,7 +219,7 @@ function StuFillInformation () {
                                     <div>
                                         
                                         <table class="min-w-full ">
-                                        <thead class="border-b bg-gray-100">
+                                        <thead class="border-double border-l-8 border-pink-700 bg-fuchsia-50 ">
                                             <tr>
                                             
                                             <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
