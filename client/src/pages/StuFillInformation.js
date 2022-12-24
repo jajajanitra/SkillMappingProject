@@ -4,6 +4,8 @@ import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 import {AiOutlineInfoCircle} from 'react-icons/ai';
 import {TfiSave} from 'react-icons/tfi';
+import {MdAdd} from 'react-icons/md';
+
 
 import { Server_URL, Skill_URL, Course_URL } from "../constants";
 
@@ -33,12 +35,13 @@ function StuFillInformation () {
         await axios.all([requestSkills, requestCourses])
         .then(
             axios.spread((...responses) => {
-                const resSkills = responses[0];
-                setSkills(resSkills.data);
-                setSelfSkills(resSkills.data);
-                setLikes(resSkills.data);
-                const resCourses = responses[1];
-                setCourses(resCourses.data);
+                const resSkills = responses[0].data;
+                const data = [...resSkills]
+                setSkills(data);
+                setSelfSkills(resSkills);
+                setLikes(resSkills);
+                const resCourses = responses[1].data;
+                setCourses(resCourses);
 
             }
         ))
@@ -102,6 +105,18 @@ function StuFillInformation () {
         setSelfSkills(tempSkill);
     };
 
+    const handleLikesLevelChange = (event) => {
+        const name = event.target.name;
+        const index = likes.findIndex(object => {
+            return object.name === name;
+        });
+        // const index = event.target
+        const level = event.target.value;
+        let tempSkill = skills;
+        tempSkill[index]['skill_like'] = level;
+        setLikes(tempSkill);
+    };
+
     const addSelfSkills = async () => {
         selfSkills.forEach((skill, index) => {
             delete skill['des'];
@@ -149,6 +164,38 @@ function StuFillInformation () {
             delete skill['levels'];
         })
         console.log(likes);
+
+        await axios.post(addLikes_URL,{
+            token: token,
+            skill: likes
+        }).then((res) => {
+            console.log(res.status);
+            if (res.status === 200 || res.status === 201){
+                MySwal.fire({
+                    title: 'บันทึกเรียบร้อย!',
+                    text: 'ข้อมูลความชอบของคุณถูกบันทึกแล้ว',
+                    icon: 'success',
+                    confirmButtonColor: '#7FCFFF',
+                    allowOutsideClick: false,
+                    allowEscapeKey: false
+                }).then((result) => {
+                    if (result.isConfirmed){
+                    }
+                })
+            }else{
+                MySwal.fire({
+                    title: 'มีบางอย่างผิดพลาด!',
+                    text: `Status ${res.status} (${res.statusText})`,
+                    icon: 'error',
+                    confirmButtonColor: '#7FCFFF',
+                    allowOutsideClick: false,
+                    allowEscapeKey: false
+                })
+            }
+        })
+        .catch((err) => {
+            console.log(err);
+        })
     };
 
 
@@ -211,12 +258,12 @@ function StuFillInformation () {
                         <div className="grid mt-3">
                             {filteredCourses.length > 0 ? (
                                 <table className="text-m text-left ml-4 mr-4 mt-3 p-2 ">
-                                    <thead className="bg-gray-100 p-2">
+                                    <thead className="bg-purple-100 p-2">
                                         <tr>
-                                            <th className="text-sm font-medium text-gray-900 p-2">รหัสวิชา</th>
-                                            <th className="text-sm font-medium text-gray-900 p-2">ชื่อวิชา</th>
-                                            <th className="text-sm font-medium text-gray-900 p-2">หัวข้อ</th>
-                                            <th className="text-sm font-medium text-gray-900 text-center w-36">เพิ่ม</th>    
+                                            <th className="text-m font-medium text-gray-900 p-2 lg:pl-3">รหัสวิชา</th>
+                                            <th className="text-m font-medium text-gray-900 p-2 lg:pl-3">ชื่อวิชา</th>
+                                            <th className="text-m font-medium text-gray-900 p-2 lg:pl-3">หัวข้อ</th>
+                                            <th className="text-m font-medium text-gray-900 text-center w-36 lg:pl-3">เพิ่ม</th>    
                                         </tr>
                                     </thead>
 
@@ -226,7 +273,13 @@ function StuFillInformation () {
                                                 <td className="p-3">{course.id}</td>
                                                 <td className="p-3">{course.name}</td>
                                                 <td className="p-3">{course.sel_topic}</td>
-                                                <td className="text-center p-3"><button className="yellow-btn" onClick={event => addCourse(event, course)}>+ เพิ่มรายวิชา</button></td>
+                                                <td className="text-center p-3">
+                                                    <button className="green-btn h-fit flex items-center" onClick={event => addCourse(event, course)}>
+                                                        <span className="px-2">
+                                                           <MdAdd></MdAdd> 
+                                                        </span>
+                                                    เพิ่ม</button>
+                                                </td>
                                             </tr>
                                             
                                         ))}    
@@ -358,12 +411,12 @@ function StuFillInformation () {
                                                 <div className="flex justify-between">
                                                     <span className="inline-block align-baseline py-2">ความชอบ:</span>
                                                     <span className="text-sm text-gray-900 font-light p-2 lg:px-6 lg:py-4 whitespace-nowrap">
-                                                        <input type="radio" name={skill.name} id={index} value={0}></input>
+                                                        <input type="radio" name={skill.name} id={index} value={0} onChange={handleLikesLevelChange}></input>
                                                         <label>0</label>
                                                     </span>
                                                     {skill.levels.map((level) => (
                                                         <span className="text-sm text-gray-900 font-light p-2 lg:px-6 lg:py-4 whitespace-nowrap">
-                                                            <input type="radio" name={skill.name} id={skill._id} value={level.level_id}></input>
+                                                            <input type="radio" name={skill.name} id={skill._id} value={level.level_id} onChange={handleLikesLevelChange}></input>
                                                             <label>{level.level_id}</label>
                                                         </span>
                                                     ))}
@@ -400,6 +453,14 @@ function StuFillInformation () {
 
                                 </div>
                             </div>
+                        </div>
+                        <div className="flex justify-end">
+                            <button className="green-btn" onClick={addLikes}>
+                                <div className="flex justify-center">
+                                    <span className="block px-2 lg:px-1"><TfiSave className="h-6 w-6"></TfiSave></span>
+                                    <span className="block px-2 lg:px-1">บันทึกข้อมูล</span>  
+                                </div>
+                            </button>
                         </div>
                     </div>
                 </div>
