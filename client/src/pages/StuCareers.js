@@ -54,7 +54,7 @@ function StuCareers () {
                 </div>
 
                 <div>
-                    <h5 className="mt-4 mb-2 p-2 text-gray-700 border-b-2 ">อาชีพทั้งหมด</h5>
+                    <h5 className="sub-header border-b-2 ">อาชีพทั้งหมด</h5>
                 </div>
 
                 <div class="flex flex-wrap md:grid md:grid-cols-2 md:gap-8 p-2 ">

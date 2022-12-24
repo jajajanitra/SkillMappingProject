@@ -33,7 +33,7 @@ function StuUser () {
         <div>
             <NavBar></NavBar>
             <div className="content-div">
-                <h4 className="page-header">ข้อมูลผู้ใช้</h4>
+                <h4 className="page-header">สรุปข้อมูล</h4>
                 <div className="py-2">
                     <div className="mb-3 px-3 py-2 lg:p-4">
                         <h6 className="text-lg">ชื่อ: {student.student_name}</h6>
