@@ -23,6 +23,18 @@
     hover:bg-lime-600
   }
 
+  .delete-btn{
+    @apply border-red-600 border-2
+    text-red-600 text-center
+    text-lg
+    py-2 px-6
+    mx-1 md:ml-3 md:mr-3 
+    rounded-2xl 
+    w-fit h-fit
+    hover:bg-red-600 hover:text-white
+    hover:shadow-md
+  }
+
   .yellow-btn{
     @apply text-gray-700 text-center 
     bg-light-yellow 

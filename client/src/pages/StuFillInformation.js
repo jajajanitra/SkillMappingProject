@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Swal from 'sweetalert2'
-import withReactContent from 'sweetalert2-react-content'
+import Swal from 'sweetalert2';
+import withReactContent from 'sweetalert2-react-content';
 import {AiOutlineInfoCircle} from 'react-icons/ai';
 import {TfiSave} from 'react-icons/tfi';
 import {MdAdd} from 'react-icons/md';
@@ -118,10 +118,10 @@ function StuFillInformation () {
     };
 
     const addSelfSkills = async () => {
-        selfSkills.forEach((skill, index) => {
-            delete skill['des'];
-            delete skill['levels'];
-        })
+        // selfSkills.forEach((skill, index) => {
+        //     delete skill['des'];
+        //     delete skill['levels'];
+        // })
         console.log(selfSkills);
 
         await axios.post(addSkills_URL,{
@@ -159,10 +159,10 @@ function StuFillInformation () {
     };
 
     const addLikes = async () => {
-        likes.forEach((skill, index) => {
-            delete skill['des'];
-            delete skill['levels'];
-        })
+        // likes.forEach((skill, index) => {
+        //     delete skill['des'];
+        //     delete skill['levels'];
+        // })
         console.log(likes);
 
         await axios.post(addLikes_URL,{

@@ -38,16 +38,16 @@ function StuCareerInfo (){
                     <div>
                         <h4 className="page-header">{career.name_career}</h4>
                         <div>
-                        <h6 className="mt-4 text-m border-l-4 border-pink-700 px-2">ภาระหน้าที่ของอาชีพ</h6>
+                        <h6 className="mt-4 text-lg border-l-4 border-pink-700 px-2">ภาระหน้าที่ของอาชีพ</h6>
                             &nbsp; &nbsp; {career.des_thai}
                         </div> 
                         <div>
-                            <h6 className="mt-4 text-m border-l-4 border-pink-700 px-2">รายวิชาที่แนะนำ</h6>
+                            <h6 className="mt-4 text-lg border-l-4 border-pink-700 px-2">รายวิชาที่แนะนำ</h6>
                         </div>   
                     </div>
 
                     <div className="md:mt-8">
-                        <h6 className="mt-4 text-m border-l-4 border-pink-700 px-2">ทักษะที่จำเป็นสำหรับอาชีพ</h6>
+                        <h6 className="mt-4 text-lg border-l-4 border-pink-700 px-2">ทักษะที่จำเป็นสำหรับอาชีพ</h6>
 
                         <table class="w-full text-left my-3">
                             <thead className="border-b bg-purple-100">

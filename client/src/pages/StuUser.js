@@ -1,15 +1,21 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Swal from 'sweetalert2';
+import withReactContent from 'sweetalert2-react-content';
+import {RiDeleteBin7Line} from 'react-icons/ri';
 
 import { Server_URL } from "../constants";
 
 import NavBar from "../components/NavBar";
+
+const MySwal = withReactContent(Swal);
 
 function StuUser () {
     const [student, setStudent] = useState({});
 
     const stuToken = '12345';
     const requestStudent = axios.get(Server_URL+"/student/"+stuToken);
+    const deleteURL = Server_URL+"/student/delete";
     
 
     useEffect(() => {
@@ -29,6 +35,43 @@ function StuUser () {
         console.log(student);
     };
 
+    const deleteCourse = async (event) => {
+        const index = event.target.value;;
+        const data = {
+            token: stuToken,
+            course_name: student.courses[index]?.course_name,
+            course_id: student.courses[index]?.course_id
+        };
+        console.log(data);
+
+        Swal.fire({
+            title: 'ต้องการลบรายวิชานี้ใช่ไหม?',
+            text: "เมื่อลบข้อมูลแล้วจะไม่สามารถเรียกคืนได้!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#dc2626',
+            cancelButtonColor: '#a3a3a3',
+            confirmButtonText: 'ลบรายวิชา!',
+            cancelButtonText: 'ยกเลิก'
+          }).then((result) => {
+            if (result.isConfirmed) {
+            //   await axios.post(deleteURL,data)
+            //     .then((res) => {
+            //         console.log(res.status);
+            //     })  
+              Swal.fire({
+                title: 'ลบข้อมูลเรียบร้อย!',
+                text: 'รายวิชานี้ถูกลบออกจากรายวิชาที่เรียนแล้ว',
+                icon: 'success',
+                confirmButtonColor: '#84cc16'
+                }
+              )
+            }
+          })
+        
+
+    };
+
     return (
         <div>
             <NavBar></NavBar>
@@ -40,47 +83,53 @@ function StuUser () {
                         <h6 className="text-lg">รหัสนักศึกษา: {student.student_id}</h6>
                     </div>
 
-                    <div className="grid gird-flow-row lg:grid-cols-2 lg:gap-8 p-2 lg:p-4 " >
-                        <div className="mb-2">
-                            <h6 className="text-lg border-solid border-l-4 border-pink-700 pl-2">รายวิชาที่เรียน</h6>
-                            <table class="w-full text-left my-3">
-                                <thead class="border-b bg-purple-100">
-                                    <tr>
-                                    <th scope="col" class="text-sm font-medium px-2 py-4 text-center">
-                                        รหัสวิชา
-                                    </th>
-                                    <th scope="col" class="text-sm font-medium px-2 py-4">
-                                        ชื่อวิชา
-                                    </th>
-                                    
+                    <div className="mb-4">
+                        <h6 className="text-lg border-solid border-l-4 border-pink-700 pl-2">รายวิชาที่เรียน</h6>
+                        <table class="w-full text-left my-3">
+                            <thead class="border-b bg-yellow-100">
+                                <tr>
+                                <th scope="col" class="text-sm font-medium pl-4 pr-1 py-4">
+                                    รหัสวิชา
+                                </th>
+                                <th scope="col" class="text-sm font-medium pl-4 pr-1 py-4">
+                                    ชื่อวิชา
+                                </th>
+                                <th>
+
+                                </th>
+                                
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {student.courses?.map((course, index) => (
+                                    <tr className="bg-white border-b ">
+                                        <td className="text-sm text-gray-900 font-light pl-4 pr-1 py-4 w-fit">{course.course_id} </td>
+                                        <td className="text-sm text-gray-900 font-light pl-4 pr-1 py-4 ">{course.course_name}</td>
+                                        <td className="text-right px-2 lg:px-4">
+                                            <button className="delete-btn" value={index} onClick={deleteCourse}>
+                                                <div className="flex items-center">
+                                                    <span className="block px-1 content-center"><RiDeleteBin7Line className="h-5 w-5"></RiDeleteBin7Line></span>
+                                                    <span className="block pr-1 text-sm">ลบ</span>  
+                                                </div>
+                                            </button>
+                                        </td>
                                     </tr>
-                                </thead>
-                                <tbody>
-                                    {student.courses?.map((course, index) => (
-                                        <tr className="bg-white border-b ">
-                                            <td className="text-sm text-gray-900 font-light px-2 py-4 text-center w-fit">{course.course_id} </td>
-                                            <td className="text-sm text-gray-900 font-light px-2 py-4 ">{course.course_name}</td>
-                                        </tr>
-                                    ))}
-                                    
-                                </tbody>
-                            </table>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
 
-                        </div>
-
-                        <div className="mb-2">
-                            <h6 className="text-lg border-solid border-l-4 border-pink-700 pl-2">ระดับทักษะ</h6>
+                    <div className="grid gird-flow-row lg:grid-cols-2 lg:gap-8 p-2 lg:p-4 " >
+                        <div className="mb-4">
+                            <h6 className="text-lg border-solid border-l-4 border-pink-700 pl-2">ระดับทักษะจากรายวิชา</h6>
                             <table class="w-full text-left my-3">
                                 <thead class="border-b bg-purple-100">
                                     <tr>
-                                    <th scope="col" class="text-sm font-medium px-2 py-4 text-center w-fit">
-                                        ระดับทักษะ
-                                    </th>
-                                    <th scope="col" class="text-sm font-medium px-2 py-4 text-center w-fit">
-                                        ระดับความชอบ
-                                    </th>
-                                    <th scope="col" class="text-sm font-medium px-2 py-4">
+                                    <th scope="col" class="text-sm font-medium pl-4 pr-1 py-4 ">
                                         ทักษะ
+                                    </th>
+                                    <th scope="col" class="text-sm font-medium px-2 py-4 w-fit text-center ">
+                                        ระดับทักษะ
                                     </th>
                                     
                                     </tr>
@@ -88,9 +137,8 @@ function StuUser () {
                                 <tbody>
                                     {student.skills?.map((skill) => (
                                         <tr className="bg-white border-b">
-                                            <td className="text-sm text-gray-900 font-light px-2 py-4 text-center max-w-fit">{skill.level_id}</td>
-                                            <td className="text-sm text-gray-900 font-light px-2 py-4 text-center max-w-fit">{skill.level_id}</td>
-                                            <td className="text-sm text-gray-900 font-light px-2 py-4 ">{skill.skill_name} </td>
+                                            <td className="text-sm text-gray-900 font-light pl-4 pr-1 py-4 ">{skill.skill_name} </td>
+                                            <td className="text-sm text-gray-900 font-light px-2 py-4 max-w-fit text-center ">{skill.level_id}</td>
                                         </tr>
                                     ))}
                                     
@@ -98,9 +146,39 @@ function StuUser () {
                             </table>
 
                         </div>
+
+                        <div className="mb-2">
+                            <h6 className="text-lg border-solid border-l-4 border-pink-700 pl-2">ระดับทักษะจากการประเมินตนเอง</h6>
+                            <table class="w-full text-left my-3">
+                                <thead class="border-b bg-purple-100">
+                                    <tr>
+                                        <th scope="col" class="text-sm font-medium pl-4 pr-1 py-4">
+                                            ทักษะ
+                                        </th>
+                                        <th scope="col" class="text-sm font-medium px-2 py-4 text-center w-fit">
+                                            ระดับทักษะ
+                                        </th>
+                                        <th scope="col" class="text-sm font-medium px-2 py-4 text-center w-fit">
+                                            ระดับความชอบ
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {student.skills?.map((skill) => (
+                                        <tr className="bg-white border-b">
+                                            <td className="text-sm text-gray-900 font-light pl-4 pr-1 py-4 ">{skill.skill_name} </td>
+                                            <td className="text-sm text-gray-900 font-light px-2 py-4 text-center max-w-fit">{skill.skill_self}</td>
+                                            <td className="text-sm text-gray-900 font-light px-2 py-4 text-center max-w-fit">{skill.skill_like}</td>
+                                        </tr>
+                                    ))}
+                                    
+                                </tbody>
+                            </table>
+
+                        </div>
+
                     </div>
 
-                    
                 </div>
             </div>
         </div>
