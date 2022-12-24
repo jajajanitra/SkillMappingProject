@@ -53,11 +53,13 @@ function StuCareers () {
                     >ค้นหา</button>
                 </div>
 
-                <div class="flex flex-wrap md:grid md:grid-cols-2 md:gap-8 p-2">
+                <div>
+                    <h5 className="mt-4 mb-2 p-2 text-gray-700 border-b-2 ">อาชีพทั้งหมด</h5>
+                </div>
+
+                <div class="flex flex-wrap md:grid md:grid-cols-2 md:gap-8 p-2 ">
                     {careers.map((career, index) => (
-                        <div class="career-card">
-                            <p class="text-gray-700 text-xl leading-tight font-medium my-1" >{career.name_career}</p>
-                        </div>
+                        <a class="career-card" >{career.name_career}</a>
                     ))}
                 </div>
 

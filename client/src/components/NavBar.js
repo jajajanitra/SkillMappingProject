@@ -38,7 +38,7 @@ function NavBar (){
                         <li className='text-sm flex-items-center gap-x-4 p-2
                            rounded-md mt-1'>
                             <a href="/student_home"
-                            className='no-underline text-gray-600 hover:text-dark-purple-font'>
+                            className='no-underline text-gray-700 hover:text-dark-purple-font'>
                                 <div>
                                 <span className={`block float-left text-xl mr-2 `}><AiOutlineHome/></span>
                                 <span className={`text-base font-medium flex-1 `}>หน้าแรก</span>      
@@ -49,7 +49,7 @@ function NavBar (){
                         <li className='text-sm flex-items-center gap-x-4 p-2
                            rounded-md mt-1'>
                             <a href="/student_fillInformation"
-                            className='no-underline text-gray-600 hover:text-dark-purple-font'>
+                            className='no-underline text-gray-700 hover:text-dark-purple-font'>
                                 <div>
                                 <span className={`block float-left text-xl mr-2 `}><BiBookAdd /></span>
                                 <span className={`text-base font-medium flex-1 `}>กรอกข้อมูล</span>
@@ -60,7 +60,7 @@ function NavBar (){
                         <li className='text-sm flex-items-center gap-x-4 p-2
                            rounded-md mt-1'>
                             <a href="/student_careers"
-                            className='no-underline text-gray-600 hover:text-dark-purple-font'>
+                            className='no-underline text-gray-700 hover:text-dark-purple-font'>
                                 <div>
                                 <span className={`block float-left text-xl mr-2 `}><AiOutlineFileSearch /></span>
                                 <span className={`text-base font-medium flex-1 `}>ข้อมูลอาชีพ</span>   
@@ -71,7 +71,7 @@ function NavBar (){
                         <li className='text-sm flex-items-center gap-x-4 p-2
                            rounded-md mt-1'>
                             <a href="/student_suggestion"
-                            className='no-underline text-gray-600 hover:text-dark-purple-font'>
+                            className='no-underline text-gray-700 hover:text-dark-purple-font'>
                                 <div>
                                 <span className={`block float-left text-xl mr-2 `}><AiOutlineBulb /></span>
                                 <span className={`text-base font-medium flex-1 `}>แนะนำอาชีพ</span>
@@ -82,7 +82,7 @@ function NavBar (){
                         <li className='text-sm flex-items-center gap-x-4 p-2
                            rounded-md mt-1'>
                             <a href="/student_user"
-                            className='no-underline text-gray-600 hover:text-dark-purple-font'>
+                            className='no-underline text-gray-700 hover:text-dark-purple-font'>
                                 <div>
                                 <span className={`block float-left text-xl mr-2 `}><AiOutlineUser /></span>
                                 <span className={`text-base font-medium flex-1 `}>ข้อมูลผู้ใช้</span>

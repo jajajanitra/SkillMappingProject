@@ -4,31 +4,47 @@
 
 @layer components{
   .blue-btn{
-    @apply bg-light-blue-bg text-gray-700 text-center p-2 pl-4 pr-4 ml-3 mr-3 rounded-full 
+    @apply bg-sky-400 text-white text-center p-2 pl-4 pr-4 ml-3 mr-3 rounded-full 
   }
 
   .yellow-btn{
-    @apply bg-light-yellow text-gray-700 text-center p-2 pl-4 pr-4 ml-1 mr-1 rounded w-fit
+    @apply text-gray-700 text-center 
+    bg-light-yellow 
+    p-2 pl-4 pr-4 
+    ml-1 mr-1 
+    rounded w-fit
   }
 
   .top-header{
-    @apply mt-4 mb-2 text-dark-purple-font text-center
+    @apply text-dark-purple-font text-center
+    mt-4 mb-2 
   }
 
   .content-div{
-    @apply w-full p-2 mt-20 mx-3 lg:mt-28 lg:mx-12 max-w-[95%]
+    @apply w-full max-w-[95%] 
+    p-2 
+    mt-20 mx-3 lg:mt-28 lg:mx-12 
   }
 
   .page-header{
-    @apply underline underline-offset-8 decoration-dark-purple-font decoration-4 mb-6
+    @apply underline underline-offset-8 
+    decoration-dark-purple-font decoration-4 mb-6
   }
 
   .career-card{
-    @apply my-2 md:my-4 block px-6 py-2 
+    @apply  text-gray-600 text-xl leading-tight font-medium 
+    my-2 md:my-4 block px-6 py-2 
     rounded-lg shadow-md 
     w-full min-w-fit 
-    border-solid border-l-8 border-dark-yellow 
-    hover:bg-amber-50
+    no-underline
+    border-solid border-l-8 
+    odd:hover:bg-amber-50 even:hover:bg-fuchsia-50
+    odd:border-dark-yellow even:border-pink-600
+    hover:text-gray-800
+  }
+
+  .fillInfo-tab{
+    @apply 
   }
 }
 
