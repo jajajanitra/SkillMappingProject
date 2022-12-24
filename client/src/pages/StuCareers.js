@@ -54,12 +54,12 @@ function StuCareers () {
                 </div>
 
                 <div>
-                    <h5 className="sub-header border-b-2 ">อาชีพทั้งหมด</h5>
+                    <h5 className="sub-header border-b-2 lg:mb-4">อาชีพทั้งหมด</h5>
                 </div>
 
-                <div class="flex flex-wrap md:grid md:grid-cols-2 md:gap-8 p-2 ">
+                <div class="flex flex-wrap md:grid md:grid-cols-2 md:gap-6 p-2 ">
                     {careers.map((career, index) => (
-                        <a class="career-card" >{career.name_career}</a>
+                        <a class="career-card" href={"/student_careers/"+career._id} >{career.name_career}</a>
                     ))}
                 </div>
 

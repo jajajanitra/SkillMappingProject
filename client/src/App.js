@@ -12,9 +12,8 @@ import NewSkill from './pages/NewSkill';
 
 //students
 import StuHome from './pages/StuHome';
-import StuAddCourse from './pages/StuAddCourse';
-import StuSkills from './pages/StuSkills';
 import StuCareers from './pages/StuCareers';
+import StuCareerInfo from './pages/StuCareerInfo';
 import StuSuggestion from './pages/StuSuggestion';
 import StuFillInformation from './pages/StuFillInformation';
 import StuUser from './pages/StuUser';
@@ -28,10 +27,9 @@ function App() {
         <Route path="/newSkill" element={<NewSkill />} />
 
         <Route path="/student_home" element={<StuHome />} />
-        <Route path="/student_addCourse" element={<StuAddCourse />} />
         <Route path="/student_careers" element={<StuCareers />} />
+        <Route path="/student_careers/:id" element={<StuCareerInfo />} />
         <Route path="/student_suggestion" element={<StuSuggestion />} />
-        <Route path="/student_skills" element={<StuSkills />} />
         <Route path="/student_fillInformation" element={<StuFillInformation/>} />
         <Route path="/student_user" element={<StuUser/>} />
       </Routes>

@@ -50,11 +50,12 @@
 
   .career-card{
     @apply  text-gray-600 text-xl leading-tight font-medium 
-    my-2 md:my-4 block px-6 py-2 
-    rounded-lg shadow-md 
+    my-2 md:my-0 block px-6 py-2 
+    rounded-md shadow-md 
     w-full min-w-fit 
     no-underline
     border-solid border-l-8 
+    bg-white
     odd:hover:bg-amber-50 even:hover:bg-fuchsia-50
     odd:border-dark-yellow even:border-pink-600
     hover:text-gray-800
