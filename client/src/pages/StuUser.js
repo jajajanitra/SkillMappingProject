@@ -35,7 +35,7 @@ function StuUser () {
         console.log(student);
     };
 
-    const deleteCourse = async (event) => {
+    const deleteCourse = (event) => {
         const index = event.target.value;;
         const data = {
             token: stuToken,
@@ -51,21 +51,31 @@ function StuUser () {
             showCancelButton: true,
             confirmButtonColor: '#dc2626',
             cancelButtonColor: '#a3a3a3',
-            confirmButtonText: 'ลบรายวิชา!',
+            confirmButtonText: 'ลบรายวิชา',
             cancelButtonText: 'ยกเลิก'
-          }).then((result) => {
+          }).then(async (result) => {
             if (result.isConfirmed) {
-            //   await axios.post(deleteURL,data)
-            //     .then((res) => {
-            //         console.log(res.status);
-            //     })  
-              Swal.fire({
-                title: 'ลบข้อมูลเรียบร้อย!',
-                text: 'รายวิชานี้ถูกลบออกจากรายวิชาที่เรียนแล้ว',
-                icon: 'success',
-                confirmButtonColor: '#84cc16'
-                }
-              )
+                await axios.delete(deleteURL,data)
+                    .then((res) => {
+                        console.log(res.status);
+                        if (res.status === 200){
+                            Swal.fire({
+                            title: 'ลบข้อมูลเรียบร้อย!',
+                            text: 'รายวิชานี้ถูกลบออกจากรายวิชาที่เรียนแล้ว',
+                            icon: 'success',
+                            confirmButtonColor: '#84cc16'
+                            })
+                        }else{
+                            Swal.fire({
+                                title: 'มีบางอย่างผิดพลาด!',
+                                text: `Status ${res.status} (${res.statusText})`,
+                                icon: 'error',
+                                confirmButtonColor: '#7FCFFF',
+                                allowOutsideClick: false,
+                                allowEscapeKey: false
+                            })
+                        }
+                    })  
             }
           })
         
