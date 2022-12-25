@@ -35,12 +35,12 @@ function StuUser () {
         console.log(student);
     };
 
-    const deleteCourse = (event) => {
-        const index = event.target.value;;
-        const data = {
+    const deleteCourse = (e, name, id) => {
+        console.log(id,name);
+        const  data = {
             token: stuToken,
-            course_name: student.courses[index]?.course_name,
-            course_id: student.courses[index]?.course_id
+            course_name: name,
+            course_id: id
         };
         console.log(data);
 
@@ -116,7 +116,7 @@ function StuUser () {
                                         <td className="text-sm text-gray-900 font-light pl-4 pr-1 py-4 w-fit">{course.course_id} </td>
                                         <td className="text-sm text-gray-900 font-light pl-4 pr-1 py-4 ">{course.course_name}</td>
                                         <td className="text-right px-2 lg:px-4">
-                                            <button className="delete-btn" value={index} onClick={deleteCourse}>
+                                            <button className="delete-btn" value={course.course_id} onClick={e => deleteCourse(e, course.course_name, course.course_id)}>
                                                 <div className="flex items-center">
                                                     <span className="block px-1 content-center"><RiDeleteBin7Line className="h-5 w-5"></RiDeleteBin7Line></span>
                                                     <span className="block pr-1 text-sm">ลบ</span>  
