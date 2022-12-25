@@ -247,7 +247,12 @@ function StuFillInformation () {
                             type="ืีnumber"
                             placeholder="ค้นหาโดยรหัสวิชา"
                             onChange={handleSearchChange}
-                            value={searchInput} />
+                            value={searchInput}
+                            onKeyDown={event => {
+                                if (event.key === 'Enter') {
+                                    searchID()
+                                }
+                              }} />
 
                             <button 
                             className="w-full my-1 mx-2 blue-btn"
@@ -269,7 +274,7 @@ function StuFillInformation () {
 
                                     <tbody>
                                         {filteredCourses.map((course, index) => (
-                                            <tr className="border-b hover:bg-gray-50">
+                                            <tr className="border-b bg-white hover:bg-gray-50">
                                                 <td className="p-3">{course.id}</td>
                                                 <td className="p-3">{course.name}</td>
                                                 <td className="p-3">{course.sel_topic}</td>
@@ -303,7 +308,7 @@ function StuFillInformation () {
                                 {skills.map((skill, index) => (
                                     <div>
                                         <div class="min-w-full ">
-                                            <div class="border-double border-l-8 border-pink-600  px-3 py-2 shadow-md ">
+                                            <div class="border-double border-l-8 border-pink-600  px-3 py-2 shadow-md bg-white">
                                                 <span className="flex flex-wrap ">
                                                     <button class="accordion-button collapsed relative flex items-center w-fit py-2 lg:px-3 text-base text-gray-800 text-left
                                                     border-0 transition focus:outline-none hover:bg-pink-50 rounded-full"
@@ -397,7 +402,7 @@ function StuFillInformation () {
                                 {skills.map((skill, index) => (
                                     <div>
                                         <div class="min-w-full ">
-                                            <div class="border-double border-l-8 border-dark-yellow  px-3 py-2 shadow-md">
+                                            <div class="border-double border-l-8 border-dark-yellow  px-3 py-2 shadow-md bg-white">
                                                 <span className="flex flex-wrap">
                                                     <button class="accordion-button collapsed relative flex items-center w-fit py-2 lg:px-3 text-base text-gray-800 text-left
                                                     border-0 transition focus:outline-none hover:bg-amber-50 rounded-full" 
@@ -434,7 +439,7 @@ function StuFillInformation () {
                                                 <div id={"l"+skill.name.replace(/[^A-Z0-9]+/ig, "_")} class="accordion-collapse border-0 collapse"
                                                 aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                                                     <div class="accordion-body py-4">
-                                                        <span className="text-md underline underline-offset-4 decoration-sky-500 decoration-2">
+                                                        <span className="text-md underline underline-offset-4 decoration-dark-yellow decoration-2">
                                                                 คำอธิบายสำหรับทักษะ {skill.name}
                                                         </span>
                                                         <p className="mt-2">
