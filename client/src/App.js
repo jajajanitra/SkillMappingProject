@@ -20,6 +20,7 @@ import StuCareerInfo from './pages/StuCareerInfo';
 import StuSuggestion from './pages/StuSuggestion';
 import StuFillInformation from './pages/StuFillInformation';
 import StuUser from './pages/StuUser';
+import StuEditSkills from './pages/StuEditSkills';
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
         <Route path="/student_suggestion" element={<StuSuggestion />} />
         <Route path="/student_fillInformation" element={<StuFillInformation/>} />
         <Route path="/student_user" element={<StuUser/>} />
+        <Route path="/student_user/editSkills" element={<StuEditSkills/>} />
       </Routes>
     </div>
   );

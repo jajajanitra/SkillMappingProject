@@ -49,6 +49,7 @@ function StuCareerInfo (){
                 const resCareer = responses[0];
                 setCareer(resCareer.data.career[0]);
                 setChartData(resCareer.data.chart);
+                console.log(resCareer.data.chart);
             }
             
         ))

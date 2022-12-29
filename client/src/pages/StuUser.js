@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
-import {RiDeleteBin7Line} from 'react-icons/ri';
+import {RiDeleteBin7Line, RiEditLine} from 'react-icons/ri';
 
 import { Server_URL } from "../constants";
 
@@ -64,7 +64,11 @@ function StuUser () {
                             text: 'รายวิชานี้ถูกลบออกจากรายวิชาที่เรียนแล้ว',
                             icon: 'success',
                             confirmButtonColor: '#84cc16'
-                            })
+                            }).then((result) => {
+                                if (result.isConfirmed){
+                                    window.location.reload();
+                                }
+                            });
                         }else{
                             Swal.fire({
                                 title: 'มีบางอย่างผิดพลาด!',
@@ -131,7 +135,7 @@ function StuUser () {
 
                     <div className="grid gird-flow-row lg:grid-cols-2 lg:gap-8 p-2 lg:p-4 " >
                         <div className="mb-4">
-                            <h6 className="text-xl border-solid border-l-4 border-pink-700 pl-2">ระดับทักษะจากรายวิชา</h6>
+                            <h6 className="text-xl border-solid border-l-4 border-pink-700 pl-2 mb-4">ระดับทักษะจากรายวิชา</h6>
                             <table class="w-full text-left my-3">
                                 <thead class="border-b bg-purple-100">
                                     <tr>
@@ -158,7 +162,20 @@ function StuUser () {
                         </div>
 
                         <div className="mb-2">
-                            <h6 className="text-xl border-solid border-l-4 border-pink-700 pl-2">ระดับทักษะจากการประเมินตนเอง</h6>
+                            <span className="flex justify-between">
+                                <h6 className="text-xl border-solid border-l-4 border-pink-700 pl-2">ระดับทักษะจากการประเมินตนเอง</h6>
+                                <a href="/student_user/editSkills" className="no-underline text-orange-400 hover:text-white md:absolute md:right-6">
+                                    <button className="edit-btn" >
+                                        <div className="flex items-center">
+                                            <span className="block px-1 content-center"><RiEditLine className="h-5 w-5"></RiEditLine></span>
+                                            <span className="block pr-1 text-sm">แก้ไข</span>  
+                                        </div> 
+                                    </button>  
+                                </a>
+                                    
+                                
+                            </span>
+                            
                             <table class="w-full text-left my-3">
                                 <thead class="border-b bg-purple-100">
                                     <tr>
