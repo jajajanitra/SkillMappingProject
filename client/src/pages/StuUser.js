@@ -55,7 +55,7 @@ function StuUser () {
             cancelButtonText: 'ยกเลิก'
           }).then(async (result) => {
             if (result.isConfirmed) {
-                await axios.delete(deleteURL,data)
+                await axios.post(deleteURL,data)
                     .then((res) => {
                         console.log(res.status);
                         if (res.status === 200){
@@ -88,13 +88,13 @@ function StuUser () {
             <div className="content-div">
                 <h4 className="page-header">สรุปข้อมูล</h4>
                 <div className="py-2">
-                    <div className="mb-3 px-3 py-2 lg:p-4">
+                    {/* <div className="mb-3 px-3 py-2 lg:p-4">
                         <h6 className="text-lg">ชื่อ: {student.student_name}</h6>
                         <h6 className="text-lg">รหัสนักศึกษา: {student.student_id}</h6>
-                    </div>
+                    </div> */}
 
                     <div className="mb-4">
-                        <h6 className="text-lg border-solid border-l-4 border-pink-700 pl-2">รายวิชาที่เรียน</h6>
+                        <h6 className="text-xl border-solid border-l-4 border-pink-700 pl-2">รายวิชาที่เรียน</h6>
                         <table class="w-full text-left my-3">
                             <thead class="border-b bg-yellow-100">
                                 <tr>
@@ -131,7 +131,7 @@ function StuUser () {
 
                     <div className="grid gird-flow-row lg:grid-cols-2 lg:gap-8 p-2 lg:p-4 " >
                         <div className="mb-4">
-                            <h6 className="text-lg border-solid border-l-4 border-pink-700 pl-2">ระดับทักษะจากรายวิชา</h6>
+                            <h6 className="text-xl border-solid border-l-4 border-pink-700 pl-2">ระดับทักษะจากรายวิชา</h6>
                             <table class="w-full text-left my-3">
                                 <thead class="border-b bg-purple-100">
                                     <tr>
@@ -158,7 +158,7 @@ function StuUser () {
                         </div>
 
                         <div className="mb-2">
-                            <h6 className="text-lg border-solid border-l-4 border-pink-700 pl-2">ระดับทักษะจากการประเมินตนเอง</h6>
+                            <h6 className="text-xl border-solid border-l-4 border-pink-700 pl-2">ระดับทักษะจากการประเมินตนเอง</h6>
                             <table class="w-full text-left my-3">
                                 <thead class="border-b bg-purple-100">
                                     <tr>

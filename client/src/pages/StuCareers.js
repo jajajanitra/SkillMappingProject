@@ -5,6 +5,7 @@ import { Server_URL } from "../constants";
 
 import NavBar from "../components/NavBar";
 
+
 function StuCareers () {
     const [careers, setCareers] = useState([]);
     const [results, setResults] = useState([]);

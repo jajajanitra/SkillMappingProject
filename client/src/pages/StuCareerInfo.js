@@ -5,13 +5,38 @@ import { Server_URL } from "../constants";
 
 import NavBar from "../components/NavBar";
 
+import Chart from "chart.js/auto";
+import { Radar } from 'react-chartjs-2';
+
 
 function StuCareerInfo (){
     const [career, setCareer] = useState([]);
+    const [chartData, setChartData] = useState([]);
 
-    const id = window.location.pathname.split("/").pop()
-    const requestCareer = axios.get(Server_URL+"/career/"+id);
     const stuToken = '12345';
+    const id = window.location.pathname.split("/").pop()
+    const requestCareer = axios.get(Server_URL+"/career/"+stuToken+"/"+id);
+    
+
+    const data = {
+        labels: chartData[0],
+        datasets: [
+          {
+            label: 'ทักษะของคุณ',
+            data: chartData[1],
+            backgroundColor: 'rgba(56, 189, 248, 0.2)',
+            borderColor: 'rgba(56, 189, 248, 1)',
+            borderWidth: 1,
+          },
+          {
+            label: 'ทักษะที่ต้องการ',
+            data: chartData[2],
+            backgroundColor: 'rgba(253, 205, 0, 0.2)',
+            borderColor: 'rgba(253, 205, 0, 1)',
+            borderWidth: 1,
+          },
+        ],
+      };
 
     useEffect(() => {
         getData();
@@ -22,7 +47,8 @@ function StuCareerInfo (){
         .then(
             axios.spread((...responses) => {
                 const resCareer = responses[0];
-                setCareer(resCareer.data);
+                setCareer(resCareer.data.career[0]);
+                setChartData(resCareer.data.chart);
             }
             
         ))
@@ -33,21 +59,21 @@ function StuCareerInfo (){
         <div>
             <NavBar></NavBar>
             <div className="content-div">
+                <h4 className="page-header">{career.name_career}</h4>
                 {/* <a className="" href="/student_careers">ข้อมูลอาชีพ</a> */}
                 <div className="md:grid md:grid-cols-2 md:gap-6">
                     <div>
-                        <h4 className="page-header">{career.name_career}</h4>
-                        <div>
-                        <h6 className="mt-4 text-lg border-l-4 border-pink-700 px-2">ภาระหน้าที่ของอาชีพ</h6>
-                            &nbsp; &nbsp; {career.des_thai}
+                        <div className="info-card">
+                        <h6 className="my-1 text-xl border-l-4 border-pink-700 px-2">ภาระหน้าที่ของอาชีพ</h6>
+                        <p className="px-2">&nbsp; &nbsp; {career.des_thai}</p>
                         </div> 
-                        <div>
-                            <h6 className="mt-4 text-lg border-l-4 border-pink-700 px-2">รายวิชาที่แนะนำ</h6>
+                        <div className="info-card mt-4 mb-4">
+                            <h6 className="my-1 text-xl border-l-4 border-pink-700 px-2">รายวิชาที่แนะนำ</h6>
                         </div>   
                     </div>
 
-                    <div className="md:mt-8">
-                        <h6 className="mt-4 text-lg border-l-4 border-pink-700 px-2">ทักษะที่จำเป็นสำหรับอาชีพ</h6>
+                    <div className="info-card">
+                        <h6 className="my-1 text-xl border-l-4 border-pink-700 px-2">ทักษะที่จำเป็นสำหรับอาชีพ</h6>
 
                         <table class="w-full text-left my-3">
                             <thead className="border-b bg-purple-100">
@@ -66,6 +92,12 @@ function StuCareerInfo (){
                             ))}
                         </table>
 
+                    </div>
+                </div>
+                <div className="info-card my-4 p-4 text-black ">
+                    <h6 className="my-1 text-xl border-l-4 border-pink-700 px-2">เปรียบเทียบทักษะ</h6>
+                    <div className="flex justify-center lg:max-h-[34rem] p-2">
+                        <Radar data={data}/>
                     </div>
                 </div>
             </div>

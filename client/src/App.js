@@ -2,6 +2,9 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'flowbite';
 import 'tw-elements';
+import { Chart as ChartJS, registerables } from 'chart.js';
+import { Chart } from 'react-chartjs-2'
+
 
 import { Routes, Route } from 'react-router-dom';
 

@@ -3,6 +3,7 @@ import axios from "axios";
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 import {AiOutlineInfoCircle} from 'react-icons/ai';
+import {RiArrowDropDownLine} from 'react-icons/ri';
 import {TfiSave} from 'react-icons/tfi';
 import {MdAdd} from 'react-icons/md';
 
@@ -304,19 +305,21 @@ function StuFillInformation () {
                                 <div>
                                     <h5 className="sub-header">ประเมินระดับทักษะด้วยตนเอง</h5>
                                 </div>
-                                <div class="overflow-x-auto">
+                                <div class="overflow-x-auto lg:grid lg:grid-cols-2 lg:gap-6 ">
                                 {skills.map((skill, index) => (
                                     <div>
                                         <div class="min-w-full ">
-                                            <div class="border-double border-l-8 border-pink-600  px-3 py-2 shadow-md bg-white">
-                                                <span className="flex flex-wrap ">
-                                                    <button class="accordion-button collapsed relative flex items-center w-fit py-2 lg:px-3 text-base text-gray-800 text-left
-                                                    border-0 transition focus:outline-none hover:bg-pink-50 rounded-full"
+                                            <div class="border-double border-l-8 border-pink-600  px-3 py-2 shadow-md bg-white w-full">
+                                                <span className="flex flex-wrap w-full">
+                                                    <button class="accordion-button flex justify-between w-full py-2 lg:px-3 text-base text-gray-800
+                                                    border-0 transition focus:outline-none hover:bg-pink-50 "
                                                     type="button" data-bs-toggle="collapse" 
                                                     data-bs-target={"#"+skill.name.replace(/[^A-Z0-9]+/ig, "_")}
                                                     aria-expanded="false" aria-controls={skill.name.replace(/[^A-Z0-9]+/ig, "_")}>
-                                                        <span className="pr-2 text-cyan-500 text-xl"><AiOutlineInfoCircle></AiOutlineInfoCircle></span>
-                                                        ทักษะ: {skill.name}
+                                                        <div className="w-full flex justify-between">
+                                                            <span className="">ทักษะ: {skill.name}</span>
+                                                            <span className=" pr-2 text-blue-500 text-3xl relative"><RiArrowDropDownLine></RiArrowDropDownLine></span>
+                                                        </div>
                                                     </button>
                                                 </span>
                                                 <div className="flex justify-between">
@@ -398,9 +401,9 @@ function StuFillInformation () {
                                 <div>
                                     <h5 className="sub-header">ประเมินระดับความชอบรายทักษะ</h5>
                                 </div>
-                                <div class="overflow-x-auto">
+                                <div class="overflow-x-auto lg:grid lg:grid-cols-2 lg:gap-6">
                                 {skills.map((skill, index) => (
-                                    <div>
+                                    <div >
                                         <div class="min-w-full ">
                                             <div class="border-double border-l-8 border-dark-yellow  px-3 py-2 shadow-md bg-white">
                                                 <span className="flex flex-wrap">
@@ -409,8 +412,10 @@ function StuFillInformation () {
                                                     type="button" data-bs-toggle="collapse" 
                                                     data-bs-target={"#"+"l"+skill.name.replace(/[^A-Z0-9]+/ig, "_")}
                                                     aria-expanded="false" aria-controls={"l"+skill.name.replace(/[^A-Z0-9]+/ig, "_")}>
-                                                        <span className="pr-1 text-cyan-500 text-lg"><AiOutlineInfoCircle></AiOutlineInfoCircle></span>
-                                                        ทักษะ: {skill.name}
+                                                        <div className="w-full flex justify-between">
+                                                            <span className="">ทักษะ: {skill.name}</span>
+                                                            <span className=" pr-2 text-blue-500 text-3xl relative"><RiArrowDropDownLine></RiArrowDropDownLine></span>
+                                                        </div>
                                                     </button>
                                                 </span>
                                                 <div className="flex justify-between">
