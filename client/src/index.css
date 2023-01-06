@@ -115,6 +115,31 @@
     hover:bg-orange-400 hover:text-white
     hover:shadow-md
   }
+
+  .card-link{
+    @apply no-underline
+    
+  }
+
+  .card-subheader{
+    @apply mb-2 
+    text-2xl text-center 
+    font-bold 
+    tracking-tight 
+    text-gray-600
+    
+  }
+
+  .user-card{
+    @apply max-w-sm 
+    bg-white 
+    border border-gray-200 
+    rounded-lg 
+    shadow-md 
+    p-2 
+    mx-2 my-4 
+    hover:bg-amber-50
+  }
 }
 
 body {

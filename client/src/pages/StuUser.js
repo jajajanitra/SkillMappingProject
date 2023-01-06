@@ -135,7 +135,7 @@ function StuUser () {
 
                     <div className="grid gird-flow-row lg:grid-cols-2 lg:gap-8 p-2 lg:p-4 " >
                         <div className="mb-4">
-                            <h6 className="text-xl border-solid border-l-4 border-pink-700 pl-2 mb-4">ระดับทักษะจากรายวิชา</h6>
+                            <h6 className="text-xl border-solid border-l-4 border-pink-700 pl-2 mb-4">ระดับทักษะจากรายวิชาที่เรียน</h6>
                             <table class="w-full text-left my-3">
                                 <thead class="border-b bg-purple-100">
                                     <tr>

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
-import {AiOutlineInfoCircle} from 'react-icons/ai';
+import {BsEmojiDizzy, BsEmojiAngry, BsEmojiFrown, BsEmojiExpressionless, BsEmojiSmile, BsEmojiLaughing} from 'react-icons/bs';
 import {RiArrowDropDownLine} from 'react-icons/ri';
 import {TfiSave} from 'react-icons/tfi';
 import {MdAdd} from 'react-icons/md';
@@ -240,7 +240,7 @@ function StuFillInformation () {
                     <div class="tab-pane fade show active" id="tabs-homeJustify" role="tabpanel"
                     aria-labelledby="tabs-home-tabJustify">
                         <div>
-                            <h5 className="sub-header">เพิ่มรายวิชาที่เรียน</h5>
+                            <h5 className="sub-header">เพิ่มรายวิชาที่เคยเรียน</h5>
                         </div>
                         <div className="flex flex-wrap lg:grid lg:grid-flow-row-dense lg:grid-cols-6 lg:gap-4">
                             <input
@@ -304,6 +304,9 @@ function StuFillInformation () {
                             <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
                                 <div>
                                     <h5 className="sub-header">ประเมินระดับทักษะด้วยตนเอง</h5>
+                                    <p className="px-2">
+                                    &nbsp; &nbsp;เลือกระดับทักษะของตนเองในแต่ละทักษะซึ่ง 0 คือไม่มีทักษะ โดยสามารถคลิกที่ชื่อทักษะเพื่อดูคำอธิบายว่าทักษะนี้ในแต่ละระดับจะต้องมีความสามารถทำอะไรได้บ้าง แล้วเลือกระดับที่เหมาะสมกับตนเอง
+                                    </p>
                                 </div>
                                 <div class="overflow-x-auto lg:grid lg:grid-cols-2 lg:gap-6 ">
                                 {skills.map((skill, index) => (
@@ -343,11 +346,13 @@ function StuFillInformation () {
                                     
                                         <div class="accordion accordion-flush" id="accordionFlushExample">
                                             <div class="accordion-item border-t-0 border-l-0 border-r-0 rounded-none bg-white border border-gray-200">
-                                                <h2 class="accordion-header mb-0" id="flush-headingOne">
-                                                </h2>
+                                                
                                                 <div id={skill.name.replace(/[^A-Z0-9]+/ig, "_")} class="accordion-collapse border-0 collapse"
                                                 aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                                                     <div class="accordion-body py-4">
+                                                        <h6 class="text-md underline underline-offset-4 decoration-pink-600 decoration-2 mb-3" >
+                                                            คำอธิบายความสามารถของทักษะในแต่ละระดับ
+                                                        </h6>
                                                         <table class={`min-w-full text-left`}>
                                                             <thead class="border-b bg-pink-50">
                                                                 <tr>
@@ -400,6 +405,9 @@ function StuFillInformation () {
                             <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
                                 <div>
                                     <h5 className="sub-header">ประเมินระดับความชอบรายทักษะ</h5>
+                                    <p className="px-2">
+                                    &nbsp; &nbsp;เลือกให้คะแนนความชอบในแต่ละทักษะซึ่งเรียงจากน้อยไปมาก 0 คือไม่ชอบเลย ถึง 5 คือชอบมากที่สุด โดยสามารถคลิกที่ชื่อทักษะเพื่อดูคำอธิบายว่าทักษะนี้เกี่ยวข้องกับอะไร
+                                    </p>
                                 </div>
                                 <div class="overflow-x-auto lg:grid lg:grid-cols-2 lg:gap-6">
                                 {skills.map((skill, index) => (

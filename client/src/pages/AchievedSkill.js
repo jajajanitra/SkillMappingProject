@@ -200,7 +200,7 @@ function AchievedSkill () {
                                 <Form.Select className="courses-dropdown" value={course} onChange={handleCourseChange} required>
                                     <option>Please select course</option>
                                     {options.map((option) => (
-                                        <option value={option._id} id={option.id} >{option.id} {option.name}</option>
+                                        <option value={option._id} id={option.id} >{option.id} {option.name} {option.sel_topic!=undefined? `(topic: ${option.sel_topic})`: ""}</option>
                                     ))}
                                 </Form.Select> 
                                 <h6>
