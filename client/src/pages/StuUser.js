@@ -97,15 +97,15 @@ function StuUser () {
                         <h6 className="text-lg">รหัสนักศึกษา: {student.student_id}</h6>
                     </div> */}
 
-                    <div className="mb-4">
-                        <h6 className="text-xl border-solid border-l-4 border-pink-700 pl-2">รายวิชาที่เรียน</h6>
+                    <h6 className="text-xl border-solid border-l-4 border-pink-700 pl-2">รายวิชาที่เรียน</h6>   
+                    <div className="mb-4 p-2">
                         <table class="w-full text-left my-3">
                             <thead class="border-b bg-yellow-100">
                                 <tr>
-                                <th scope="col" class="text-sm font-medium pl-4 pr-1 py-4">
+                                <th scope="col" class="text-md font-medium pl-4 pr-1 py-4">
                                     รหัสวิชา
                                 </th>
-                                <th scope="col" class="text-sm font-medium pl-4 pr-1 py-4">
+                                <th scope="col" class="text-md font-medium pl-4 pr-1 py-4">
                                     ชื่อวิชา
                                 </th>
                                 <th>
@@ -117,8 +117,8 @@ function StuUser () {
                             <tbody>
                                 {student.courses?.map((course, index) => (
                                     <tr className="bg-white border-b ">
-                                        <td className="text-sm text-gray-900 font-light pl-4 pr-1 py-4 w-fit">{course.course_id} </td>
-                                        <td className="text-sm text-gray-900 font-light pl-4 pr-1 py-4 ">{course.course_name}</td>
+                                        <td className="text-md text-gray-900 font-light pl-4 pr-1 py-4 w-fit">{course.course_id} </td>
+                                        <td className="text-md text-gray-900 font-light pl-4 pr-1 py-4 ">{course.course_name}</td>
                                         <td className="text-right px-2 lg:px-4">
                                             <button className="delete-btn" value={course.course_id} onClick={e => deleteCourse(e, course.course_name, course.course_id)}>
                                                 <div className="flex items-center">
@@ -133,16 +133,16 @@ function StuUser () {
                         </table>
                     </div>
 
-                    <div className="grid gird-flow-row lg:grid-cols-2 lg:gap-8 p-2 lg:p-4 " >
+                    <h6 className="text-xl border-solid border-l-4 border-pink-700 pl-2">ระดับทักษะจากรายวิชาที่เรียน</h6>
+                    <div className="grid gird-flow-row lg:grid-cols-2 lg:gap-8 p-2 lg:px-4" >
                         <div className="mb-4">
-                            <h6 className="text-xl border-solid border-l-4 border-pink-700 pl-2 mb-4">ระดับทักษะจากรายวิชาที่เรียน</h6>
                             <table class="w-full text-left my-3">
                                 <thead class="border-b bg-purple-100">
                                     <tr>
-                                    <th scope="col" class="text-sm font-medium pl-4 pr-1 py-4 ">
+                                    <th scope="col" class="text-md font-medium pl-4 pr-1 py-4 ">
                                         ทักษะ
                                     </th>
-                                    <th scope="col" class="text-sm font-medium px-2 py-4 w-fit text-center ">
+                                    <th scope="col" class="text-md font-medium px-2 py-4 w-fit text-center ">
                                         ระดับทักษะ
                                     </th>
                                     
@@ -151,8 +151,8 @@ function StuUser () {
                                 <tbody>
                                     {student.skills?.map((skill) => (
                                         <tr className="bg-white border-b">
-                                            <td className="text-sm text-gray-900 font-light pl-4 pr-1 py-4 ">{skill.skill_name} </td>
-                                            <td className="text-sm text-gray-900 font-light px-2 py-4 max-w-fit text-center ">{skill.level_id}</td>
+                                            <td className="text-md text-gray-900 font-light pl-4 pr-1 py-4 ">{skill.skill_name} </td>
+                                            <td className="text-md text-gray-900 font-light px-2 py-4 max-w-fit text-center ">{skill.level_id}</td>
                                         </tr>
                                     ))}
                                     
@@ -161,31 +161,17 @@ function StuUser () {
 
                         </div>
 
-                        <div className="mb-2">
-                            <span className="flex justify-between">
-                                <h6 className="text-xl border-solid border-l-4 border-pink-700 pl-2">ระดับทักษะจากการประเมินตนเอง</h6>
-                                <a href="/student_user/editSkills" className="no-underline text-orange-400 hover:text-white md:absolute md:right-6">
-                                    <button className="edit-btn" >
-                                        <div className="flex items-center">
-                                            <span className="block px-1 content-center"><RiEditLine className="h-5 w-5"></RiEditLine></span>
-                                            <span className="block pr-1 text-sm">แก้ไข</span>  
-                                        </div> 
-                                    </button>  
-                                </a>
-                                    
-                                
-                            </span>
-                            
+                        <div className="mb-4">
                             <table class="w-full text-left my-3">
                                 <thead class="border-b bg-purple-100">
                                     <tr>
-                                        <th scope="col" class="text-sm font-medium pl-4 pr-1 py-4">
+                                        <th scope="col" class="text-md font-medium pl-4 pr-1 py-4">
                                             ทักษะ
                                         </th>
-                                        <th scope="col" class="text-sm font-medium px-2 py-4 text-center w-fit">
+                                        <th scope="col" class="text-md font-medium px-2 py-4 text-center w-fit">
                                             ระดับทักษะ
                                         </th>
-                                        <th scope="col" class="text-sm font-medium px-2 py-4 text-center w-fit">
+                                        <th scope="col" class="text-md font-medium px-2 py-4 text-center w-fit">
                                             ระดับความชอบ
                                         </th>
                                     </tr>
@@ -193,9 +179,9 @@ function StuUser () {
                                 <tbody>
                                     {student.skills?.map((skill) => (
                                         <tr className="bg-white border-b">
-                                            <td className="text-sm text-gray-900 font-light pl-4 pr-1 py-4 ">{skill.skill_name} </td>
-                                            <td className="text-sm text-gray-900 font-light px-2 py-4 text-center max-w-fit">{skill.skill_self}</td>
-                                            <td className="text-sm text-gray-900 font-light px-2 py-4 text-center max-w-fit">{skill.skill_like}</td>
+                                            <td className="text-md text-gray-900 font-light pl-4 pr-1 py-4 ">{skill.skill_name} </td>
+                                            <td className="text-md text-gray-900 font-light px-2 py-4 text-center max-w-fit">{skill.skill_self}</td>
+                                            <td className="text-md text-gray-900 font-light px-2 py-4 text-center max-w-fit">{skill.skill_like}</td>
                                         </tr>
                                     ))}
                                     

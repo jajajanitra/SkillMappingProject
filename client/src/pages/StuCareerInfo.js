@@ -11,6 +11,7 @@ import { Radar } from 'react-chartjs-2';
 
 function StuCareerInfo (){
     const [career, setCareer] = useState([]);
+    const [courses, setCourses] = useState([]);
     const [chartData, setChartData] = useState([]);
 
     const stuToken = '12345';
@@ -35,8 +36,14 @@ function StuCareerInfo (){
             borderColor: 'rgba(253, 205, 0, 1)',
             borderWidth: 1,
           },
-        ],
-      };
+        ]
+    };
+
+    const option = {
+        labels: {
+            fontSize: 20,
+        }
+    }
 
     useEffect(() => {
         getData();
@@ -49,7 +56,9 @@ function StuCareerInfo (){
                 const resCareer = responses[0];
                 setCareer(resCareer.data.career[0]);
                 setChartData(resCareer.data.chart);
-                console.log(resCareer.data.chart);
+                setCourses(resCareer.data.courses.sort(
+                    (p1, p2) => (p1.id > p2.id) ? 1 : (p1.id < p2.id) ? -1 : 0));
+                console.log(resCareer.data);
             }
             
         ))
@@ -66,10 +75,18 @@ function StuCareerInfo (){
                     <div>
                         <div className="info-card">
                         <h6 className="my-1 text-xl border-l-4 border-pink-700 px-2">ภาระหน้าที่ของอาชีพ</h6>
-                        <p className="px-2">&nbsp; &nbsp; {career.des_thai}</p>
+                        <p className="px-2 text-lg">&nbsp; &nbsp; {career.des_thai}</p>
                         </div> 
                         <div className="info-card mt-4 mb-4">
                             <h6 className="my-1 text-xl border-l-4 border-pink-700 px-2">รายวิชาที่แนะนำ</h6>
+                            <table className="mb-3">
+                                {courses.map((course, index) => (
+                                    <tr>
+                                        <td className="text-lg pl-4 pr-2">{course.id}</td>
+                                        <td className="text-lg">{course.name}</td>    
+                                    </tr>
+                                ))}
+                            </table>
                         </div>   
                     </div>
 
@@ -79,15 +96,15 @@ function StuCareerInfo (){
                         <table class="w-full text-left my-3">
                             <thead className="border-b bg-purple-100">
                                 <tr>
-                                    <th className="text-sm font-medium px-4 py-4">ทักษะ</th>
-                                    <th className="text-sm font-medium px-4 py-4 text-center">ระดับทักษะ</th>
+                                    <th className="text-lg font-medium px-4 py-4 ">ทักษะ</th>
+                                    <th className="text-lg font-medium px-4 py-4 text-center">ระดับทักษะ</th>
                                 </tr>
                             </thead>
                         
                             {career.skills?.map((skill, index) => (
                                 <tr className="bg-white border-b ">
-                                    <td className="text-sm text-gray-900 font-light px-4 py-4 ">{skill.skill_name}</td>
-                                    <td className="text-sm text-gray-900 font-light px-4 py-4 text-center">{skill.level_id}</td>
+                                    <td className="text-md text-gray-900 font-light px-4 py-4 ">{skill.skill_name}</td>
+                                    <td className="text-md text-gray-900 font-light px-4 py-4 text-center">{skill.level_id}</td>
                                 </tr>
 
                             ))}
@@ -98,7 +115,7 @@ function StuCareerInfo (){
                 <div className="info-card my-4 p-4 text-black ">
                     <h6 className="my-1 text-xl border-l-4 border-pink-700 px-2">เปรียบเทียบทักษะ</h6>
                     <div className="flex justify-center lg:max-h-[34rem] p-2">
-                        <Radar data={data}/>
+                        <Radar data={data} options={option}/>
                     </div>
                 </div>
             </div>
