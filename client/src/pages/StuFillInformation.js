@@ -43,11 +43,11 @@ function StuFillInformation () {
                 const resSkills = responses[0].data;
                 const data = [...resSkills]
                 setSkills(data);
-                setSelfSkills(resSkills);
                 const resCourses = responses[1].data;
                 setCourses(resCourses);
                 const resStudent = responses[2].data;
                 setStudent(resStudent.skillslist);
+                setSelfSkills(resStudent.skillslist);
                 setLikes(resStudent.skillslist);
                 // console.log(student);
                 
@@ -112,15 +112,15 @@ function StuFillInformation () {
         )
     };
 
-    const handleSkillsLevelChange = (event) => {
-        const name = event.target.name;
+    const handleSkillsLevelChange = (event, name) => {
+        console.log(name);
         const index = selfSkills.findIndex(object => {
-            return object.name === name;
+            return object.skill_name === name;
         });
         // const index = event.target
         const level = event.target.value;
-        let tempSkill = skills;
-        tempSkill[index]['skill_self'] = level;
+        let tempSkill = student;
+        tempSkill[index].skill_self = level;
         setSelfSkills(tempSkill);
     };
 
@@ -137,10 +137,6 @@ function StuFillInformation () {
     };
 
     const addSelfSkills = async () => {
-        // selfSkills.forEach((skill, index) => {
-        //     delete skill['des'];
-        //     delete skill['levels'];
-        // })
         console.log(selfSkills);
 
         await axios.post(addSkills_URL,{
@@ -178,10 +174,6 @@ function StuFillInformation () {
     };
 
     const addLikes = async () => {
-        // likes.forEach((skill, index) => {
-        //     delete skill['des'];
-        //     delete skill['levels'];
-        // })
         console.log("likeArr",likes);
 
         await axios.post(addLikes_URL,{
@@ -346,12 +338,12 @@ function StuFillInformation () {
                                                 <div className="flex justify-between">
                                                     <span className="inline-block align-baseline py-2">ระดับ:</span>
                                                     <span className="text-sm text-gray-900 font-light p-2 lg:px-6 lg:py-4 whitespace-nowrap">
-                                                        <input type="radio" name={skill.name} id={skill._id} value={0} onChange={handleSkillsLevelChange}></input>
+                                                        <input type="radio" name={skill.name+"skill"} id={skill._id+"0"} value={0} onChange={handleSkillsLevelChange} defaultChecked={student[index]?.skill_self === 0}></input>
                                                         <label>0</label>
                                                     </span>
                                                     {skill.levels.map((level) => (
                                                         <span className="text-sm text-gray-900 font-light p-2 lg:px-6 lg:py-4 whitespace-nowrap">
-                                                            <input type="radio" name={skill.name} id={skill._id} value={level.level_id} onChange={handleSkillsLevelChange}></input>
+                                                            <input type="radio" name={skill.name+"skill"} id={skill._id+level.level_id} value={level.level_id} onChange={event => handleSkillsLevelChange(event, skill.name)} defaultChecked={student[index]?.skill_self === level.level_id}></input>
                                                             <label>{level.level_id}</label>
                                                         </span>
                                                     ))}
