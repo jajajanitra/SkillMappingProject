@@ -44,13 +44,16 @@ function StuFillInformation () {
                 const data = [...resSkills]
                 setSkills(data);
                 setSelfSkills(resSkills);
-                setLikes(resSkills);
                 const resCourses = responses[1].data;
                 setCourses(resCourses);
                 const resStudent = responses[2].data;
-                setStudent(resStudent.data.skillslist[0]);
-                console.log(resStudent.data[0]);
-
+                setStudent(resStudent.skillslist);
+                setLikes(resStudent.skillslist);
+                console.log(student);
+                // let tempSkill = skills;
+                // setLikes(tempSkill.map((skill, index) => {
+                //     skill['skill_like'] = student[index].skill_like;
+                // }));
             }
         ))
         // console.log(skills);
@@ -127,12 +130,12 @@ function StuFillInformation () {
     const handleLikesLevelChange = (event) => {
         const name = event.target.name;
         const index = likes.findIndex(object => {
-            return object.name === name;
+            return object.skill_name === name;
         });
         // const index = event.target
         const level = event.target.value;
-        let tempSkill = skills;
-        tempSkill[index]['skill_like'] = level;
+        let tempSkill = student;
+        tempSkill[index].skill_like = level;
         setLikes(tempSkill);
     };
 
@@ -447,34 +450,34 @@ function StuFillInformation () {
                                                 <div className="flex justify-between">
                                                     <span className="inline-block align-baseline py-2">ความชอบ:</span>
                                                    
-                                                    <input type="radio" name={skill.name} id={index+"-0"} value={0} onChange={handleLikesLevelChange} class="hidden peer" required />
-                                                        <label for={index+"-0"} class="inline-flex items-center justify-between peer-checked:text-blue-600 cursor-pointer">                           
-                                                            <BsEmojiDizzy></BsEmojiDizzy>
+                                                    <input type="radio" name={skill.name} id={index+"-0"} value={0} onChange={handleLikesLevelChange} class="hidden peer" required defaultChecked={student[index]?.skill_like == 0}/>
+                                                        <label for={index+"-0"} class="inline-flex items-center justify-between peer-checked:text-gray-300 cursor-pointer">                           
+                                                            <BsEmojiDizzy className="h-6 w-6"></BsEmojiDizzy>
                                                         </label>
 
-                                                    <input type="radio" name={skill.name} id={index+"-1"} value={1} onChange={handleLikesLevelChange} class="hidden peer"/>
+                                                    <input type="radio" name={skill.name} id={index+"-1"} value={1} onChange={handleLikesLevelChange} class="hidden peer" defaultChecked={student[index]?.skill_like == 1}/>
                                                         <label for={index+"-1"} class="inline-flex items-center justify-between peer-checked:text-red-600 cursor-pointer">                           
-                                                            <BsEmojiAngry></BsEmojiAngry>
+                                                            <BsEmojiAngry className="h-6 w-6"></BsEmojiAngry>
                                                         </label>
 
-                                                    <input type="radio" name={skill.name} id={index+"-2"} value={2} onChange={handleLikesLevelChange} class="hidden peer"/>
-                                                        <label for={index+"-2"} class="inline-flex items-center justify-between peer-checked:text-orange-600 cursor-pointer">                           
-                                                            <BsEmojiFrown></BsEmojiFrown>
+                                                    <input type="radio" name={skill.name} id={index+"-2"} value={2} onChange={handleLikesLevelChange} class="hidden peer" defaultChecked={student[index]?.skill_like == 2}/>
+                                                        <label for={index+"-2"} class="inline-flex items-center justify-between peer-checked:text-orange-500 cursor-pointer">                           
+                                                            <BsEmojiFrown className="h-6 w-6"></BsEmojiFrown>
                                                         </label>
 
-                                                    <input type="radio" name={skill.name} id={index+"-3"} value={3} onChange={handleLikesLevelChange} class="hidden peer"/>
-                                                        <label for={index+"-3"} class="inline-flex items-center justify-between peer-checked:text-yellow-600 cursor-pointer">                           
-                                                            <BsEmojiExpressionless></BsEmojiExpressionless>
+                                                    <input type="radio" name={skill.name} id={index+"-3"} value={3} onChange={handleLikesLevelChange} class="hidden peer" defaultChecked={student[index]?.skill_like == 3}/>
+                                                        <label for={index+"-3"} class="inline-flex items-center justify-between peer-checked:text-yellow-400 cursor-pointer">                           
+                                                            <BsEmojiExpressionless className="h-6 w-6"></BsEmojiExpressionless>
                                                         </label>
 
-                                                    <input type="radio" name={skill.name} id={index+"-4"} value={4} onChange={handleLikesLevelChange} class="hidden peer"/>
-                                                        <label for={index+"-4"} class="inline-flex items-center justify-between peer-checked:text-amber-600 cursor-pointer">                           
-                                                            <BsEmojiSmile></BsEmojiSmile>
+                                                    <input type="radio" name={skill.name} id={index+"-4"} value={4} onChange={handleLikesLevelChange} class="hidden peer" defaultChecked={student[index]?.skill_like == 4}/>
+                                                        <label for={index+"-4"} class="inline-flex items-center justify-between peer-checked:text-lime-500 cursor-pointer">                           
+                                                            <BsEmojiSmile className="h-6 w-6"></BsEmojiSmile>
                                                         </label>
 
-                                                    <input type="radio" name={skill.name} id={index+"-5"} value={5} onChange={handleLikesLevelChange} class="hidden peer"/>
-                                                        <label for={index+"-5"} class="inline-flex items-center justify-between peer-checked:text-green-600 cursor-pointer">                           
-                                                            <BsEmojiLaughing></BsEmojiLaughing>
+                                                    <input type="radio" name={skill.name} id={index+"-5"} value={5} onChange={handleLikesLevelChange} class="hidden peer" defaultChecked={student[index]?.skill_like == 5}/>
+                                                        <label for={index+"-5"} class="inline-flex items-center justify-between peer-checked:text-green-500 cursor-pointer">                           
+                                                            <BsEmojiLaughing className="h-6 w-6"></BsEmojiLaughing>
                                                         </label>
 
 
