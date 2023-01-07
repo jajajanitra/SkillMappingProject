@@ -22,11 +22,14 @@ function StuFillInformation () {
     const [searchInput, setSearchInput] = useState("");
     const [selfSkills, setSelfSkills] = useState([]);
     const [likes, setLikes] = useState([]);
+    const [student, setStudent] = useState({});
 
     const requestSkills = axios.get(Skill_URL);
     const requestCourses = axios.get(Course_URL);
     const addSkills_URL = Server_URL+"/student/selfs";
     const addLikes_URL = Server_URL+"/student/likes";
+    const stuToken = '12345';
+    const requestStudent = axios.get(Server_URL+"/student/"+stuToken);
     const token = "12345";
 
     useEffect(() => {
@@ -34,7 +37,7 @@ function StuFillInformation () {
     }, []);
 
     const getData = async () => {
-        await axios.all([requestSkills, requestCourses])
+        await axios.all([requestSkills, requestCourses, requestStudent])
         .then(
             axios.spread((...responses) => {
                 const resSkills = responses[0].data;
@@ -44,6 +47,9 @@ function StuFillInformation () {
                 setLikes(resSkills);
                 const resCourses = responses[1].data;
                 setCourses(resCourses);
+                const resStudent = responses[2].data;
+                setStudent(resStudent.data.skillslist[0]);
+                console.log(resStudent.data[0]);
 
             }
         ))
@@ -176,7 +182,7 @@ function StuFillInformation () {
         //     delete skill['des'];
         //     delete skill['levels'];
         // })
-        console.log(likes);
+        console.log("like",likes);
 
         await axios.post(addLikes_URL,{
             token: token,
@@ -440,16 +446,38 @@ function StuFillInformation () {
                                                 </span>
                                                 <div className="flex justify-between">
                                                     <span className="inline-block align-baseline py-2">ความชอบ:</span>
-                                                    <span className="text-sm text-gray-900 font-light p-2 lg:px-6 lg:py-4 whitespace-nowrap">
-                                                        <input type="radio" name={skill.name} id={index} value={0} onChange={handleLikesLevelChange}></input>
-                                                        <label>0</label>
-                                                    </span>
-                                                    {skill.levels.map((level) => (
-                                                        <span className="text-sm text-gray-900 font-light p-2 lg:px-6 lg:py-4 whitespace-nowrap">
-                                                            <input type="radio" name={skill.name} id={skill._id} value={level.level_id} onChange={handleLikesLevelChange}></input>
-                                                            <label>{level.level_id}</label>
-                                                        </span>
-                                                    ))}
+                                                   
+                                                    <input type="radio" name={skill.name} id={index+"-0"} value={0} onChange={handleLikesLevelChange} class="hidden peer" required />
+                                                        <label for={index+"-0"} class="inline-flex items-center justify-between peer-checked:text-blue-600 cursor-pointer">                           
+                                                            <BsEmojiDizzy></BsEmojiDizzy>
+                                                        </label>
+
+                                                    <input type="radio" name={skill.name} id={index+"-1"} value={1} onChange={handleLikesLevelChange} class="hidden peer"/>
+                                                        <label for={index+"-1"} class="inline-flex items-center justify-between peer-checked:text-red-600 cursor-pointer">                           
+                                                            <BsEmojiAngry></BsEmojiAngry>
+                                                        </label>
+
+                                                    <input type="radio" name={skill.name} id={index+"-2"} value={2} onChange={handleLikesLevelChange} class="hidden peer"/>
+                                                        <label for={index+"-2"} class="inline-flex items-center justify-between peer-checked:text-orange-600 cursor-pointer">                           
+                                                            <BsEmojiFrown></BsEmojiFrown>
+                                                        </label>
+
+                                                    <input type="radio" name={skill.name} id={index+"-3"} value={3} onChange={handleLikesLevelChange} class="hidden peer"/>
+                                                        <label for={index+"-3"} class="inline-flex items-center justify-between peer-checked:text-yellow-600 cursor-pointer">                           
+                                                            <BsEmojiExpressionless></BsEmojiExpressionless>
+                                                        </label>
+
+                                                    <input type="radio" name={skill.name} id={index+"-4"} value={4} onChange={handleLikesLevelChange} class="hidden peer"/>
+                                                        <label for={index+"-4"} class="inline-flex items-center justify-between peer-checked:text-amber-600 cursor-pointer">                           
+                                                            <BsEmojiSmile></BsEmojiSmile>
+                                                        </label>
+
+                                                    <input type="radio" name={skill.name} id={index+"-5"} value={5} onChange={handleLikesLevelChange} class="hidden peer"/>
+                                                        <label for={index+"-5"} class="inline-flex items-center justify-between peer-checked:text-green-600 cursor-pointer">                           
+                                                            <BsEmojiLaughing></BsEmojiLaughing>
+                                                        </label>
+
+
                                                 </div>
                                                 
                                             </div>

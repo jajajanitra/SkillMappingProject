@@ -20,7 +20,8 @@ function NavBar (){
         .then(
             axios.spread((...responses) => {
                 const resStudent = responses[0];
-                setStudent(resStudent.data[0]);
+                setStudent(resStudent.data.student[0]);
+                console.log(resStudent.data);
             }
             
         ))

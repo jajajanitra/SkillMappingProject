@@ -27,8 +27,8 @@ function StuUser () {
         .then(
             axios.spread((...responses) => {
                 const resStudent = responses[0];
-                setStudent(resStudent.data[0]);
-                console.log(resStudent.data[0].courses);
+                setStudent(resStudent.data.student[0]);
+                console.log(resStudent.data[0]);
             }
             
         ))
