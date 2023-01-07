@@ -140,6 +140,14 @@
     mx-2 my-4 
     hover:bg-amber-50
   }
+
+  .emoji-label{
+    @apply inline-flex 
+    items-center 
+    justify-between 
+    text-gray-500 
+    cursor-pointer 
+  }
 }
 
 body {
