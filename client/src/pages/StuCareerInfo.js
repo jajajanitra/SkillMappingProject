@@ -36,13 +36,43 @@ function StuCareerInfo (){
             borderColor: 'rgba(253, 205, 0, 1)',
             borderWidth: 1,
           },
-        ]
+        ],
     };
 
-    const option = {
-        labels: {
-            fontSize: 20,
-        }
+    const options = {
+        plugins: {
+            legend: {
+                labels: {
+                    font: function(context) {
+                        var width = context.chart.width;
+                        var size = Math.round(width / 32);
+                        if(size > 18){
+                            size = 18
+                        }
+                        return {
+                            size: size
+                        };
+                    }
+                }
+            },
+            
+        },
+        scales: {
+            r: {
+              pointLabels: {
+                font: function(context) {
+                    var width = context.chart.width;
+                    var size = Math.round(width / 48);
+                    if(size > 18){
+                        size = 18
+                    }
+                    return {
+                        size: size
+                    };
+                }
+              }
+            }
+          }
     }
 
     useEffect(() => {
@@ -114,8 +144,8 @@ function StuCareerInfo (){
                 </div>
                 <div className="info-card my-4 p-4 text-black ">
                     <h6 className="my-1 text-xl border-l-4 border-pink-700 px-2">เปรียบเทียบทักษะ</h6>
-                    <div className="flex justify-center lg:max-h-[34rem] p-2">
-                        <Radar data={data} options={option}/>
+                    <div className="flex justify-center p-2 max-h-[60rem]">
+                        <Radar options={options} data={data} />
                     </div>
                 </div>
             </div>
