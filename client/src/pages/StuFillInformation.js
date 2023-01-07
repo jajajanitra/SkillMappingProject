@@ -3,6 +3,7 @@ import axios from "axios";
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 import {BsEmojiDizzy, BsEmojiAngry, BsEmojiFrown, BsEmojiExpressionless, BsEmojiSmile, BsEmojiLaughing} from 'react-icons/bs';
+import {BsClipboard, BsTools, BsBookmarkHeart} from 'react-icons/bs';
 import {RiArrowDropDownLine} from 'react-icons/ri';
 import {TfiSave} from 'react-icons/tfi';
 import {MdAdd} from 'react-icons/md';
@@ -57,6 +58,17 @@ function StuFillInformation () {
         setFilteredCourses(courses.filter((course) => {
             return course.id === searchInput
         }))
+        
+        // if(filteredCourses.length < 1){
+        //     MySwal.fire({
+        //         title: 'ไม่พบข้อมูลรายวิชานี้!',
+        //         text: `ไม่มีข้อมูลของรายวิชา ${searchInput}`,
+        //         icon: 'error',
+        //         confirmButtonColor: '#7FCFFF',
+        //         allowOutsideClick: false,
+        //         allowEscapeKey: false
+        //     })
+        // }
     };
 
     const addCourse = async (event, course) => {
@@ -219,21 +231,21 @@ function StuFillInformation () {
                     id="tabs-home-tabJustify" 
                     data-bs-toggle="pill" 
                     data-bs-target="#tabs-homeJustify" role="tab"
-                    aria-controls="tabs-homeJustify" aria-selected="true">รายวิชา</a>
+                    aria-controls="tabs-homeJustify" aria-selected="true"><span className="flex justify-center"><BsClipboard className="h-7 mr-2"></BsClipboard>รายวิชา</span></a>
                 </li>
                 <li class="nav-item flex-grow text-center" role="presentation">
                     <a href="#tabs-profileJustify" class="fillInfo-tab" 
                     id="tabs-profile-tabJustify" 
                     data-bs-toggle="pill" 
                     data-bs-target="#tabs-profileJustify" role="tab"
-                    aria-controls="tabs-profileJustify" aria-selected="false">ทักษะ</a>
+                    aria-controls="tabs-profileJustify" aria-selected="false"><span className="flex justify-center"><BsTools className="h-7 mr-2"></BsTools>ทักษะ</span></a>
                 </li>
                 <li class="nav-item flex-grow text-center" role="presentation">
                     <a href="#tabs-messagesJustify" class="fillInfo-tab" 
                     id="tabs-messages-tabJustify" 
                     data-bs-toggle="pill" 
                     data-bs-target="#tabs-messagesJustify" role="tab"
-                    aria-controls="tabs-messagesJustify" aria-selected="false">ความชอบ</a>
+                    aria-controls="tabs-messagesJustify" aria-selected="false"><span className="flex justify-center"><BsBookmarkHeart className="h-7 mr-2"></BsBookmarkHeart> ความชอบ</span></a>
                 </li>
                 </ul>
                 <div class="tab-content" id="tabs-tabContentJustify">
