@@ -4,7 +4,7 @@ import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 import {BsEmojiDizzy, BsEmojiAngry, BsEmojiFrown, BsEmojiExpressionless, BsEmojiSmile, BsEmojiLaughing} from 'react-icons/bs';
 import {BsClipboard, BsTools, BsBookmarkHeart} from 'react-icons/bs';
-import {RiArrowDropDownLine} from 'react-icons/ri';
+import {RiArrowDropDownLine, RiLoader2Fill} from 'react-icons/ri';
 import {TfiSave} from 'react-icons/tfi';
 import {MdAdd} from 'react-icons/md';
 
@@ -16,6 +16,7 @@ import NavBar from "../components/NavBar";
 const MySwal = withReactContent(Swal);
 
 function StuFillInformation () {
+    const [loading, setLoading] = useState(false);
     const [skills, setSkills] = useState([]);
     const [courses, setCourses] = useState([]);
     const [filteredCourses, setFilteredCourses] = useState([]);
@@ -64,7 +65,7 @@ function StuFillInformation () {
         setFilteredCourses(courses.filter((course) => {
             return course.id === searchInput
         }))
-        
+
         // if(filteredCourses.length < 1){
         //     MySwal.fire({
         //         title: 'ไม่พบข้อมูลรายวิชานี้!',
@@ -113,7 +114,6 @@ function StuFillInformation () {
     };
 
     const handleSkillsLevelChange = (event, name) => {
-        console.log(name);
         const index = selfSkills.findIndex(object => {
             return object.skill_name === name;
         });
@@ -137,6 +137,7 @@ function StuFillInformation () {
     };
 
     const addSelfSkills = async () => {
+        setLoading(true);
         console.log(selfSkills);
 
         await axios.post(addSkills_URL,{
@@ -144,6 +145,7 @@ function StuFillInformation () {
             skill: selfSkills
         }).then((res) => {
             console.log(res.status);
+            setLoading(false);
             if (res.status === 200 || res.status === 201){
                 MySwal.fire({
                     title: 'บันทึกเรียบร้อย!',
@@ -168,12 +170,14 @@ function StuFillInformation () {
             }
         })
         .catch((err) => {
+            setLoading(false);
             console.log(err);
         })
 
     };
 
     const addLikes = async () => {
+        setLoading(true);
         console.log("likeArr",likes);
 
         await axios.post(addLikes_URL,{
@@ -181,6 +185,7 @@ function StuFillInformation () {
             skill: likes
         }).then((res) => {
             console.log(res.status);
+            setLoading(false);
             if (res.status === 200 || res.status === 201){
                 MySwal.fire({
                     title: 'บันทึกเรียบร้อย!',
@@ -205,6 +210,7 @@ function StuFillInformation () {
             }
         })
         .catch((err) => {
+            setLoading(false);
             console.log(err);
         })
     };
@@ -229,21 +235,21 @@ function StuFillInformation () {
                     id="tabs-home-tabJustify" 
                     data-bs-toggle="pill" 
                     data-bs-target="#tabs-homeJustify" role="tab"
-                    aria-controls="tabs-homeJustify" aria-selected="true"><span className="flex justify-center"><BsClipboard className="h-7 mr-2"></BsClipboard>รายวิชา</span></a>
+                    aria-controls="tabs-homeJustify" aria-selected="true"><span className="flex justify-center"><BsClipboard className="lg:h-7 mr-2"></BsClipboard>รายวิชา</span></a>
                 </li>
                 <li class="nav-item flex-grow text-center" role="presentation">
                     <a href="#tabs-profileJustify" class="fillInfo-tab" 
                     id="tabs-profile-tabJustify" 
                     data-bs-toggle="pill" 
                     data-bs-target="#tabs-profileJustify" role="tab"
-                    aria-controls="tabs-profileJustify" aria-selected="false"><span className="flex justify-center"><BsTools className="h-7 mr-2"></BsTools>ทักษะ</span></a>
+                    aria-controls="tabs-profileJustify" aria-selected="false"><span className="flex justify-center"><BsTools className="lg:h-7 mr-2"></BsTools>ทักษะ</span></a>
                 </li>
                 <li class="nav-item flex-grow text-center" role="presentation">
                     <a href="#tabs-messagesJustify" class="fillInfo-tab" 
                     id="tabs-messages-tabJustify" 
                     data-bs-toggle="pill" 
                     data-bs-target="#tabs-messagesJustify" role="tab"
-                    aria-controls="tabs-messagesJustify" aria-selected="false"><span className="flex justify-center"><BsBookmarkHeart className="h-7 mr-2"></BsBookmarkHeart> ความชอบ</span></a>
+                    aria-controls="tabs-messagesJustify" aria-selected="false"><span className="flex justify-center"><BsBookmarkHeart className="lg:h-7 mr-2"></BsBookmarkHeart> ความชอบ</span></a>
                 </li>
                 </ul>
                 <div class="tab-content" id="tabs-tabContentJustify">
@@ -401,8 +407,8 @@ function StuFillInformation () {
                         <div className="flex justify-end">
                             <button className="green-btn" onClick={addSelfSkills}>
                                 <div className="flex justify-center">
-                                    <span className="block px-2 lg:px-1"><TfiSave className="h-6 w-6"></TfiSave></span>
-                                    <span className="block px-2 lg:px-1">บันทึกข้อมูล</span>  
+                                    <span className="block px-2 lg:px-1">{loading ? <RiLoader2Fill className="h-6 w-6"></RiLoader2Fill> : <TfiSave className="h-6 w-6"></TfiSave>}</span>
+                                    <span className="block px-2 lg:px-1">{loading ? "กำลังบันทึก..." : "บันทึกข้อมูล"}</span>  
                                 </div>
                             </button>
                         </div>
@@ -516,8 +522,8 @@ function StuFillInformation () {
                         <div className="flex justify-end">
                             <button className="green-btn" onClick={addLikes}>
                                 <div className="flex justify-center">
-                                    <span className="block px-2 lg:px-1"><TfiSave className="h-6 w-6"></TfiSave></span>
-                                    <span className="block px-2 lg:px-1">บันทึกข้อมูล</span>  
+                                    <span className="block px-2 lg:px-1">{loading ? <RiLoader2Fill className="h-6 w-6"></RiLoader2Fill> : <TfiSave className="h-6 w-6"></TfiSave>}</span>
+                                    <span className="block px-2 lg:px-1">{loading ? "กำลังบันทึก..." : "บันทึกข้อมูล"}</span>  
                                 </div>
                             </button>
                         </div>
