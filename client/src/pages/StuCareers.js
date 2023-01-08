@@ -52,7 +52,7 @@ function StuCareers () {
         <div>
             <NavBar></NavBar>
             <div className="content-div">
-                <h4 className="page-header">ข้อมูลอาชีพ</h4>
+                <h4 className="page-header">วิเคราะห์อาชีพ</h4>
                 <div className="flex flex-wrap lg:grid lg:grid-flow-row-dense lg:grid-cols-6 lg:gap-4 mb-2">
                     <input
                     className="h-10 w-full p-2 mx-2 my-2 md:my-1 lg:col-span-5"

@@ -85,7 +85,7 @@ function NavBar (){
                             className='no-underline text-gray-700 hover:text-dark-purple-font'>
                                 <div>
                                 <span className={`block float-left text-xl mr-2 `}><AiOutlineFileSearch /></span>
-                                <span className={`text-base font-medium flex-1 `}>ข้อมูลอาชีพ</span>   
+                                <span className={`text-base font-medium flex-1 `}>วิเคราะห์อาชีพ</span>   
                                 </div>                         
                             </a>
                         </li>

@@ -16,6 +16,7 @@ import NavBar from "../components/NavBar";
 const MySwal = withReactContent(Swal);
 
 function StuFillInformation () {
+    const [adding, setAdding] = useState(false);
     const [loading, setLoading] = useState(false);
     const [skills, setSkills] = useState([]);
     const [courses, setCourses] = useState([]);
@@ -80,6 +81,7 @@ function StuFillInformation () {
 
     const addCourse = async (event, course) => {
         // console.log(course);
+        setAdding(true);
         await axios.post(Server_URL+'/student/courses',{
             token: token,
             course_id: course.id,
@@ -90,6 +92,7 @@ function StuFillInformation () {
         .then(
             (res) => {
                 console.log(res);
+                setAdding(false);
                 if (res.status === 200 || res.status === 201){
                     MySwal.fire({
                         title: 'เพิ่มรายวิชาเรียบร้อย!',
@@ -111,6 +114,10 @@ function StuFillInformation () {
                 }
             }
         )
+        .catch((err) => {
+            setAdding(false);
+            console.log(err);
+        })
     };
 
     const handleSkillsLevelChange = (event, name) => {

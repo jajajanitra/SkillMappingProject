@@ -57,6 +57,14 @@ function StuCareerInfo (){
             },
             
         },
+        scale: {
+            ticks: {
+                beginAtZero: true,
+                max: 5,
+                min: 0,
+                stepSize: 1
+            }
+        },
         scales: {
             r: {
               pointLabels: {
