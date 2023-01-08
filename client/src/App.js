@@ -14,6 +14,7 @@ import AchievedSkill from './pages/AchievedSkill';
 import NewSkill from './pages/NewSkill';
 
 //students
+import StuLogin from './pages/StuLogin';
 import StuHome from './pages/StuHome';
 import StuCareers from './pages/StuCareers';
 import StuCareerInfo from './pages/StuCareerInfo';
@@ -30,6 +31,7 @@ function App() {
         <Route path="/achievedSkill" element={<AchievedSkill />} />
         <Route path="/newSkill" element={<NewSkill />} />
 
+        <Route path="/student_login" element={<StuLogin />} />
         <Route path="/student_home" element={<StuHome />} />
         <Route path="/student_careers" element={<StuCareers />} />
         <Route path="/student_careers/:id" element={<StuCareerInfo />} />
