@@ -171,6 +171,13 @@
     text-gray-500 
     cursor-pointer 
   }
+
+  .course-link{
+    @apply cursor-pointer
+    h-10
+    p-3
+    hover:text-fuchsia-600
+  }
 }
 
 body {

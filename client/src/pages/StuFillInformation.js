@@ -66,17 +66,16 @@ function StuFillInformation () {
         setFilteredCourses(courses.filter((course) => {
             return course.id === searchInput
         }))
-
-        // if(filteredCourses.length < 1){
-        //     MySwal.fire({
-        //         title: 'ไม่พบข้อมูลรายวิชานี้!',
-        //         text: `ไม่มีข้อมูลของรายวิชา ${searchInput}`,
-        //         icon: 'error',
-        //         confirmButtonColor: '#7FCFFF',
-        //         allowOutsideClick: false,
-        //         allowEscapeKey: false
-        //     })
-        // }
+        if(filteredCourses.length < 1){
+            MySwal.fire({
+                title: 'ไม่พบข้อมูลรายวิชานี้!',
+                text: `ไม่มีข้อมูลของรายวิชา ${searchInput}`,
+                icon: 'error',
+                confirmButtonColor: '#7FCFFF',
+                allowOutsideClick: false,
+                allowEscapeKey: false
+            })    
+        }
     };
 
     const addCourse = async (event, course) => {
@@ -303,11 +302,11 @@ function StuFillInformation () {
                                                 <td className="p-3">{course.name}</td>
                                                 <td className="p-3">{course.sel_topic}</td>
                                                 <td className="text-center p-3">
-                                                    <button className="green-btn h-fit flex items-center" onClick={event => addCourse(event, course)}>
+                                                    <button className={adding ? "disabled-btn h-fit flex items-center" : "green-btn h-fit flex items-center"} onClick={event => addCourse(event, course)} disabled={adding ? true : false}>
                                                         <span className="px-2">
                                                            <MdAdd></MdAdd> 
                                                         </span>
-                                                    เพิ่ม</button>
+                                                        เพิ่ม</button>
                                                 </td>
                                             </tr>
                                             

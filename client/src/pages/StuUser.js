@@ -11,6 +11,7 @@ import NavBar from "../components/NavBar";
 const MySwal = withReactContent(Swal);
 
 function StuUser () {
+    const [loading, setLoading] = useState(false);
     const [student, setStudent] = useState({});
 
     const stuToken = '12345';
@@ -54,10 +55,12 @@ function StuUser () {
             confirmButtonText: 'ลบรายวิชา',
             cancelButtonText: 'ยกเลิก'
           }).then(async (result) => {
+            setLoading(true);
             if (result.isConfirmed) {
                 await axios.post(deleteURL,data)
                     .then((res) => {
                         console.log(res.status);
+                        setLoading(false);
                         if (res.status === 200){
                             Swal.fire({
                             title: 'ลบข้อมูลเรียบร้อย!',
@@ -79,7 +82,11 @@ function StuUser () {
                                 allowEscapeKey: false
                             })
                         }
-                    })  
+                    }) 
+                    .catch((err) => {
+                        setLoading(false);
+                        console.log(err);
+                    }) 
             }
           })
         
@@ -120,7 +127,7 @@ function StuUser () {
                                         <td className="text-md text-gray-900 font-light pl-4 pr-1 py-4 w-fit">{course.course_id} </td>
                                         <td className="text-md text-gray-900 font-light pl-4 pr-1 py-4 ">{course.course_name}</td>
                                         <td className="text-right px-2 lg:px-4">
-                                            <button className="delete-btn" value={course.course_id} onClick={e => deleteCourse(e, course.course_name, course.course_id)}>
+                                            <button className={loading ? "disabled-btn" : "delete-btn"} value={course.course_id} onClick={e => deleteCourse(e, course.course_name, course.course_id)} disabled={loading ? true : false}>
                                                 <div className="flex items-center">
                                                     <span className="block px-1 content-center"><RiDeleteBin7Line className="h-5 w-5"></RiDeleteBin7Line></span>
                                                     <span className="block pr-1 text-sm">ลบ</span>  

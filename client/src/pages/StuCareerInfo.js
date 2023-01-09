@@ -4,6 +4,7 @@ import axios from "axios";
 import { Server_URL } from "../constants";
 
 import NavBar from "../components/NavBar";
+import {HiOutlineArrowRight, HiOutlineExternalLink} from 'react-icons/hi';
 
 import Chart from "chart.js/auto";
 import { Radar } from 'react-chartjs-2';
@@ -17,6 +18,18 @@ function StuCareerInfo (){
     const stuToken = '12345';
     const id = window.location.pathname.split("/").pop()
     const requestCareer = axios.get(Server_URL+"/career/"+stuToken+"/"+id);
+    const courseSearch_URL = "https://www1.reg.cmu.ac.th/registrationoffice/searchcourse.php";
+
+    const d = new Date();
+    let month = d.getMonth();
+    let year = d.getUTCFullYear() + 543;
+    let semester = 1;
+    if (month > 9 || month < 4 ){
+        semester = 2;
+    }
+    if(month < 5){
+        year -= 1;
+    }
     
 
     const data = {
@@ -117,14 +130,21 @@ function StuCareerInfo (){
                         </div> 
                         <div className="info-card mt-4 mb-4">
                             <h6 className="my-1 text-xl border-l-4 border-pink-700 px-2">รายวิชาที่แนะนำ</h6>
-                            <table className="mb-3">
-                                {courses.map((course, index) => (
-                                    <tr>
-                                        <td className="text-lg pl-4 pr-2">{course.id}</td>
-                                        <td className="text-lg">{course.name}</td>    
-                                    </tr>
-                                ))}
+                            <table className="mb-3 w-full">
+                                <tbody>
+                                    {courses.map((course, index) => (
+                                    
+                                        <tr className="course-link" onClick={() => window.open(`https://mis.cmu.ac.th/tqf/coursepublic.aspx?courseno=${course.id}&semester=${semester}&year=${year}`, '_blank')}>
+                                            <td className="text-lg pl-4 pr-2">{course.id}</td>
+                                            <td className="text-lg">{course.name}</td> 
+                                            <td className="px-2"><HiOutlineArrowRight></HiOutlineArrowRight></td>
+                                        </tr>    
+                                        
+                                    ))}    
+                                </tbody>
                             </table>
+
+                            <a className="flex justfy-items-center" href={courseSearch_URL} target="_blank"><HiOutlineExternalLink className="h-6 w-6 mx-2"></HiOutlineExternalLink>ค้นหากระบวนวิชาที่เปิดสอน (REG CMU)</a>
                         </div>   
                     </div>
 
