@@ -113,7 +113,7 @@ function StuUser () {
                                     รหัสวิชา
                                 </th>
                                 <th scope="col" class="text-md font-medium pl-4 pr-1 py-4">
-                                    ชื่อวิชา
+                                    รายวิชา
                                 </th>
                                 <th>
 
@@ -142,7 +142,7 @@ function StuUser () {
 
                     <div className="grid gird-flow-row lg:grid-cols-2 lg:gap-8 p-2 lg:px-4" >
                         <div className="mb-4">
-                        <h6 className="text-xl border-solid border-l-4 border-pink-700 pl-2">ระดับทักษะจากรายวิชาที่เรียน</h6>
+                        <h6 className="text-xl border-solid border-l-4 border-pink-700 pl-2">ระดับทักษะที่ได้รับจากรายวิชาที่เรียน</h6>
                             <table class="w-full text-left my-3">
                                 <thead class="border-b bg-purple-100">
                                     <tr>

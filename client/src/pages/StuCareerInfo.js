@@ -4,7 +4,7 @@ import axios from "axios";
 import { Server_URL } from "../constants";
 
 import NavBar from "../components/NavBar";
-import {HiOutlineArrowRight, HiOutlineExternalLink} from 'react-icons/hi';
+import {HiOutlineArrowRight, HiOutlineExternalLink, HiOutlineInformationCircle} from 'react-icons/hi';
 
 import Chart from "chart.js/auto";
 import { Radar } from 'react-chartjs-2';
@@ -135,8 +135,9 @@ function StuCareerInfo (){
                                     {courses.map((course, index) => (
                                     
                                         <tr className="course-link" onClick={() => window.open(`https://mis.cmu.ac.th/tqf/coursepublic.aspx?courseno=${course.id}&semester=${semester}&year=${year}`, '_blank')}>
+                                            
                                             <td className="text-lg pl-4 pr-2">{course.id}</td>
-                                            <td className="text-lg">{course.name}</td> 
+                                            <td className="text-lg"> {course.name}</td> 
                                             <td className="px-2"><HiOutlineArrowRight></HiOutlineArrowRight></td>
                                         </tr>    
                                         

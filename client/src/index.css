@@ -149,19 +149,19 @@
     text-2xl text-center 
     font-bold 
     tracking-tight 
-    text-gray-600
+    text-white
     
   }
 
   .user-card{
     @apply max-w-sm 
-    bg-white 
+    bg-gradient-to-r from-sky-300 to-purple-400
     border border-gray-200 
     rounded-lg 
     shadow-md 
     p-2 
     mx-2 my-4 
-    hover:bg-amber-50
+    hover:border-4 hover:border-gray-300
   }
 
   .emoji-label{
@@ -177,6 +177,7 @@
     h-10
     p-3
     hover:text-fuchsia-600
+    hover:bg-fuchsia-50
   }
 }
 
