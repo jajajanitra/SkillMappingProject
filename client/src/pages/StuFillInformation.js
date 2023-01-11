@@ -66,16 +66,16 @@ function StuFillInformation () {
         setFilteredCourses(courses.filter((course) => {
             return course.id === searchInput
         }))
-        if(filteredCourses.length < 1){
-            MySwal.fire({
-                title: 'ไม่พบข้อมูลรายวิชานี้!',
-                text: `ไม่มีข้อมูลของรายวิชา ${searchInput}`,
-                icon: 'error',
-                confirmButtonColor: '#7FCFFF',
-                allowOutsideClick: false,
-                allowEscapeKey: false
-            })    
-        }
+        // if(filteredCourses.length < 1){
+        //     MySwal.fire({
+        //         title: 'ไม่พบข้อมูลรายวิชานี้!',
+        //         text: `ไม่มีข้อมูลของรายวิชา ${searchInput}`,
+        //         icon: 'error',
+        //         confirmButtonColor: '#7FCFFF',
+        //         allowOutsideClick: false,
+        //         allowEscapeKey: false
+        //     })    
+        // }
     };
 
     const addCourse = async (event, course) => {
