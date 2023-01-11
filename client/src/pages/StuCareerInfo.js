@@ -136,9 +136,9 @@ function StuCareerInfo (){
                                     
                                         <tr className="course-link" onClick={() => window.open(`https://mis.cmu.ac.th/tqf/coursepublic.aspx?courseno=${course.id}&semester=${semester}&year=${year}`, '_blank')}>
                                             
-                                            <td className="text-lg pl-4 pr-2">{course.id}</td>
-                                            <td className="text-lg"> {course.name}</td> 
-                                            <td className="px-2"><HiOutlineArrowRight></HiOutlineArrowRight></td>
+                                            <td className="md:text-lg pl-4 pr-2">{course.id}</td>
+                                            <td className="md:text-lg"> {course.name}</td> 
+                                            <td className="px-2"><HiOutlineArrowRight className="text-fuchsia-500"></HiOutlineArrowRight></td>
                                         </tr>    
                                         
                                     ))}    
@@ -155,15 +155,15 @@ function StuCareerInfo (){
                         <table class="w-full text-left my-3">
                             <thead className="border-b bg-purple-100">
                                 <tr>
-                                    <th className="text-lg font-medium px-4 py-4 ">ทักษะ</th>
-                                    <th className="text-lg font-medium px-4 py-4 text-center">ระดับทักษะ</th>
+                                    <th className="md:text-lg font-medium px-4 py-4 ">ทักษะ</th>
+                                    <th className="md:text-lg font-medium px-4 py-4 text-center">ระดับทักษะ</th>
                                 </tr>
                             </thead>
                         
                             {career.skills?.map((skill, index) => (
                                 <tr className="bg-white border-b ">
-                                    <td className="text-md text-gray-900 font-light px-4 py-4 ">{skill.skill_name}</td>
-                                    <td className="text-md text-gray-900 font-light px-4 py-4 text-center">{skill.level_id}</td>
+                                    <td className="text-sm md:text-md text-gray-900 font-light px-4 py-4 ">{skill.skill_name}</td>
+                                    <td className="text-sm md:text-md text-gray-900 font-light px-4 py-4 text-center">{skill.level_id}</td>
                                 </tr>
 
                             ))}

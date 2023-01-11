@@ -124,8 +124,8 @@ function StuUser () {
                             <tbody>
                                 {student.courses?.map((course, index) => (
                                     <tr className="bg-white border-b ">
-                                        <td className="text-md text-gray-900 font-light pl-4 pr-1 py-4 w-fit">{course.course_id} </td>
-                                        <td className="text-md text-gray-900 font-light pl-4 pr-1 py-4 ">{course.course_name}</td>
+                                        <td className="text-sm md:text-md text-gray-900 font-light pl-4 pr-1 py-4 w-fit">{course.course_id} </td>
+                                        <td className="text-sm md:text-md text-gray-900 font-light pl-4 pr-1 py-4 ">{course.course_name}</td>
                                         <td className="text-right px-2 lg:px-4">
                                             <button className={loading ? "disabled-btn" : "delete-btn"} value={course.course_id} onClick={e => deleteCourse(e, course.course_name, course.course_id)} disabled={loading ? true : false}>
                                                 <div className="flex items-center">
@@ -146,10 +146,10 @@ function StuUser () {
                             <table class="w-full text-left my-3">
                                 <thead class="border-b bg-purple-100">
                                     <tr>
-                                    <th scope="col" class="text-md font-medium pl-4 pr-1 py-4 ">
+                                    <th scope="col" class="md:text-lg font-medium pl-4 pr-1 py-4 ">
                                         ทักษะ
                                     </th>
-                                    <th scope="col" class="text-md font-medium px-2 py-4 w-fit text-center ">
+                                    <th scope="col" class="md:text-lg font-medium px-2 py-4 w-fit text-center ">
                                         ระดับทักษะ
                                     </th>
                                     
@@ -158,8 +158,8 @@ function StuUser () {
                                 <tbody>
                                     {student.skills?.map((skill) => (
                                         <tr className="bg-white border-b">
-                                            <td className="text-md text-gray-900 font-light pl-4 pr-1 py-4 ">{skill.skill_name} </td>
-                                            <td className="text-md text-gray-900 font-light px-2 py-4 max-w-fit text-center ">{skill.level_id}</td>
+                                            <td className="text-sm md:text-md text-gray-900 font-light pl-4 pr-1 py-4 ">{skill.skill_name} </td>
+                                            <td className="text-sm md:text-md text-gray-900 font-light px-2 py-4 max-w-fit text-center ">{skill.level_id}</td>
                                         </tr>
                                     ))}
                                     
@@ -174,13 +174,13 @@ function StuUser () {
                             <table class="w-full text-left my-3">
                                 <thead class="border-b bg-purple-100">
                                     <tr>
-                                        <th scope="col" class="text-md font-medium pl-4 pr-1 py-4">
+                                        <th scope="col" class="md:text-lg font-medium pl-4 pr-1 py-4">
                                             ทักษะ
                                         </th>
-                                        <th scope="col" class="text-md font-medium px-2 py-4 text-center w-fit">
+                                        <th scope="col" class="md:text-lg font-medium px-2 py-4 text-center w-fit">
                                             ระดับทักษะ
                                         </th>
-                                        <th scope="col" class="text-md font-medium px-2 py-4 text-center w-fit">
+                                        <th scope="col" class="md:text-lg font-medium px-2 py-4 text-center w-fit">
                                             ระดับความชอบ
                                         </th>
                                     </tr>
@@ -188,9 +188,9 @@ function StuUser () {
                                 <tbody>
                                     {student.skills?.map((skill) => (
                                         <tr className="bg-white border-b">
-                                            <td className="text-md text-gray-900 font-light pl-4 pr-1 py-4 ">{skill.skill_name} </td>
-                                            <td className="text-md text-gray-900 font-light px-2 py-4 text-center max-w-fit">{skill.skill_self}</td>
-                                            <td className="text-md text-gray-900 font-light px-2 py-4 text-center max-w-fit">{skill.skill_like}</td>
+                                            <td className="text-sm md:text-md text-gray-900 font-light pl-4 pr-1 py-4 ">{skill.skill_name} </td>
+                                            <td className="text-sm md:text-md text-gray-900 font-light px-2 py-4 text-center max-w-fit">{skill.skill_self}</td>
+                                            <td className="text-sm md:text-md text-gray-900 font-light px-2 py-4 text-center max-w-fit">{skill.skill_like}</td>
                                         </tr>
                                     ))}
                                     
