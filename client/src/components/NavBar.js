@@ -8,6 +8,8 @@ import { Server_URL } from "../constants";
 
 function NavBar (){
     const [student, setStudent] = useState({});
+    const [openMenu, setOpenMenu] = useState(false);
+    const [openUser, setOpenUser] = useState(false);
 
     const stuToken = '12345';
     const requestStudent = axios.get(Server_URL+"/student/"+stuToken);
@@ -27,6 +29,15 @@ function NavBar (){
         ))
         // console.log(student);
     };
+
+    const toggleMenu = () => {
+        setOpenMenu(!openMenu);
+    };
+
+    const toggleUserMenu = () => {
+        setOpenUser(!openUser);
+    }
+
     return (
         <div>
             <nav class="bg-white boder border-b-2 px-2 sm:px-4 py-2.5 rounded fixed w-full z-20 top-0 left-0 border-gray-200">
@@ -36,12 +47,12 @@ function NavBar (){
                     <span class="text-xl text-purple-600">Skill Mapping</span>
                 </a>
                 <div class="flex items-center lg:order-2">
-                    <button type="button" class="flex mr-3 text-sm rounded-full lg:mr-0 focus:ring-4 focus:ring-gray-300 " id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
+                    <button type="button" class="flex mr-3 text-sm rounded-full lg:mr-0 focus:ring-4 focus:ring-gray-300 " id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom" onClick={toggleUserMenu}>
                         <span class="sr-only">Open user menu</span>
                         <img src={require("../images/User.png")} class="w-10 h-10 rounded-full"  alt="User photo" />
                     </button>
                     {/* for user */}
-                    <div class="z-50 hidden my-3 mr-2 text-base list-none bg-white divide-y divide-gray-100 rounded shadow" id="user-dropdown">
+                    <div class={openUser ? "absolute right-4 top-20 z-50 text-base list-none bg-white divide-y divide-gray-100 rounded shadow" : "hidden"} id="user-dropdown">
                         <div class="px-4 py-3">
                         <span class="block text-sm text-gray-900 ">{student.student_name}</span>
                         <span class="block text-sm font-medium text-gray-500 truncate ">name@cmu.ac.th</span>
@@ -50,13 +61,13 @@ function NavBar (){
                             <li>logout</li>
                         </ul>
                     </div>
-                    <button data-collapse-toggle="mobile-menu-2" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="mobile-menu-2" aria-expanded="false">
+                    <button type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="mobile-menu-2" aria-expanded="false" onClick={toggleMenu}>
                         <span class="sr-only">Open main menu</span>
                         <svg class="w-6 h-6 text-dark-purple-font" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"></path></svg>
                     </button>
                 </div>
 
-                <div class="items-center justify-between hidden w-full h-fit lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
+                <div class={openMenu ? "items-center justify-between w-full h-fit lg:flex lg:w-auto lg:order-1" : "items-center justify-between hidden w-full h-fit lg:flex lg:w-auto lg:order-1" } id="mobile-menu-2">
                     <ul class="flex flex-col p-2  my-2 rounded-lg bg-purple-50 lg:flex-row lg:space-x-8  lg:text-sm md:font-medium  lg:bg-white ">
                         <li className='text-sm flex-items-center gap-x-4 p-2
                            rounded-md mt-1'>
