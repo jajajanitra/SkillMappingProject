@@ -353,7 +353,7 @@ function StuFillInformation () {
                                                 <div className="flex justify-between">
                                                     <span className="inline-block align-baseline py-2">ระดับ:</span>
                                                     <span className="text-sm text-gray-900 font-light p-2 lg:px-6 lg:py-4 whitespace-nowrap">
-                                                        <input type="radio" name={skill.name+"skill"} id={skill._id+"0"} value={0} onChange={handleSkillsLevelChange} defaultChecked={student[index]?.skill_self === 0}></input>
+                                                        <input type="radio" name={skill.name+"skill"} id={skill._id+"0"} value={0} onChange={handleSkillsLevelChange} defaultChecked={student[index]?.skill_self == 0}></input>
                                                         <label>0</label>
                                                     </span>
                                                     {skill.levels.map((level) => (
