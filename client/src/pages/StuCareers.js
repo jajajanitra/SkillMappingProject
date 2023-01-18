@@ -27,7 +27,7 @@ function StuCareers () {
             }
             
         ))
-        console.log(careers);
+        // console.log(careers);
     };
 
     const handleSearchChange = (e) => {

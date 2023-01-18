@@ -12,6 +12,7 @@ import {MdAdd} from 'react-icons/md';
 import { Server_URL, Skill_URL, Course_URL } from "../constants";
 
 import NavBar from "../components/NavBar";
+import useToken from '../components/UseToken';
 
 const MySwal = withReactContent(Swal);
 
@@ -25,14 +26,14 @@ function StuFillInformation () {
     const [selfSkills, setSelfSkills] = useState([]);
     const [likes, setLikes] = useState([]);
     const [student, setStudent] = useState({});
+    const { token} = useToken();
 
     const requestSkills = axios.get(Skill_URL);
     const requestCourses = axios.get(Course_URL);
     const addSkills_URL = Server_URL+"/student/selfs";
     const addLikes_URL = Server_URL+"/student/likes";
-    const stuToken = '12345';
+    const stuToken = token;
     const requestStudent = axios.get(Server_URL+"/student/"+stuToken);
-    const token = "12345";
 
     useEffect(() => {
         getData();
@@ -353,15 +354,35 @@ function StuFillInformation () {
                                                 <div className="flex justify-between">
                                                     <span className="inline-block align-baseline py-2">ระดับ:</span>
                                                     <span className="text-sm text-gray-900 font-light p-2 lg:px-6 lg:py-4 whitespace-nowrap">
-                                                        <input type="radio" name={skill.name+"skill"} id={skill._id+"0"} value={0} onChange={event => handleSkillsLevelChange(event, skill.name)} defaultChecked={student[index]?.skill_self == 0}></input>
-                                                        <label>0</label>
+                                                        <input type="radio" name={skill.name+"skill"} id={skill._id+"0"} value={0} onChange={event => handleSkillsLevelChange(event, skill.name)} defaultChecked={student[index]?.skill_self == 0} className="hidden peer/level0"></input>
+                                                        <label for={skill._id+"0"} className="level-label peer-checked/level0:bg-cyan-400 rounded-full peer-checked/level0:text-white">0</label>
                                                     </span>
-                                                    {skill.levels.map((level) => (
+                                                    {/* {skill.levels.map((level) => (
                                                         <span className="text-sm text-gray-900 font-light p-2 lg:px-6 lg:py-4 whitespace-nowrap">
-                                                            <input type="radio" name={skill.name+"skill"} id={skill._id+level.level_id} value={level.level_id} onChange={event => handleSkillsLevelChange(event, skill.name)} defaultChecked={student[index]?.skill_self === level.level_id}></input>
-                                                            <label>{level.level_id}</label>
+                                                            <input type="radio" name={skill.name+"skill"} id={skill._id+level.level_id} value={level.level_id} onChange={event => handleSkillsLevelChange(event, skill.name)} defaultChecked={student[index]?.skill_self === level.level_id} className="hidden peer/level1"></input>
+                                                            <label >{level.level_id}</label>
                                                         </span>
-                                                    ))}
+                                                    ))} */}
+                                                    <span className="text-sm text-gray-900 font-light p-2 lg:px-6 lg:py-4 whitespace-nowrap">
+                                                        <input type="radio" name={skill.name+"skill"} id={skill._id+"1"} value={1} onChange={event => handleSkillsLevelChange(event, skill.name)} defaultChecked={student[index]?.skill_self === '1'} className="hidden peer/level1"></input>
+                                                        <label for={skill._id+"1"} className="level-label peer-checked/level1:bg-cyan-400 rounded-full peer-checked/level1:text-white ">1</label>
+                                                    </span>
+                                                    <span className="text-sm text-gray-900 font-light p-2 lg:px-6 lg:py-4 whitespace-nowrap">
+                                                        <input type="radio" name={skill.name+"skill"} id={skill._id+"2"} value={2} onChange={event => handleSkillsLevelChange(event, skill.name)} defaultChecked={student[index]?.skill_self === '2'} className="hidden peer/level2"></input>
+                                                        <label for={skill._id+"2"} className="level-label peer-checked/level2:bg-cyan-400 rounded-full peer-checked/level2:text-white ">2</label>
+                                                    </span>
+                                                    <span className="text-sm text-gray-900 font-light p-2 lg:px-6 lg:py-4 whitespace-nowrap">
+                                                        <input type="radio" name={skill.name+"skill"} id={skill._id+"3"} value={3} onChange={event => handleSkillsLevelChange(event, skill.name)} defaultChecked={student[index]?.skill_self === '3'} className="hidden peer/level3"></input>
+                                                        <label for={skill._id+"3"} className="level-label peer-checked/level3:bg-cyan-400 rounded-full peer-checked/level3:text-white ">3</label>
+                                                    </span>
+                                                    <span className="text-sm text-gray-900 font-light p-2 lg:px-6 lg:py-4 whitespace-nowrap">
+                                                        <input type="radio" name={skill.name+"skill"} id={skill._id+"4"} value={4} onChange={event => handleSkillsLevelChange(event, skill.name)} defaultChecked={student[index]?.skill_self === '4'} className="hidden peer/level4"></input>
+                                                        <label for={skill._id+"4"} className="level-label peer-checked/level4:bg-cyan-400 rounded-full peer-checked/level4:text-white ">4</label>
+                                                    </span>
+                                                    <span className="text-sm text-gray-900 font-light p-2 lg:px-6 lg:py-4 whitespace-nowrap">
+                                                        <input type="radio" name={skill.name+"skill"} id={skill._id+"5"} value={5} onChange={event => handleSkillsLevelChange(event, skill.name)} defaultChecked={student[index]?.skill_self === '5'} className="hidden peer/level5"></input>
+                                                        <label for={skill._id+"5"} className="level-label peer-checked/level5:bg-cyan-400 rounded-full peer-checked/level5:text-white ">5</label>
+                                                    </span>
                                                 </div>
                                                 
                                             </div>

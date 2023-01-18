@@ -6,7 +6,7 @@ import { Chart as ChartJS, registerables } from 'chart.js';
 import { Chart } from 'react-chartjs-2'
 
 
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 
 //pages
 import Home from './pages/Home';
@@ -23,13 +23,19 @@ import StuFillInformation from './pages/StuFillInformation';
 import StuUser from './pages/StuUser';
 import StuEditSkills from './pages/StuEditSkills';
 
+
+import CmuOAuthCallback from './pages/CmuOAuthCallback';
+
 function App() {
+
   return (
     <div className="App">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/achievedSkill" element={<AchievedSkill />} />
         <Route path="/newSkill" element={<NewSkill />} />
+
+        <Route path="/cmuOAuthCallback" element={<CmuOAuthCallback />} />
 
         <Route path="/student_login" element={<StuLogin />} />
         <Route path="/student_home" element={<StuHome />} />

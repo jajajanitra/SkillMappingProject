@@ -7,14 +7,16 @@ import {RiDeleteBin7Line, RiEditLine} from 'react-icons/ri';
 import { Server_URL } from "../constants";
 
 import NavBar from "../components/NavBar";
+import useToken from '../components/UseToken';
 
 const MySwal = withReactContent(Swal);
 
 function StuUser () {
     const [loading, setLoading] = useState(false);
     const [student, setStudent] = useState({});
+    const { token} = useToken();
 
-    const stuToken = '12345';
+    const stuToken = token;
     const requestStudent = axios.get(Server_URL+"/student/"+stuToken);
     const deleteURL = Server_URL+"/student/delete";
     
@@ -104,6 +106,7 @@ function StuUser () {
                         <h6 className="text-lg">รหัสนักศึกษา: {student.student_id}</h6>
                     </div> */}
 
+                    
                     <h6 className="text-xl border-solid border-l-4 border-pink-700 pl-2">รายวิชาที่เรียน</h6>   
                     <div className="mb-4 p-2">
                         <table class="w-full text-left my-3">

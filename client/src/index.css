@@ -180,6 +180,25 @@
     hover:bg-fuchsia-50
   }
 
+  .level-label{
+    @apply px-3 md:px-5 xl:px-8 
+    py-1 
+    md:text-lg 
+    bg-blue-50 
+    text-gray-600 
+    cursor-pointer
+  }
+
+  .career-sugg-card{
+    @apply  text-gray-700 text-xl leading-tight font-medium 
+    my-2 md:my-0 block px-6 py-2 
+    rounded-sm shadow-md 
+    w-full min-w-fit 
+    no-underline
+    border-solid border-l-8 
+    bg-white
+  }
+
 }
 
 body {

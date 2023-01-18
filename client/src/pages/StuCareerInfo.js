@@ -4,6 +4,7 @@ import axios from "axios";
 import { Server_URL } from "../constants";
 
 import NavBar from "../components/NavBar";
+import useToken from '../components/UseToken';
 import {HiOutlineArrowRight, HiOutlineExternalLink, HiOutlineInformationCircle} from 'react-icons/hi';
 
 import Chart from "chart.js/auto";
@@ -14,8 +15,9 @@ function StuCareerInfo (){
     const [career, setCareer] = useState([]);
     const [courses, setCourses] = useState([]);
     const [chartData, setChartData] = useState([]);
+    const { token} = useToken();
 
-    const stuToken = '12345';
+    const stuToken = token;
     const id = window.location.pathname.split("/").pop()
     const requestCareer = axios.get(Server_URL+"/career/"+stuToken+"/"+id);
     const courseSearch_URL = "https://www1.reg.cmu.ac.th/registrationoffice/searchcourse.php";
@@ -109,11 +111,11 @@ function StuCareerInfo (){
                 setChartData(resCareer.data.chart);
                 setCourses(resCareer.data.courses.sort(
                     (p1, p2) => (p1.id > p2.id) ? 1 : (p1.id < p2.id) ? -1 : 0));
-                console.log(resCareer.data);
+                // console.log(resCareer.data);
             }
             
         ))
-        console.log(career);
+        // console.log(career);
     };
      
     return (
