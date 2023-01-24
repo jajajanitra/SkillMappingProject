@@ -164,8 +164,8 @@ function StuCareerInfo (){
                         
                             {career.skills?.map((skill, index) => (
                                 <tr className="bg-white border-b ">
-                                    <td className="text-sm md:text-md text-gray-900 font-light px-4 py-4 ">{skill.skill_name}</td>
-                                    <td className="text-sm md:text-md text-gray-900 font-light px-4 py-4 text-center">{skill.level_id}</td>
+                                    <td className="md:text-lg text-gray-900 font-light px-4 py-4 ">{skill.skill_name}</td>
+                                    <td className="md:text-lg text-gray-900 font-light px-4 py-4 text-center">{skill.level_id}</td>
                                 </tr>
 
                             ))}

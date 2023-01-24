@@ -9,7 +9,7 @@ import { Server_URL } from "../constants";
 export default function CMUOAuthCallback() {
     const url = window.location.search;
     const code  = new URLSearchParams(url).get("code");
-    const [message, setMessage] = useState("test");
+    const [message, setMessage] = useState("");
     const { setToken, isAuthen} = useToken();
     const { setStuName, setStuEmail, } = useInfo();
 
