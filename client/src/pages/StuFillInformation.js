@@ -22,6 +22,7 @@ function StuFillInformation () {
     const [skills, setSkills] = useState([]);
     const [courses, setCourses] = useState([]);
     const [filteredCourses, setFilteredCourses] = useState([]);
+    const [selectedCourses, setSelectedCourses] = useState([]);
     const [searchInput, setSearchInput] = useState("");
     const [selfSkills, setSelfSkills] = useState([]);
     const [likes, setLikes] = useState([]);
@@ -222,6 +223,53 @@ function StuFillInformation () {
         })
     };
 
+    const handleCheckChange = (event, course) => {
+        if(event.target.checked){
+            selectedCourses.push(course);    
+        }else{
+            setSelectedCourses(selectedCourses.filter((selCourse) => {
+                return selCourse._id != course._id ;
+            }));
+        }
+    };
+
+    const addCourses = async () => {
+        setAdding(true);
+        await axios.post(Server_URL+'/student/courses',{
+            token: token,
+            courses: selectedCourses   
+        })
+        .then(
+            (res) => {
+                console.log(res);
+                setAdding(false);
+                if (res.status === 200 || res.status === 201){
+                    MySwal.fire({
+                        title: 'เพิ่มรายวิชาเรียบร้อย!',
+                        text: '',
+                        icon: 'success',
+                        confirmButtonColor: '#7FCFFF',
+                        allowOutsideClick: false,
+                        allowEscapeKey: false
+                    })
+                }else{
+                    MySwal.fire({
+                        title: 'เกิดข้อผิดพลาด!',
+                        text: `Status ${res.status} (${res.statusText})`,
+                        icon: 'error',
+                        confirmButtonColor: '#7FCFFF',
+                        allowOutsideClick: false,
+                        allowEscapeKey: false
+                    })
+                }
+            }
+        )
+        .catch((err) => {
+            setAdding(false);
+            console.log(err);
+        })
+    };
+
 
     return (
         <div className="flex">
@@ -263,12 +311,12 @@ function StuFillInformation () {
                     <div class="tab-pane fade show active" id="tabs-homeJustify" role="tabpanel"
                     aria-labelledby="tabs-home-tabJustify">
                         <div>
-                            <h5 className="sub-header">เพิ่มรายวิชาที่เคยเรียน</h5>
+                            <h5 className="sub-header">รายวิชาที่เคยเรียน</h5>
                             <p className="px-2">
-                                    &nbsp; &nbsp;ค้นหารายวิชาของภาควิชาวิศวกรรมคอมพิวเตอร์โดยใช้รหัสวิชา จากนั้นกดปุ่มเพิ่มที่รายวิชาที่ต้องการเพื่อบันทึกข้อมูล
+                                    &nbsp; &nbsp;เลือกรายวิชาของภาควิชาวิศวกรรมคอมพิวเตอร์ที่เคยเรียนทั้งหมด จากนั้นกดปุ่มบันทึกเพื่อบันทึกข้อมูล
                             </p>
                         </div>
-                        <div className="flex flex-wrap lg:grid lg:grid-flow-row-dense lg:grid-cols-6 lg:gap-4">
+                        {/* <div className="flex flex-wrap lg:grid lg:grid-flow-row-dense lg:grid-cols-6 lg:gap-4">
                             <input
                             className="h-10 w-full p-2 mx-2 my-2 md:my-1 lg:col-span-5"
                             type="ืีnumber"
@@ -285,14 +333,14 @@ function StuFillInformation () {
                             className="w-full my-1 mx-2 blue-btn"
                             onClick={searchID}
                             >ค้นหา</button>
-                        </div>
+                        </div> */}
                         
-                        <div className="grid mt-3">
-                            {filteredCourses.length > 0 ? (
+                        <div className="grid my-3 overflow-scroll">
+                            {courses.length > 0 ? (
                                 <table className="text-m text-left ml-4 mr-4 mt-3 p-2 ">
                                     <thead className="bg-purple-100 p-2">
                                         <tr>
-                                            <th className="text-m font-medium text-gray-900 p-2 lg:pl-3">รหัสวิชา</th>
+                                            <th className="text-m font-medium text-gray-900 p-2 lg:pl-4">รหัสวิชา</th>
                                             <th className="text-m font-medium text-gray-900 p-2 lg:pl-3">ชื่อวิชา</th>
                                             <th className="text-m font-medium text-gray-900 p-2 lg:pl-3">หัวข้อ</th>
                                             <th className="text-m font-medium text-gray-900 text-center w-36 lg:pl-3">เพิ่ม</th>    
@@ -300,17 +348,19 @@ function StuFillInformation () {
                                     </thead>
 
                                     <tbody>
-                                        {filteredCourses.map((course, index) => (
+                                        {courses.map((course, index) => (
                                             <tr className="border-b bg-white hover:bg-gray-50">
                                                 <td className="p-3">{course.id}</td>
                                                 <td className="p-3">{course.name}</td>
                                                 <td className="p-3">{course.sel_topic}</td>
                                                 <td className="text-center p-3">
-                                                    <button className={adding ? "disabled-btn h-fit flex items-center" : "green-btn h-fit flex items-center"} onClick={event => addCourse(event, course)} disabled={adding ? true : false}>
+                                                    {/* <button className={adding ? "disabled-btn h-fit flex items-center" : "green-btn h-fit flex items-center"} onClick={event => addCourse(event, course)} disabled={adding ? true : false}>
                                                         <span className="px-2">
                                                            <MdAdd></MdAdd> 
                                                         </span>
-                                                        เพิ่ม</button>
+                                                        เพิ่ม</button> */}
+                                                    <input type="checkbox" onChange={event => handleCheckChange(event, course)} disabled={adding ? true : false}>
+                                                    </input>
                                                 </td>
                                             </tr>
                                             
@@ -321,6 +371,14 @@ function StuFillInformation () {
                             ):(
                                     <span></span>
                             )}            
+                        </div>
+                        <div className="flex justify-end">
+                            <button className={loading ?"disabled-btn":"green-btn"} onClick={addCourses} disabled={loading ? true : false}>
+                                <div className="flex justify-center">
+                                    <span className="block px-2 lg:px-1">{loading ? <RiLoader2Fill className="h-6 w-6"></RiLoader2Fill> : <TfiSave className="h-6 w-6"></TfiSave>}</span>
+                                    <span className="block px-2 lg:px-1">{loading ? "กำลังบันทึก..." : "บันทึกข้อมูล"}</span>  
+                                </div>
+                            </button>
                         </div>
                     </div>
 
