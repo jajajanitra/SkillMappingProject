@@ -107,41 +107,50 @@ function StuUser () {
                     </div> */}
 
                     
-                    <h6 className="text-xl border-solid border-l-4 border-pink-700 pl-2">รายวิชาที่เรียน</h6>   
-                    <div className="mb-4 p-2">
-                        <table class="w-full text-left my-3">
-                            <thead class="border-b bg-yellow-100">
-                                <tr>
-                                <th scope="col" class="text-md font-medium pl-4 pr-1 py-4">
-                                    รหัสวิชา
-                                </th>
-                                <th scope="col" class="text-md font-medium pl-4 pr-1 py-4">
-                                    รายวิชา
-                                </th>
-                                <th>
+                    <h6 className="text-xl border-solid border-l-4 border-pink-700 pl-2">รายวิชาที่เรียน</h6>  
+                    {student.courses?.length > 0 ? 
+                    (
+                        <div className="mb-4 p-2">
+                            <table class="w-full text-left my-3">
+                                <thead class="border-b bg-yellow-100">
+                                    <tr>
+                                    <th scope="col" class="text-md font-medium pl-4 pr-1 py-4">
+                                        รหัสวิชา
+                                    </th>
+                                    <th scope="col" class="text-md font-medium pl-4 pr-1 py-4">
+                                        รายวิชา
+                                    </th>
+                                    <th>
 
-                                </th>
-                                
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {student.courses?.map((course, index) => (
-                                    <tr className="bg-white border-b ">
-                                        <td className="text-sm md:text-md text-gray-900 font-light pl-4 pr-1 py-4 w-fit">{course.course_id} </td>
-                                        <td className="text-sm md:text-md text-gray-900 font-light pl-4 pr-1 py-4 ">{course.course_name}</td>
-                                        <td className="text-right px-2 lg:px-4">
-                                            <button className={loading ? "disabled-btn" : "delete-btn"} value={course.course_id} onClick={e => deleteCourse(e, course.course_name, course.course_id)} disabled={loading ? true : false}>
-                                                <div className="flex items-center">
-                                                    <span className="block px-1 content-center"><RiDeleteBin7Line className="h-5 w-5"></RiDeleteBin7Line></span>
-                                                    <span className="block pr-1 text-sm">ลบ</span>  
-                                                </div>
-                                            </button>
-                                        </td>
+                                    </th>
+                                    
                                     </tr>
-                                ))}
-                            </tbody>
-                        </table>
-                    </div>
+                                </thead>
+                                <tbody>
+                                    {student.courses?.map((course, index) => (
+                                        <tr className="bg-white border-b ">
+                                            <td className="text-sm md:text-md text-gray-900 font-light pl-4 pr-1 py-4 w-fit">{course.course_id} </td>
+                                            <td className="text-sm md:text-md text-gray-900 font-light pl-4 pr-1 py-4 ">{course.course_name}</td>
+                                            <td className="text-right px-2 lg:px-4">
+                                                <button className={loading ? "disabled-btn" : "delete-btn"} value={course.course_id} onClick={e => deleteCourse(e, course.course_name, course.course_id)} disabled={loading ? true : false}>
+                                                    <div className="flex items-center">
+                                                        <span className="block px-1 content-center"><RiDeleteBin7Line className="h-5 w-5"></RiDeleteBin7Line></span>
+                                                        <span className="block pr-1 text-sm">ลบ</span>  
+                                                    </div>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
+                    ):(
+                        <div className="mb-4 p-2 flex justify-center">
+                            <p>ยังไม่ได้เพิ่มรายวิชา</p>
+                        </div>
+                    )
+                    } 
+                    
 
                     <div className="grid gird-flow-row lg:grid-cols-2 lg:gap-8 p-2 lg:px-4" >
                         <div className="mb-4">

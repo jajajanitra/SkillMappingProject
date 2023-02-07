@@ -40,6 +40,7 @@ export default function CMUOAuthCallback() {
             );
             } else if (!error.response.data.ok) {
             setMessage(error.response.data.message);
+            console.log(message);
             } else {
             setMessage("Unknown error occurred. Please try again later.");
             }
@@ -49,7 +50,7 @@ export default function CMUOAuthCallback() {
     if(isAuthen) {
         return <Navigate replace to="/student_home" />;
     }else{
-        return <div className="p-3">{message || "Redirecting ..."}</div>;  
+        return <div className="p-3">{"Redirecting ..."}</div>;  
     }
 
 //   return <div className="p-3">{message || "Redirecting ..."}</div>;  

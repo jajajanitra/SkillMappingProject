@@ -17,20 +17,17 @@ import useToken from '../components/UseToken';
 const MySwal = withReactContent(Swal);
 
 function StuFillInformation () {
-    const [adding, setAdding] = useState(false);
     const [loading, setLoading] = useState(false);
     const [skills, setSkills] = useState([]);
     const [courses, setCourses] = useState([]);
-    const [filteredCourses, setFilteredCourses] = useState([]);
     const [selectedCourses, setSelectedCourses] = useState([]);
-    const [searchInput, setSearchInput] = useState("");
     const [selfSkills, setSelfSkills] = useState([]);
     const [likes, setLikes] = useState([]);
     const [student, setStudent] = useState({});
     const { token} = useToken();
 
     const requestSkills = axios.get(Skill_URL);
-    const requestCourses = axios.get(Course_URL);
+    const requestCourses = axios.get(Course_URL+"/"+token);
     const addSkills_URL = Server_URL+"/student/selfs";
     const addLikes_URL = Server_URL+"/student/likes";
     const stuToken = token;
@@ -58,67 +55,6 @@ function StuFillInformation () {
             }
         ))
         // console.log(skills);
-    };
-
-    const handleSearchChange = (e) => {
-        setSearchInput(e.target.value);
-    };
-
-    const searchID = () => {
-        setFilteredCourses(courses.filter((course) => {
-            return course.id === searchInput
-        }))
-        // if(filteredCourses.length < 1){
-        //     MySwal.fire({
-        //         title: 'ไม่พบข้อมูลรายวิชานี้!',
-        //         text: `ไม่มีข้อมูลของรายวิชา ${searchInput}`,
-        //         icon: 'error',
-        //         confirmButtonColor: '#7FCFFF',
-        //         allowOutsideClick: false,
-        //         allowEscapeKey: false
-        //     })    
-        // }
-    };
-
-    const addCourse = async (event, course) => {
-        // console.log(course);
-        setAdding(true);
-        await axios.post(Server_URL+'/student/courses',{
-            token: token,
-            course_id: course.id,
-            course_name: course.name,
-            id: course._id
-            
-        })
-        .then(
-            (res) => {
-                console.log(res);
-                setAdding(false);
-                if (res.status === 200 || res.status === 201){
-                    MySwal.fire({
-                        title: 'เพิ่มรายวิชาเรียบร้อย!',
-                        text: '',
-                        icon: 'success',
-                        confirmButtonColor: '#7FCFFF',
-                        allowOutsideClick: false,
-                        allowEscapeKey: false
-                    })
-                }else{
-                    MySwal.fire({
-                        title: 'เกิดข้อผิดพลาด!',
-                        text: `Status ${res.status} (${res.statusText})`,
-                        icon: 'error',
-                        confirmButtonColor: '#7FCFFF',
-                        allowOutsideClick: false,
-                        allowEscapeKey: false
-                    })
-                }
-            }
-        )
-        .catch((err) => {
-            setAdding(false);
-            console.log(err);
-        })
     };
 
     const handleSkillsLevelChange = (event, name) => {
@@ -234,7 +170,7 @@ function StuFillInformation () {
     };
 
     const addCourses = async () => {
-        setAdding(true);
+        setLoading(true);
         await axios.post(Server_URL+'/student/courses',{
             token: token,
             courses: selectedCourses   
@@ -242,7 +178,7 @@ function StuFillInformation () {
         .then(
             (res) => {
                 console.log(res);
-                setAdding(false);
+                setLoading(false);
                 if (res.status === 200 || res.status === 201){
                     MySwal.fire({
                         title: 'เพิ่มรายวิชาเรียบร้อย!',
@@ -265,7 +201,7 @@ function StuFillInformation () {
             }
         )
         .catch((err) => {
-            setAdding(false);
+            setLoading(false);
             console.log(err);
         })
     };
@@ -316,50 +252,27 @@ function StuFillInformation () {
                                     &nbsp; &nbsp;เลือกรายวิชาของภาควิชาวิศวกรรมคอมพิวเตอร์ที่เคยเรียนทั้งหมด จากนั้นกดปุ่มบันทึกเพื่อบันทึกข้อมูล
                             </p>
                         </div>
-                        {/* <div className="flex flex-wrap lg:grid lg:grid-flow-row-dense lg:grid-cols-6 lg:gap-4">
-                            <input
-                            className="h-10 w-full p-2 mx-2 my-2 md:my-1 lg:col-span-5"
-                            type="ืีnumber"
-                            placeholder="ค้นหาโดยรหัสวิชา"
-                            onChange={handleSearchChange}
-                            value={searchInput}
-                            onKeyDown={event => {
-                                if (event.key === 'Enter') {
-                                    searchID()
-                                }
-                              }} />
-
-                            <button 
-                            className="w-full my-1 mx-2 blue-btn"
-                            onClick={searchID}
-                            >ค้นหา</button>
-                        </div> */}
                         
-                        <div className="grid my-3 overflow-scroll">
+                        <div className="grid my-3 overflow-scroll ">
                             {courses.length > 0 ? (
-                                <table className="text-m text-left ml-4 mr-4 mt-3 p-2 ">
+                                <table className="text-m text-left ml-4 mr-4 mt-3 p-2 border ">
                                     <thead className="bg-purple-100 p-2">
                                         <tr>
-                                            <th className="text-m font-medium text-gray-900 p-2 lg:pl-4">รหัสวิชา</th>
-                                            <th className="text-m font-medium text-gray-900 p-2 lg:pl-3">ชื่อวิชา</th>
-                                            <th className="text-m font-medium text-gray-900 p-2 lg:pl-3">หัวข้อ</th>
-                                            <th className="text-m font-medium text-gray-900 text-center w-36 lg:pl-3">เพิ่ม</th>    
+                                            <th className="header-courses-table p-2 lg:pl-4">รหัสวิชา</th>
+                                            <th className="header-courses-table p-2 lg:pl-3">ชื่อวิชา</th>
+                                            <th className="header-courses-table p-2 lg:pl-3">หัวข้อ</th>
+                                            <th className="header-courses-table text-center w-36 lg:pl-3">เพิ่ม</th>    
                                         </tr>
                                     </thead>
 
                                     <tbody>
                                         {courses.map((course, index) => (
-                                            <tr className="border-b bg-white hover:bg-gray-50">
-                                                <td className="p-3">{course.id}</td>
-                                                <td className="p-3">{course.name}</td>
-                                                <td className="p-3">{course.sel_topic}</td>
-                                                <td className="text-center p-3">
-                                                    {/* <button className={adding ? "disabled-btn h-fit flex items-center" : "green-btn h-fit flex items-center"} onClick={event => addCourse(event, course)} disabled={adding ? true : false}>
-                                                        <span className="px-2">
-                                                           <MdAdd></MdAdd> 
-                                                        </span>
-                                                        เพิ่ม</button> */}
-                                                    <input type="checkbox" onChange={event => handleCheckChange(event, course)} disabled={adding ? true : false}>
+                                            <tr className="border-b odd:bg-white even:bg-gray-50">
+                                                <td className="data-course-table p-2">{course.id}</td>
+                                                <td className="data-course-table py-3">{course.name}</td>
+                                                <td className="data-course-table">{course.sel_topic}</td>
+                                                <td className="text-center data-course-table">
+                                                    <input type="checkbox" onChange={event => handleCheckChange(event, course)} disabled={loading ? true : false} className="ml-2">
                                                     </input>
                                                 </td>
                                             </tr>
@@ -415,12 +328,6 @@ function StuFillInformation () {
                                                         <input type="radio" name={skill.name+"skill"} id={skill._id+"0"} value={0} onChange={event => handleSkillsLevelChange(event, skill.name)} defaultChecked={student[index]?.skill_self == 0} className="hidden peer/level0"></input>
                                                         <label for={skill._id+"0"} className="level-label peer-checked/level0:bg-cyan-400 rounded-full peer-checked/level0:text-white">0</label>
                                                     </span>
-                                                    {/* {skill.levels.map((level) => (
-                                                        <span className="text-sm text-gray-900 font-light p-2 lg:px-6 lg:py-4 whitespace-nowrap">
-                                                            <input type="radio" name={skill.name+"skill"} id={skill._id+level.level_id} value={level.level_id} onChange={event => handleSkillsLevelChange(event, skill.name)} defaultChecked={student[index]?.skill_self === level.level_id} className="hidden peer/level1"></input>
-                                                            <label >{level.level_id}</label>
-                                                        </span>
-                                                    ))} */}
                                                     <span className="text-sm text-gray-900 font-light p-2 lg:px-6 lg:py-4 whitespace-nowrap">
                                                         <input type="radio" name={skill.name+"skill"} id={skill._id+"1"} value={1} onChange={event => handleSkillsLevelChange(event, skill.name)} defaultChecked={student[index]?.skill_self === '1'} className="hidden peer/level1"></input>
                                                         <label for={skill._id+"1"} className="level-label peer-checked/level1:bg-cyan-400 rounded-full peer-checked/level1:text-white ">1</label>

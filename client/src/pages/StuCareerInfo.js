@@ -74,9 +74,8 @@ function StuCareerInfo (){
         },
         scale: {
             ticks: {
-                beginAtZero: true,
-                max: 5,
                 min: 0,
+                max: 5,
                 stepSize: 1
             }
         },
@@ -111,7 +110,7 @@ function StuCareerInfo (){
                 setChartData(resCareer.data.chart);
                 setCourses(resCareer.data.courses.sort(
                     (p1, p2) => (p1.id > p2.id) ? 1 : (p1.id < p2.id) ? -1 : 0));
-                // console.log(resCareer.data);
+                console.log(resCareer.data);
             }
             
         ))
@@ -127,11 +126,12 @@ function StuCareerInfo (){
                 <div className="md:grid md:grid-cols-2 md:gap-6">
                     <div>
                         <div className="info-card">
-                        <h6 className="my-1 text-xl border-l-4 border-pink-700 px-2">ภาระหน้าที่ของอาชีพ</h6>
+                        <h6 className="card-header px-2">ภาระหน้าที่ของอาชีพ</h6>
                         <p className="px-2 text-lg">&nbsp; &nbsp; {career.des_thai}</p>
                         </div> 
                         <div className="info-card mt-4 mb-4">
-                            <h6 className="my-1 text-xl border-l-4 border-pink-700 px-2">รายวิชาที่แนะนำ</h6>
+                            <h6 className="card-header px-2">รายวิชาที่แนะนำ</h6>
+                                <p className="p-2 mb-1">&nbsp; &nbsp; คลิกที่ชื่อวิชาเพื่อดูรายละเอียดกระบวนวิชาจาก CMU MIS</p>
                             <table className="mb-3 w-full">
                                 <tbody>
                                     {courses.map((course, index) => (
@@ -152,23 +152,36 @@ function StuCareerInfo (){
                     </div>
 
                     <div className="info-card">
-                        <h6 className="my-1 text-xl border-l-4 border-pink-700 px-2">ทักษะที่จำเป็นสำหรับอาชีพ</h6>
+                        <h6 className="card-header px-2">ทักษะที่จำเป็นสำหรับอาชีพ</h6>
 
                         <table class="w-full text-left my-3">
                             <thead className="border-b bg-purple-100">
                                 <tr>
-                                    <th className="md:text-lg font-medium px-4 py-4 ">ทักษะ</th>
-                                    <th className="md:text-lg font-medium px-4 py-4 text-center">ระดับทักษะ</th>
+                                    <th className="skill-data">ทักษะ</th>
+                                    <th className="skill-data text-center">ระดับทักษะ</th>
                                 </tr>
                             </thead>
-                        
-                            {career.skills?.map((skill, index) => (
-                                <tr className="bg-white border-b ">
-                                    <td className="md:text-lg text-gray-900 font-light px-4 py-4 ">{skill.skill_name}</td>
-                                    <td className="md:text-lg text-gray-900 font-light px-4 py-4 text-center">{skill.level_id}</td>
-                                </tr>
 
-                            ))}
+                            <tbody>
+                                {career.skills?.map((skill, index) => (
+                                    <tr className="bg-white border-b ">
+                                        <td className="group skill-data">
+                                            <div class="des-block group-hover:block">
+                                                {skill.des}
+                                            </div>
+                                            {skill.skill_name}
+                                        </td>
+                                        
+                                        <td className="group skill-data text-center">
+                                            <div class="des-block group-hover:block">
+                                                {skill.des_level}
+                                            </div>
+                                            {skill.level_id}
+                                        </td>
+                                    </tr>
+
+                                ))}    
+                            </tbody>
                         </table>
 
                     </div>

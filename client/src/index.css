@@ -122,8 +122,9 @@
 
   .info-card{
     @apply px-3 py-2
+    mb-6
     bg-white
-    rounded-md
+    rounded-lg
     shadow-md
   }
 
@@ -176,6 +177,7 @@
     @apply cursor-pointer
     h-10
     p-3
+    my-1
     hover:text-fuchsia-600
     hover:bg-fuchsia-50
   }
@@ -199,6 +201,47 @@
     bg-white
   }
 
+  .skill-data{
+    @apply md:text-lg 
+    text-gray-900 
+    font-light 
+    px-4 py-4 
+  }
+
+  .des-block{
+    @apply absolute 
+    mr-8
+    px-3 py-2 
+    text-sm font-medium 
+    text-gray-900 
+    bg-white 
+    border border-purple-400
+    rounded-lg 
+    shadow-sm 
+    hidden 
+    
+  }
+
+  .card-header{
+    @apply my-1 
+    text-xl 
+    border-l-4 border-pink-700 
+    px-2
+  }
+
+  .data-courses-table{
+    @apply 
+    p-2
+    text-sm md:text-md
+  }
+
+  .header-courses-table{
+    @apply 
+    md:text-lg 
+    font-medium 
+    text-gray-900 
+  }
+
 }
 
 body {
@@ -214,8 +257,4 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
-
-.nav-tabs{
-
 }

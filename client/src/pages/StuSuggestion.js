@@ -9,6 +9,7 @@ import NavBar from "../components/NavBar";
 import useToken from '../components/UseToken';
 
 function StuSuggestion () {
+    const [hidden, setHidden] = useState(true);
     const { token} = useToken();
     const [careerByCourses, setCareerByCourses] = useState([]);
     const [careerBySelf, setCareerBySelf] = useState([]);
@@ -29,6 +30,10 @@ function StuSuggestion () {
             }
             
         ))
+    };
+
+    const toggleHidden = () => {
+        setHidden(!hidden);
     };
     
     return (
@@ -53,6 +58,23 @@ function StuSuggestion () {
                             ))}    
                         </div>
                     </div>
+                </div>
+                <div>
+                    <div className="flex justify-end mb-4">
+                        <button className="py-2 px-4 rounded-md text-purple-500 hover:bg-purple-500 hover:text-white" onClick={toggleHidden}>? วิธีการคำนวน</button>
+                    </div>
+                    {hidden?(
+                        <span></span>
+                    ):(
+                        <div className="info-card block border-2 border-purple-100">
+                            <div className="flex justify-end mx-3">
+                                <button className="text-red-500 text-lg md:text-3xl" onClick={toggleHidden}>X</button>
+                            </div>
+                            <h4 className="px-2 text-gray-700">วิธีการคำนวน</h4>
+                            <p className="p-2 text-gray-700">&nbsp; &nbsp;ในการแนะนำอาชีพ จะเลือกอาชีพที่มีระยะห่างน้อยที่สุด 5 อาชีพ เพื่อแนะนำให้กับผู้ใช้ โดยในการหาระยะห่างระหว่างผู้ใช้กับอาชีพแต่ละอาชีพนั้น จะใช้สูตร euclidean ในการหาระยะห่าง</p>
+                            <img alt="Euclidean Formula" src={require("../images/EuclideanFormula.png")}></img>
+                        </div>   
+                    )}
                 </div>
             </div>
         </div>
