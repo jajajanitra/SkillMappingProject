@@ -1,27 +1,26 @@
 import { useState } from 'react';
+import { useCookies } from 'react-cookie';
 
 export default function useToken() {
-    
+    const [cookies, setCookie, removeCookie] = useCookies(['user']);
+
     const getToken = () => {
-        const tokenString = localStorage.getItem('token');
-        const userToken = JSON.parse(tokenString);
-        return userToken
+        return cookies.token
     };
 
     const [token, setToken] = useState(getToken());
 
     const saveToken = userToken => {
-        localStorage.setItem('token', JSON.stringify(userToken));
-        setToken(userToken?.token);
+        setCookie('token', userToken, {maxAge: 7200, path: '/'});
     };
 
     const removeToken = () => {
-        localStorage.removeItem("token");
+        removeCookie('token',{path:'/'});
         getToken();
     };
 
     const isAuthen = () => {
-        return localStorage.getItem('token') != null
+        return cookies.token != null
     }
 
     return {

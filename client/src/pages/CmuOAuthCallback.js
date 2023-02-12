@@ -31,6 +31,7 @@ export default function CMUOAuthCallback() {
                 setToken(res.data.studentId);
                 setStuName(res.data.student_name);
                 setStuEmail(res.data.cmuAccount);
+                window.location.reload();
             }
         })
         .catch((error) => {
@@ -50,7 +51,7 @@ export default function CMUOAuthCallback() {
     if(isAuthen) {
         return <Navigate replace to="/student_home" />;
     }else{
-        return <div className="p-3">{"Redirecting ..."}</div>;  
+        return <div className="p-3">{ "Redirecting ..." || message}</div>;  
     }
 
 //   return <div className="p-3">{message || "Redirecting ..."}</div>;  

@@ -1,39 +1,35 @@
 import { useState } from 'react';
+import { useCookies } from 'react-cookie';
 
 export default function useToken() {
-    
+    const [cookies, setCookie, removeCookie] = useCookies(['user']);
+
     const getStuName = () => {
-        const tokenString = localStorage.getItem('stuName');
-        const userToken = JSON.parse(tokenString);
-        return userToken
+        return cookies.stuName;
     };
 
     const getStuEmail = () => {
-        const tokenString = localStorage.getItem('stuEmail');
-        const userToken = JSON.parse(tokenString);
-        return userToken
+        return cookies.stuEmail;
     };
 
     const [stuName, setStuName] = useState(getStuName());
     const [stuEmail, setStuEmail] = useState(getStuEmail());
 
-    const saveStuName = userToken => {
-        localStorage.setItem('stuName', JSON.stringify(userToken));
-        setStuName(userToken?.stuName);
+    const saveStuName = name => {
+        setCookie('stuName', name, {maxAge: 7200, path: '/'});
     };
 
-    const saveStuEmail = userToken => {
-        localStorage.setItem('stuEmail', JSON.stringify(userToken));
-        setStuEmail(userToken?.stuEmail);
+    const saveStuEmail = email => {
+        setCookie('stuEmail', email, {maxAge: 7200, path: '/'});
     };
 
     const removeStuName = () => {
-        localStorage.removeItem("stuName");
+        removeCookie('stuName', {path:'/'});
         getStuName();
     };
 
     const removeStuEmail = () => {
-        localStorage.removeItem("stuEmail");
+        removeCookie('stuEmail', {path:'/'});
         getStuEmail();
     };
 

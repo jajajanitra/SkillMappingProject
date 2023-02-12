@@ -51,9 +51,7 @@ function NavBar (){
         removeToken();
         removeStuEmail();
         removeStuName();
-        if(!token){
-            window.location.reload();
-        }
+        window.location.reload();
     }
 
     if (!isAuthen) {
