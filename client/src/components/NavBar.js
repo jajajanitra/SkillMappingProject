@@ -73,12 +73,12 @@ function NavBar (){
                         {/* for user */}
                         <div class={openUser ? "absolute right-4 top-20 z-50 text-base list-none bg-white divide-y divide-gray-100 rounded shadow" : "hidden"} id="user-dropdown">
                             <div class="px-4 py-3">
-                            <span class="block text-sm text-gray-900 ">{stuName}</span>
-                            <span class="block text-sm font-medium text-gray-500 truncate ">{stuEmail}</span>
+                                <span class="block text-sm text-gray-900 ">{stuName}</span>
+                                <span class="block text-sm font-medium text-gray-500 truncate ">{stuEmail}</span>
                             </div>
-                            <ul class="py-1" aria-labelledby="user-menu-button">
-                                <li><button onClick={logout}>logout</button></li>
-                            </ul>
+                            <div className="flex justify-center p-2 text-red-600">
+                                <button onClick={logout}>logout</button>
+                            </div>
                         </div>
                         <button type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="mobile-menu-2" aria-expanded="false" onClick={toggleMenu}>
                             <span class="sr-only">Open main menu</span>

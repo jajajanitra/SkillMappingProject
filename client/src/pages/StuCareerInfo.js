@@ -6,6 +6,7 @@ import { Server_URL } from "../constants";
 import NavBar from "../components/NavBar";
 import useToken from '../components/UseToken';
 import {HiOutlineArrowRight, HiOutlineExternalLink, HiOutlineInformationCircle} from 'react-icons/hi';
+import {MdOutlineArrowBackIos} from 'react-icons/md';
 
 import Chart from "chart.js/auto";
 import { Radar } from 'react-chartjs-2';
@@ -38,7 +39,7 @@ function StuCareerInfo (){
         labels: chartData[0],
         datasets: [
           {
-            label: 'ทักษะของคุณ',
+            label: 'ทักษะของคุณจากวิชาที่เรียน',
             data: chartData[1],
             backgroundColor: 'rgba(56, 189, 248, 0.2)',
             borderColor: 'rgba(56, 189, 248, 1)',
@@ -116,12 +117,20 @@ function StuCareerInfo (){
         ))
         // console.log(career);
     };
+
+    const goBack = () => {
+        window.history.back();
+    };
      
     return (
         <div>
             <NavBar></NavBar>
             <div className="content-div">
-                <h4 className="page-header">{career.name_career}</h4>
+                <div className="flex ">
+                    <h4 className="h-8 w-8 mt-1 cursor-pointer hover:text-sky-500" onClick={goBack}> <MdOutlineArrowBackIos></MdOutlineArrowBackIos> </h4>
+                    <h4 className="page-header">{career.name_career}</h4>    
+                </div>
+                
                 {/* <a className="" href="/student_careers">ข้อมูลอาชีพ</a> */}
                 <div className="md:grid md:grid-cols-2 md:gap-6">
                     <div>
@@ -140,7 +149,7 @@ function StuCareerInfo (){
                                             
                                             <td className="md:text-lg pl-4 pr-2">{course.id}</td>
                                             <td className="md:text-lg"> {course.name}</td> 
-                                            <td className="px-2"><HiOutlineArrowRight className="text-fuchsia-500"></HiOutlineArrowRight></td>
+                                            <td className="px-2"><HiOutlineArrowRight className="text-fuchsia-500 "></HiOutlineArrowRight></td>
                                         </tr>    
                                         
                                     ))}    
@@ -157,7 +166,7 @@ function StuCareerInfo (){
                         <table class="w-full text-left my-3">
                             <thead className="border-b bg-purple-100">
                                 <tr>
-                                    <th className="skill-data">ทักษะ</th>
+                                    <th className="skill-data border-r">ทักษะ</th>
                                     <th className="skill-data text-center">ระดับทักษะ</th>
                                 </tr>
                             </thead>
@@ -165,14 +174,17 @@ function StuCareerInfo (){
                             <tbody>
                                 {career.skills?.map((skill, index) => (
                                     <tr className="bg-white border-b ">
-                                        <td className="group skill-data">
+                                        <td className="group skill-data flex border-r">
+                                            <p className="text-sky-500 mr-2">
+                                                 <HiOutlineInformationCircle className="h-6 w-6"></HiOutlineInformationCircle> 
+                                            </p>
                                             <div class="des-block group-hover:block">
-                                                {skill.des}
+                                                 {skill.des}
                                             </div>
                                             {skill.skill_name}
                                         </td>
                                         
-                                        <td className="group skill-data text-center">
+                                        <td className="group skill-data text-center text-sky-500">
                                             <div class="des-block group-hover:block">
                                                 {skill.des_level}
                                             </div>

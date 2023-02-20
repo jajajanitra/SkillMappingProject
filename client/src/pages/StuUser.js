@@ -101,36 +101,28 @@ function StuUser () {
             <div className="content-div">
                 <h4 className="page-header">สรุปข้อมูล</h4>
                 <div className="py-2">
-                    {/* <div className="mb-3 px-3 py-2 lg:p-4">
-                        <h6 className="text-lg">ชื่อ: {student.student_name}</h6>
-                        <h6 className="text-lg">รหัสนักศึกษา: {student.student_id}</h6>
-                    </div> */}
-
-                    
-                    <h6 className="text-xl border-solid border-l-4 border-pink-700 pl-2">รายวิชาที่เรียน</h6>  
+                    <h6 className="pink-left-border">รายวิชาที่เรียน</h6>  
                     {student.courses?.length > 0 ? 
                     (
                         <div className="mb-4 p-2">
                             <table class="w-full text-left my-3">
                                 <thead class="border-b bg-yellow-100">
                                     <tr>
-                                    <th scope="col" class="text-md font-medium pl-4 pr-1 py-4">
-                                        รหัสวิชา
-                                    </th>
-                                    <th scope="col" class="text-md font-medium pl-4 pr-1 py-4">
-                                        รายวิชา
-                                    </th>
-                                    <th>
-
-                                    </th>
+                                        <th scope="col" class="user-course-header">
+                                            รหัสวิชา
+                                        </th>
+                                        <th scope="col" class="user-course-header">
+                                            รายวิชา
+                                        </th>
+                                        <th></th>
                                     
                                     </tr>
                                 </thead>
                                 <tbody>
                                     {student.courses?.map((course, index) => (
                                         <tr className="bg-white border-b ">
-                                            <td className="text-sm md:text-md text-gray-900 font-light pl-4 pr-1 py-4 w-fit">{course.course_id} </td>
-                                            <td className="text-sm md:text-md text-gray-900 font-light pl-4 pr-1 py-4 ">{course.course_name}</td>
+                                            <td className="md:text-md user-course-data w-fit">{course.course_id} </td>
+                                            <td className="md:text-md user-course-data">{course.course_name}</td>
                                             <td className="text-right px-2 lg:px-4">
                                                 <button className={loading ? "disabled-btn" : "delete-btn"} value={course.course_id} onClick={e => deleteCourse(e, course.course_name, course.course_id)} disabled={loading ? true : false}>
                                                     <div className="flex items-center">
@@ -146,7 +138,8 @@ function StuUser () {
                         </div>
                     ):(
                         <div className="mb-4 p-2 flex justify-center">
-                            <p>ยังไม่ได้เพิ่มรายวิชา</p>
+                            <p className="px-2">ยังไม่ได้เพิ่มรายวิชา</p>
+                            <a href="/student_fillinformation"> กรุณากรอกข้อมูล</a>
                         </div>
                     )
                     } 
@@ -154,14 +147,14 @@ function StuUser () {
 
                     <div className="grid gird-flow-row lg:grid-cols-2 lg:gap-8 p-2 lg:px-4" >
                         <div className="mb-4">
-                        <h6 className="text-xl border-solid border-l-4 border-pink-700 pl-2">ระดับทักษะที่ได้รับจากรายวิชาที่เรียน</h6>
+                        <h6 className="pink-left-border">ระดับทักษะที่ได้รับจากรายวิชาที่เรียน</h6>
                             <table class="w-full text-left my-3">
                                 <thead class="border-b bg-purple-100">
                                     <tr>
-                                    <th scope="col" class="md:text-lg font-medium pl-4 pr-1 py-4 ">
+                                    <th scope="col" class="md:text-lg user-course-header">
                                         ทักษะ
                                     </th>
-                                    <th scope="col" class="md:text-lg font-medium px-2 py-4 w-fit text-center ">
+                                    <th scope="col" class="md:text-lg user-skill-header">
                                         ระดับทักษะ
                                     </th>
                                     
@@ -170,8 +163,8 @@ function StuUser () {
                                 <tbody>
                                     {student.skills?.map((skill) => (
                                         <tr className="bg-white border-b">
-                                            <td className="text-sm md:text-md text-gray-900 font-light pl-4 pr-1 py-4 ">{skill.skill_name} </td>
-                                            <td className="text-sm md:text-md text-gray-900 font-light px-2 py-4 max-w-fit text-center ">{skill.level_id}</td>
+                                            <td className="user-skill md:text-md">{skill.skill_name} </td>
+                                            <td className="user-skill-data md:text-md ">{skill.level_id}</td>
                                         </tr>
                                     ))}
                                     
@@ -182,17 +175,17 @@ function StuUser () {
                         
                         
                         <div className="mb-4">
-                        <h6 className="text-xl border-solid border-l-4 border-pink-700 pl-2">ระดับทักษะจากการประเมินตนเอง</h6>
+                        <h6 className="pink-left-border">ระดับทักษะจากการประเมินตนเอง</h6>
                             <table class="w-full text-left my-3">
                                 <thead class="border-b bg-purple-100">
                                     <tr>
-                                        <th scope="col" class="md:text-lg font-medium pl-4 pr-1 py-4">
+                                        <th scope="col" class="md:text-lg user-course-header">
                                             ทักษะ
                                         </th>
-                                        <th scope="col" class="md:text-lg font-medium px-2 py-4 text-center w-fit">
+                                        <th scope="col" class="md:text-lg user-skill-header">
                                             ระดับทักษะ
                                         </th>
-                                        <th scope="col" class="md:text-lg font-medium px-2 py-4 text-center w-fit">
+                                        <th scope="col" class="md:text-lg user-skill-header">
                                             ระดับความชอบ
                                         </th>
                                     </tr>
@@ -200,9 +193,9 @@ function StuUser () {
                                 <tbody>
                                     {student.skills?.map((skill) => (
                                         <tr className="bg-white border-b">
-                                            <td className="text-sm md:text-md text-gray-900 font-light pl-4 pr-1 py-4 ">{skill.skill_name} </td>
-                                            <td className="text-sm md:text-md text-gray-900 font-light px-2 py-4 text-center max-w-fit">{skill.skill_self}</td>
-                                            <td className="text-sm md:text-md text-gray-900 font-light px-2 py-4 text-center max-w-fit">{skill.skill_like}</td>
+                                            <td className="user-skill md:text-md">{skill.skill_name} </td>
+                                            <td className="user-skill-data md:text-md ">{skill.skill_self}</td>
+                                            <td className="user-skill-data md:text-md ">{skill.skill_like}</td>
                                         </tr>
                                     ))}
                                     

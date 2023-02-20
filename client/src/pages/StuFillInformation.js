@@ -258,17 +258,17 @@ function StuFillInformation () {
                                 <table className="text-m text-left ml-4 mr-4 mt-3 p-2 border ">
                                     <thead className="bg-purple-100 p-2">
                                         <tr>
-                                            <th className="header-courses-table p-2 lg:pl-4">รหัสวิชา</th>
-                                            <th className="header-courses-table p-2 lg:pl-3">ชื่อวิชา</th>
-                                            <th className="header-courses-table p-2 lg:pl-3">หัวข้อ</th>
-                                            <th className="header-courses-table text-center w-36 lg:pl-3">เพิ่ม</th>    
+                                            <th className="header-courses-table md:text-lg lg:pl-4">รหัสวิชา</th>
+                                            <th className="header-courses-table md:text-lg lg:pl-3">ชื่อวิชา</th>
+                                            <th className="header-courses-table md:text-lg lg:pl-3">หัวข้อ</th>
+                                            <th className="header-courses-table text-center w-36 md:text-lg lg:pl-3">เพิ่ม</th>    
                                         </tr>
                                     </thead>
 
                                     <tbody>
                                         {courses.map((course, index) => (
                                             <tr className="border-b odd:bg-white even:bg-gray-50">
-                                                <td className="data-course-table p-2">{course.id}</td>
+                                                <td className="data-course-table p-3">{course.id}</td>
                                                 <td className="data-course-table py-3">{course.name}</td>
                                                 <td className="data-course-table">{course.sel_topic}</td>
                                                 <td className="text-center data-course-table">

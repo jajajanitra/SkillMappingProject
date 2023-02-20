@@ -16,8 +16,6 @@ export default function CMUOAuthCallback() {
     const Login_URL = Server_URL+"/login/";    
 
     useEffect(() => {
-    //Next.js takes sometime to read parameter from URL
-    //So we'll check if "code" is ready before calling sign-in api
     if (!code) return;
         getAccessToken();
     

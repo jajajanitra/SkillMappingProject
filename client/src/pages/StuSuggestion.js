@@ -26,7 +26,7 @@ function StuSuggestion () {
                 const resSuggestion = responses[0].data;
                 setCareerByCourses(resSuggestion.bycourses);
                 setCareerBySelf(resSuggestion.byself);
-                
+                console.log(careerByCourses);
             }
             
         ))
@@ -45,17 +45,33 @@ function StuSuggestion () {
                     <div className="mt-2 mb-8">
                         <h6 className="text-xl pl-2 mb-4 text-center flex justify-center"><span className="px-2 "><IoBookOutline className="h-6 w-6"></IoBookOutline></span><span>อาชีพที่แนะนำจากรายวิชาที่เรียน</span></h6>
                         <div className="px-2">
-                            {careerByCourses.map((career, index) => (
-                                <a class="career-sugg-card border-blue-700 " href={"/student_careers/"+career._id} >{index+1}. {career.career} (distance: {career.distance})</a>
-                            ))}    
+                            {careerByCourses.length > 0 ? 
+                                <div>
+                                    {careerByCourses.map((career, index) => (
+                                        <a class="career-sugg-card border-blue-700 " href={"/student_careers/"+career._id} >{index+1}. {career.career}</a>
+                                    ))} 
+                                </div>
+                                :
+                                <div className="flex justify-center">
+                                    <p>กรุณา <a href="/student_fillinformation">กรอกข้อมูล</a> ก่อนใช้งาน</p>
+                                </div>}
+                               
                         </div>
                     </div>
                     <div className="mt-2 mb-8">
                         <h6 className="text-xl pl-2 mb-4 text-center flex justify-center"><span className="px-2"><FaRegEdit className="h-6 w-6"></FaRegEdit></span><span>อาชีพที่แนะนำจากการประเมินตนเอง</span></h6>
                         <div className="px-2">
-                            {careerBySelf.map((career, index) => (
-                                <a class="career-sugg-card border-orange-500" href={"/student_careers/"+career._id} >{index+1}. {career.career} (distance: {career.distance})</a>
-                            ))}    
+                            {careerBySelf.length > 0 ? 
+                            <div>
+                                {careerBySelf.map((career, index) => (
+                                    <a class="career-sugg-card border-orange-500" href={"/student_careers/"+career._id} >{index+1}. {career.career}</a>
+                                ))} 
+                            </div>
+                            :
+                            <div className="flex justify-center">
+                                <p>กรุณา <a href="/student_fillinformation">กรอกข้อมูล</a> ก่อนใช้งาน</p>
+                            </div>}
+                               
                         </div>
                     </div>
                 </div>

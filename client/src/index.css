@@ -212,7 +212,7 @@
     @apply absolute 
     mr-8
     px-3 py-2 
-    text-sm font-medium 
+    text-sm
     text-gray-900 
     bg-white 
     border border-purple-400
@@ -236,10 +236,52 @@
   }
 
   .header-courses-table{
-    @apply 
-    md:text-lg 
+    @apply p-2
     font-medium 
     text-gray-900 
+  }
+
+  .user-skill{
+    @apply text-sm 
+    text-gray-900 font-light 
+    pl-4 pr-1 py-4 
+  }
+
+  .user-skill-data{
+    @apply text-sm 
+    text-gray-900 
+    font-light 
+    px-2 py-4 
+    text-center 
+    max-w-fit
+  }
+
+  .user-skill-header{
+    @apply text-gray-900 
+    font-medium 
+    px-2 py-4 
+    text-center 
+    w-fit
+  }
+
+  .user-course-header{
+    @apply font-medium 
+    pl-4 pr-1 py-4
+  }
+
+  .user-course-data{
+    @apply text-sm  
+    text-gray-900 
+    font-light 
+    pl-4 pr-1 py-4 
+  }
+
+  .pink-left-border{
+    @apply text-xl 
+    border-solid 
+    border-l-4 
+    border-pink-700 
+    pl-2
   }
 
 }
