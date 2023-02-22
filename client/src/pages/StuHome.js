@@ -66,13 +66,22 @@ function StuHome () {
         labels: skills[0],
         datasets: [
           {
-            label: 'ระดับทักษะ',
+            label: 'ระดับทักษะจากรายวิชา',
             backgroundColor: 'rgb(214, 189, 255, 0.2)',
             borderColor: '#B080FF',
             borderWidth: 1,
             hoverBackgroundColor: '#D6BDFF',
             hoverBorderColor: '#FFF296',
             data: skills[1]
+          },
+          {
+            label: 'ระดับทักษะจากการประเมินโดยตนเอง',
+            backgroundColor: 'rgba(253, 205, 0, 0.2)',
+            borderColor: 'rgba(253, 205, 0, 1)',
+            borderWidth: 1,
+            hoverBackgroundColor: '#BDE6FF',
+            hoverBorderColor: '#FFF296',
+            data: skills[2]
           }
         ]
     };
@@ -84,8 +93,8 @@ function StuHome () {
             <div className="content-div">
                 <div>
                     <div className="card shadow-md bg-white p-4 m-4 ">
-                        <h5 className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-sky-600 text-2xl w-fit">Skill Mapping คืออะไร?</h5>
-                        <p className="text-md md:text-xl text-gray-600 p-2">&nbsp; &nbsp; Skill Mapping คือ เว็บไซต์ที่จะเป็นตัวช่วยสำหรับนักศึกษาวิศวกรรมคอมพิวเตอร์ให้ไปสู่อาชีพที่ต้องการ เพื่อให้นักศึกษาได้รู้ถึงทักษะของตนเองจากรายวิชาที่เคยเรียน ซึ่งสามารถดูได้จากเมนูสรุปข้อมูล 
+                        <h5 className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-sky-600 text-2xl w-fit">CPE CAREER IDEAS คืออะไร?</h5>
+                        <p className="text-md md:text-xl text-gray-600 p-2">&nbsp; &nbsp; CPE CAREER IDEAS คือ เว็บไซต์ที่จะเป็นตัวช่วยสำหรับนักศึกษาวิศวกรรมคอมพิวเตอร์ให้ไปสู่อาชีพที่ต้องการ เพื่อให้นักศึกษาได้รู้ถึงทักษะของตนเองจากรายวิชาที่เคยเรียน ซึ่งสามารถดูได้จากเมนูสรุปข้อมูล 
                         สำหรับนักศึกษาที่มีอาชีพที่สนใจสามารถดูข้อมูลเกี่ยวกับอาชีพได้ที่เมนูวิเคราะห์อาชีพ และนักศึกษาที่ยังไม่มีอาชีพที่สนใจสามารถใช้เมนูแนะนำอาชีพเพื่อให้ช่วยแนะนำอาชีพที่น่าจะเหมาะสมกับทักษะที่ตนเองมีได้</p>
                     </div>
                 </div>
@@ -93,14 +102,15 @@ function StuHome () {
                     <Instruction></Instruction>
                 </div>
                 <div className="card shadow-md bg-white p-4 m-4">
-                    <div className="flex justify-center">
-                        <h5 className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-sky-600 text-2xl w-fit">ทักษะของคุณ</h5>
+                    <div className="grid cols-1 ">
+                        <div className="flex justify-center">
+                            <h5 className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-sky-600 text-2xl w-fit">ทักษะของคุณ</h5>
+                        </div>
+                        <p className="text-sm md:text-md text-gray-500 flex justify-center">บันทึกข้อมูลเมื่อ: {updateDate}</p>
                     </div>
                     <div className="grid justify-items-center w-full">
                             <Radar options={options} data={dataBar} className="max-h-screen max-w-screen-xl lg:p-5" />
                     </div>
-                    
-                    <p className="flex justify-end text-sm md:text-md text-gray-500">บันทึกข้อมูลเมื่อ: {updateDate}</p>
                 </div>
                 <div>
                     <UserType></UserType>

@@ -380,7 +380,7 @@ function StuFillInformation () {
                                                                 {skill.levels.map((level) => (
                                                                     <tr className="bg-white border-b">
                                                                         <td className="text-sm text-gray-900 font-light px-6 py-4 w-12 text-center">{level.level_id} </td>
-                                                                        <td className="text-sm text-gray-900 font-light px-6 py-4 ">{level.level_des}</td>
+                                                                        <td className="text-sm text-gray-900 font-light px-6 py-4 ">{level.level_thai}</td>
                                                                     </tr>
                                                                 ))}
                                                                 
@@ -492,7 +492,7 @@ function StuFillInformation () {
                                                                 คำอธิบายสำหรับทักษะ {skill.name}
                                                         </span>
                                                         <p className="mt-2">
-                                                            {skill.des}   
+                                                            {skill.des_thai}   
                                                         </p>
                                                         
                                                     </div>

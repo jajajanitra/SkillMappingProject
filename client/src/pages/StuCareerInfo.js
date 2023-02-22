@@ -111,7 +111,7 @@ function StuCareerInfo (){
                 setChartData(resCareer.data.chart);
                 setCourses(resCareer.data.courses.sort(
                     (p1, p2) => (p1.id > p2.id) ? 1 : (p1.id < p2.id) ? -1 : 0));
-                console.log(resCareer.data);
+                // console.log(resCareer.data);
             }
             
         ))
@@ -179,14 +179,14 @@ function StuCareerInfo (){
                                                  <HiOutlineInformationCircle className="h-6 w-6"></HiOutlineInformationCircle> 
                                             </p>
                                             <div class="des-block group-hover:block">
-                                                 {skill.des}
+                                                 {skill.des_thai}
                                             </div>
                                             {skill.skill_name}
                                         </td>
                                         
                                         <td className="group skill-data text-center text-sky-500">
-                                            <div class="des-block group-hover:block">
-                                                {skill.des_level}
+                                            <div class="des-block group-hover:block right-0 md:right-3 lg:right-4 max-w-sm ml-1">
+                                                {skill.thai_level}
                                             </div>
                                             {skill.level_id}
                                         </td>

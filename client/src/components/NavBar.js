@@ -63,7 +63,7 @@ function NavBar (){
                     <div class=" flex flex-wrap items-center justify-between mx-4 lg:mx-16 lg:px-2">
                     <a href="" class="flex items-center no-underline">
                         <img src="../Images/SkillMappingLogo.png" class="h-12 mr-3" alt="SkillMapping Logo" />
-                        <span class="text-xl text-purple-600">Skill Mapping</span>
+                        <span class="xl:text-xl text-purple-600">CPE Career Ideas</span>
                     </a>
                     <div class="flex items-center lg:order-2">
                         <button type="button" class="flex mr-3 text-sm rounded-full lg:mr-0 focus:ring-4 focus:ring-gray-300 " id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom" onClick={toggleUserMenu}>
