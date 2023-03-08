@@ -8,6 +8,7 @@ import useToken from '../components/UseToken';
 import {HiOutlineArrowRight, HiOutlineExternalLink, HiOutlineInformationCircle} from 'react-icons/hi';
 import {MdOutlineArrowBackIos} from 'react-icons/md';
 
+
 import Chart from "chart.js/auto";
 import { Radar } from 'react-chartjs-2';
 
@@ -46,8 +47,15 @@ function StuCareerInfo (){
             borderWidth: 1,
           },
           {
-            label: 'ทักษะที่ต้องการ',
+            label: 'ทักษะของคุณจากการประเมินตนเอง',
             data: chartData[2],
+            backgroundColor: 'rgb(219, 39, 119, 0.2)',
+            borderColor: 'rgb(219, 39, 119, 1)',
+            borderWidth: 1,
+          },
+          {
+            label: 'ทักษะที่อาชีพต้องการ',
+            data: chartData[3],
             backgroundColor: 'rgba(253, 205, 0, 0.2)',
             borderColor: 'rgba(253, 205, 0, 1)',
             borderWidth: 1,
@@ -136,7 +144,7 @@ function StuCareerInfo (){
                     <div>
                         <div className="info-card">
                         <h6 className="card-header px-2">ภาระหน้าที่ของอาชีพ</h6>
-                        <p className="px-2 text-lg">&nbsp; &nbsp; {career.des_thai}</p>
+                        <p className="p-2 text-lg">&nbsp; &nbsp; {career.des_thai}</p>
                         </div> 
                         <div className="info-card mt-4 mb-4">
                             <h6 className="card-header px-2">รายวิชาที่แนะนำ</h6>
@@ -200,6 +208,11 @@ function StuCareerInfo (){
                 </div>
                 <div className="info-card my-4 p-4 text-black ">
                     <h6 className="my-1 text-xl border-l-4 border-pink-700 px-2">เปรียบเทียบทักษะ</h6>
+                    <div className="grid cols-1 ">
+                        <div className="flex justify-center">
+                            <h5 className="w-fit my-3 text-gray-600">กราฟเปรียบเทียบทักษะอาชีพ {career.name_career}</h5>
+                        </div>
+                    </div>
                     <div className="flex justify-center p-2 max-h-[60rem]">
                         <Radar options={options} data={data} />
                     </div>

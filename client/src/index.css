@@ -9,6 +9,7 @@
     p-2 pl-4 pr-4 
     ml-3 mr-3 
     rounded-3xl 
+    hover:shadow-md
   }
 
   .login-btn{
@@ -91,8 +92,8 @@
     no-underline
     border-solid border-l-8 
     bg-white
-    odd:hover:bg-amber-50 even:hover:bg-fuchsia-50
-    odd:border-dark-yellow even:border-pink-600
+    hover:bg-fuchsia-50
+    border-pink-600
     hover:text-gray-800
   }
 

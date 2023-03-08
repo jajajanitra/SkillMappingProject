@@ -20,8 +20,10 @@ function StuFillInformation () {
     const [loading, setLoading] = useState(false);
     const [skills, setSkills] = useState([]);
     const [courses, setCourses] = useState([]);
+    const [filteredCourses, setFilteredCourses] = useState([]);
     const [selectedCourses, setSelectedCourses] = useState([]);
     const [selfSkills, setSelfSkills] = useState([]);
+    const [searchInput, setSearchInput] = useState("");
     const [likes, setLikes] = useState([]);
     const [student, setStudent] = useState({});
     const { token} = useToken();
@@ -46,6 +48,7 @@ function StuFillInformation () {
                 setSkills(data);
                 const resCourses = responses[1].data;
                 setCourses(resCourses);
+                setFilteredCourses(resCourses);
                 const resStudent = responses[2].data;
                 setStudent(resStudent.skillslist);
                 setSelfSkills(resStudent.skillslist);
@@ -55,6 +58,23 @@ function StuFillInformation () {
             }
         ))
         // console.log(skills);
+    };
+
+    const handleSearchChange = (e) => {
+        setSearchInput(e.target.value.toLowerCase());
+        
+    };
+
+    const searchID = () => {
+        setFilteredCourses(courses.filter((course) => {
+            if (searchInput === '') {
+                return course;
+            }
+            //return the item which contains the user input
+            else {
+                return course.name.toLowerCase().includes(searchInput) || course.id.toLowerCase().includes(searchInput)
+            }
+        }))
     };
 
     const handleSkillsLevelChange = (event, name) => {
@@ -252,6 +272,24 @@ function StuFillInformation () {
                                     &nbsp; &nbsp;เลือกรายวิชาของภาควิชาวิศวกรรมคอมพิวเตอร์ที่เคยเรียนทั้งหมด จากนั้นกดปุ่มบันทึกเพื่อบันทึกข้อมูล
                             </p>
                         </div>
+
+                        <div className="flex flex-wrap lg:grid lg:grid-flow-row-dense lg:grid-cols-6 lg:gap-4 mb-2 p-2">
+                            <input
+                            className="h-10 w-full p-2 mx-2 my-2 md:my-1 lg:col-span-5"
+                            type="ืีnumber"
+                            placeholder="ค้นหาโดยชื่อหรือรหัสวิชา"
+                            onChange={handleSearchChange}
+                            onKeyDown={event => {
+                                if (event.key === 'Enter') {
+                                searchID()
+                                }
+                            }} />
+
+                            <button 
+                            className="w-full my-1 mx-2 blue-btn"
+                            onClick={searchID}
+                            >ค้นหา</button>
+                        </div>
                         
                         <div className="grid my-3 overflow-scroll ">
                             {courses.length > 0 ? (
@@ -266,8 +304,8 @@ function StuFillInformation () {
                                     </thead>
 
                                     <tbody>
-                                        {courses.map((course, index) => (
-                                            <tr className="border-b odd:bg-white even:bg-gray-50">
+                                        {filteredCourses.map((course, index) => (
+                                            <tr className="border-b odd:bg-white even:bg-gray-50 hover:bg-sky-50">
                                                 <td className="data-course-table p-3">{course.id}</td>
                                                 <td className="data-course-table py-3">{course.name}</td>
                                                 <td className="data-course-table">{course.sel_topic}</td>
@@ -402,7 +440,7 @@ function StuFillInformation () {
                         <div className="flex justify-end">
                             <button className={loading ?"disabled-btn":"green-btn"} onClick={addSelfSkills} disabled={loading ? true : false}>
                                 <div className="flex justify-center">
-                                    <span className="block px-2 lg:px-1">{loading ? <RiLoader2Fill className="h-6 w-6"></RiLoader2Fill> : <TfiSave className="h-6 w-6"></TfiSave>}</span>
+                                    <span className="block px-2 lg:px-1">{loading ? <img className="h-6 w-6" src={require("../images/loading.gif")}></img> : <TfiSave className="h-6 w-6"></TfiSave>}</span>
                                     <span className="block px-2 lg:px-1">{loading ? "กำลังบันทึก..." : "บันทึกข้อมูล"}</span>  
                                 </div>
                             </button>
@@ -492,7 +530,7 @@ function StuFillInformation () {
                                                                 คำอธิบายสำหรับทักษะ {skill.name}
                                                         </span>
                                                         <p className="mt-2">
-                                                            {skill.des_thai}   
+                                                            &nbsp; &nbsp;{skill.des_thai}   
                                                         </p>
                                                         
                                                     </div>
@@ -511,7 +549,7 @@ function StuFillInformation () {
                         <div className="flex justify-end">
                             <button className={loading ?"disabled-btn":"green-btn"} onClick={addLikes} disabled={loading ? true : false}>
                                 <div className="flex justify-center">
-                                    <span className="block px-2 lg:px-1">{loading ? <RiLoader2Fill className="h-6 w-6"></RiLoader2Fill> : <TfiSave className="h-6 w-6"></TfiSave>}</span>
+                                    <span className="block px-2 lg:px-1">{loading ? <img className="h-6 w-6" src={require("../images/loading.gif")}></img> : <TfiSave className="h-6 w-6"></TfiSave>}</span>
                                     <span className="block px-2 lg:px-1">{loading ? "กำลังบันทึก..." : "บันทึกข้อมูล"}</span>  
                                 </div>
                             </button>

@@ -99,7 +99,18 @@ function StuHome () {
                     </div>
                 </div>
                 <div>
+                    <div className="card shadow-md bg-white p-4 m-4 ">
+                        <h5 className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-sky-600 text-2xl w-fit">วิธีการใช้งาน</h5>
+                        <p className="text-md md:text-xl text-gray-600 p-2">&nbsp; &nbsp;สำหรับการใช้งานของเว็บไซต์ ผู้ใช้ต้องทำการกรอกข้อมูลและบันทึกข้อมูลทั้ง 3 ส่วนให้เรียบร้อยก่อนได้แก่ รายวิชา ทักษะ และ ความชอบ ในเมนูกรอกข้อมูล
+                        &nbsp;เมื่อกรอกข้อมูลเรียบร้อยแล้วหากมีอาชีพที่สนใจที่ต้องการจะดูรายละเอียดให้ไปที่เมนูวิเคราะห์อาชีพ เพื่อค้นหาอาชีพที่ต้องการ แต่หากยังไม่มีอาชีพที่สนใจต้องการให้ช่วยแนะนำอาชีพ ให้เข้าไปที่เมนูแนะนำอาชีพ
+                        &nbsp;หากกรอกข้อมูลรายวิชาผิดพลาดสามารถเข้าไปแก้ไขได้ที่เมนูสรุปข้อมูล ส่วนข้อมูลทักษะและความชอบสามารถแก้ในเมนูกรอกข้อมูลแล้วบันทึกใหม่อีกครั้ง</p>
+                    </div>
+                </div>
+                <div>
                     <Instruction></Instruction>
+                </div>
+                <div>
+                    <UserType></UserType>
                 </div>
                 <div className="card shadow-md bg-white p-4 m-4">
                     <div className="grid cols-1 ">
@@ -109,12 +120,10 @@ function StuHome () {
                         <p className="text-sm md:text-md text-gray-500 flex justify-center">บันทึกข้อมูลเมื่อ: {updateDate}</p>
                     </div>
                     <div className="grid justify-items-center w-full">
-                            <Radar options={options} data={dataBar} className="max-h-screen max-w-screen-xl lg:p-5" />
+                            <Radar options={options} data={dataBar} className="max-h-[48rem] max-w-screen-xl lg:p-5" />
                     </div>
                 </div>
-                <div>
-                    <UserType></UserType>
-                </div>
+                
             </div>
         </div>
     );
