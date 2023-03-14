@@ -291,7 +291,7 @@ function StuFillInformation () {
                             >ค้นหา</button>
                         </div>
                         
-                        <div className="grid my-3 overflow-scroll ">
+                        <div className="grid my-3 ">
                             {courses.length > 0 ? (
                                 <table className="text-m text-left ml-4 mr-4 mt-3 p-2 border ">
                                     <thead className="bg-purple-100 p-2">

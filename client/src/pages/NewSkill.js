@@ -17,6 +17,11 @@ function NewSkill () {
     const [level3, setLevel3] = useState("");
     const [level4, setLevel4] = useState("");
     const [level5, setLevel5] = useState("");
+    const [level1_thai, setLevel1_thai] = useState("");
+    const [level2_thai, setLevel2_thai] = useState("");
+    const [level3_thai, setLevel3_thai] = useState("");
+    const [level4_thai, setLevel4_thai] = useState("");
+    const [level5_thai, setLevel5_thai] = useState("");
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -26,19 +31,24 @@ function NewSkill () {
             levels: [
                 {
                     level_id: 1,
-                    level_des: level1},
+                    level_des: level1,
+                    level_thai: level1_thai},
                 {
                     level_id: 2,
-                    level_des: level2},
+                    level_des: level2,
+                    level_thai: level2_thai},
                 {
                     level_id: 3,
-                    level_des: level3},
+                    level_des: level3,
+                    level_thai: level3_thai},
                 {
                     level_id: 4,
-                    level_des: level4},
+                    level_des: level4,
+                    level_thai: level4_thai},
                 {
                     level_id: 5,
-                    level_des: level5},
+                    level_des: level5,
+                    level_thai: level5_thai},
             ]
         }
         await axios.post(Skill_URL, data)
@@ -117,6 +127,7 @@ function NewSkill () {
                                 <tr>
                                     <th className="levels-col" >Skill level</th>
                                     <th className="" >Description</th>
+                                    <th className="" >Description(thai)</th>
                                 </tr>
                             </thead>
 
@@ -124,22 +135,27 @@ function NewSkill () {
                                 <tr>
                                     <td className="levels-col" >1</td>
                                     <td><textarea className="level-textbox" onChange={e => setLevel1(e.target.value)} required/></td>
+                                    <td><textarea className="level-textbox" onChange={e => setLevel1_thai(e.target.value)} required/></td>
                                 </tr>
                                 <tr>
                                     <td className="levels-col" >2</td>
                                     <td><textarea className="level-textbox" onChange={e => setLevel2(e.target.value)} required/></td>
+                                    <td><textarea className="level-textbox" onChange={e => setLevel2_thai(e.target.value)} required/></td>
                                 </tr>
                                 <tr>
                                     <td className="levels-col" >3</td>
                                     <td><textarea className="level-textbox" onChange={e => setLevel3(e.target.value)} required/></td>
+                                    <td><textarea className="level-textbox" onChange={e => setLevel3_thai(e.target.value)} required/></td>
                                 </tr>
                                 <tr>
                                     <td className="levels-col" >4</td>
                                     <td><textarea className="level-textbox" onChange={e => setLevel4(e.target.value)} required/></td>
+                                    <td><textarea className="level-textbox" onChange={e => setLevel4_thai(e.target.value)} required/></td>
                                 </tr>
                                 <tr>
                                     <td className="levels-col" >5</td>
                                     <td><textarea className="level-textbox" onChange={e => setLevel5(e.target.value)} required/></td>
+                                    <td><textarea className="level-textbox" onChange={e => setLevel5_thai(e.target.value)} required/></td>
                                 </tr>
                             </tbody>
                         </Table>    
