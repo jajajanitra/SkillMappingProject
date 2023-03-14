@@ -12,6 +12,7 @@ const MySwal = withReactContent(Swal);
 function NewSkill () {
     const [name, setName] = useState("");
     const [description, setDescription] = useState("");
+    const [description_thai, setDescription_thai] = useState("");
     const [level1, setLevel1] = useState("");
     const [level2, setLevel2] = useState("");
     const [level3, setLevel3] = useState("");
@@ -28,6 +29,7 @@ function NewSkill () {
         var data = {
             name: name,
             des: description,
+            des_thai: description_thai,
             levels: [
                 {
                     level_id: 1,
@@ -113,11 +115,19 @@ function NewSkill () {
                         </Row>
                         <Row>
                             <Col>
+                                <span>English</span>
                                 <textarea
                                     className="level-textbox"
                                     onChange={e => setDescription(e.target.value)}
                                     required/> 
-                            </Col> 
+                            </Col>
+                            <Col>
+                                <span>Thai</span>
+                                <textarea
+                                    className="level-textbox"
+                                    onChange={e => setDescription_thai(e.target.value)}
+                                    required/> 
+                            </Col>  
                         </Row>
                     </div>
 
