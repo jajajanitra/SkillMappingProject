@@ -326,7 +326,7 @@ function StuFillInformation () {
                         <div className="flex justify-end">
                             <button className={loading ?"disabled-btn":"green-btn"} onClick={addCourses} disabled={loading ? true : false}>
                                 <div className="flex justify-center">
-                                    <span className="block px-2 lg:px-1">{loading ? <RiLoader2Fill className="h-6 w-6"></RiLoader2Fill> : <TfiSave className="h-6 w-6"></TfiSave>}</span>
+                                    <span className="block px-2 lg:px-1">{loading ? <img className="h-6 w-6" src={require("../images/loading.gif")}></img> : <TfiSave className="h-6 w-6"></TfiSave>}</span>
                                     <span className="block px-2 lg:px-1">{loading ? "กำลังบันทึก..." : "บันทึกข้อมูล"}</span>  
                                 </div>
                             </button>
