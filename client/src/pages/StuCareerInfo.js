@@ -149,20 +149,25 @@ function StuCareerInfo (){
                         <div className="info-card mt-4 mb-4">
                             <h6 className="card-header px-2">รายวิชาที่แนะนำ</h6>
                                 <p className="p-2 mb-1">&nbsp; &nbsp; คลิกที่ชื่อวิชาเพื่อดูรายละเอียดกระบวนวิชาจาก CMU MIS</p>
-                            <table className="mb-3 w-full">
-                                <tbody>
-                                    {courses.map((course, index) => (
-                                    
-                                        <tr className="course-link" onClick={() => window.open(`https://mis.cmu.ac.th/tqf/coursepublic.aspx?courseno=${course.id}&semester=${semester}&year=${year}`, '_blank')}>
-                                            
-                                            <td className="md:text-lg pl-4 pr-2">{course.id}</td>
-                                            <td className="md:text-lg"> {course.name}</td> 
-                                            <td className="px-2"><HiOutlineArrowRight className="text-fuchsia-500 "></HiOutlineArrowRight></td>
-                                        </tr>    
+                            {courses.length > 0 ? 
+                                    <table className="mb-3 w-full">
+                                    <tbody>
+                                        {courses.map((course, index) => (
                                         
-                                    ))}    
-                                </tbody>
-                            </table>
+                                            <tr className="course-link" onClick={() => window.open(`https://mis.cmu.ac.th/tqf/coursepublic.aspx?courseno=${course.id}&semester=${semester}&year=${year}`, '_blank')}>
+                                                
+                                                <td className="md:text-lg pl-4 pr-2">{course.id}</td>
+                                                <td className="md:text-lg"> {course.name}</td> 
+                                                <td className="px-2"><HiOutlineArrowRight className="text-fuchsia-500 "></HiOutlineArrowRight></td>
+                                            </tr>    
+                                            
+                                        ))}    
+                                    </tbody>
+                                </table>
+                            :
+                                <p className="text-center text-red-600">ไม่มีรายวิชาที่แนะนำ เนื่องจากทักษะถึงระดับที่ต้องการแล้ว</p>
+                            }
+                            
 
                             <a className="flex justfy-items-center" href={courseSearch_URL} target="_blank"><HiOutlineExternalLink className="h-6 w-6 mx-2"></HiOutlineExternalLink>ค้นหากระบวนวิชาที่เปิดสอน (REG CMU)</a>
                         </div>   
