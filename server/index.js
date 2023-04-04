@@ -45,10 +45,7 @@ app.use('/student' , getStudent,addCourses,addLikeskills,addSelfkills,deleteCour
 app.use('/login' ,login);
 
 
-
-//const CONNECTION_URL = 'mongodb+srv://project:491@skillmapping.s8p064c.mongodb.net/?retryWrites=true&w=majority'
-
-mongoose.connect('mongodb+srv://project:491@skillmapping.s8p064c.mongodb.net/?retryWrites=true&w=majority', { useNewUrlParser: true });
+mongoose.connect('LINK DATABASE', { useNewUrlParser: true });
 
 let port = process.env.PORT;
 if (port == null || port == "") {

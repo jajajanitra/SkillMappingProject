@@ -14,3 +14,9 @@
 3. เปิด terminal ที่โฟลเดอร์ server
 4. ใช้คำสั่ง npm install เพื่อติดตั้ง dependency
 5. ใช้คำสั่ง npm start เพื่อเริ่ม ซึ่งจะทำงานอยู่ที่ locallhost:5001
+
+## ส่วน database ใน server
+1. ไฟล์ข้อมูล database อยู่ในโฟลเดอร์ Database
+2. ดาวน์โหลดไฟล์Collection ทั้งหมดในโฟลเดอร์
+3. Import Collection ลง Mongodb
+4. Connect Database และนำลิงค์connect มาเปลี่ยนที่ index.js /mongoose.connect('LINK DATABASE', { useNewUrlParser: true })/
