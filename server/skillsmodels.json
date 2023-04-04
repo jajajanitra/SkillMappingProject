@@ -1,0 +1,1030 @@
+[{
+  "_id": {
+    "$oid": "6384744a07c740173a3d430c"
+  },
+  "name": "Coding",
+  "des": "Knowledge and understanding of various aspects of programming and can be written to work according to the system requirements or an organization needs. With reviews and management of the structure in a standardized manner.",
+  "levels": [
+    {
+      "level_id": "1",
+      "level_des": "Can code to get the expected results.",
+      "_id": {
+        "$oid": "6384744a07c740173a3d430d"
+      },
+      "level_thai": "มีทักษะพื้นฐานของการเขียนโค้ด สามารถเขียนโปรแกรมเพื่อแสดงผลในสิ่งที่ต้องการออกมาได้"
+    },
+    {
+      "level_id": "2",
+      "level_des": "Understanding condition, loop etc.",
+      "_id": {
+        "$oid": "6384744a07c740173a3d430e"
+      },
+      "level_thai": "เข้าใจในเรื่องของ condition, loop etc. ที่ช่วยให้เขียนโปรแกรมได้หลากหลายขึ้น"
+    },
+    {
+      "level_id": "3",
+      "level_des": "Able to design and implement classes and functions as needed and understanding the flow of processes.",
+      "_id": {
+        "$oid": "6384744a07c740173a3d430f"
+      },
+      "level_thai": "สามารถสร้าง function, class ตามที่ต้องการและเข้าใจ flow การทำงานเมื่อมี function ทำงานร่วมกัน รวมไปถึงการออกแบบ class/flow ให้เหมาสมกับงาน"
+    },
+    {
+      "level_id": "4",
+      "level_des": "Able to write, structure, and simplify or ambiguous code to avoid problems or errors so it can also be modified according to the changing of system requirements.",
+      "_id": {
+        "$oid": "6384744a07c740173a3d4310"
+      },
+      "level_thai": "สามารถเขียน วางโครงสร้าง และลดความซับซ้อนหรือกำกวม เพื่อไม่ให้เกิดปัญหาหรือข้อผิดพลาด อีกทั้งยังสามารถแก้ไขปรับปรุงตามความต้องการที่เปลี่ยนไปของระบบได้"
+    },
+    {
+      "level_id": "5",
+      "level_des": "Able to optimizing prior to the device or operation system used for maximum performance.",
+      "_id": {
+        "$oid": "6384744a07c740173a3d4311"
+      },
+      "level_thai": "สามารถปรับปรุงประสิทธิภาพของโปรแกรมโดยคำนึงถึงอุปกรณ์ที่ใช้งาน ให้ใช้งานได้อย่างมีประสิทธิภาพสูงสุด"
+    }
+  ],
+  "des_thai": "มีความรู้ ความเข้าใจในด้านต่าง ๆ เกี่ยวกับการเขียนโปรแกรม และสามารถเขียนให้ทำงานตามความต้องการของระบบ หรือองค์กรได้ โดยมีการดูแล จัดการโครงสร้างอย่างมีมาตรฐานแบบแผน"
+},{
+  "_id": {
+    "$oid": "638474a507c740173a3d4313"
+  },
+  "name": "Software tools",
+  "des": "Selection and use of various software tools to design, develop, and manage as appropriate to the working environment, projects or organization needs.",
+  "levels": [
+    {
+      "level_id": "1",
+      "level_des": "Students are encouraged to pick any software tools deem appropriate to support/automate/assist software engineering tasks",
+      "_id": {
+        "$oid": "638474a507c740173a3d4314"
+      },
+      "level_thai": "รู้จักซอฟท์แวร์ที่ใช้ในการสนับสนุนหรือช่วยเหลืองานทางด้านวิศวกรรม"
+    },
+    {
+      "level_id": "2",
+      "level_des": "Know, learnable, or have used the appropriate software.",
+      "_id": {
+        "$oid": "638474a507c740173a3d4315"
+      },
+      "level_thai": "สามารถเรียนรู้ และเคยใช้ซอฟต์แวร์ที่เหมาะสมต่อการทำงาน"
+    },
+    {
+      "level_id": "3",
+      "level_des": "Understand and are familiar with the chosen software. And utilize it effectively.",
+      "_id": {
+        "$oid": "638474a507c740173a3d4316"
+      },
+      "level_thai": "เข้าใจและคุ้นเคยในซอร์ฟแวร์ที่เลือกใช้ และใช้งานได้อย่างมีประสิทธิภาพ\""
+    },
+    {
+      "level_id": "4",
+      "level_des": "Use software shortcut keys to increase the fluency in work.",
+      "_id": {
+        "$oid": "638474a507c740173a3d4317"
+      },
+      "level_thai": "ใช้งานคีย์ลัดของซอฟต์แวร์ เพื่อเพิ่มความคล่องแคล่วในการทำงาน"
+    },
+    {
+      "level_id": "5",
+      "level_des": "Choose the tool that best meets your needs, or create customized software when needed.",
+      "_id": {
+        "$oid": "638474a507c740173a3d4318"
+      },
+      "level_thai": "เลือกใช้เครื่องมือที่ตอบสนองความต้องการอย่างมีประสิทธิภาพสูงสุด หรือสร้างซอฟต์แวร์ เฉพาะเพิ่มเติมเมื่อจำเป็น\""
+    }
+  ],
+  "des_thai": "การเลือกและใช้งานเครื่องมือซอฟต์แวร์ต่าง ๆ ในการออกแบบ พัฒนา จัดการ ตามความเหมาะสมกับสภาพการทำงาน โปรเจค หรือความต้องการขององค์กร"
+},{
+  "_id": {
+    "$oid": "6384752307c740173a3d431a"
+  },
+  "name": "Electronics",
+  "des": "Understanding equipment such as Oscilloscopes, Multimeter, etc. Can design an electronic circuit.",
+  "levels": [
+    {
+      "level_id": "1",
+      "level_des": "Understanding basic of circuit and able to calculate things that use in circuit such as resistance.",
+      "_id": {
+        "$oid": "6384752307c740173a3d431b"
+      },
+      "level_thai": "เข้าใจวงจรไฟฟ้าเบื้องต้น และสามารถคำนวณสิ่งที่จะใช้ได้เช่น คำนวณความต้านทานสำหรับวงจร"
+    },
+    {
+      "level_id": "2",
+      "level_des": "Understand and use electronic test equipment correctly and appropriately.",
+      "_id": {
+        "$oid": "6384752307c740173a3d431c"
+      },
+      "level_thai": "เข้าใจและใช้เครื่องมือวัดและทดสอบได้อย่างถูกต้องและเหมาะสม"
+    },
+    {
+      "level_id": "3",
+      "level_des": "Able to analyze and identify a function of a circuit.",
+      "_id": {
+        "$oid": "6384752307c740173a3d431d"
+      },
+      "level_thai": "สามารถวิเคราะห์และบอกหน้าที่การทำงานของวงจรต่าง ๆ ได้"
+    },
+    {
+      "level_id": "4",
+      "level_des": "Able to design a circuit for specific requirement.",
+      "_id": {
+        "$oid": "6384752307c740173a3d431e"
+      },
+      "level_thai": "ออกแบบวงจรทั่วไปตามความต้องการได้"
+    },
+    {
+      "level_id": "5",
+      "level_des": "Able to create top-down design for complex circuit and implement with tools like VHDL etc.",
+      "_id": {
+        "$oid": "6384752307c740173a3d431f"
+      },
+      "level_thai": "ออกแบบ Top down design สำหรับวงจรที่ซับซ้อน และนำไป implement ได้จริงผ่านเครื่องมือต่าง ๆ เช่น VHDL"
+    }
+  ],
+  "des_thai": "ความรู้ความเข้าใจในเครื่องมือต่าง ๆ เช่น ออสซิลโลสโคป มัลติมิเตอร์ เป็นต้น, ความสามารถในการออกแบบวงจรอิเล็กทรอนิกส์"
+},{
+  "_id": {
+    "$oid": "6384756907c740173a3d4321"
+  },
+  "name": "Microcontroller",
+  "des": "Knowledge and understanding of use, selection, search, or analysis of features/functions that the microcontroller can do or have the required features.",
+  "levels": [
+    {
+      "level_id": "1",
+      "level_des": "Basic understanding of microcontroller, sensor module and related platform.",
+      "_id": {
+        "$oid": "6384756907c740173a3d4322"
+      },
+      "level_thai": "เข้าใจในการใช้งาน ไมโครคอนโทรลเลอร์ เซนเซอร์โมดูล และแพลตฟอร์มที่เกี่ยวข้องเบื้องต้น"
+    },
+    {
+      "level_id": "2",
+      "level_des": "Able to connect circuits and write programs to use UART, timer, I2C, SPI, and interrupts.",
+      "_id": {
+        "$oid": "6384756907c740173a3d4323"
+      },
+      "level_thai": "สามารถต่อวงจรและเขียนโปรแกรมเพื่อใช้งาน UART, timer, I2C, SPI และ interrupts"
+    },
+    {
+      "level_id": "3",
+      "level_des": "Able to apply various functions of microcontroller, sensor and platform to solve a problem.",
+      "_id": {
+        "$oid": "6384756907c740173a3d4324"
+      },
+      "level_thai": "สามารถประยุกต์หน้าที่การทำงานต่าง ๆ ของไมโครคอนโทรลเลอร์ เซนเซอร์ และแพลตฟอร์มเพื่อแก้ปัญหาใด ๆ ได้"
+    },
+    {
+      "level_id": "4",
+      "level_des": "Able to analyze the performance and limitation of different types of microcontroller and sensor, and design a set of hardwares and platforms, suitable for a problem.",
+      "_id": {
+        "$oid": "6384756907c740173a3d4325"
+      },
+      "level_thai": "สามารถวิเคราะห์สมรรถนะและขีดจำกัดของไมโครคอนโทรลเลอร์และเซนเซอร์แบบต่าง ๆ และออกแบบชุดของฮาร์ดแวร์และแพลตฟอร์มที่เหมาะสมกับปัญหาใด ๆ ได้"
+    },
+    {
+      "level_id": "5",
+      "level_des": "Able to verify that the design will work with the desired results.",
+      "_id": {
+        "$oid": "6384756907c740173a3d4326"
+      },
+      "level_thai": "สามารถตรวจสอบการออกแบบว่าจะสามารถทำงานได้ตามผลลัพธ์ที่ต้องการ"
+    }
+  ],
+  "des_thai": "ความรู้ ความเข้าใจ ในการใช้งาน เลือก ค้นหา หรือหรือวิเคราะห์ เกี่ยวกับ คุณสมบัติ/ฟังก์ชัน ที่ไมโครคอนโทรลเลอร์สามารถทำได้ หรือมีคุณสมบัติที่ต้องการ"
+},{
+  "_id": {
+    "$oid": "63908d0a0e641c8678786cb2"
+  },
+  "name": "API",
+  "des": "API is a software intermediary that allows two applications to talk to each other.",
+  "levels": [
+    {
+      "level_id": "1",
+      "level_des": "สามารถอธิบายหลักการทำงาน การเรียกใช้และการสร้าง API ได้",
+      "_id": {
+        "$oid": "63908d0a0e641c8678786cb3"
+      },
+      "level_thai": "สามารถอธิบายหลักการทำงาน การเรียกใช้และการสร้าง API ได้"
+    },
+    {
+      "level_id": "2",
+      "level_des": "สามารถเรียกใช้ และสร้าง API ได้",
+      "_id": {
+        "$oid": "63908d0a0e641c8678786cb4"
+      },
+      "level_thai": "สามารถเรียกใช้ และสร้าง API ได้"
+    },
+    {
+      "level_id": "3",
+      "level_des": "สามารถออกแบบ API ได้",
+      "_id": {
+        "$oid": "63908d0a0e641c8678786cb5"
+      },
+      "level_thai": "สามารถออกแบบ API ได้"
+    },
+    {
+      "level_id": "4",
+      "level_des": "สามารถออกแบบ API ที่มีความซับซ้อนได้",
+      "_id": {
+        "$oid": "63908d0a0e641c8678786cb6"
+      },
+      "level_thai": "สามารถออกแบบ API ที่มีความซับซ้อนได้"
+    },
+    {
+      "level_id": "5",
+      "level_des": "สามารถออกแบบไลบรารีของ API ที่มีความซับซ้อนได้",
+      "_id": {
+        "$oid": "63908d0a0e641c8678786cb7"
+      },
+      "level_thai": "สามารถออกแบบไลบรารีของ API ที่มีความซับซ้อนได้"
+    }
+  ],
+  "des_thai": "เอพีไอ คือซอฟต์แวร์ตัวกลางที่ช่วยให้สองแอปพลิเคชันสามารถพูดคุยกันได้"
+},{
+  "_id": {
+    "$oid": "63908d6c0e641c8678786cd3"
+  },
+  "name": "Data Visualization",
+  "des": "Data visualization is the graphical representation of information and data. By using visual elements like charts, graphs, and maps",
+  "levels": [
+    {
+      "level_id": "1",
+      "level_des": "สามารถอธิบายหลักการและความจำเป็นของแสดงผลของข้อมูล",
+      "_id": {
+        "$oid": "63908d6c0e641c8678786cd4"
+      },
+      "level_thai": "สามารถอธิบายหลักการและความจำเป็นของแสดงผลของข้อมูล"
+    },
+    {
+      "level_id": "2",
+      "level_des": "สามารถใช้ส่วนประกอบพื้นฐาน เช่น เส้น สี รูปทรง ขนาดต่างๆ เพื่อแสดงผลของข้อมูลได้",
+      "_id": {
+        "$oid": "63908d6c0e641c8678786cd5"
+      },
+      "level_thai": "สามารถใช้ส่วนประกอบพื้นฐาน เช่น เส้น สี รูปทรง ขนาดต่างๆ เพื่อแสดงผลของข้อมูลได้"
+    },
+    {
+      "level_id": "3",
+      "level_des": "สามารถออกแบบ เส้น สี รูปทรง ขนาดต่างๆ เพื่อแสดงผลของข้อมูลได้อย่างเหมาะสม",
+      "_id": {
+        "$oid": "63908d6c0e641c8678786cd6"
+      },
+      "level_thai": "สามารถออกแบบ เส้น สี รูปทรง ขนาดต่างๆ เพื่อแสดงผลของข้อมูลได้อย่างเหมาะสม"
+    },
+    {
+      "level_id": "4",
+      "level_des": "สามารถออกแบบการแสดงผลของข้อมูลที่ซับซ้อน เช่น มีหลายมิติหรืออนุกรมเวลาได้",
+      "_id": {
+        "$oid": "63908d6c0e641c8678786cd7"
+      },
+      "level_thai": "สามารถออกแบบการแสดงผลของข้อมูลที่ซับซ้อน เช่น มีหลายมิติหรืออนุกรมเวลาได้"
+    },
+    {
+      "level_id": "5",
+      "level_des": "สามารถประยุกต์ใช้การแสดงผลของข้อมูลให้มีประสิทธิภาพในการสื่อสารสูง",
+      "_id": {
+        "$oid": "63908d6c0e641c8678786cd8"
+      },
+      "level_thai": "สามารถประยุกต์ใช้การแสดงผลของข้อมูลให้มีประสิทธิภาพในการสื่อสารสูง"
+    }
+  ],
+  "des_thai": "การสร้างภาพข้อมูล คือการแสดงข้อมูลเป็นแบบกราฟิก โดยใช้องค์ประกอบภาพ เช่น แผนภูมิ กราฟ และแผนที่ "
+},{
+  "_id": {
+    "$oid": "63908e120e641c8678786d2b"
+  },
+  "name": "UX/UI Design",
+  "des": "Conceptualize and enhance the users' interactions and engagement with products and services by integrating elements of interaction design, information architecture, information design, visual interface design, user assistance design, and user-centered design",
+  "levels": [
+    {
+      "level_id": "1",
+      "level_des": "สามารถอธิบาย ความหมายของ UX และ UI ได้",
+      "_id": {
+        "$oid": "63908e120e641c8678786d2c"
+      },
+      "level_thai": "สามารถอธิบาย ความหมายของ UX และ UI ได้"
+    },
+    {
+      "level_id": "2",
+      "level_des": "สามารถออกแบบ UI เพื่อตอบสนองการทำงานของผลิตภัณฑ์หรือบริการได้ตามความต้องการของผู้ใช้",
+      "_id": {
+        "$oid": "63908e120e641c8678786d2d"
+      },
+      "level_thai": "สามารถออกแบบ UI เพื่อตอบสนองการทำงานของผลิตภัณฑ์หรือบริการได้ตามความต้องการของผู้ใช้"
+    },
+    {
+      "level_id": "3",
+      "level_des": "สามารถออกแบบ และพัฒนา UI เพื่อให้การใช้งานของผลิตภัณฑ์หรือบริการมีประสิทธิภาพสูงขึ้น โดยอาศัยการศึกษา UX พื้นฐาน",
+      "_id": {
+        "$oid": "63908e120e641c8678786d2e"
+      },
+      "level_thai": "สามารถออกแบบ และพัฒนา UI เพื่อให้การใช้งานของผลิตภัณฑ์หรือบริการมีประสิทธิภาพสูงขึ้น โดยอาศัยการศึกษา UX พื้นฐาน"
+    },
+    {
+      "level_id": "4",
+      "level_des": "สามารถวิเคราะห์การศึกษา UX เพื่อปรับปรุง UI ได้",
+      "_id": {
+        "$oid": "63908e120e641c8678786d2f"
+      },
+      "level_thai": "สามารถวิเคราะห์การศึกษา UX เพื่อปรับปรุง UI ได้"
+    },
+    {
+      "level_id": "5",
+      "level_des": "สามารถสร้างระบบการออกแบบ (design system) อันประกอบด้วย มาตรฐานการออกแบบ (design standards หรือ style guide) เครื่องมือสำหรับพัฒนา UI และ documentation ที่ประกอบด้วย รูปแบบพื้นฐานสำหรับ UI กฎการออกแบบ UX และองค์ประกอบที่จำเป็นได้",
+      "_id": {
+        "$oid": "63908e120e641c8678786d30"
+      },
+      "level_thai": "สามารถสร้างระบบการออกแบบ (design system) อันประกอบด้วย มาตรฐานการออกแบบ (design standards หรือ style guide) เครื่องมือสำหรับพัฒนา UI และ documentation ที่ประกอบด้วย รูปแบบพื้นฐานสำหรับ UI กฎการออกแบบ UX และองค์ประกอบที่จำเป็นได้"
+    }
+  ],
+  "des_thai": "กำหนดแนวคิดและปรับปรุงการโต้ตอบของผู้ใช้และการมีส่วนร่วมกับผลิตภัณฑ์และบริการโดยผสมผสานองค์ประกอบของการออกแบบการโต้ตอบ สถาปัตยกรรมข้อมูล การออกแบบข้อมูล การออกแบบส่วนต่อประสานภาพ การออกแบบการให้ความช่วยเหลือผู้ใช้ และการออกแบบที่เน้นผู้ใช้"
+},{
+  "_id": {
+    "$oid": "63908f380e641c8678786e04"
+  },
+  "name": "Testing & Quality Assurance",
+  "des": "Test, reproduce for verifying function or feature from software work correctly",
+  "levels": [
+    {
+      "level_id": "1",
+      "level_des": "Understand essential types of testing",
+      "_id": {
+        "$oid": "63908f380e641c8678786e05"
+      },
+      "level_thai": "เข้าใจการทดสอบมาตรฐานทั่วไป"
+    },
+    {
+      "level_id": "2",
+      "level_des": "Understand various types of testing and able to identify their appropriate scenarios",
+      "_id": {
+        "$oid": "63908f380e641c8678786e06"
+      },
+      "level_thai": "เข้าใจการทดสอบหลายรูปแบบและสามารถระบุได้ว่าการทดสอบเหล่านั้นควรทำในสถานการณ์ใด"
+    },
+    {
+      "level_id": "3",
+      "level_des": "Capable of setting up essential tests in general environments",
+      "_id": {
+        "$oid": "63908f380e641c8678786e07"
+      },
+      "level_thai": "สามารถจัดชุดการทดสอบที่จำเป็นได้ในสิ่งแวดล้อมมาตรฐาน"
+    },
+    {
+      "level_id": "4",
+      "level_des": "Capable of setting up various tests in general environments",
+      "_id": {
+        "$oid": "63908f380e641c8678786e08"
+      },
+      "level_thai": "สามารถจัดชุดการทดสอบได้หลายรูปแบบในสิ่งแวดล้อมมาตรฐาน"
+    },
+    {
+      "level_id": "5",
+      "level_des": "Capable of setting up thorough and efficient tests in various environments",
+      "_id": {
+        "$oid": "63908f380e641c8678786e09"
+      },
+      "level_thai": "สามารถจัดชุดการทดสอบได้อย่างครอบคลุมและมีประสิทธิภาพภายใต้สิ่งแวดล้อมที่หลากหลาย"
+    }
+  ],
+  "des_thai": "ความสามารถในการทดสอบ, หาข้อผิดพลาด, พิสูจน์กระบวนการทำงานฟังก์ชันหรือส่วนงานบนซอฟต์แวร์ว่าเป็นไปอย่างถูกต้อง"
+},{
+  "_id": {
+    "$oid": "639090050e641c8678786e0b"
+  },
+  "name": "Data Structures",
+  "des": "Program to organize, manage and store data systematically and effectively. ",
+  "levels": [
+    {
+      "level_id": "1",
+      "level_des": "Able to explain and use Arrays, LinkedLists, Dictionaries etc in practical programming tasks.",
+      "_id": {
+        "$oid": "639090050e641c8678786e0c"
+      },
+      "level_thai": "สามารถอธิบายและใช้ Arrays, LinkedLists, Dictionaries และอื่น ๆ ในการเขียนโปรแกรมจริง"
+    },
+    {
+      "level_id": "2",
+      "level_des": "Knows space and time tradeoffs of the basic data structures, Arrays vs LinkedLists, Able to explain how hash tables can be implemented and can handle collisions etc.",
+      "_id": {
+        "$oid": "639090050e641c8678786e0d"
+      },
+      "level_thai": "รู้ในเรื่อง space and time tradeoffs ของพื้นฐาน data structures, Arrays vs LinkedLists, สามารถอธิบายการนำ hash tables มาใช้งานและการจัดการ collisions และอื่น ๆ"
+    },
+    {
+      "level_id": "3",
+      "level_des": "Students need to know data structure well in order to write complex programs in class",
+      "_id": {
+        "$oid": "639090050e641c8678786e0e"
+      },
+      "level_thai": "มีความรู้ใน data sturcture เป็นอย่างดี ซึ่งสามารถนำไปใช้ในการเขียนโปรแกรมที่มีความซัยซ้อนได้"
+    },
+    {
+      "level_id": "4",
+      "level_des": "Can analyze time and space complexity of algorithms and data structures, and can make informed decisions on the best approach to solve a problem based on the complexity analysis",
+      "_id": {
+        "$oid": "639090050e641c8678786e0f"
+      },
+      "level_thai": "สามารถวิเคราะห์เวลา และพื้นที่ที่ใช้ใน algorithms และ data structures เพื่อเลือกวิธีที่มีประสิทธิภาพสูงสุด"
+    },
+    {
+      "level_id": "5",
+      "level_des": "Can implement and analyze the complexity of highly advanced algorithms and data structures, such as B-trees, Fibonacci Heaps, and Bloom Filters, and can explain the use cases and trade-offs of each",
+      "_id": {
+        "$oid": "639090050e641c8678786e10"
+      },
+      "level_thai": "สามารถสร้างและวิเคราะห์ความซับซ้อนของ algorithms ขั้นสูง  และ data structures  เช่น  B-trees, Fibonacci Heaps, and Bloom Filters "
+    }
+  ],
+  "des_thai": "สร้างหรือเขียนโปรแกรมให้สามารถจัดระเบียบ จัดการ และจัดเก็บข้อมูล ได้อย่างเป็นระบบ และมีประสิทธิภาพ"
+},{
+  "_id": {
+    "$oid": "6390904d0e641c8678786e12"
+  },
+  "name": "Cybersecurity",
+  "des": "Management, maintenance, protection of computers, servers, networks, and devices from malicious attacks, including network security, application security, data security, operational safety, etc.",
+  "levels": [
+    {
+      "level_id": "1",
+      "level_des": "Basic knowledge and understanding in cybersecurity.",
+      "_id": {
+        "$oid": "6390904d0e641c8678786e13"
+      },
+      "level_thai": "มีความรู้พื้นฐานและความเข้าใจในความปลอดภัยทางไซเบอร์"
+    },
+    {
+      "level_id": "2",
+      "level_des": "Minimum necessary skills and experience in cybersecurity. Academic level certificate.",
+      "_id": {
+        "$oid": "6390904d0e641c8678786e14"
+      },
+      "level_thai": "มีทักษะและประสบการณ์ที่จำเป็นขั้นต่ำในการรักษาความปลอดภัยในโลกไซเบอร์ ได้รับใบรับรองระดับวิชาการ"
+    },
+    {
+      "level_id": "3",
+      "level_des": "Can implement and use basic security measures, such as firewalls, encryption, and access control, to secure networks and systems",
+      "_id": {
+        "$oid": "6390904d0e641c8678786e15"
+      },
+      "level_thai": "สามารถสร้างและใช้มาตรการความปลอดภัยขั้นพื้นฐานได้ เช่น  firewalls, encryption, และ access control เพื่อรักษาความปลอดภัยของเครือข่ายและระบบ"
+    },
+    {
+      "level_id": "4",
+      "level_des": "Trained on the latest tools and software to detect, prevent, and combat cybersecurity issues. Professional level certificate.",
+      "_id": {
+        "$oid": "6390904d0e641c8678786e16"
+      },
+      "level_thai": "ได้รับการฝึกอบรมเกี่ยวกับเครื่องมือและซอฟต์แวร์ล่าสุดเพื่อตรวจจับ ป้องกัน และต่อสู้กับปัญหาด้านความปลอดภัยในโลกไซเบอร์ ได้รับใบรับรองระดับมืออาชีพ"
+    },
+    {
+      "level_id": "5",
+      "level_des": "Can implement and use advanced security measures, such as intrusion detection/prevention systems, multi-factor authentication, and network segmentation, to secure complex networks and systems",
+      "_id": {
+        "$oid": "6390904d0e641c8678786e17"
+      },
+      "level_thai": "สามารถสร้างและใช้มาตรการความปลอดภัยขั้นสูงได้ เช่น intrusion detection/prevention systems, multi-factor authentication, and network segmentation เพื่อรักษาความปลอดภัยของเครือข่ายและระบบที่มีความซับซ้อน"
+    }
+  ],
+  "des_thai": "การจัดการ ดูแล ป้องกัน คอมพิวเตอร์ เซิร์ฟเวอร์ เครือข่าย และอุปกรณ์ต่าง ๆ จากการโจมตีที่เป็นอันตราย ประกอบด้วย ความปลอดภัยเครือข่าย ความปลอดภัยแอปพลิเคชัน ความปลอดภัยข้อมูล ความปลอดภัยในการปฏิบัติงาน และอื่น ๆ"
+},{
+  "_id": {
+    "$oid": "639090760e641c8678786e19"
+  },
+  "name": "Algorithms",
+  "des": "Find and implement the solution to the problems by utilizing the well-defined instructions of well-known problems in programming",
+  "levels": [
+    {
+      "level_id": "1",
+      "level_des": "Basic sorting, searching and data structure traversal and retrieval algorithms",
+      "_id": {
+        "$oid": "639090760e641c8678786e1a"
+      },
+      "level_thai": "ใช้งานการเรียงลำดับพื้นฐาน และการใช้งานอัลกอริธึมในการสืบค้นข้อมูล"
+    },
+    {
+      "level_id": "2",
+      "level_des": "Tree, Graph, simple greedy and divide and conquer algorithms, is able to understand the relevance of the levels of this matrix.",
+      "_id": {
+        "$oid": "639090760e641c8678786e1b"
+      },
+      "level_thai": "ใช้งานและเข้าใจในแผนภูมิต้นไม้, กราฟ, อัลกอริธึมแบบละโมบ และอัลกอริธึมแบ่งแยกและเอาชนะ"
+    },
+    {
+      "level_id": "3",
+      "level_des": "Students need to know algorithms well in order to write complex programs in class",
+      "_id": {
+        "$oid": "639090760e641c8678786e1c"
+      },
+      "level_thai": "รู้และเข้าใจ สามารถนำมาใช้ในการเขียนโปรแกรมได้"
+    },
+    {
+      "level_id": "4",
+      "level_des": "Can implement and analyze advanced algorithms, such as dynamic programming, graph algorithms, and advanced data structures, and can explain the trade-offs and limitations of each approach.",
+      "_id": {
+        "$oid": "639090760e641c8678786e1d"
+      },
+      "level_thai": "สามารถสร้างและวิเคราะห์ algorithms ขั้นสูงได้ เช่น dynamic programming, graph algorithms, และ advanced data structure และสามารถอธิบายถึงข้อได้เปรียบรวมไปถึงข้อจำกัดของแต่ละ algorithm"
+    },
+    {
+      "level_id": "5",
+      "level_des": "Consistently demonstrates a deep understanding of algorithms and data structures, and can design and implement the most optimal solutions for complex programming tasks, with a strong understanding of the trade-offs and limitations involved.",
+      "_id": {
+        "$oid": "639090760e641c8678786e1e"
+      },
+      "level_thai": "แสดงให้เห็นว่ามีความเข้าใจเชี่ยวชาญใน algorithms และ data structures สามารถออกแบบ สร้าง หาวิธีการแก้ปัญหาที่เหมาะสมที่สุดกับงานที่มีความซับซ้อน พร้อมทั้งเข้าใจถึงข้อได้เปรียบและข้อจำกัด"
+    }
+  ],
+  "des_thai": "การหาแนวทางหรือวิธีการแก้ไขปัญหาโปรแกรมให้สำเร็จลุล่วง โดยนำแนวคิดหรือรูปแบบการแก้ไขปัญหาที่มีอยู่แล้วมาใช้งานร่วมกัน"
+},{
+  "_id": {
+    "$oid": "6390909c0e641c8678786e9c"
+  },
+  "name": "Network Configuration",
+  "des": "Network configuration is the process of assigning network settings, policies, flows, and controls.",
+  "levels": [
+    {
+      "level_id": "1",
+      "level_des": "Perform basic configuration of network components and monitor user network access. ",
+      "_id": {
+        "$oid": "6390909c0e641c8678786e9d"
+      },
+      "level_thai": "มีความรู้พื้นฐานและความเข้าใจในความปลอดภัยทางไซเบอร์"
+    },
+    {
+      "level_id": "2",
+      "level_des": "Implement and configure servers and devices in line with network blueprint, and manage user network access.",
+      "_id": {
+        "$oid": "6390909c0e641c8678786e9e"
+      },
+      "level_thai": "ใช้งานและกำหนดค่าเซิร์ฟเวอร์และอุปกรณ์ตามพิมพ์เขียวเครือข่าย และจัดการการเข้าถึงเครือข่ายของผู้ใช้ "
+    },
+    {
+      "level_id": "3",
+      "level_des": "Evaluate organization network requirements and develop a network configuration blueprint. ",
+      "_id": {
+        "$oid": "6390909c0e641c8678786e9f"
+      },
+      "level_thai": "ประเมินความต้องการของเครือข่ายขององค์กรและพัฒนาพิมพ์เขียวการกำหนดค่าเครือข่าย"
+    },
+    {
+      "level_id": "4",
+      "level_des": "Can design, implement, and maintain complex network configurations, including advanced security measures, network optimization, and disaster recovery strategies, and can explain the trade-offs and limitations of each approach.",
+      "_id": {
+        "$oid": "6390909c0e641c8678786ea0"
+      },
+      "level_thai": "สามารถออกแบบ ดำเนินการ และบำรุงรักษาการกำหนดค่าเครือข่ายที่ซับซ้อน รวมถึงมีมาตรการรักษาความปลอดภัยระดับสูง การปรับปรุงเครือข่าย และกลยุทธ์ฟื้นฟูภัยพิบัติได้ และสามารถอธิบายข้อดีข้อเสียและข้อจำกัดของแต่ละวิธีได้อย่างชัดเจน"
+    },
+    {
+      "level_id": "5",
+      "level_des": "Consistently demonstrates an expert understanding of network configurations and can lead the design, implementation, and maintenance of highly complex and secure network environments, with a deep understanding of the trade-offs and limitations involved.",
+      "_id": {
+        "$oid": "6390909c0e641c8678786ea1"
+      },
+      "level_thai": "แสดงให้เห็นว่ามีความเข้าใจเชี่ยวชาญในการกำหนดค่าเครือข่ายและสามารถนำทีมออกแบบ ปรับปรุง และบำรุงรักษาสภาพแวดล้อมเครือข่ายที่ซับซ้อนและมีความปลอดภัยสูง โดยมีความเข้าใจลึกซึ้งในข้อดีข้อเสียและข้อจำกัดที่เกี่ยวข้อง"
+    }
+  ],
+  "des_thai": "การตั้งค่าเครือข่าย เป็นกระบวนการกำหนดการตั้งค่าเครือข่าย นโยบาย โฟลว์ และการควบคุม บนเครือข่ายเสมือน"
+},{
+  "_id": {
+    "$oid": "639090bd0e641c8678786ea3"
+  },
+  "name": "Database Management",
+  "des": "Database Management, allows a person to organize, store and retrieve data from a computer.",
+  "levels": [
+    {
+      "level_id": "1",
+      "level_des": "Knows basic database concepts, normalization, ACID, transactions and can write simple selects",
+      "_id": {
+        "$oid": "639090bd0e641c8678786ea4"
+      },
+      "level_thai": "มีความรู้พื้นฐานเกี่ยวกับฐานข้อมูล concepts, normalize , ACID, transactions และสามารถเขียน query ได้"
+    },
+    {
+      "level_id": "2",
+      "level_des": "Proficient in use of views, stored procedures, triggers, and user-defined types. Knows difference between clustered and non-clustered indexes. Proficient in use of ORM tools.",
+      "_id": {
+        "$oid": "639090bd0e641c8678786ea5"
+      },
+      "level_thai": "มีความเชี่ยวชาญในการใช้งาน มุมมอง โพรซีเดอร์ที่จัดเก็บ ทริกเกอร์ และประเภทที่ผู้ใช้กำหนดได้ดีและเป็นมาตรฐาน รู้ความแตกต่างระหว่างดัชนีคลัสเตอร์และดัชนีที่ไม่ใช่คลัสเตอร์ สามารถใช้เครื่องมือ ORM ได้คล่อง"
+    },
+    {
+      "level_id": "3",
+      "level_des": "Can do database administration, performance optimization, index optimization, write advanced select queries, able to replace cursor usage with relational SQL.",
+      "_id": {
+        "$oid": "639090bd0e641c8678786ea6"
+      },
+      "level_thai": "สามารถทำการบริหารฐานข้อมูล, เพิ่มประสิทธิภาพการทำงาน, การปรับดัชนีให้เหมาะสม, เขียน query แบบใช้เลือกข้อมูลขั้นสูง, สามารถแทนที่การใช้เคอร์เซอร์ด้วย SQL เชิงสัมพันธ์"
+    },
+    {
+      "level_id": "4",
+      "level_des": "Can design, implement, and maintain complex database systems, including advanced security measures, data warehousing, and disaster recovery strategies, and can explain the trade-offs and limitations of each approach.",
+      "_id": {
+        "$oid": "639090bd0e641c8678786ea7"
+      },
+      "level_thai": "สามารถออกแบบ สร้าง และบำรุงรักษา ระบบฐานข้อมูลที่มีความซับซ้อน รวมไปถึง มาตรการรักษาความปลอดภัยขั้นสูง, data warehousing, และ หลักการของการกู้คืนข้อมูล สามารถอธิบายถึงข้อได้เปรียบและข้อจำกัดได้"
+    },
+    {
+      "level_id": "5",
+      "level_des": "Consistently demonstrates an expert understanding of database management and can lead the design, implementation, and maintenance of highly complex and secure database environments, with a deep understanding of the trade-offs and limitations involved, and can mentor and guide others in best practices in database management.",
+      "_id": {
+        "$oid": "639090bd0e641c8678786ea8"
+      },
+      "level_thai": "แสดงให้เห็นว่ามีความเข้าใจเชี่ยวชาญในการจัดการฐานข้อมูลและสามารถนำทีมออกแบบ ปรับปรุง และบำรุงรักษาสภาพแวดล้อมฐานข้อมูลที่ซับซ้อนและมีความปลอดภัยสูง โดยมีความเข้าใจลึกซึ้งในข้อดีข้อเสียและข้อจำกัดที่เกี่ยวข้อง และสามารถเป็นที่ปรึกษาและแนะนำผู้อื่นในวิธีการจัดการฐานข้อมูลที่ดีที่สุด"
+    }
+  ],
+  "des_thai": "การจัดการฐานข้อมูล ช่วยให้บุคคลสามารถจัดระเบียบ จัดเก็บ และดึงข้อมูลจากคอมพิวเตอร์ได้ "
+},{
+  "_id": {
+    "$oid": "639090e50e641c8678786eaa"
+  },
+  "name": "Cloud Computing",
+  "des": "Cloud computing is the on-demand availability of computer system resources, especially data storage (cloud storage) and computing power, without direct active management by the user.",
+  "levels": [
+    {
+      "level_id": "1",
+      "level_des": "\"Know the design issues in distributed\nsystems and cloud computing platforms\"",
+      "_id": {
+        "$oid": "639090e50e641c8678786eab"
+      },
+      "level_thai": "รู้จัก distributed system และ cloud computing เบื้องต้น รู้จักปัจจัย/ประเด็นที่เกี่ยวข้อง"
+    },
+    {
+      "level_id": "2",
+      "level_des": "\"Understand the the design principles\nof computer clusters for scalable computing\"",
+      "_id": {
+        "$oid": "639090e50e641c8678786eac"
+      },
+      "level_thai": "เข้าใจหลักการออกแบบ distributed system และ cloud computing "
+    },
+    {
+      "level_id": "3",
+      "level_des": "sufficiently explain cloud enabling technologies, and understand the design principles of computer clusters",
+      "_id": {
+        "$oid": "639090e50e641c8678786ead"
+      },
+      "level_thai": "อธิบายเทคโนโลยีคคลาวด์และเข้าใจหลักการออกแบบ computer cluster ในระดับพอใช้ แต่ยังไม่เข้าใจอย่างละเอียดทั้งหมด"
+    },
+    {
+      "level_id": "4",
+      "level_des": "fully explain cloud enabling technologies, and understand the design principles of computer clusters",
+      "_id": {
+        "$oid": "639090e50e641c8678786eae"
+      },
+      "level_thai": " อธิบายเทคโนโลยีคคลาวด์และเข้าใจหลักการออกแบบ computer cluster เป็นอย่างดี"
+    },
+    {
+      "level_id": "5",
+      "level_des": "Demonstrate a high degree of effectiveness and correctness in using cloud computing software for problem solving, explain cloud enabling technologies, understand the design principles of computer clusters",
+      "_id": {
+        "$oid": "639090e50e641c8678786eaf"
+      },
+      "level_thai": "สามารถใช้งาน cloud computing software เพื่อแก้ปัญหาได้อย่างมีประสิทธิภาพและถูกต้อง อธิบายเทคโนโลยีคคลาวด์ได้ เข้าใจหลักการออกแบบ computer cluster เป็นอย่างดี"
+    }
+  ],
+  "des_thai": "การประมวลผลแบบคลาวด์ คือความพร้อมใช้งานตามต้องการของทรัพยากรระบบคอมพิวเตอร์ โดยเฉพาะอย่างยิ่งการจัดเก็บข้อมูล (ที่เก็บข้อมูลบนคลาวด์) และพลังการประมวลผล โดยไม่มีการจัดการโดยตรงโดยผู้ใช้ "
+},{
+  "_id": {
+    "$oid": "639091000e641c8678786eb1"
+  },
+  "name": "Requirement Gathering",
+  "des": "Requirements gathering is an exploratory process that involves researching and documenting the project’s exact requirements from start to finish.",
+  "levels": [
+    {
+      "level_id": "1",
+      "level_des": "Come up with questions regarding missed cases in the spec",
+      "_id": {
+        "$oid": "639091000e641c8678786eb2"
+      },
+      "level_thai": "ตั้งข้อสงสัยเกี่ยวกับกรณีที่ขาดหายไปในรายการความต้องการวิธีการประเมินเชิงประจักษ์"
+    },
+    {
+      "level_id": "2",
+      "level_des": "Students are able to analyze gathered requirements, organize and specify them in the requirements document",
+      "_id": {
+        "$oid": "639091000e641c8678786eb3"
+      },
+      "level_thai": "สามารถวิเคราะห์ความต้องการที่รวบรวมมา พร้อมกับการจัดการเพื่อนำมาจัดทำเอกสารความต้องการได้"
+    },
+    {
+      "level_id": "3",
+      "level_des": "Able to suggest better alternatives and flows to given requirements based on experience",
+      "_id": {
+        "$oid": "639091000e641c8678786eb4"
+      },
+      "level_thai": "สามารถแนะนำแนวทางและกระบวนการอื่น ๆ ที่ตอบสนองความต้องการได้ดีกว่า โดยอ้างอิงจากประสบการณ์"
+    },
+    {
+      "level_id": "4",
+      "level_des": "Can lead the requirement gathering process for complex projects, including facilitating stakeholder meetings, eliciting requirements, and negotiating trade-offs, and can explain the trade-offs and limitations of each approach.",
+      "_id": {
+        "$oid": "639091000e641c8678786eb5"
+      },
+      "level_thai": "สามารถรวบรวมความต้องการสำหรับโครงการที่มีความซับซ้อน รวมถึง อำนวยความสะดวกให้กับการประชุมของผู้เกี่ยวข้อง, เก็บข้อมูลความต้องการ และ การเจรจา"
+    },
+    {
+      "level_id": "5",
+      "level_des": "Consistently demonstrates an expert understanding of requirement gathering and can lead the requirement gathering process for highly complex projects, with a deep understanding of the trade-offs and limitations involved, and can mentor and guide others in best practices in requirement gathering.",
+      "_id": {
+        "$oid": "639091000e641c8678786eb6"
+      },
+      "level_thai": "แสดงให้เห็นว่ามีความเข้าใจเชี่ยวชาญในการเก็บข้อมูลความต้องการและสามารถนำทีมดำเนินการเก็บข้อมูลความต้องการสำหรับโปรเจกต์ที่ซับซ้อนมากๆ โดยมีความเข้าใจลึกซึ้งในข้อดีข้อเสียและข้อจำกัดที่เกี่ยวข้อง และสามารถเป็นที่ปรึกษาและแนะนำผู้อื่นในวิธีการเก็บข้อมูลความต้องการที่ดีที่สุด"
+    }
+  ],
+  "des_thai": "การรวบรวมความต้องการเป็นกระบวนการสำรวจ ค้นคว้าและจัดทำเอกสารเกี่ยวกับความต้องการที่แท้จริงของโครงการตั้งแต่ต้นจนจบ "
+},{
+  "_id": {
+    "$oid": "6390911e0e641c8678786eb8"
+  },
+  "name": "Network Infrastructure Design",
+  "des": "Processing and management resources of a network that make network or internet connectivity, management, business operations and communication possible, comprises hardware and software enable computing and communication between user or service",
+  "levels": [
+    {
+      "level_id": "1",
+      "level_des": "Understand basic concept of network architecture and communication systems",
+      "_id": {
+        "$oid": "6390911e0e641c8678786eb9"
+      },
+      "level_thai": "เข้าใจหลักของสถาปัตยกรรมเครือข่าย และระบบการสื่อสาร"
+    },
+    {
+      "level_id": "2",
+      "level_des": "Can design basic network infrastructure, including network topology, addressing schemes, and network security, and can explain the trade-offs and limitations of each approach.",
+      "_id": {
+        "$oid": "6390911e0e641c8678786eba"
+      },
+      "level_thai": "สามารถออกแบบโครงสร้างพื้นฐานของเครือข่าย รวมถึง network topology, addressing schemes, and network security สามารถอธิบายถึงข้อได้เปรียบ และ ข้อจำกัดของแต่ละวิธีได้"
+    },
+    {
+      "level_id": "3",
+      "level_des": "Translate a broader infrastructure blueprint into technical specifications and develop prototypes for simple infrastructure components",
+      "_id": {
+        "$oid": "6390911e0e641c8678786ebb"
+      },
+      "level_thai": "สามารถแนะนำแนวทางและกระบวนการอื่น ๆ ที่ตอบสนองความต้องการได้ดีกว่า โดยอ้างอิงจากประสบการณ์"
+    },
+    {
+      "level_id": "4",
+      "level_des": "Define and deliver technical and conceptual visualization of IT infrastructure components and features",
+      "_id": {
+        "$oid": "6390911e0e641c8678786ebc"
+      },
+      "level_thai": "กำหนดและส่งมอบเทคนิคและการสร้างภาพแนวคิดของ IT infrastructure components and features"
+    },
+    {
+      "level_id": "5",
+      "level_des": "Design infrastructure policies, principles, and evaluating the viability and managing the impact of design options base on requirements.",
+      "_id": {
+        "$oid": "6390911e0e641c8678786ebd"
+      },
+      "level_thai": "ออกแบบนโยบายโครงสร้างพื้นฐาน หลักการ และการประเมินความเป็นไปได้และการจัดการผลกระทบของตัวเลือกการออกแบบตามความต้องการ "
+    }
+  ],
+  "des_thai": "ความสามารถในการจัดการระบบเครือข่ายการเชื่อมต่อให้มีประสิทธิภาพทั้งฮาร์ดแวร์ ซอฟต์แวร์เข้าด้วยกัน"
+},{
+  "_id": {
+    "$oid": "639091440e641c8678786ebf"
+  },
+  "name": "Architecture Design",
+  "des": "Architectural design is an early stage in the design process for the system. This represents the connection between processes of specification and design.",
+  "levels": [
+    {
+      "level_id": "1",
+      "level_des": "Understand the background, issue and requirement of system",
+      "_id": {
+        "$oid": "639091440e641c8678786ec0"
+      },
+      "level_thai": "เข้าใจความเป็นมา ประเด็น และความต้องการของระบบอย่างเพียงพอ"
+    },
+    {
+      "level_id": "2",
+      "level_des": "Students learn software architecture patterns and are able to design the system architecture based on the requirements specification",
+      "_id": {
+        "$oid": "639091440e641c8678786ec1"
+      },
+      "level_thai": "เข้าใจในรูปแบบของสถาปัตยกรรมซอฟต์แวร์ และสามารถที่จะออกแบบระบบตามความต้องการได้"
+    },
+    {
+      "level_id": "3",
+      "level_des": "Able to design very complex software architecture efficiently",
+      "_id": {
+        "$oid": "639091440e641c8678786ec2"
+      },
+      "level_thai": "สามารถออกแบบระบบที่มีความยุ่งยากซับซ้อนได้อย่างมีประสิทธิภาพ"
+    },
+    {
+      "level_id": "4",
+      "level_des": "Can lead the architecture design process for complex projects, including evaluating trade-offs, making design decisions, and communicating the design to stakeholders, and can explain the trade-offs and limitations of each approach.",
+      "_id": {
+        "$oid": "639091440e641c8678786ec3"
+      },
+      "level_thai": "สามารถนำทีมดำเนินการออกแบบสถาปัตยกรรมสำหรับโปรเจกต์ที่ซับซ้อน รวมถึงการประเมินสิ่งที่จะสละเปลี่ยน ตัดสินใจออกแบบ และสื่อสารการออกแบบกับผู้มีส่วนได้ส่วนเสียในโครงการ และสามารถอธิบายความเป็นไปได้ของแต่ละวิธีการ และข้อจำกัดของแต่ละวิธีการให้เข้าใจได้อย่างชัดเจน"
+    },
+    {
+      "level_id": "5",
+      "level_des": "Consistently demonstrates an expert understanding of architecture design and can lead the architecture design process for highly complex projects, with a deep understanding of the trade-offs and limitations involved, and can mentor and guide others in best practices in architecture design.",
+      "_id": {
+        "$oid": "639091440e641c8678786ec4"
+      },
+      "level_thai": "แสดงให้เห็นว่ามีความเข้าใจเชี่ยวชาญในการออกแบบสถาปัตยกรรมและสามารถนำทีมดำเนินการออกแบบสถาปัตยกรรมสำหรับโปรเจกต์ที่ซับซ้อนมากๆ โดยมีความเข้าใจลึกซึ้งในข้อดีข้อเสียและข้อจำกัดที่เกี่ยวข้อง และสามารถเป็นที่ปรึกษาและแนะนำผู้อื่นในวิธีการที่ดีที่สุดในการออกแบบสถาปัตยกรรม"
+    }
+  ],
+  "des_thai": "การออกแบบทางสถาปัตยกรรมเป็นขั้นตอนแรกในกระบวนการออกแบบระบบ โดยแสดงถึงความเชื่อมโยงระหว่างกระบวนการของข้อกำหนดเฉพาะและการออกแบบ เข้าด้วยกัน"
+},{
+  "_id": {
+    "$oid": "639091600e641c8678786ec6"
+  },
+  "name": "Database Design",
+  "des": "Design the database to serve the project requirements or organization needs.",
+  "levels": [
+    {
+      "level_id": "1",
+      "level_des": "Able to design with basic concepts and serve the requirements just right.",
+      "_id": {
+        "$oid": "639091600e641c8678786ec7"
+      },
+      "level_thai": "สามารถออกแบบด้วยแนวคิดพื้นฐานและตอบสนองความต้องการได้อย่างเหมาะสม"
+    },
+    {
+      "level_id": "2",
+      "level_des": "Able to design good and normalized database schemas, views, stored procedures, triggers, and user-defined types keeping in mind the queries that’ll have to be run.",
+      "_id": {
+        "$oid": "639091600e641c8678786ec8"
+      },
+      "level_thai": "สามารถออกแบบแผนผังฐานข้อมูล มุมมอง โพรซีเดอร์ที่จัดเก็บ ทริกเกอร์ และประเภทที่ผู้ใช้กำหนดได้ดีและเป็นมาตรฐาน โดยคำนึงถึงการสืบค้นข้อมูลที่จะต้องดำเนินการ"
+    },
+    {
+      "level_id": "3",
+      "level_des": "Able to design with performance, scalability, etc. as the key point.",
+      "_id": {
+        "$oid": "639091600e641c8678786ec9"
+      },
+      "level_thai": "สามารถออกแบบโดยคำนึงถึงประสิทธิภาพ ความสามารถในการขยาย ฯลฯ เป็นหลัก"
+    },
+    {
+      "level_id": "4",
+      "level_des": "Can lead the database design process for complex projects, including evaluating trade-offs, making design decisions, and communicating the design to stakeholders, while ensuring optimal performance, scalability, and data integrity.",
+      "_id": {
+        "$oid": "639091600e641c8678786eca"
+      },
+      "level_thai": "สามารถนำทีมดำเนินการออกแบบฐานข้อมูลสำหรับโปรเจกต์ที่ซับซ้อน รวมถึงการประเมินข้อดีข้อเสีย ตัดสินใจออกแบบ และสื่อสารการออกแบบกับผู้มีส่วนได้ส่วนเสียในโครงการ พร้อมทั้งตรวจสอบประสิทธิภาพที่ดีที่สุด ความสามารถในการขยายขนาด และความถูกต้องของข้อมูล"
+    },
+    {
+      "level_id": "5",
+      "level_des": "Consistently demonstrates an expert understanding of database design and can lead the database design process for highly complex projects, with a deep understanding of the trade-offs and limitations involved, and can mentor and guide others in best practices in database design, while ensuring optimal performance, scalability, security, and data integrity.",
+      "_id": {
+        "$oid": "639091600e641c8678786ecb"
+      },
+      "level_thai": "แสดงให้เห็นว่ามีความเข้าใจเชี่ยวชาญในการออกแบบฐานข้อมูลและสามารถนำทีมดำเนินการออกแบบฐานข้อมูลสำหรับโปรเจกต์ที่ซับซ้อนมากๆ โดยมีความเข้าใจลึกซึ้งในข้อดีข้อเสียและข้อจำกัดที่เกี่ยวข้อง และสามารถเป็นที่ปรึกษาและแนะนำผู้อื่นในวิธีการที่ดีที่สุดในการออกแบบฐานข้อมูล พร้อมทั้งตรวจสอบประสิทธิภาพที่ดีที่สุด ความสามารถในการขยายขนาด ความปลอดภัยและความถูกต้องของข้อมูล"
+    }
+  ],
+  "des_thai": "ออกแบบฐานข้อมูลเพื่อตอบสนองความต้องการของโครงการหรือความต้องการขององค์กร"
+},{
+  "_id": {
+    "$oid": "639091840e641c8678786f8f"
+  },
+  "name": "Software Analysis",
+  "des": "An analysis of business procedures or needs, to identify goals and objectives. Create systems and procedures that meet the needs of products and organizations.",
+  "levels": [
+    {
+      "level_id": "1",
+      "level_des": "Analyze whether the requirements or method can meet the business or product needs.",
+      "_id": {
+        "$oid": "639091840e641c8678786f90"
+      },
+      "level_thai": "อธิบายขั้นตอนการหาความต้องการทางธุรกิจได้"
+    },
+    {
+      "level_id": "2",
+      "level_des": "Use specification datas to help analyze and evaluate the system's resource, request, response rate, etc.",
+      "_id": {
+        "$oid": "639091840e641c8678786f91"
+      },
+      "level_thai": "ใช้ข้อมูล specification ต่าง ๆ มาช่วยในการวิเคราะห์ และประเมิน resource, request และ response rate ของระบบได้"
+    },
+    {
+      "level_id": "3",
+      "level_des": "Use tools to analyze more accurately such as simulating or creating prototype.",
+      "_id": {
+        "$oid": "639091840e641c8678786f92"
+      },
+      "level_thai": "ใช้เครื่องมือมาช่วยวิเคราะห์ให้แม่นยำยิ่งขึ้น เช่นทำการจำลองหรือสร้างผลิตภัณฑ์ต้นแบบ"
+    },
+    {
+      "level_id": "4",
+      "level_des": "Can lead the software analysis process for complex projects, including evaluating trade-offs, making design decisions, and communicating the analysis to stakeholders, while ensuring optimal performance, scalability, and resource utilization.",
+      "_id": {
+        "$oid": "639091840e641c8678786f93"
+      },
+      "level_thai": "สามารถนำทีมดำเนินการวิเคราะห์ซอฟต์แวร์สำหรับโปรเจกต์ที่ซับซ้อน รวมถึงการประเมินข้อดีข้อเสีย ตัดสินใจออกแบบ และสื่อสารการวิเคราะห์กับผู้มีส่วนได้ส่วนเสียในโครงการ พร้อมทั้งตรวจสอบประสิทธิภาพที่ดีที่สุด ความสามารถในการขยายขนาด และการใช้ทรัพยากรอย่างมีประสิทธิภาพ"
+    },
+    {
+      "level_id": "5",
+      "level_des": "Consistently demonstrates an expert understanding of software analysis and can lead the software analysis process for highly complex projects, with a deep understanding of the trade-offs and limitations involved, and can mentor and guide others in best practices in software analysis, while ensuring optimal performance, scalability, and resource utilization.",
+      "_id": {
+        "$oid": "639091840e641c8678786f94"
+      },
+      "level_thai": "แสดงให้เห็นว่ามีความเข้าใจเชี่ยวชาญในการวิเคราะห์ซอฟต์แวร์และสามารถนำทีมดำเนินการวิเคราะห์ซอฟต์แวร์สำหรับโปรเจกต์ที่ซับซ้อนมากๆ โดยมีความเข้าใจลึกซึ้งในข้อดีข้อเสียและข้อจำกัดที่เกี่ยวข้อง และสามารถเป็นที่ปรึกษาและแนะนำผู้อื่นในวิธีการที่ดีที่สุดในการวิเคราะห์ซอฟต์แวร์ พร้อมทั้งตรวจสอบประสิทธิภาพที่ดีที่สุด ความสามารถในการขยายขนาด และการใช้ทรัพยากรอย่างมีประสิทธิภาพ"
+    }
+  ],
+  "des_thai": "การวิเคราะห์ขั้นตอนหรือความต้องการทางธุรกิจเพื่อระบุเป้าหมายและวัตถุประสงค์ สร้างระบบและขั้นตอนที่ตอบสนองความต้องการของผลิตภัณฑ์และองค์กร"
+},{
+  "_id": {
+    "$oid": "639091a80e641c8678786f96"
+  },
+  "name": "Data Analysis",
+  "des": "Data analysis is a process of inspecting, cleansing, transforming, and modeling data with the goal of discovering useful information, informing conclusions, and supporting decision-making.",
+  "levels": [
+    {
+      "level_id": "1",
+      "level_des": "Descriptive Analytics",
+      "_id": {
+        "$oid": "639091a80e641c8678786f97"
+      },
+      "level_thai": "วิเคราะห์แบบพื้นฐาน ทำการวิเคราะห์ด้วยเทคนิคประเภทสถิติเชิงพรรณา หาค่ากลาง ค่าการกระจาย เช่น ค่าเฉลี่ย ผลรวม เป็นต้น"
+    },
+    {
+      "level_id": "2",
+      "level_des": "Diagnostics Analytics",
+      "_id": {
+        "$oid": "639091a80e641c8678786f98"
+      },
+      "level_thai": "วิเคราะห์ ความสัมพันธ์ของตัวแปรตั้งแต่สองตัวขึ้นไป (Multivariate Analysis) เช่น อุณหภูมิมีผลต่อยอดขายหรือไม่ ยอดขายในแต่ละพื้นที่แตกต่างกันหรือไม่ เป็นต้น"
+    },
+    {
+      "level_id": "3",
+      "level_des": "Predictive Analytics",
+      "_id": {
+        "$oid": "639091a80e641c8678786f99"
+      },
+      "level_thai": "พยากรณ์หรือทำนายอนาคต เช่น ลูกค้าคนไหนจะหยุดใช้บริการ เมื่อลูกค้าซื้อสินค้านี้แล้ว จะซื้อสินค้าใดต่อ เป็นต้น"
+    },
+    {
+      "level_id": "4",
+      "level_des": "Although, the computer assignments involve with image process, student need to be able to analyze image information to create desired output",
+      "_id": {
+        "$oid": "639091a80e641c8678786f9a"
+      },
+      "level_thai": "สามารถวิเคราะห์และทำงานกับข้อมูลประเภทภาพได้ และสามารถตีความ ทำความเข้าใจข้อมูลในภาพได้เพื่อให้ได้ผลลัพธ์ที่ต้องการ"
+    },
+    {
+      "level_id": "5",
+      "level_des": "Can perform advanced statistical analysis and can create complex visualizations to represent the data, and can draw meaningful insights from the data.",
+      "_id": {
+        "$oid": "639091a80e641c8678786f9b"
+      },
+      "level_thai": "สามารถทำการวิเคราะห์ทางสถิติขั้นสูงได้ และสามารถสร้างภาพของข้อมูลที่มีความซับซ้อนเพื่อแสดงผล และสามารถสื่อถึงความหมายเชิงลึกจากข้อมูลได้"
+    }
+  ],
+  "des_thai": "การวิเคราะห์ข้อมูลเป็นกระบวนการของการตรวจสอบ การคลีน การแปลง และการสร้างแบบจำลองข้อมูลโดยมีเป้าหมายในการค้นหาข้อมูลที่เป็นประโยชน์ โดยแจ้งข้อสรุป และสนับสนุนการตัดสินใจ"
+},{
+  "_id": {
+    "$oid": "639091c20e641c8678786f9d"
+  },
+  "name": "Design Verification",
+  "des": "The skill to run the test suite, inspect, or analyze the design and provides evidence that the design outputs meet the design inputs (product requirements and specifications)",
+  "levels": [
+    {
+      "level_id": "1",
+      "level_des": "Can perform basic design verification tasks, such as reviewing design documentation and performing simple tests to verify design requirements.",
+      "_id": {
+        "$oid": "639091c20e641c8678786f9e"
+      },
+      "level_thai": "สามารถออกแบบการตรวจสอบอย่างง่ายได้ เช่น ตรวจสอบเอกสารการออกแบบ, สร้างชุดทดสอบอย่างง่ายเพื่อตรวจสอบความต้องการในการออกแบบ"
+    },
+    {
+      "level_id": "2",
+      "level_des": "Verify the design will work with the desired results.",
+      "_id": {
+        "$oid": "639091c20e641c8678786f9f"
+      },
+      "level_thai": "ตรวจสอบการออกแบบว่าจะสามารถทำงานได้ตามผลลัพธ์ที่ต้องการ"
+    },
+    {
+      "level_id": "3",
+      "level_des": "Utilize the test suite and tools to inspect and analyze the design to make sure it can work as needed.",
+      "_id": {
+        "$oid": "639091c20e641c8678786fa0"
+      },
+      "level_thai": "ใช้เครื่องมือทดสอบ ในการตรวจสอบและวิเคราะห์การออกแบบ เพื่อให้แน่ใจว่าจะสามารถทำงานได้ตามต้องการ"
+    },
+    {
+      "level_id": "4",
+      "level_des": "Can perform advanced design verification tasks, such as creating simulations and prototypes, and can apply advanced verification techniques, such as formal methods and model-based verification.",
+      "_id": {
+        "$oid": "639091c20e641c8678786fa1"
+      },
+      "level_thai": "สามารถดำเนินการตรวจสอบการออกแบบระดับสูง เช่น การสร้างแบบจำลองและโปรโตไทป์ และสามารถนำเทคนิคการตรวจสอบระดับสูง เช่น วิธีการฟอร์มอล และการตรวจสอบที่ใช้โมเดล"
+    },
+    {
+      "level_id": "5",
+      "level_des": "Can lead design verification projects, including defining the verification plan, executing the verification tests, and communicating the results to stakeholders.",
+      "_id": {
+        "$oid": "639091c20e641c8678786fa2"
+      },
+      "level_thai": "สามารถนำทีมดำเนินการตรวจสอบการออกแบบโปรเจกต์ รวมถึงการกำหนดแผนการตรวจสอบ ดำเนินการทดสอบการตรวจสอบ และสื่อสารผลลัพธ์กับผู้มีส่วนได้ส่วนเสียในโครงการได้"
+    }
+  ],
+  "des_thai": "ทักษะในการรันชุดทดสอบ ตรวจสอบ หรือวิเคราะห์การออกแบบ และแสดงหลักฐานว่าการทำงานหรือผลลัพธ์จากการออกแบบตรงตามต้องการและข้อกำหนด"
+}]

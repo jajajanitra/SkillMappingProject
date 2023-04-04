@@ -1,0 +1,940 @@
+[{
+  "_id": {
+    "$oid": "6398a84a0046bab7546d70fc"
+  },
+  "name_career": "UX/UI Designer",
+  "des_eng": "UX/UI Designer",
+  "des_thai": "รวบรวมและประเมินความต้องการของผู้ใช้ โดยร่วมมือกับผู้ดูแลผลิตภัณฑ์และวิศวกร อธิบายแนวคิดการออกแบบโดยใช้สตอรี่บอร์ด โฟลว์กระบวนการ และแผนผังเว็บไซต์ ออกแบบในส่วนต่อประสานกราฟิกกับผู้ใช้ให้เหมาะสมกับการใช้งาน โดยมีความสวยงามและสามารถใช้งานได้ง่ายต่อผู้ใช้ ทั้งในการออกแบบ prototype และ interactive prototype ",
+  "skills": [
+    {
+      "level_id": "3",
+      "skill_name": "UX/UI Design"
+    },
+    {
+      "level_id": "3",
+      "skill_name": "Software tools"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Requirement Gathering"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Data Visualization"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63a6932dbce682e4d0b5477c"
+  },
+  "name_career": "Back-End Developer",
+  "des_eng": "Back-End Developer",
+  "des_thai": "พัฒนาในส่วนหลังบ้าน ซึ่งจะเกี่ยวข้องกับการทำงานของระบบภายในรวมไปถึง database เขียนเอกสารข้อกำหนดการทำงานและคำแนะนำ",
+  "skills": [
+    {
+      "level_id": "4",
+      "skill_name": "Coding"
+    },
+    {
+      "level_id": "3",
+      "skill_name": "Testing & Quality Assurance"
+    },
+    {
+      "level_id": "3",
+      "skill_name": "Data Structures"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Algorithms"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "API"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Requirement Gathering"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Database Management"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Software tools"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Cybersecurity"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63bab713480d063c5b45f6f3"
+  },
+  "name_career": "Embedded System Engineer",
+  "des_eng": "Embedded System Engineer",
+  "des_thai": "ออกแบบ สร้างต้นแบบ และตรวจสอบระบบสำหรับแอพพลิเคชั่นระบบฝังตัวต่างๆ พัฒนาและบำรุงรักษาเฟิร์มแวร์สำหรับแพลตฟอร์มระบบฝังตัว สร้างและจัดการเอกสารสำหรับโครงการที่ใช้งานอยู่ สื่อสารกับลูกค้าและช่วยในการพัฒนาโซลูชันระบบฝังตัวแบบปรับปรุงโดยเฉพาะ ทดสอบและแก้ไขข้อบกพร่องของซอฟต์แวร์และแอปพลิเคชันบนอุปกรณ์ระบบฝังตัว พัฒนาข้อกำหนดฮาร์ดแวร์และซอฟต์แวร์ พัฒนาเครื่องมือและเทคนิคในการทดสอบและตรวจสอบ",
+  "skills": [
+    {
+      "level_id": "4",
+      "skill_name": "Coding"
+    },
+    {
+      "level_id": "3",
+      "skill_name": "Software tools"
+    },
+    {
+      "level_id": "3",
+      "skill_name": "Microcontroller"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Electronics"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Software Analysis"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Requirement Gathering"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Data Visualization"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Algorithms"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Data Structures"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Database Design"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Testing & Quality Assurance"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Network Configuration"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "API"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Data Analysis"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Cybersecurity"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63beb58db4cc59b907a27e82"
+  },
+  "name_career": "Full-Stack Developer",
+  "des_eng": "Full-Stack Developer",
+  "des_thai": "พัฒนาในส่วนทั้งหน้าบ้านและหลังบ้าน ทดสอบพร้อมกับแก้ไขข้อผิดพลาดของระบบ ประเมินประสิทธิภาพของซอฟต์แวร์ เขียนเอกสารประกอบข้อกำหนดการทำงานและคำแนะนำ สร้างเซิร์ฟเวอร์และฐานข้อมูลเพื่อใช้งาน และออกแบบและพัฒนา APIs  ",
+  "skills": [
+    {
+      "level_id": "4",
+      "skill_name": "Coding"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Software tools"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Requirement Gathering"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Algorithms"
+    },
+    {
+      "level_id": "3",
+      "skill_name": "Data Structures"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Database Design"
+    },
+    {
+      "level_id": "3",
+      "skill_name": "Testing & Quality Assurance"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Network Configuration"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "API"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Cybersecurity"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Database Management"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Architecture Design"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Cloud Computing"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63bec087b4cc59b907a27e83"
+  },
+  "name_career": "Mobile Developer",
+  "des_eng": "Mobile Developer",
+  "des_thai": "ออกแบบแอพพลิเคชั่นตามความต้องการที่กำหนด พัฒนา ทดสอบ และดูแล สำหรับโทรศัพท์ทั้งในระบบ ios และ android เขียนเอกสารประกอบข้อกำหนดการทำงานและคำแนะนำ",
+  "skills": [
+    {
+      "level_id": "5",
+      "skill_name": "Coding"
+    },
+    {
+      "level_id": "3",
+      "skill_name": "Software tools"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "API"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Testing & Quality Assurance"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Data Structures"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Database Management"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Requirement Gathering"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Algorithms"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Software Analysis"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Cybersecurity"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63bec0c0b4cc59b907a27e84"
+  },
+  "name_career": "Desktop Application Developer",
+  "des_eng": "Desktop Application Developer",
+  "des_thai": "ออกแบบโปรแกรมตามความต้องการที่กำหนด พัฒนา ทดสอบ และดูแล เขียนเอกสารประกอบข้อกำหนดการทำงานและคำแนะนำ",
+  "skills": [
+    {
+      "level_id": "5",
+      "skill_name": "Coding"
+    },
+    {
+      "level_id": "3",
+      "skill_name": "Data Structures"
+    },
+    {
+      "level_id": "3",
+      "skill_name": "Software tools"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Algorithms"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "API"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Testing & Quality Assurance"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Database Management"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Cybersecurity"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Requirement Gathering"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63bec0f4b4cc59b907a27e85"
+  },
+  "name_career": "IT Support",
+  "des_eng": "IT Support",
+  "des_thai": "ดูแลรับผิดชอบ จัดการ แก้ไข ซ่อมแซม บำรุงรักษา ติดตั้ง เครื่องใช้อุปกรณ์คอมพิวเตอร์ และระบบเครือข่าย ดูแล Software และ Hardware ขององค์กรให้อยู่ในสภาพที่ดี และพร้อมใช้งานอยู่ตลอดเวลา",
+  "skills": [
+    {
+      "level_id": "3",
+      "skill_name": "Network Infrastructure Design"
+    },
+    {
+      "level_id": "3",
+      "skill_name": "Coding"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Cybersecurity"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Electronics"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Software tools"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Network Configuration"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "API"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Algorithms"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Data Structures"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Requirement Gathering"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Testing & Quality Assurance"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Database Management"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Architecture Design"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Cloud Computing"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Software Analysis"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63bec109b4cc59b907a27e86"
+  },
+  "name_career": "IoT Engineer",
+  "des_eng": "IoT Engineer",
+  "des_thai": "สร้างและพัฒนาอุปกรณ์ เซ็นเซอร์ และซอฟต์แวร์  จัดทำเอกสารโซลูชัน IoT ออกแบบ เขียนโปรแกรม และทดสอบอุปกรณ์ IoT พัฒนาซอฟต์แวร์ที่ตรวจสอบและดำเนินการตามกระบวนการที่ต้องการ ออกแบบโซลูชันแพลตฟอร์มที่เข้ากันได้กับคลาวด์และทำงานกับแอปพลิเคชัน IoT การพัฒนาซอฟต์แวร์ที่ช่วยให้อุปกรณ์ IoT ทำงานและเชื่อมต่อกับอุปกรณ์อื่นได้",
+  "skills": [
+    {
+      "level_id": "4",
+      "skill_name": "Coding"
+    },
+    {
+      "level_id": "3",
+      "skill_name": "Microcontroller"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Electronics"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Software Analysis"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Requirement Gathering"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Data Visualization"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Software tools"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Data Analysis"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Architecture Design"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Design Verification"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "API"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Cybersecurity"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Database Design"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63bec127b4cc59b907a27e87"
+  },
+  "name_career": "Data Engineer",
+  "des_eng": "Data Engineer",
+  "des_thai": "วิเคราะห์และจัดระเบียบข้อมูลดิบ สร้างระบบข้อมูลและไปป์ไลน์ ประเมินความต้องการและวัตถุประสงค์ทางธุรกิจ ตีความแนวโน้มและรูปแบบของข้อมูล ดำเนินการวิเคราะห์ข้อมูลที่ซับซ้อนและรายงานผล สร้างอัลกอริธึมและต้นแบบ รวมข้อมูลดิบจากแหล่งต่างๆ สำรวจวิธีการปรับปรุงคุณภาพข้อมูลและความน่าเชื่อถือ พัฒนาเครื่องมือและโปรแกรมวิเคราะห์",
+  "skills": [
+    {
+      "level_id": "2",
+      "skill_name": "Algorithms"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Software tools"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Data Analysis"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Database Design"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Data Visualization"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Software Analysis"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Requirement Gathering"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Data Structures"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Database Management"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Architecture Design"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Coding"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63bec137b4cc59b907a27e88"
+  },
+  "name_career": "Database Admin",
+  "des_eng": "Database Admin",
+  "des_thai": "จัดการการเข้าใช้งานฐานข้อมูลแต่ละผู้ใช้ ออกแบบโครงสร้างและฐานข้อมูล  มีมาตรฐานในการรักษาข้อมูล กู้คืนข้อมูล มี version control เพื่อหาข้อบกพร่อง รวมฐานข้อมูลเมื่อจำเป็น ปรับปรุงและอัพเดทระบบ เมื่อจำเป็น รวมไปถึงการสำรองฐานข้อมูล ตรวจสอบฐานข้อมูลอย่างสม่ำเสมอ",
+  "skills": [
+    {
+      "level_id": "3",
+      "skill_name": "Database Management"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Cybersecurity"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Database Design"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Coding"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Software tools"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Testing & Quality Assurance"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Requirement Gathering"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63bec148b4cc59b907a27e89"
+  },
+  "name_career": "System Engineer",
+  "des_eng": "System Engineer",
+  "des_thai": "จัดการ ตรวจสอบ ระบบและโครงสร้างพื้นฐานทั้งหมดที่ติดตั้งไว้ ติดตั้ง ตั้งค่า ทดสอบ และดูแล ระบบปฏิบัติการ โปรแกรม และเครื่องมือบริหารจัดการระบบ ทำให้มั่นใจว่าระบบและโครงสร้างสามารถทำงานได้ประสิทธิภาพสูงสุดตลอดเวลา",
+  "skills": [
+    {
+      "level_id": "3",
+      "skill_name": "Network Infrastructure Design"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Cybersecurity"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Database Design"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Requirement Gathering"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Database Management"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Software tools"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Coding"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Software Analysis"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Testing & Quality Assurance"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Architecture Design"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Cloud Computing"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Network Configuration"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63bec1c5b4cc59b907a27e8c"
+  },
+  "name_career": "Security Engineer",
+  "des_eng": "Security Engineer",
+  "des_thai": "ออกแบบ ดำเนินการ และตรวจสอบ มาตรการความปลอดภัยสำหรับระบบคอมพิวเตอร์ เครือข่าย และข้อมูล ระบุ และกำหนด ความต้องการด้านความปลอดภัยของระบบ ออกแบบและพัฒนาสถาปัตยกรรมความปลอดภัยอย่างละเอียด จัดทำเอกสารมาตรฐานการดำเนินการและกฏเกณฑ์ พัฒนาเครื่องมือหรือแนวทางเชิงเทคนิคที่ช่วยลดช่องโหว่และการทำงานซ้ำได้โดยอัตโนมัติ ตรวจสอบให้แน่ใจว่า บริษัท รู้ถึงเหตุการณ์ด้านความปลอดภัย ได้อย่างรวดเร็วที่สุด",
+  "skills": [
+    {
+      "level_id": "4",
+      "skill_name": "Cybersecurity"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Database Design"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Coding"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Testing & Quality Assurance"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Requirement Gathering"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Software tools"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "API"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Architecture Design"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Cloud Computing"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Network Configuration"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Data Structures"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63bec1e2b4cc59b907a27e8d"
+  },
+  "name_career": "Network Engineer",
+  "des_eng": "Network Engineer",
+  "des_thai": "การตรวจทานและยืนยันจำนวนทรัพยากรที่ใช้ในการติดตั้งและพัฒนาระบบเครือข่าย ปฏิบัติงานติดตั้ง พัฒนาระบบ ในทีมงานฝ่ายวิศวกรรมระบบ เป็นที่ปรึกษาในการพัฒนาระบบ หรือต่อยอดการพัฒนา เพื่อรองรับการทำงานในระดับองค์กรของลูกค้าที่ต้องมีความต่อเนื่อง สัมพันธ์ และปลอดภัย",
+  "skills": [
+    {
+      "level_id": "3",
+      "skill_name": "Network Infrastructure Design"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Cybersecurity"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Data Visualization"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Testing & Quality Assurance"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Requirement Gathering"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Software tools"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Cloud Computing"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Network Configuration"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Architecture Design"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63bec1efb4cc59b907a27e8e"
+  },
+  "name_career": "DevOps Engineer",
+  "des_eng": "DevOps Engineer",
+  "des_thai": "พัฒนารูปแบบวิธีการปฏิบัติและกระบวนการต่าง ๆ ระหว่างทีมพัฒนา ทีมทดสอบ และทีมดูแลการให้บริการ เพิ่มประสิทธิภาพในการทำงานให้องค์กรสามารถผลิตซอฟต์แวร์ออกสู่ตลาดได้รวดเร็วขึ้น มีคุณภาพและเสถียรภาพมากขึ้น",
+  "skills": [
+    {
+      "level_id": "3",
+      "skill_name": "Coding"
+    },
+    {
+      "level_id": "3",
+      "skill_name": "Software tools"
+    },
+    {
+      "level_id": "3",
+      "skill_name": "Testing & Quality Assurance"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Requirement Gathering"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Network Configuration"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Cybersecurity"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Cloud Computing"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Data Visualization"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Database Management"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63bec1fdb4cc59b907a27e8f"
+  },
+  "name_career": "Machine Learning Engineer",
+  "des_eng": "Machine Learning Engineer",
+  "des_thai": "ออกแบบระบบการเรียนรู้ของเครื่อง วิจัยและใช้อัลกอริธึมและเครื่องมือ ML ที่เหมาะสม พัฒนาแอพพลิเคชั่นแมชชีนเลิร์นนิ่งตามความต้องการ เลือกชุดข้อมูลและวิธีการแสดงข้อมูลที่เหมาะสม เรียกใช้การทดสอบและการทดลองของแมชชีนเลิร์นนิง ทำการวิเคราะห์ทางสถิติและปรับแต่งโดยใช้ผลการทดสอบ ขยายไลบรารีและเฟรมเวิร์ก ML ที่มีอยู่",
+  "skills": [
+    {
+      "level_id": "3",
+      "skill_name": "Coding"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Software tools"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Data Structures"
+    },
+    {
+      "level_id": "3",
+      "skill_name": "Algorithms"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Requirement Gathering"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Database Management"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Architecture Design"
+    },
+    {
+      "level_id": "3",
+      "skill_name": "Data Analysis"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Data Visualization"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Database Design"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63bec20bb4cc59b907a27e90"
+  },
+  "name_career": "Software engineer",
+  "des_eng": "Software engineer",
+  "des_thai": " วิเคราะห์ความต้องการ ออกแบบระบบ พัฒนาซอฟต์แวร์ตามที่กำหนด แก้ไขปัญหาในซอฟต์แวร์  เตรียมการ deploy สำหรับรูปแบบที่หลากหลายใน production ดูแลจัดการการเขียนโค้ด รวมไปถึงการดูแลและแก้ไขปัญหาที่จะเกิดขึ้นของระบบในอนาคต",
+  "skills": [
+    {
+      "level_id": "4",
+      "skill_name": "Coding"
+    },
+    {
+      "level_id": "3",
+      "skill_name": "Software tools"
+    },
+    {
+      "level_id": "3",
+      "skill_name": "Data Structures"
+    },
+    {
+      "level_id": "3",
+      "skill_name": "Algorithms"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Testing & Quality Assurance"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Requirement Gathering"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Database Management"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Software Analysis"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Architecture Design"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "API"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Cybersecurity"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63bec219b4cc59b907a27e91"
+  },
+  "name_career": "QA Engineer",
+  "des_eng": "QA Engineer",
+  "des_thai": "ออกแบบการทดสอบที่เหมาะสมสำหรับระบบ สร้างชุดทดสอบ ทำการทดสอบระบบเพื่อหาข้อผิดพลาด",
+  "skills": [
+    {
+      "level_id": "3",
+      "skill_name": "Coding"
+    },
+    {
+      "level_id": "3",
+      "skill_name": "Testing & Quality Assurance"
+    },
+    {
+      "level_id": "3",
+      "skill_name": "Software tools"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Requirement Gathering"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Database Management"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Database Design"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Software Analysis"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Architecture Design"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Cybersecurity"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63bec225b4cc59b907a27e92"
+  },
+  "name_career": "Data Analyst",
+  "des_eng": "Data Analyst",
+  "des_thai": "ตีความข้อมูล วิเคราะห์ผลลัพธ์โดยใช้เทคนิคทางสถิติและจัดทำรายงานต่อเนื่อง  พัฒนาและใช้งานฐานข้อมูล ระบบการเก็บรวบรวมข้อมูล การวิเคราะห์ข้อมูล และกลยุทธ์อื่นๆ ที่ปรับประสิทธิภาพและคุณภาพทางสถิติให้เหมาะสมที่สุด ระบุ วิเคราะห์ และตีความแนวโน้มหรือรูปแบบในชุดข้อมูลที่ซับซ้อน กรองและ \"ล้าง\" ข้อมูลโดยตรวจสอบรายงานคอมพิวเตอร์ ผลงานพิมพ์ และตัวบ่งชี้ประสิทธิภาพเพื่อค้นหาและแก้ไขปัญหารหัส ทำงานร่วมกับผู้บริหารเพื่อจัดลำดับความสำคัญของธุรกิจและข้อมูลที่ต้องการ ค้นหาและกำหนดโอกาสในการปรับปรุงกระบวนการใหม่",
+  "skills": [
+    {
+      "level_id": "3",
+      "skill_name": "Coding"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Algorithms"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Database Design"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Requirement Gathering"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Database Management"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Software tools"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Data Visualization"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Data Analysis"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Data Structures"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63e0c80bcc90380a047a8f33"
+  },
+  "name_career": "Front-End Developer",
+  "des_eng": "Back-End Developer",
+  "des_thai": "พัฒนาในส่วนหน้าบ้าน ซึ่งจะเป็นส่วนที่ผู้ใช้มองเห็นและใช้งาน โดยใช้ HTML, CSS, JavaScript หรือ frameworks อื่นๆ เขียนเอกสารข้อกำหนดการทำงานและคำแนะนำ",
+  "skills": [
+    {
+      "level_id": "4",
+      "skill_name": "Coding"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Testing & Quality Assurance"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Data Structures"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "Algorithms"
+    },
+    {
+      "level_id": "1",
+      "skill_name": "API"
+    },
+    {
+      "level_id": "2",
+      "skill_name": "Software tools"
+    }
+  ]
+}]

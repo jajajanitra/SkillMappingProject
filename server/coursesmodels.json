@@ -1,0 +1,1623 @@
+[{
+  "_id": {
+    "$oid": "6332c142e6580899c89d4fa8"
+  },
+  "id": "261200",
+  "name": "Object-Oriented Programming",
+  "des": "Object-oriented concepts. Classes and objects. Function overloading. Operator overloading. Inheritance. Override. Polymorphism. Advanced topics in object-oriented programming. Project development using object-oriented programming.",
+  "skills": [
+    {
+      "skill_name": "Coding",
+      "level_id": "4",
+      "_id": {
+        "$oid": "6384744a07c740173a3d430c"
+      }
+    },
+    {
+      "skill_name": "Software tools",
+      "level_id": "5",
+      "_id": {
+        "$oid": "638474a507c740173a3d4313"
+      }
+    },
+    {
+      "skill_name": "UX/UI Design",
+      "level_id": "2",
+      "_id": {
+        "$oid": "63908e120e641c8678786d2b"
+      }
+    },
+    {
+      "skill_name": "Testing & Quality Assurance",
+      "level_id": "2",
+      "_id": {
+        "$oid": "63908f380e641c8678786e04"
+      }
+    },
+    {
+      "skill_name": "Data Structures",
+      "level_id": "1",
+      "_id": {
+        "$oid": "639090050e641c8678786e0b"
+      }
+    },
+    {
+      "skill_name": "Requirement Gathering",
+      "level_id": "1",
+      "_id": {
+        "$oid": "639091000e641c8678786eb1"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "6332c3eee6580899c89d4fa9"
+  },
+  "id": "261217",
+  "name": "Data Structures",
+  "des": " Arrays, Linked lists, Abstract data type, and recursion. Analysis tools with computer engineering applications. Stack and queue with computer engineering applications. Lists with computer engineering applications. Trees with computer engineering applications. Priority queue. Map and dictionary with computer engineering applications. Search trees with computer engineering applications. Graphs with computer engineering applications.",
+  "skills": [
+    {
+      "skill_name": "Coding",
+      "level_id": "4",
+      "_id": {
+        "$oid": "6384744a07c740173a3d430c"
+      }
+    },
+    {
+      "skill_name": "Data Structures",
+      "level_id": "3",
+      "_id": {
+        "$oid": "639090050e641c8678786e0b"
+      }
+    },
+    {
+      "skill_name": "Algorithms",
+      "level_id": "2",
+      "_id": {
+        "$oid": "639090760e641c8678786e19"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63330116d039104ac57efe11"
+  },
+  "id": "261218",
+  "name": "Algorithms",
+  "des": "Growth function and asymptotic notation. Bounding of summations and recurrences in computer engineering. Comparison-based sorting. Linear-time sorting. Medians, maximum, minimum values and order statistics. Greedy algorithm design in computer engineering. Dynamic programming in computer engineering. Hash tables. NP-complete problems and reduction in computer engineering. Approximation algorithms.",
+  "skills": [
+    {
+      "skill_name": "Coding",
+      "level_id": "4",
+      "_id": {
+        "$oid": "6384744a07c740173a3d430c"
+      }
+    },
+    {
+      "skill_name": "Testing & Quality Assurance",
+      "level_id": "3",
+      "_id": {
+        "$oid": "63908f380e641c8678786e04"
+      }
+    },
+    {
+      "skill_name": "Data Structures",
+      "level_id": "2",
+      "_id": {
+        "$oid": "639090050e641c8678786e0b"
+      }
+    },
+    {
+      "skill_name": "Algorithms",
+      "level_id": "2",
+      "_id": {
+        "$oid": "639090760e641c8678786e19"
+      }
+    },
+    {
+      "skill_name": "Design Verification",
+      "level_id": "2",
+      "_id": {
+        "$oid": "639091c20e641c8678786f9d"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63330278d039104ac57efe12"
+  },
+  "id": "261361",
+  "name": "Software Engineering",
+  "des": "Basic principles of software engineering. Software development processes. Requirements engineering. Software design. Software construction and software testing. Software operation and maintenance, Software quality. Advanced topics in software engineering.",
+  "skills": [
+    {
+      "skill_name": "Software tools",
+      "level_id": "1",
+      "comment": "Students are encouraged to pick any software tools deem appropriate to support/automate/assist software engineering tasks.",
+      "_id": {
+        "$oid": "638474a507c740173a3d4313"
+      }
+    },
+    {
+      "skill_name": "UX/UI Design",
+      "level_id": "2",
+      "comment": "The design of UI/UX will be tested in usability testing. So students know if the users satisfy the design.",
+      "_id": {
+        "$oid": "63908e120e641c8678786d2b"
+      }
+    },
+    {
+      "skill_name": "Testing & Quality Assurance",
+      "level_id": "3",
+      "comment": "Students are required to test software for functionality and usability and get feedback to improve software.",
+      "_id": {
+        "$oid": "63908f380e641c8678786e04"
+      }
+    },
+    {
+      "skill_name": "Requirement Gathering",
+      "level_id": "2",
+      "comment": "Students are able to analyze gathered requirements, organize and specify them in the requirements document.",
+      "_id": {
+        "$oid": "639091000e641c8678786eb1"
+      }
+    },
+    {
+      "skill_name": "Architecture Design",
+      "level_id": "2",
+      "comment": "Students learn software architecture patterns and are able to design the system architecture based on the requirements specification.",
+      "_id": {
+        "$oid": "639091440e641c8678786ebf"
+      }
+    },
+    {
+      "skill_name": "Software Analysis",
+      "level_id": "1",
+      "comment": "Students need to have an approval from the stakeholders before proceeding to requirements specification and software design.",
+      "_id": {
+        "$oid": "639091840e641c8678786f8f"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63330656d039104ac57efe13"
+  },
+  "id": "261408",
+  "name": "QUANTUM COMPUTATION",
+  "des": "Introduction to quantum circuit model. Quantum mathematics basics. The power of entanglement. Grover’s algorithm. Quantum query complexity. Boolean Fourier analysis and Simon’s Algorithm. Quantum Fourier transform over Zn. Period finding : Simon’s problem over Zn. Shor’s algorithm. Quantum complexity.",
+  "skills": [
+    {
+      "skill_name": "Algorithms",
+      "level_id": "2",
+      "_id": {
+        "$oid": "639090760e641c8678786e19"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "6333067cd039104ac57efe14"
+  },
+  "id": "261409",
+  "name": "FUNCTIONAL PROGRAMMING",
+  "des": "Programming in imperative style. Tracking values of variables. Attempts to reason about program correctness. Difficulties in reasoning imperative programs. Global states. Unknown factors to the program that could affect correctness. Programming in functional style. Simplicity in reasoning functional programs. Static typing in functional programs. Checking for type safety at compile time. Preventing accidental operations before running programs. Burden from statically typed imperative languages. Annotating variables with types in imperative languages. Loss of productivity from type annotations. Convenience of dynamic typing in recently popular programming languages. Type inference. Eliminating annotation burden with type inference in functional languages. Preservation of type safety at compile time in functional languages. Absence of external state in functional programs. Productivity gain from type inference. Problem solving at a higher level of abstraction in functional programming. Polymorphism. Higher-order functions. Maps. Filters. Folds. Defining functions in point-free style. Pattern matching. Algebraic data types. Purely functional data structures. Typeclasses. Kinds. Records. Type isomorphism. Introduction to category theory. Functors. Monoids. Monads. Input and output in functional programming. Side effects in functional programming. Randomness. Stateful computation. Propositions as types. Advanced topics.",
+  "skills": [
+    {
+      "skill_name": "Coding",
+      "level_id": "4",
+      "_id": {
+        "$oid": "6384744a07c740173a3d430c"
+      }
+    },
+    {
+      "skill_name": "Data Structures",
+      "level_id": "1",
+      "_id": {
+        "$oid": "639090050e641c8678786e0b"
+      }
+    },
+    {
+      "skill_name": "Algorithms",
+      "level_id": "2",
+      "_id": {
+        "$oid": "639090760e641c8678786e19"
+      }
+    },
+    {
+      "skill_name": "Requirement Gathering",
+      "level_id": "1",
+      "_id": {
+        "$oid": "639091000e641c8678786eb1"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "6333073fd039104ac57efe15"
+  },
+  "id": "261446",
+  "name": "Information Systems",
+  "des": "Introduction to information systems and roles of information systems in organizations. Characteristics of organizations. Ethical and social impact of information systems. Computer and information processing. Telecommunications. Organizations planning and designing with information systems. Management information systems. Executive information systems. Decision support systems. Expert systems. Interorganizational and international information systems.",
+  "skills": [
+    {
+      "skill_name": "Network Infrastructure Design",
+      "level_id": "3",
+      "_id": {
+        "$oid": "6390911e0e641c8678786eb8"
+      }
+    },
+    {
+      "skill_name": "Architecture Design",
+      "level_id": "1",
+      "_id": {
+        "$oid": "639091440e641c8678786ebf"
+      }
+    },
+    {
+      "skill_name": "Database Design",
+      "level_id": "1",
+      "_id": {
+        "$oid": "639091600e641c8678786ec6"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63330773d039104ac57efe16"
+  },
+  "id": "261449",
+  "name": "Software Testing for Computer Engineering",
+  "des": "Basic principles of software testing. Test case design. Test levels, Black-box and White-box testing. Other types of testing. Supporting tools for software testing. Testing process. Test planning. Writing test report.",
+  "skills": [
+    {
+      "skill_name": "Testing & Quality Assurance",
+      "level_id": "4",
+      "comment": "Students learn to analyze software requirements to create the test plans, execute the tests and write the report. ",
+      "_id": {
+        "$oid": "63908f380e641c8678786e04"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "6335309e1145d8b493deb6a3"
+  },
+  "id": "261498",
+  "name": "Selected Topics in Computer Networks"
+},{
+  "_id": {
+    "$oid": "633531851145d8b493deb6a4"
+  },
+  "id": "261497",
+  "name": "Selected Topics in Computer Software"
+},{
+  "_id": {
+    "$oid": "6370f460d9263db7e3526d46"
+  },
+  "id": "261456",
+  "name": "Introduction to Computational Intelligence for Computer Engineering",
+  "des": "Introduction to computational intelligence. Introduction to artificial neural networks. Introduction to fuzzy systems. Introduction to evolutionary computing. Introduction to swarm intelligence."
+},{
+  "_id": {
+    "$oid": "637c2c2999900a65ce4d0dc7"
+  },
+  "id": "261459",
+  "name": "DEEP LEARNING ",
+  "des": " Various architectures in deep learning with the focus on supervises deep learning. The topics include feedforward, convolutional and recurrent neural networks, autoencoders, transformers, and graph convolutional networks. The course also covers various techniques in model initialization, optimization, evaluation, and regularization. The practical uses of deep learning will be demonstrated through applications in computer vision and natural language peocessing.",
+  "skills": [
+    {
+      "skill_name": "Data Analysis",
+      "level_id": "3",
+      "_id": {
+        "$oid": "639091a80e641c8678786f96"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "637c2c3a99900a65ce4d0dc8"
+  },
+  "id": "261461",
+  "name": "Visual and Interactive Programming ",
+  "des": " Visual and interactive programming language and environment. Variables, conditonals, and loops. Functions and objects. Arrays, debugging, and libraries. Applying mathematics. Translation, and rotation (in 3D). Images. Text and data input. Data visualization.",
+  "skills": [
+    {
+      "skill_name": "Coding",
+      "level_id": "4",
+      "_id": {
+        "$oid": "6384744a07c740173a3d430c"
+      }
+    },
+    {
+      "skill_name": "Data Visualization",
+      "level_id": "4",
+      "_id": {
+        "$oid": "63908d6c0e641c8678786cd3"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "637c2c6599900a65ce4d0dc9"
+  },
+  "id": "261465",
+  "name": "Computer Graphics ",
+  "des": "Mathematics for computer graphics. Two and three-dimensional geometric shapes. Transformation and viewing. Lighting and shadow. Texture mapping. Alpha blending. Keyframe and physics-based animation. Computer graphics for visualization applications. Game programming.",
+  "skills": [
+    {
+      "skill_name": "Coding",
+      "level_id": "3",
+      "_id": {
+        "$oid": "6384744a07c740173a3d430c"
+      }
+    },
+    {
+      "skill_name": "Software tools",
+      "level_id": "4",
+      "_id": {
+        "$oid": "638474a507c740173a3d4313"
+      }
+    },
+    {
+      "skill_name": "Data Visualization",
+      "level_id": "4",
+      "_id": {
+        "$oid": "63908d6c0e641c8678786cd3"
+      }
+    },
+    {
+      "skill_name": "Algorithms",
+      "level_id": "1",
+      "_id": {
+        "$oid": "639090760e641c8678786e19"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "637c2c7499900a65ce4d0dca"
+  },
+  "id": "261469",
+  "name": "Software Project Management for Computer Engineering ",
+  "des": "Concepts of project management. Fundamentals of project management. Ethics in software engineering. Business concepts and software business. Software project initiation. Software project definition. Software project planning. Software project implementation. Software project decommissioning. Quality management in Software project."
+},{
+  "_id": {
+    "$oid": "637c2c9f99900a65ce4d0dcb"
+  },
+  "id": "261479",
+  "name": "Bioinformatics Programming ",
+  "des": "Introduction to bioinformatics and molecular data. Algorithms and complexity. Algorithms and techniques in Motif finding. Algorithms and techniques in DNA sequence comparison and gene prediction. Algorithms and techniques in DNA and protein sequencing. Algorithms and techniques in combinatorial pattern matching. Gene expression analysis using clustering and tree algorithms. Special topics in bioinformatics.",
+  "skills": [
+    {
+      "skill_name": "Coding",
+      "level_id": "4",
+      "_id": {
+        "$oid": "6384744a07c740173a3d430c"
+      }
+    },
+    {
+      "skill_name": "Software tools",
+      "level_id": "3",
+      "_id": {
+        "$oid": "638474a507c740173a3d4313"
+      }
+    },
+    {
+      "skill_name": "Data Structures",
+      "level_id": "2",
+      "_id": {
+        "$oid": "639090050e641c8678786e0b"
+      }
+    },
+    {
+      "skill_name": "Algorithms",
+      "level_id": "2",
+      "_id": {
+        "$oid": "639090760e641c8678786e19"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "637c2cb099900a65ce4d0dcc"
+  },
+  "id": "269462",
+  "name": " Introduction to Human-Computer Interaction ",
+  "des": " Psychology and science of human-computer interaction. Human and computers. Human-computer interaction. Design for a good user experience. Model. Evaluation. Using experiment. Interaction design technology. Case study.",
+  "skills": [
+    {
+      "skill_name": "UX/UI Design",
+      "level_id": "4",
+      "comment": "Students learn to use UX/UL design and evaluation tools and are able to set up a process to design and evaluate UX/UI designs.",
+      "_id": {
+        "$oid": "63908e120e641c8678786d2b"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "637c2cc699900a65ce4d0dcd"
+  },
+  "id": "261103",
+  "name": " Basic CPE ",
+  "des": " Basic of design and problem solving for computer engineering problems. Basic programming principles. Solving computer engineering problems using programming. Basic automated computer control systems. Solving computer engineering problems using computer control systems.",
+  "skills": [
+    {
+      "skill_name": "Coding",
+      "level_id": "1",
+      "_id": {
+        "$oid": "6384744a07c740173a3d430c"
+      }
+    },
+    {
+      "skill_name": "Electronics",
+      "level_id": "2",
+      "_id": {
+        "$oid": "6384752307c740173a3d431a"
+      }
+    },
+    {
+      "skill_name": "Microcontroller",
+      "level_id": "1",
+      "_id": {
+        "$oid": "6384756907c740173a3d4321"
+      }
+    },
+    {
+      "skill_name": "Requirement Gathering",
+      "level_id": "2",
+      "_id": {
+        "$oid": "639091000e641c8678786eb1"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "637c2cdc99900a65ce4d0dce"
+  },
+  "id": "261207",
+  "name": " CPE Lab ",
+  "des": " Unix file system. Basic commands on Unix system. Shell script programming. Basic Unix administration. Basic database systems. Basic web application.",
+  "skills": [
+    {
+      "skill_name": "Coding",
+      "level_id": "4",
+      "_id": {
+        "$oid": "6384744a07c740173a3d430c"
+      }
+    },
+    {
+      "skill_name": "Software tools",
+      "level_id": "3",
+      "_id": {
+        "$oid": "638474a507c740173a3d4313"
+      }
+    },
+    {
+      "skill_name": "API",
+      "level_id": "3",
+      "_id": {
+        "$oid": "63908d0a0e641c8678786cb2"
+      }
+    },
+    {
+      "skill_name": "UX/UI Design",
+      "level_id": "2",
+      "_id": {
+        "$oid": "63908e120e641c8678786d2b"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "637c2ce699900a65ce4d0dcf"
+  },
+  "id": "261332",
+  "name": "Data Communications",
+  "des": " Introduction to data and computer communications. Signal processing and signal analysis. Modulation. Multiplexing and multiple access protocols. Transmission medium. Data compression. Error detection and error control. Information security. Multimedia Data.",
+  "skills": [
+    {
+      "skill_name": "Architecture Design",
+      "level_id": "1",
+      "_id": {
+        "$oid": "639091440e641c8678786ebf"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "637c2d0599900a65ce4d0dd0"
+  },
+  "id": "261335",
+  "name": "Networks",
+  "des": " Introduction to computer networks. Network access. Network layer and routing. Transport layer. Application layer. Basic network security. Basic network design and management.",
+  "skills": [
+    {
+      "skill_name": "Network Infrastructure Design",
+      "level_id": "1",
+      "comment": "Understand bacis concept of network architecture and communication systems",
+      "_id": {
+        "$oid": "6390911e0e641c8678786eb8"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "637c2d1999900a65ce4d0dd1"
+  },
+  "id": "261336",
+  "name": "Networks Lab ",
+  "des": "Introduction to computer networks laboratory. Transmission media. Network equipment. Network simulation and monitoring tools. Network access layer. Network layer and routing. Transport layer. Application layer. Wireless computer networks. Basic network security.",
+  "skills": [
+    {
+      "skill_name": "Network Configuration",
+      "level_id": "2",
+      "_id": {
+        "$oid": "6390909c0e641c8678786e9c"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "637c2d3999900a65ce4d0dd2"
+  },
+  "id": "261430",
+  "name": "Wireless Networks ",
+  "des": " Introduction to radio communications. Wireless netwoks technologies (WPAN, WLAN, WMAN, WWAN). Wireless netwok architecture. Network topology. Routing protocol. Localization. Energy optimization. Network simulation. Wireless netwok advantages and applications.",
+  "skills": [
+    {
+      "skill_name": "Network Configuration",
+      "level_id": "2",
+      "_id": {
+        "$oid": "6390909c0e641c8678786e9c"
+      }
+    },
+    {
+      "skill_name": "Network Infrastructure Design",
+      "level_id": "5",
+      "_id": {
+        "$oid": "6390911e0e641c8678786eb8"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "637c2d4b99900a65ce4d0dd3"
+  },
+  "id": "261433",
+  "name": "Network Programming CPE ",
+  "des": "Introduction to network programming. Open System Interconnectivity reference model: programming point of view. Client-Server working model and implementation. Transmission Control Protocol sockets. Input/Output multiplexing. User Datagram Protocol sockets. Raw sockets. Name and addressing conversion. Daemon process and superserver. Threading. Advanced issues in networking programming.",
+  "skills": [
+    {
+      "skill_name": "Coding",
+      "level_id": "3",
+      "_id": {
+        "$oid": "6384744a07c740173a3d430c"
+      }
+    },
+    {
+      "skill_name": "Network Configuration",
+      "level_id": "1",
+      "_id": {
+        "$oid": "6390909c0e641c8678786e9c"
+      }
+    },
+    {
+      "skill_name": "Network Infrastructure Design",
+      "level_id": "3",
+      "_id": {
+        "$oid": "6390911e0e641c8678786eb8"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "637c39ca99900a65ce4d0dd4"
+  },
+  "id": "261434",
+  "name": "Computer Network Design and Management ",
+  "des": "Computer network review. Principles and architecture of enterprise network design. Small and large backbone design. Network management. Case studies of network design and management.",
+  "skills": [
+    {
+      "skill_name": "Network Configuration",
+      "level_id": "1",
+      "_id": {
+        "$oid": "6390909c0e641c8678786e9c"
+      }
+    },
+    {
+      "skill_name": "Requirement Gathering",
+      "level_id": "2",
+      "_id": {
+        "$oid": "639091000e641c8678786eb1"
+      }
+    },
+    {
+      "skill_name": "Network Infrastructure Design",
+      "level_id": "4",
+      "_id": {
+        "$oid": "6390911e0e641c8678786eb8"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "637c39db99900a65ce4d0dd5"
+  },
+  "id": "261438",
+  "name": "Fundamentals of Multiprotocol Label Switching",
+  "des": "Fundamentals of computer network. Architecture of Multiprotocol Label Switching. Packet forwarding of Multiprotocol Label Switching. Fundamentals of virtual private network. Multiprotocol Label Switching application in virtual private network. Fundamentals of traffic engineering. Multiprotocol Label Switching application in traffic engineering.",
+  "skills": [
+    {
+      "skill_name": "Network Configuration",
+      "level_id": "3",
+      "_id": {
+        "$oid": "6390909c0e641c8678786e9c"
+      }
+    },
+    {
+      "skill_name": "Network Infrastructure Design",
+      "level_id": "3",
+      "_id": {
+        "$oid": "6390911e0e641c8678786eb8"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "637c39ed99900a65ce4d0dd6"
+  },
+  "id": "261447",
+  "name": "Network and Information Security  ",
+  "des": " Introduction to network and information security. Security policy specifications and evaluation. Firewalls. Hardening of Operating Systems. Authentication and authorization. Monitoring, audit and review. Secret-key and public-key encryption. Digital signature and certification. World-Wide-Web security. E-mail security. General network transportation security. Social and non-technical issues.",
+  "skills": [
+    {
+      "skill_name": "Cybersecurity",
+      "level_id": "2",
+      "_id": {
+        "$oid": "6390904d0e641c8678786e12"
+      }
+    },
+    {
+      "skill_name": "Network Configuration",
+      "level_id": "2",
+      "_id": {
+        "$oid": "6390909c0e641c8678786e9c"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "637c39f999900a65ce4d0dd7"
+  },
+  "id": "269421",
+  "name": "Computer Network Traffic Analysis ",
+  "des": "Probability, Random processes, Markov chains, Markov chains at equilibrium, Queuing analysis, Modeling traffic flow control protocols, Modeling error control protocols, Modeling medium access control protocols, Modeling network traffic.",
+  "skills": [
+    {
+      "skill_name": "Algorithms",
+      "level_id": "2",
+      "_id": {
+        "$oid": "639090760e641c8678786e19"
+      }
+    },
+    {
+      "skill_name": "Network Infrastructure Design",
+      "level_id": "4",
+      "_id": {
+        "$oid": "6390911e0e641c8678786eb8"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "637c3a0a99900a65ce4d0dd8"
+  },
+  "id": "269430",
+  "name": "Wireless and Broadband Computer Networks",
+  "des": "Computer network architecture, Wireless computer network standards, Wireless computer network connection, Design of wireless computer networks, Broadband computer network architecture, Broadband computer network design, Quality of service of broadband computer networks.",
+  "skills": [
+    {
+      "skill_name": "Algorithms",
+      "level_id": "2",
+      "_id": {
+        "$oid": "639090760e641c8678786e19"
+      }
+    },
+    {
+      "skill_name": "Network Infrastructure Design",
+      "level_id": "4",
+      "_id": {
+        "$oid": "6390911e0e641c8678786eb8"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "637c3a1699900a65ce4d0dd9"
+  },
+  "id": "261210",
+  "name": "Logic ",
+  "des": "Numeral system and coding. Basic switching circuit theory. Principles of digital logic circuit. Logic gate and Boolean algebra. Logic function reduction. Analysis and design of combination logic circuit. Latch and flip-flop devices. Principles of sequential logic circuit. Analysis and design of sequential logic circuit. Concept of applying digital logic circuit in computer architecture.",
+  "skills": [
+    {
+      "skill_name": "Electronics",
+      "level_id": "4",
+      "_id": {
+        "$oid": "6384752307c740173a3d431a"
+      }
+    },
+    {
+      "skill_name": "Requirement Gathering",
+      "level_id": "1",
+      "_id": {
+        "$oid": "639091000e641c8678786eb1"
+      }
+    },
+    {
+      "skill_name": "Architecture Design",
+      "level_id": "1",
+      "_id": {
+        "$oid": "639091440e641c8678786ebf"
+      }
+    },
+    {
+      "skill_name": "Design Verification",
+      "level_id": "2",
+      "_id": {
+        "$oid": "639091c20e641c8678786f9d"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "637c3a2599900a65ce4d0dda"
+  },
+  "id": "261212",
+  "name": "Logic Lab ",
+  "des": "Principles of semiconductor devices. Logic gate and Boolean algebra. Logic function reduction techniques. Circuit development using digital logic ICs. Design of combination logic circuits. Digital logic circuit development using Hardware Description Language (HDL). Latches and flip-flops. Design and development of sequential logic circuit. Design and development of Application Specific IC (ASIC) using digital logic circuits. Applying digital logic circuit in computer architecture design.",
+  "skills": [
+    {
+      "skill_name": "Electronics",
+      "level_id": "4",
+      "_id": {
+        "$oid": "6384752307c740173a3d431a"
+      }
+    },
+    {
+      "skill_name": "Requirement Gathering",
+      "level_id": "1",
+      "_id": {
+        "$oid": "639091000e641c8678786eb1"
+      }
+    },
+    {
+      "skill_name": "Architecture Design",
+      "level_id": "1",
+      "_id": {
+        "$oid": "639091440e641c8678786ebf"
+      }
+    },
+    {
+      "skill_name": "Design Verification",
+      "level_id": "2",
+      "_id": {
+        "$oid": "639091c20e641c8678786f9d"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "637c3a3199900a65ce4d0ddb"
+  },
+  "id": "261214",
+  "name": "Microprocessors ",
+  "des": "Microprocessor-Based System. Memory and Input/Output connecting. Assembly programming. Microprocessor instruction-set and programming techniques. Stack and sub-procedures. The interrupt system. Programmable timers. Serial and parallel ports and data communications. Trends in Microprocessor technology.",
+  "skills": [
+    {
+      "skill_name": "Electronics",
+      "level_id": "4",
+      "_id": {
+        "$oid": "6384752307c740173a3d431a"
+      }
+    },
+    {
+      "skill_name": "Microcontroller",
+      "level_id": "3",
+      "_id": {
+        "$oid": "6384756907c740173a3d4321"
+      }
+    },
+    {
+      "skill_name": "Requirement Gathering",
+      "level_id": "2",
+      "_id": {
+        "$oid": "639091000e641c8678786eb1"
+      }
+    },
+    {
+      "skill_name": "Architecture Design",
+      "level_id": "1",
+      "_id": {
+        "$oid": "639091440e641c8678786ebf"
+      }
+    },
+    {
+      "skill_name": "Design Verification",
+      "level_id": "2",
+      "_id": {
+        "$oid": "639091c20e641c8678786f9d"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "637c3a3c99900a65ce4d0ddc"
+  },
+  "id": "261215",
+  "name": "Embedded Lab ",
+  "des": "Embedded system development tools. Basic embedded system circuit construction and control programming. Using analog to digital converters. Output tools controls. Connecting to embedded system expansion devices. Using interrupt system. Printed circuit board design.",
+  "skills": [
+    {
+      "skill_name": "Electronics",
+      "level_id": "4",
+      "_id": {
+        "$oid": "6384752307c740173a3d431a"
+      }
+    },
+    {
+      "skill_name": "Microcontroller",
+      "level_id": "3",
+      "_id": {
+        "$oid": "6384756907c740173a3d4321"
+      }
+    },
+    {
+      "skill_name": "Requirement Gathering",
+      "level_id": "2",
+      "_id": {
+        "$oid": "639091000e641c8678786eb1"
+      }
+    },
+    {
+      "skill_name": "Architecture Design",
+      "level_id": "1",
+      "_id": {
+        "$oid": "639091440e641c8678786ebf"
+      }
+    },
+    {
+      "skill_name": "Design Verification",
+      "level_id": "2",
+      "_id": {
+        "$oid": "639091c20e641c8678786f9d"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "637c3a4999900a65ce4d0ddd"
+  },
+  "id": "261304",
+  "name": "Comp Arch ",
+  "des": "Introduction to computer architecture. The role of performance. Machine arithmetic. Datapath design. Control design. Pipelining. Memory organization.",
+  "skills": [
+    {
+      "skill_name": "Coding",
+      "level_id": "4",
+      "_id": {
+        "$oid": "6384744a07c740173a3d430c"
+      }
+    },
+    {
+      "skill_name": "Data Structures",
+      "level_id": "3",
+      "comment": "Student need to know data structure well  in order to write a complex program in class.",
+      "_id": {
+        "$oid": "639090050e641c8678786e0b"
+      }
+    },
+    {
+      "skill_name": "Algorithms",
+      "level_id": "3",
+      "comment": "Student need to know algorithm well in order to write a complex program in class.",
+      "_id": {
+        "$oid": "639090760e641c8678786e19"
+      }
+    },
+    {
+      "skill_name": "Architecture Design",
+      "level_id": "3",
+      "comment": "",
+      "_id": {
+        "$oid": "639091440e641c8678786ebf"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "637c3a5699900a65ce4d0dde"
+  },
+  "id": "261305",
+  "name": "OS ",
+  "des": "Review of computer architecture structure and introduction to Operating Systems. Process management. Central processing unit management. Process synchronization. Process deadlock. Memory management: paging, segmentation. Virtual memory system. File and device management. Security and protection of operating systems. System programming.",
+  "skills": [
+    {
+      "skill_name": "API",
+      "level_id": "1",
+      "_id": {
+        "$oid": "63908d0a0e641c8678786cb2"
+      }
+    },
+    {
+      "skill_name": "Algorithms",
+      "level_id": "3",
+      "_id": {
+        "$oid": "639090760e641c8678786e19"
+      }
+    },
+    {
+      "skill_name": "Requirement Gathering",
+      "level_id": "2",
+      "_id": {
+        "$oid": "639091000e641c8678786eb1"
+      }
+    },
+    {
+      "skill_name": "Architecture Design",
+      "level_id": "1",
+      "_id": {
+        "$oid": "639091440e641c8678786ebf"
+      }
+    },
+    {
+      "skill_name": "Software Analysis",
+      "level_id": "2",
+      "_id": {
+        "$oid": "639091840e641c8678786f8f"
+      }
+    },
+    {
+      "skill_name": "Design Verification",
+      "level_id": "2",
+      "_id": {
+        "$oid": "639091c20e641c8678786f9d"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "637c3a7b99900a65ce4d0ddf"
+  },
+  "id": "261406",
+  "name": "Basic Compiler Design ",
+  "des": "Introduction to theory of computation and compiler design. Processes and structures of compilers. Expression and syntax. Finite automata. Lexical analysis. Syntax analysis. Instruction set implementation. Language used for compiler design.",
+  "skills": [
+    {
+      "skill_name": "Coding",
+      "level_id": "5",
+      "_id": {
+        "$oid": "6384744a07c740173a3d430c"
+      }
+    },
+    {
+      "skill_name": "Software tools",
+      "level_id": "5",
+      "_id": {
+        "$oid": "638474a507c740173a3d4313"
+      }
+    },
+    {
+      "skill_name": "Testing & Quality Assurance",
+      "level_id": "4",
+      "_id": {
+        "$oid": "63908f380e641c8678786e04"
+      }
+    },
+    {
+      "skill_name": "Data Structures",
+      "level_id": "2",
+      "_id": {
+        "$oid": "639090050e641c8678786e0b"
+      }
+    },
+    {
+      "skill_name": "Algorithms",
+      "level_id": "1",
+      "_id": {
+        "$oid": "639090760e641c8678786e19"
+      }
+    },
+    {
+      "skill_name": "Architecture Design",
+      "level_id": "2",
+      "_id": {
+        "$oid": "639091440e641c8678786ebf"
+      }
+    },
+    {
+      "skill_name": "Software Analysis",
+      "level_id": "3",
+      "_id": {
+        "$oid": "639091840e641c8678786f8f"
+      }
+    },
+    {
+      "skill_name": "Design Verification",
+      "level_id": "3",
+      "_id": {
+        "$oid": "639091c20e641c8678786f9d"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "637c3a8799900a65ce4d0de0"
+  },
+  "id": "261411",
+  "name": "Parallel Processing and Distributed Systems",
+  "des": "Introduction to parallel processing. Parallel architectures. Problems suited for parallel processing. Parallel algorithms. Parallel programming environments. Introduction to distributed systems. Models of distributed systems. Distributed algorithms. Distributed programming environments.",
+  "skills": [
+    {
+      "skill_name": "Coding",
+      "level_id": "4",
+      "_id": {
+        "$oid": "6384744a07c740173a3d430c"
+      }
+    },
+    {
+      "skill_name": "Algorithms",
+      "level_id": "2",
+      "_id": {
+        "$oid": "639090760e641c8678786e19"
+      }
+    },
+    {
+      "skill_name": "Cloud Computing",
+      "level_id": "3",
+      "_id": {
+        "$oid": "639090e50e641c8678786eaa"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "637c3a9599900a65ce4d0de1"
+  },
+  "id": "261421",
+  "name": "Computer Hardware Design",
+  "des": "Computer hardware design environments. Basic concept and system simulation. Design methodology. Modeling transfer and related language structures. Design management. Defining parameters and simulation execution. Logic circuit design examples. Central processing unit simulation. Design and systhesis using the HDL language.",
+  "skills": [
+    {
+      "skill_name": "Electronics",
+      "level_id": "5",
+      "_id": {
+        "$oid": "6384752307c740173a3d431a"
+      }
+    },
+    {
+      "skill_name": "Microcontroller",
+      "level_id": "5",
+      "_id": {
+        "$oid": "6384756907c740173a3d4321"
+      }
+    },
+    {
+      "skill_name": "Architecture Design",
+      "level_id": "2",
+      "_id": {
+        "$oid": "639091440e641c8678786ebf"
+      }
+    },
+    {
+      "skill_name": "Design Verification",
+      "level_id": "2",
+      "_id": {
+        "$oid": "639091c20e641c8678786f9d"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "637c3aa399900a65ce4d0de2"
+  },
+  "id": "261441",
+  "name": "Internet of Things and Big Data",
+  "des": "Introduction to Internet of things and big data. Basic electronics circuits. Basic digital design. Basic microcontrollers. Sensors and physical measurement. Bus systems and data communication. Remote communication. Basic data management. Basic data analysis. Visualization techniques.",
+  "skills": [
+    {
+      "skill_name": "Coding",
+      "level_id": "2",
+      "_id": {
+        "$oid": "6384744a07c740173a3d430c"
+      }
+    },
+    {
+      "skill_name": "Software tools",
+      "level_id": "1",
+      "_id": {
+        "$oid": "638474a507c740173a3d4313"
+      }
+    },
+    {
+      "skill_name": "Electronics",
+      "level_id": "3",
+      "_id": {
+        "$oid": "6384752307c740173a3d431a"
+      }
+    },
+    {
+      "skill_name": "Microcontroller",
+      "level_id": "3",
+      "_id": {
+        "$oid": "6384756907c740173a3d4321"
+      }
+    },
+    {
+      "skill_name": "API",
+      "level_id": "2",
+      "_id": {
+        "$oid": "63908d0a0e641c8678786cb2"
+      }
+    },
+    {
+      "skill_name": "Data Visualization",
+      "level_id": "1",
+      "_id": {
+        "$oid": "63908d6c0e641c8678786cd3"
+      }
+    },
+    {
+      "skill_name": "Cloud Computing",
+      "level_id": "1",
+      "_id": {
+        "$oid": "639090e50e641c8678786eaa"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "637c3ab099900a65ce4d0de3"
+  },
+  "id": "261453",
+  "name": "Digital Image Processing",
+  "des": "Fundamental concepts of digital image. Image enhancement in the spatial domain. Image enhancement in frequency domain. Image restoration. Discrete image transform. Wavelet and multiresolution processing. Image segmentation.",
+  "skills": [
+    {
+      "skill_name": "Coding",
+      "level_id": "5",
+      "_id": {
+        "$oid": "6384744a07c740173a3d430c"
+      }
+    },
+    {
+      "skill_name": "Data Structures",
+      "level_id": "3",
+      "comment": "Students need to know data structure well in order to write complex programs in class.",
+      "_id": {
+        "$oid": "639090050e641c8678786e0b"
+      }
+    },
+    {
+      "skill_name": "Algorithms",
+      "level_id": "3",
+      "comment": "Students need to know algorithms well in order to write complex programs in class",
+      "_id": {
+        "$oid": "639090760e641c8678786e19"
+      }
+    },
+    {
+      "skill_name": "Data Analysis",
+      "level_id": "4",
+      "comment": "Although, the computer assignments involve with image process, student need to be able to analyze image information to create desired output",
+      "_id": {
+        "$oid": "639091a80e641c8678786f96"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "637c3abe99900a65ce4d0de4"
+  },
+  "id": "261457",
+  "name": "Digital Image and Video Compression",
+  "des": "Introduction to image and video coding. Lossless image compression. Lossy image compression. Video compression. Isochronous information and applications.",
+  "skills": [
+    {
+      "skill_name": "Coding",
+      "level_id": "3",
+      "_id": {
+        "$oid": "6384744a07c740173a3d430c"
+      }
+    },
+    {
+      "skill_name": "Software tools",
+      "level_id": "3",
+      "_id": {
+        "$oid": "638474a507c740173a3d4313"
+      }
+    },
+    {
+      "skill_name": "Algorithms",
+      "level_id": "1",
+      "_id": {
+        "$oid": "639090760e641c8678786e19"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "637c3acb99900a65ce4d0de5"
+  },
+  "id": "261458",
+  "name": "Machine Vision",
+  "des": "Images and fundamentals of image processing. Image feature extraction. Image recognition and classification. Object detection. Grouping and segmentation. Moving object tracking. Applications of machine vision technologies."
+},{
+  "_id": {
+    "$oid": "637c3ada99900a65ce4d0de6"
+  },
+  "id": "261472",
+  "name": "Robotics",
+  "des": "Introduction to Robotics. Homogeneous transformations. Kinematic equations. Solving kinematic equations. Differential relationships. Robot arms. Dynamics of robot arms. Static forces in robot arms. Robotic control.",
+  "skills": [
+    {
+      "skill_name": "Coding",
+      "level_id": "3",
+      "_id": {
+        "$oid": "6384744a07c740173a3d430c"
+      }
+    },
+    {
+      "skill_name": "Electronics",
+      "level_id": "3",
+      "_id": {
+        "$oid": "6384752307c740173a3d431a"
+      }
+    },
+    {
+      "skill_name": "Microcontroller",
+      "level_id": "3",
+      "_id": {
+        "$oid": "6384756907c740173a3d4321"
+      }
+    },
+    {
+      "skill_name": "Algorithms",
+      "level_id": "1",
+      "_id": {
+        "$oid": "639090760e641c8678786e19"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "637c3ae999900a65ce4d0de7"
+  },
+  "id": "261473",
+  "name": "Computer-Aided Manufacturing",
+  "des": "Introduction to manufacturing and engineering process. Decision support systems. Optimization model for production planning. Graph in production planning. Algorithms in production planning. Sensitivity analysis. Tools for optimization in production planning. Automation control in manufacturing. Problem solving by using network modeling. Multi-objective problem solving. Artificial intelligence in manufacturing. Basic queuing theory and simulation. Game theory for strategy planning.",
+  "skills": [
+    {
+      "skill_name": "Algorithms",
+      "level_id": "2",
+      "_id": {
+        "$oid": "639090760e641c8678786e19"
+      }
+    },
+    {
+      "skill_name": "Data Analysis",
+      "level_id": "2",
+      "_id": {
+        "$oid": "639091a80e641c8678786f96"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "637c3af599900a65ce4d0de8"
+  },
+  "id": "261405",
+  "name": " Advanced CPE ",
+  "des": " Introduction to advanced computer engineering technologies. Platforms of advanced computer engineering technologies. Tools used in advanced computer engineering technologies. Applications of advanced computer engineering technologies. Laws and ethics related to computer engineering.",
+  "skills": [
+    {
+      "skill_name": "Software tools",
+      "level_id": "3",
+      "_id": {
+        "$oid": "638474a507c740173a3d4313"
+      }
+    },
+    {
+      "skill_name": "UX/UI Design",
+      "level_id": "3",
+      "_id": {
+        "$oid": "63908e120e641c8678786d2b"
+      }
+    },
+    {
+      "skill_name": "Cloud Computing",
+      "level_id": "1",
+      "_id": {
+        "$oid": "639090e50e641c8678786eaa"
+      }
+    },
+    {
+      "skill_name": "Network Infrastructure Design",
+      "level_id": "3",
+      "comment": "",
+      "_id": {
+        "$oid": "6390911e0e641c8678786eb8"
+      }
+    },
+    {
+      "skill_name": "Architecture Design",
+      "level_id": "2",
+      "_id": {
+        "$oid": "639091440e641c8678786ebf"
+      }
+    },
+    {
+      "skill_name": "Database Design",
+      "level_id": "2",
+      "_id": {
+        "$oid": "639091600e641c8678786ec6"
+      }
+    },
+    {
+      "skill_name": "Software Analysis",
+      "level_id": "1",
+      "_id": {
+        "$oid": "639091840e641c8678786f8f"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "637c3b0199900a65ce4d0de9"
+  },
+  "id": "261491",
+  "name": "Project Survey",
+  "des": "This is a preparation course for students intending to enroll in the course CPE 492 PROJECT in the next semester. The student will carry out literature survey of preliminary studies and/or experiments in order to arrive at a feasible topic to be perused as his chosen senior project. The students are required to submit a written report outlining the topics they have studied and giving details of the work-plan and time-schedule of the intended project. The report will be evaluated (S or U)."
+},{
+  "_id": {
+    "$oid": "637c3b0c99900a65ce4d0dea"
+  },
+  "id": "261492",
+  "name": "Project",
+  "des": "Special investigation or studies of any topic in computer engineering to be carried out by an individual student or a group of students under the supervision of an advisor. A written report must be submitted at completion of the course and an oral examination will be given by a committee."
+},{
+  "_id": {
+    "$oid": "637c3b1e99900a65ce4d0deb"
+  },
+  "id": "261342",
+  "name": "Database",
+  "des": "Database concepts. Data modeling. Database design and engineering. Data model improvement. Query language. Physical database design. Efficient data retrieval and indexing. Query optimization. Basic concept of transaction, concurrency and recovery techniques. Trends in database systems technology.",
+  "skills": [
+    {
+      "skill_name": "Database Management",
+      "level_id": "3",
+      "_id": {
+        "$oid": "639090bd0e641c8678786ea3"
+      }
+    },
+    {
+      "skill_name": "Database Design",
+      "level_id": "2",
+      "_id": {
+        "$oid": "639091600e641c8678786ec6"
+      }
+    },
+    {
+      "skill_name": "Data Analysis",
+      "level_id": "1",
+      "_id": {
+        "$oid": "639091a80e641c8678786f96"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "637c3b2a99900a65ce4d0dec"
+  },
+  "id": "261343",
+  "name": "Database Lab",
+  "des": "Database management system software installation. Database design. Query language. Database administration. Database application development.",
+  "skills": [
+    {
+      "skill_name": "Software tools",
+      "level_id": "2",
+      "_id": {
+        "$oid": "638474a507c740173a3d4313"
+      }
+    },
+    {
+      "skill_name": "Database Management",
+      "level_id": "3",
+      "_id": {
+        "$oid": "639090bd0e641c8678786ea3"
+      }
+    },
+    {
+      "skill_name": "Data Analysis",
+      "level_id": "1",
+      "_id": {
+        "$oid": "639091a80e641c8678786f96"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "637c3b3499900a65ce4d0ded"
+  },
+  "id": "261444",
+  "name": "Advanced Database Systems",
+  "des": "Concepts of physical database design. Querying techniques. Transactions. Concurrency controls. Recovery systems. Database system architectures. Parallel database. Distributed databases. Trends in database technologies and developments of database applications.",
+  "skills": [
+    {
+      "skill_name": "Software tools",
+      "level_id": "3",
+      "_id": {
+        "$oid": "638474a507c740173a3d4313"
+      }
+    },
+    {
+      "skill_name": "Algorithms",
+      "level_id": "2",
+      "_id": {
+        "$oid": "639090760e641c8678786e19"
+      }
+    },
+    {
+      "skill_name": "Database Management",
+      "level_id": "3",
+      "_id": {
+        "$oid": "639090bd0e641c8678786ea3"
+      }
+    },
+    {
+      "skill_name": "Database Design",
+      "level_id": "3",
+      "_id": {
+        "$oid": "639091600e641c8678786ec6"
+      }
+    },
+    {
+      "skill_name": "Data Analysis",
+      "level_id": "2",
+      "_id": {
+        "$oid": "639091a80e641c8678786f96"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "637c3b3f99900a65ce4d0dee"
+  },
+  "id": "261448",
+  "name": "Data Mining for Computer Engineering",
+  "des": "Introduction to data mining. Data preprocessing. Association rule mining. Classification and prediction. Clustering analysis. Advanced topics in data mining.",
+  "skills": [
+    {
+      "skill_name": "Coding",
+      "level_id": "4",
+      "_id": {
+        "$oid": "6384744a07c740173a3d430c"
+      }
+    },
+    {
+      "skill_name": "Data Visualization",
+      "level_id": "2",
+      "_id": {
+        "$oid": "63908d6c0e641c8678786cd3"
+      }
+    },
+    {
+      "skill_name": "Algorithms",
+      "level_id": "3",
+      "_id": {
+        "$oid": "639090760e641c8678786e19"
+      }
+    },
+    {
+      "skill_name": "Requirement Gathering",
+      "level_id": "2",
+      "_id": {
+        "$oid": "639091000e641c8678786eb1"
+      }
+    },
+    {
+      "skill_name": "Data Analysis",
+      "level_id": "3",
+      "_id": {
+        "$oid": "639091a80e641c8678786f96"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63992fcfd0bbaa212b7e262d"
+  },
+  "id": "261497",
+  "name": "Selected Topics in Computer Software",
+  "skills": [
+    {
+      "skill_name": "Coding",
+      "level_id": "4",
+      "_id": {
+        "$oid": "6384744a07c740173a3d430c"
+      }
+    },
+    {
+      "skill_name": "Software tools",
+      "level_id": "3",
+      "_id": {
+        "$oid": "638474a507c740173a3d4313"
+      }
+    },
+    {
+      "skill_name": "Testing & Quality Assurance",
+      "level_id": "5",
+      "comment": "In this course, student will understand the essential of systematic process improvement. Additionally, they will discover their own preference and implement their own process improvement policies. This should be considered as the highest level of quality assurance.",
+      "_id": {
+        "$oid": "63908f380e641c8678786e04"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63b50116cc15ab4f81572fb7"
+  },
+  "id": "261493",
+  "name": "Seminar"
+},{
+  "_id": {
+    "$oid": "63b50136cc15ab4f81572fb8"
+  },
+  "id": "261494",
+  "name": "Selected Topics in Computer Engineering"
+},{
+  "_id": {
+    "$oid": "63b50152cc15ab4f81572fb9"
+  },
+  "id": "261499",
+  "name": "Selected Topics in Computational Intelligence"
+},{
+  "_id": {
+    "$oid": "63d9e4d725d5a79e144759aa"
+  },
+  "id": "261102",
+  "name": "Computer Programming",
+  "des": "Computer Programming",
+  "skills": [
+    {
+      "skill_name": "Coding",
+      "level_id": "4",
+      "_id": {
+        "$oid": "6384744a07c740173a3d430c"
+      }
+    },
+    {
+      "skill_name": "Software tools",
+      "level_id": "2",
+      "_id": {
+        "$oid": "638474a507c740173a3d4313"
+      }
+    },
+    {
+      "skill_name": "Data Structures",
+      "level_id": "1",
+      "_id": {
+        "$oid": "639090050e641c8678786e0b"
+      }
+    },
+    {
+      "skill_name": "Algorithms",
+      "level_id": "1",
+      "_id": {
+        "$oid": "639090760e641c8678786e19"
+      }
+    }
+  ]
+}]
