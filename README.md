@@ -15,7 +15,7 @@
 4. ใช้คำสั่ง npm install เพื่อติดตั้ง dependency
 5. ใช้คำสั่ง npm start เพื่อเริ่ม ซึ่งจะทำงานอยู่ที่ locallhost:5001
 
-## ส่วน database ใน server
+## ส่วน Database ใน Server
 1. ไฟล์ข้อมูล database อยู่ในโฟลเดอร์ Database
 2. ดาวน์โหลดไฟล์Collection ทั้งหมดในโฟลเดอร์
 3. Import Collection ลง Mongodb
